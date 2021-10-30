@@ -3,13 +3,13 @@ from selenium import webdriver
 import time
 
 SCROLL_PAUSE_SEC = 2
-CRAWL = 'kaist' # snu, postech, kaist, yonsei, korea
+CRAWL = 'korea' # snu, postech, kaist, yonsei, korea
 
 url_list = {'postech': "http://ai.postech.ac.kr/sub020101",
                 'snu': "https://gsai.snu.ac.kr/ko/portfolio",
                 'kaist':"https://gsai.kaist.ac.kr/people/?lang=ko",
-                'yonsei':"",
-                'korea':""}
+                'yonsei':"https://ai.yonsei.ac.kr/ysai/members/professors.do?mode=list&srSearchKey=&srSearchVal=&srCategoryId1=9999",
+                'korea':"http://xai.korea.ac.kr/teacher/teacher"}
 
 output_list = {'postech': "output/postech_homepage.csv",
                 'snu': "output/snu_homepage.csv",
@@ -86,19 +86,13 @@ def kaist_crawl(path, output) :
     driver.implicitly_wait(3)
     f = open(output, 'w')
     
-    profs_section = driver.find_element_by_class_name("vc_tta-panel-body")
+    profs_section = driver.find_element_by_class_name("teacher")
 
-    for prof in profs_section.find_elements_by_css_selector("div.wpb_text_column.wpb_content_element") :
-        name = prof.find_element_by_css_selector("div > div > div > p:nth-child(1) > strong").text
-        # email = prof.find_element_by_css_selector("div > div > div > p:nth-child(2) > strong:nth-child(7)").text
-        content = prof.find_element_by_css_selector("div > div > div > p:nth-child(2)").text
-        email_line = content.split("\n")[3]
-        email = email_line[6:]
-        try :
-            homepage = prof.find_element_by_css_selector("div > div > p:nth-child(2) > span > a").get_attribute("href")
-        except :
-            homepage = ""
-        
+    for prof in profs_section.find_elements_by_css_selector("li") :
+        name = prof.find_element_by_css_selector("div.right > dl > dt").text
+        email = prof.find_element_by_css_selector("div.right > dl > dd:nth-child(3)").text[7:]
+        homepage = prof.find_element_by_css_selector("div.right > dl > dd:nth-child(5) > a").get_attribute("href")
+
         print("[Crawled]:", name,  email, homepage)
         f.write("%s,%s,%s\n" % ( name, email, homepage))
 
@@ -106,10 +100,51 @@ def kaist_crawl(path, output) :
     f.close()
 
 def yonsei_crawl(path, output) :
-    pass
+    driver = webdriver.Chrome(executable_path='chromedriver')
+    driver.get(url=path)
+    driver.implicitly_wait(3)
+    f = open(output, 'w')
+    
+    profs_section = driver.find_element_by_class_name("professor")
+
+    for prof in profs_section.find_elements_by_css_selector("div.board-faculty-box") :
+        name = prof.find_element_by_css_selector("dl > dt").text
+        
+        try :
+            email = prof.find_element_by_css_selector("dl > dd:nth-child(3) > a").text
+            if email == "@" :
+                email = ""
+        except :
+            email = ""
+        homepage = ""
+        
+        print("[Crawled]:", name,  email, homepage)
+        f.write("%s,%s,%s\n" % ( name, email, homepage))
+
+    driver.close()
+    f.close()
 
 def korea_crawl(path, output) :
-    pass
+    chrome_options = webdriver.chrome.options.Options()
+    chrome_options.add_argument("--window-size=1920,1080")
+    driver = webdriver.Chrome(executable_path='chromedriver', chrome_options=chrome_options)
+    driver.get(url=path)
+    driver.implicitly_wait(3)
+    f = open(output, 'w',encoding='UTF-8')
+    
+    # profs_section = driver.find_element_by_css_selector("#content > ul")
+    profs_section = driver.find_element_by_css_selector("ul.teacher")
+
+    for prof in profs_section.find_elements_by_css_selector("li") :
+        name = prof.find_element_by_css_selector("div.right > dl > dt").text
+        email = prof.find_element_by_css_selector("div.right > dl > dd:nth-child(3)").text[7:]
+        homepage = prof.find_element_by_css_selector("div.right > dl > dd:nth-child(5) > a").get_attribute("href")
+        
+        print("[Crawled]:", name,  email, homepage)
+        f.write("%s,%s,%s\n" % ( name, email, homepage))
+
+    driver.close()
+    f.close()
 
 
 func_list = {'postech': postech_crawl,
