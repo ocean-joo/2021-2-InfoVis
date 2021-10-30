@@ -3,11 +3,11 @@ from selenium import webdriver
 import time
 
 SCROLL_PAUSE_SEC = 2
-CRAWL = 'snu' # snu, postech, kaist, yonsei, korea
+CRAWL = 'kaist' # snu, postech, kaist, yonsei, korea
 
 url_list = {'postech': "http://ai.postech.ac.kr/sub020101",
                 'snu': "https://gsai.snu.ac.kr/ko/portfolio",
-                'kaist':"https://gsai.kaist.ac.kr/?lang=ko",
+                'kaist':"https://gsai.kaist.ac.kr/people/?lang=ko",
                 'yonsei':"",
                 'korea':""}
 
@@ -81,23 +81,26 @@ def postech_crawl(path, output) :
     f.close()
 
 def kaist_crawl(path, output) :
-    
     driver = webdriver.Chrome(executable_path='chromedriver')
     driver.get(url=path)
     driver.implicitly_wait(3)
     f = open(output, 'w')
+    
+    profs_section = driver.find_element_by_class_name("vc_tta-panel-body")
 
-    # profs_section = driver.find_element_by_class_name("wpb_wrapper")
-
-    # for prof in profs_section.find_elements_by_class_name("vc_column-inner") :
-    #     name = prof.find_element_by_css_selector("div.wpb_text_column.wpb_content_element > div > p > span > a > strong").text
-    #     try :
-    #         homepage = prof.find_element_by_css_selector("div.wpb_text_column.wpb_content_element > div > p > span > a").get_attribute("href")
-    #     except :
-    #         homepage = ""
-
-    #     print("[Crawled]:", name, homepage)
-    #     f.write("%s,%s\n" % ( name, homepage))
+    for prof in profs_section.find_elements_by_css_selector("div.wpb_text_column.wpb_content_element") :
+        name = prof.find_element_by_css_selector("div > div > div > p:nth-child(1) > strong").text
+        # email = prof.find_element_by_css_selector("div > div > div > p:nth-child(2) > strong:nth-child(7)").text
+        content = prof.find_element_by_css_selector("div > div > div > p:nth-child(2)").text
+        email_line = content.split("\n")[3]
+        email = email_line[6:]
+        try :
+            homepage = prof.find_element_by_css_selector("div > div > p:nth-child(2) > span > a").get_attribute("href")
+        except :
+            homepage = ""
+        
+        print("[Crawled]:", name,  email, homepage)
+        f.write("%s,%s,%s\n" % ( name, email, homepage))
 
     driver.close()
     f.close()
@@ -116,5 +119,8 @@ func_list = {'postech': postech_crawl,
                 'korea':korea_crawl}
 
 if __name__ == '__main__' :
+    options = webdriver.ChromeOptions()
+    options.add_experimental_option("excludeSwitches", ["enable-logging"])
+
     func = func_list[CRAWL]
     func(url_list[CRAWL], output_list[CRAWL])
