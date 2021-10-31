@@ -8,7 +8,7 @@
 3. Locate chrome driver in your execution path.
 
 ### Frontend
-- Skeleton graph using force directed graph 
+- Skeleton community graph using dummy nodes (id, cluster) and links (source, target, weight)
 ~~~
 $ cd skeleton_graph
 $ yarn start
