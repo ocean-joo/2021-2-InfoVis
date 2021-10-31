@@ -1,6 +1,5 @@
 from selenium import webdriver
-
-CRAWL = 'only_name' # metadata, only_name
+import argparse
 
 url_list = [
     'https://research.com/conference-rankings/computer-science/2021/computer-vision/page/1',
@@ -63,6 +62,17 @@ def crawl(path, mode):
     driver.close()
 
 if __name__ == '__main__' :
+    parser = argparse.ArgumentParser(description='Conference Crawler Argparser')
+    parser.add_argument('--mode', required=True, type=str, help='mode (only_name / metadata)')
+
+    args = parser.parse_args()
+
+    if args.mode not in ['only_name', 'metadata']:
+        print('Should select correct mode')
+        exit(1)
+
+    CRAWL = args.mode
+
     for url in url_list:
         crawl(url, CRAWL)
 
