@@ -10,6 +10,6 @@
 ### Frontend
 - Skeleton community graph using dummy nodes (id, cluster) and links (source, target, weight)
 ~~~
-$ cd skeleton_graph
+$ cd front/skeleton_graph
 $ yarn start
 ~~~
