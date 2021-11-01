@@ -27,6 +27,8 @@ def crawl(path, mode):
         if conf_a_element.text not in conf_dict:
             conference_metadata = {}
 
+            print("[System] " + conf_a_element.text + " Crawling Start")
+
             if mode == 'only_name':
                 conf_dict[conf_a_element.text] = conference_metadata
                 continue
@@ -40,6 +42,13 @@ def crawl(path, mode):
             sub_driver = webdriver.Chrome(executable_path='chromedriver')
             item_url = conf_a_element.get_attribute('href')
             sub_driver.get(url=item_url)
+
+            # Check 500 error
+            try:
+                sub_driver.find_element_by_class_name("conference-details")
+            except:
+                print("[System] Server may down, crawl next instance")
+                continue
 
             conference_details_elements = sub_driver.find_element_by_class_name("conference-details").find_elements_by_css_selector("p")
 
@@ -58,6 +67,8 @@ def crawl(path, mode):
             conf_dict[conf_a_element.text] = conference_metadata
 
             sub_driver.close()
+
+            print("[System] " + conf_a_element.text + " Crawling End")
 
     driver.close()
 
