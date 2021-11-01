@@ -2,12 +2,10 @@ from selenium import webdriver
 import argparse
 
 url_list = [
-    'https://research.com/conference-rankings/computer-science/2021/computer-vision/page/1',
-    'https://research.com/conference-rankings/computer-science/2021/computer-vision/page/2',
-    'https://research.com/conference-rankings/computer-science/2021/machine-learning/page/1',
-    'https://research.com/conference-rankings/computer-science/2021/machine-learning/page/2',
-    'https://research.com/conference-rankings/computer-science/2021/machine-learning/page/3',
-    'https://research.com/conference-rankings/computer-science/2021/computational-linguistics-speech-processing/page/1'
+    'https://research.com/journals-rankings/computer-science/2021/machine-learning/page/1',
+    'https://research.com/journals-rankings/computer-science/2021/machine-learning/page/2',
+    'https://research.com/journals-rankings/computer-science/2021/computer-vision/page/1',
+    'https://research.com/journals-rankings/computer-science/2021/computational-linguistics-speech-processing/page/1'
 ]
 
 output_list = {
@@ -74,7 +72,7 @@ def crawl(path, mode):
     driver.close()
 
 if __name__ == '__main__' :
-    parser = argparse.ArgumentParser(description='Conference Crawler Argparser')
+    parser = argparse.ArgumentParser(description='Journal Crawler Argparser')
     parser.add_argument('--mode', required=True, type=str, help='mode (only_name / metadata)')
 
     args = parser.parse_args()
