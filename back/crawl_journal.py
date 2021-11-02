@@ -90,14 +90,14 @@ if __name__ == '__main__' :
             for jn_name, metadata in sorted(jn_dict.items()):
                 f.write("%s\n" % jn_name)
         else:
-            f.write("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n" %
+            f.write("%s+%s+%s+%s+%s+%s+%s+%s+%s+%s+%s+%s+%s+%s\n" %
                     ("Name","impact_score","jcr_impact_factor","scimago_sjr",\
                     "scopus_citescore","scimago_h_index","research_ranking",\
                     "number_of_top_scientist","documents_by_top_scientist",\
                     "issn","publisher","periodicity","editor_in_chief","website"))
 
             for jn_name, metadata in sorted(jn_dict.items()):
-                f.write("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n" % (jn_name,
+                f.write("%s+%s+%s+%s+%s+%s+%s+%s+%s+%s+%s+%s+%s+%s\n" % (jn_name,
                     metadata['impact_score'], metadata['jcr_impact_factor'], metadata['scimago_sjr'],
                     metadata['scopus_citescore'], metadata['scimago_h_index'], metadata['research_ranking'],
                     metadata['number_of_top_scientist'], metadata['documents_by_top_scientist'], metadata['issn'],

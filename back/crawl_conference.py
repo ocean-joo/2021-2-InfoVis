@@ -93,9 +93,12 @@ if __name__ == '__main__' :
             for conf_name, metadata in sorted(conf_dict.items()):
                 f.write("%s\n" % conf_name)
         else:
-            f.write("Name,H5_index,impact_score,place,date,submission_deadline,website,research_ranking,published_by_top_scientist,contributing_top_scientist\n")
+            f.write("%s+%s+%s+%s+%s+%s+%s+%s+%s+%s\n" %
+                ("Name","H5_index","impact_score","place",
+                "date","submission_deadline","website","research_ranking",
+                "published_by_top_scientist","contributing_top_scientist"))
             for conf_name, metadata in sorted(conf_dict.items()):
-                f.write("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n" % (conf_name,
+                f.write("%s+%s+%s+%s+%s+%s+%s+%s+%s+%s\n" % (conf_name,
                     metadata['h5_index'], metadata['impact_score'], metadata['place'],
                     metadata['date'], metadata['submission_deadline'], metadata['website'],
                     metadata['research_ranking'], metadata['published_by_top_scientist'], metadata['contributing_top_scientist']))
