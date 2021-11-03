@@ -3,7 +3,7 @@ from selenium import webdriver
 import time
 
 SCROLL_PAUSE_SEC = 2
-CRAWL = 'korea' # snu, postech, kaist, yonsei, korea
+CRAWL = 'postech' # snu, postech, kaist, yonsei, korea
 
 url_list = {'postech': "http://ai.postech.ac.kr/sub020101",
                 'snu': "https://gsai.snu.ac.kr/ko/portfolio",
@@ -51,34 +51,28 @@ def snu_crawl(path, output) :
     f.close()
 
 def postech_crawl(path, output) :
-    PROXY = "117.102.78.42:8080"
-    webdriver.DesiredCapabilities.FIREFOX['proxy'] = {
-        "httpProxy": PROXY,
-        "ftpProxy": PROXY,
-        "sslProxy": PROXY,
-        "proxyType": "MANUAL",
-    }
-
     driver = webdriver.Chrome(executable_path='chromedriver')
-    driver.get(url=path)
+    driver.get(path)
+    # f = open(output, 'w')
 
-    f = open(output, 'w')
+    profs_section = driver.find_element_by_class_name("new-list3")
+    print(profs_section.text)
 
-    profs_section = driver.find_elements_by_class_name("new-list3")
+    for prof in profs_section.find_elements_by_css_selector("li") :
+        name = prof.find_element_by_css_selector("div.list-txt > strong").text
+        email = prof.find_element_by_css_selector("div.list-txt > strong").text
+        # #member_mail > img
+        # #member_link > a
+        try :
+            homepage = prof.find_element_by_css_selector("div.list-txt > strong > img.homepage_class").get_attribute("href")
+        except :
+            homepage = ""
 
-    for profs_element in profs_section.find_elements_by_css_selector("li") :
-        for prof in profs_element.find_elements_by_css_selector("d0") :
-            name = prof.find_element_by_css_selector("div.list-txt > strong").text
-            try :
-                homepage = prof.find_element_by_css_selector("div.list-txt > strong > img.homepage_class").get_attribute("href")
-            except :
-                homepage = ""
-
-            print("[Crawled]:", name, homepage)
-            f.write("%s,%s\n" % ( name, homepage))
+        print("[Crawled]:", name, email, homepage)
+        # f.write("%s,%s,%s\n" % ( name, email, homepage))
 
     driver.close()
-    f.close()
+    # f.close()
 
 def kaist_crawl(path, output) :
     driver = webdriver.Chrome(executable_path='chromedriver')
