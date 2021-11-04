@@ -5,13 +5,13 @@ import time
 def crawl(email, output) :
     options = webdriver.ChromeOptions()
     # options.add_argument('--headless')
-    options.add_argument('--no-sandbox')
+    # options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
     options.add_argument("--disable-infobars")
     options.add_argument("--disable-extensions")
     options.add_argument('--disable-blink-features=AutomationControlled')
 
-    # PROXY = "139.99.99.165:8000"
+    # PROXY = "140.227.211.47:8080"
     # webdriver.DesiredCapabilities.CHROME['proxy'] = {
     #     "httpProxy": PROXY,
     #     "ftpProxy": PROXY,
@@ -40,46 +40,34 @@ def crawl(email, output) :
         driver.implicitly_wait(5)
 
         for paper_content in sub_driver.find_elements_by_css_selector("#gs_res_ccl_mid > div") :
+            driver = webdriver.Chrome(executable_path='chromedriver', options=options)
             paper_name = paper_content.find_element_by_css_selector("h3").text
             id = paper_content.get_attribute("data-cid")
             p = paper_content.get_attribute("data-rp")
             bib_url = "https://scholar.google.co.kr/scholar?q="+email+"#d=gs_cit&u=%2Fscholar%3Fq%3Dinfo%3A"+id+"%3Ascholar.google.com%2F%26output%3Dcite%26scirp%3D"+p+"%26hl%3Dko"
             driver.get(bib_url)
             driver.implicitly_wait(5)
-            bibtex_link = driver.find_element_by_css_selector("#gs_citi > a:nth-child(1)").get_attribute("href")
-            driver.get(bibtex_link)
-            driver.implicitly_wait(5)
-            bibtex = parse_bibtex(driver.find_element_by_css_selector("body > pre").text)
 
-            print(bibtex)
-            f.write("%s+%s+%s\n" % (bibtex["title"], bibtex["author"], bibtex["journal"]))
-            driver.delete_all_cookies()
+            try :
+                journal = driver.find_element_by_css_selector("#gs_citt > table > tbody > tr:nth-child(1) > td > div > i").text
+            except :
+                journal = ""
+            _apa = driver.find_element_by_css_selector("#gs_citt > table > tbody > tr:nth-child(1) > td > div").text
+            
+            author, journal = process_apa(_apa)
+            print(_apa)
+            f.write("%s+%s+%s\n" % (paper_name, author, journal))
+            # driver.delete_all_cookies()
+            driver.close()
             
         sub_driver.close()
+        break
 
     f.close()
 
-def parse_bibtex(bib) :
-    bib_json = {}
-    bib_json["journal"] = ""
-    bib_json["author"] = ""
-    bib_json["title"] = ""
-
-    bib_line = bib.splitlines()
-
-    bib_json["type"] = bib_line[0].split("{")[0][1:]
-    for line in bib_line[1:] :
-        index = line.find('=')
-        if index == -1 :
-            continue
-        key, value = line[:index], line[index+1:]
-        if line.endswith(",") :
-            value = value[1:-2]
-        else :
-            value = value[1:-1]
-        bib_json[key.strip()] = value
-    
-    return bib_json
+def process_apa(_apa) :
+    split_apa = _apa.split("\"")
+    return split_apa[0].strip(), split_apa[1].strip()
 
 if __name__ == '__main__' :
     """
