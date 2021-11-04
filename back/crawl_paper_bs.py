@@ -59,5 +59,5 @@ if __name__ == '__main__' :
         TODO: Error handling when specific email does not have paper at all.
     """
     email = "mkang@snu.ac.kr"
-    path = "output/{}/{}.csv".format("snu", "강명주")
+    path = "output/{}_{}.csv".format("snu", "강명주")
     crawl(email, path)
