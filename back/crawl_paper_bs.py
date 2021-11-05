@@ -30,6 +30,7 @@ def crawl(email, output) :
 
             print("[CRAWLED] %s, %s\n" % (paper_name, link))
             f.write("%s+%s\n" % (paper_name, link))
+
     f.close()
 
 
@@ -61,8 +62,6 @@ if __name__ == '__main__' :
         lines = f.readlines()
         for line in lines :
             name, email, _ = line.split(",")
-    
-            email = "mkang@snu.ac.kr"
             path = "output/{}_{}.csv".format(CRAWL_SCHOOL, name)
 
             crawl(email, path) 
