@@ -1,5 +1,8 @@
-import bs4, requests
-import time
+import bs4, time
+import requests
+from requests.auth import HTTPProxyAuth
+
+CRAWL_SCHOOL = 'snu' # snu, postech, kaist, yonsei, korea
 
 def crawl(email, output) :
     header =  {'User-Agent': 'Mozilla/5.0'}
@@ -23,27 +26,10 @@ def crawl(email, output) :
 
         for paper_content in sub_soup.select("#gs_res_ccl_mid > div") :
             paper_name = paper_content.select_one("h3").text
-            id = paper_content["data-cid"]
-            p = paper_content["data-rp"]
+            link = paper_content.select_one("h3 > a").get("href")
 
-            bib_url = "https://scholar.google.co.kr/scholar?q="+email+"#d=gs_cit&u=%2Fscholar%3Fq%3Dinfo%3A"+id+"%3Ascholar.google.com%2F%26output%3Dcite%26scirp%3D"+p+"%26hl%3Dko"
-            result = requests.get(bib_url, headers=header)
-            soup = bs4.BeautifulSoup(result.content, 'html.parser')
-            time.sleep(10)
-
-            try :
-                journal = soup.select_one("#gs_citt > table > tbody > tr:nth-child(1) > td > div > i").text
-            except :
-                journal = ""
-
-            try :
-                _apa = soup.select_one("#gs_citt > table > tbody > tr:nth-child(1) > td > div").text
-                author = process_apa(_apa)
-            except :
-                author = ""
-
-            print("[CRAWLED] %s     %s      %s\n" % (paper_name, author, journal))
-            f.write("%s+%s+%s\n" % (paper_name, author, journal))
+            print("[CRAWLED] %s, %s\n" % (paper_name, link))
+            f.write("%s+%s\n" % (paper_name, link))
     f.close()
 
 
@@ -62,6 +48,21 @@ if __name__ == '__main__' :
         TODO: Complete mechanism feeding email information to crawl function
         TODO: Error handling when specific email does not have paper at all.
     """
-    email = "mkang@snu.ac.kr"
-    path = "output/{}_{}.csv".format("snu", "강명주")
-    crawl(email, path)
+    
+    meta_path_dict =  {'postech': "output/postech_homepage.csv",
+                        'snu': "output/snu_homepage.csv",
+                        'kaist':"output/kaist_homepage.csv",
+                        'yonsei':"output/yousei_homepage.csv",
+                        'korea':"output/korea_homepage.csv"}
+
+    meta = meta_path_dict[CRAWL_SCHOOL]
+    
+    with open(meta, 'r') as f : 
+        lines = f.readlines()
+        for line in lines :
+            name, email, _ = line.split(",")
+    
+            email = "mkang@snu.ac.kr"
+            path = "output/{}_{}.csv".format(CRAWL_SCHOOL, name)
+
+            crawl(email, path) 
