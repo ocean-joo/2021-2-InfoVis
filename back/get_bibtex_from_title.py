@@ -16,7 +16,7 @@ def get_bibtex_and_APA_from_title(target):
     driver.get(url=ss_path)
 
     # Wait for loading page
-    time.sleep(2)
+    time.sleep(5)
 
     # Write title in input
     search_input = driver.find_element_by_class_name("legacy__input")
@@ -47,19 +47,17 @@ def get_bibtex_and_APA_from_title(target):
     # Check only first searched element
     first_element = elements_list[0]
 
-    title_char_list = first_element\
-                .find_element_by_css_selector("a > div > span")\
-                .find_elements_by_css_selector("*")
+    try:
+        title = first_element.find_element_by_class_name("cl-paper-title").text
 
-    title = ""
-
-    # Title split into multiple elements.
-    # We should merge them in one string
-    for title_char_el in title_char_list:
-        title += title_char_el.text
+        if len(title.split('.')) > 1:
+            title = title.split('.')[0]
+    except:
+        driver.close()
+        return "", ""
 
     # If first title is different from target, continue
-    if title.lower() != target.lower().replace(" ", ""):
+    if title.lower() != target.lower():
         print("[System] %s : First element not matched" % target)
         driver.close()
         return "", ""
@@ -100,8 +98,8 @@ if __name__ == '__main__' :
     warnings.filterwarnings('ignore')
 
     for title_file_name in os.listdir('data'):
-        input_path = 'data/' + title_file_name
-        output_path = 'output/bibtex_' + title_file_name
+        input_path = 'data/' + title_file_name        
+        output_path = 'output/{}_bibtex_{}'.format(title_file_name.split('-')[0], title_file_name.split('-')[2])
 
         input_f = open(input_path, 'rt', encoding='utf-16')
         rdr = csv.reader(input_f, delimiter='+')
