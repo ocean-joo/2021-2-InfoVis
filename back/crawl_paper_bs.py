@@ -79,7 +79,10 @@ if __name__ == '__main__' :
     
     with open(meta, 'r') as f : 
         lines = f.readlines()
-        for line in lines :
+        for i, line in enumerate(lines) :
+            # Start crawling from banned point
+            if i<4 :
+                continue
             name, email, _ = line.split(",")
             path = "output/{}_title_{}.csv".format(CRAWL_SCHOOL, name)
 
