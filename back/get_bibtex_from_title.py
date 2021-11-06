@@ -99,7 +99,7 @@ if __name__ == '__main__' :
 
     for title_file_name in os.listdir('data'):
         input_path = 'data/' + title_file_name        
-        output_path = 'output/{}_bibtex_{}'.format(title_file_name.split('-')[0], title_file_name.split('-')[2])
+        output_path = 'output/{}_bibtex_{}'.format(title_file_name.split('_')[0], title_file_name.split('_')[2])
 
         input_f = open(input_path, 'rt', encoding='utf-16')
         rdr = csv.reader(input_f, delimiter='+')
