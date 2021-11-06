@@ -19,8 +19,14 @@ def get_bibtex_and_APA_from_title(target):
     time.sleep(5)
 
     # Write title in input
-    search_input = driver.find_element_by_class_name("legacy__input")
-    search_input.send_keys(target)
+    try:
+        search_input = driver.find_element_by_class_name("legacy__input")
+        search_input.send_keys(target)
+    except:
+        # No result
+        print("[System] %s : Chrome access fail" % target)
+        driver.close()
+        return "", ""
 
     # Click Search button
     search_button = driver.find_element_by_class_name("form-submit__icon-text")
