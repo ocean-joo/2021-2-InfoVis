@@ -1,19 +1,14 @@
 from selenium import webdriver
-import argparse
 import time
+import csv
+import os
+import warnings
 
-title_list = [
-    'ENHANCED EXEMPLAR BASED INPAINTING USING PATCH RATIO',
-    'IMAGE RESTORATION UNDER CAUCHY NOISE WITH SPARSE REPRESENTATION PRIOR AND TOTAL GENERALIZED VARIATION',
-    'Financial series prediction using Attention LSTM',
-    'Curvature-weighted Surface Simplification Algorithm using Vertex-based Geometric Features',
-    'Troubled-Cell Indicator based on Mean Value Property for Hybrid WENO schemes',
-    'Features detection from industrial noisy 3D CT data for reverse engineering',
-    'Simultaneous cartoon and texture image restoration with higher-order regularization'
-]
-
-def get_bibtex_from_title(target):
-    driver = webdriver.Chrome(executable_path='chromedriver')
+def get_bibtex_and_APA_from_title(target):
+    options = webdriver.ChromeOptions()
+    options.add_argument('--headless')
+    options.add_argument('--disable-logging') 
+    driver = webdriver.Chrome(executable_path='chromedriver', options=options)
 
     print("[System] Try to find bibtex of " + target)
 
@@ -21,7 +16,7 @@ def get_bibtex_from_title(target):
     driver.get(url=ss_path)
 
     # Wait for loading page
-    time.sleep(3)
+    time.sleep(2)
 
     # Write title in input
     search_input = driver.find_element_by_class_name("legacy__input")
@@ -32,19 +27,19 @@ def get_bibtex_from_title(target):
     search_button.click()
 
     # Wait for response
-    time.sleep(5)
+    time.sleep(3)
 
     try:
         elements_list = driver.find_elements_by_class_name("cl-paper-row")
     except:
         # No result
         driver.close()
-        return ""
+        return "", ""
 
     # Maybe we don't need to check length of 0?
     if len(elements_list) == 0:
         driver.close()
-        return ""
+        return "", ""
 
     # Check only first searched element
     first_element = elements_list[0]
@@ -63,12 +58,16 @@ def get_bibtex_from_title(target):
     # If first title is different from target, continue
     if title.lower() != target.lower().replace(" ", ""):
         driver.close()
-        return ""
+        return "", ""
 
     # Click cite button (# of buttons are 3 or 4)
-    cite_button = first_element\
-                .find_elements_by_class_name("cl-paper-action__button")[-1]
-    cite_button.click()
+    try:
+        cite_button = first_element\
+                    .find_elements_by_class_name("cl-paper-action__button")[-1]
+        cite_button.click()
+    except:
+        driver.close()
+        return "", ""
 
     # Wait for response
     time.sleep(2)
@@ -76,20 +75,64 @@ def get_bibtex_from_title(target):
     # get bibtex
     bibtex = driver.find_element_by_class_name("formatted-citation--style-bibtex").text
 
+    # Click APA button
+    try:
+        apa_button = driver.find_elements_by_class_name("cite-modal__button")[2]
+        apa_button.click()
+    except:
+        driver.close()
+        return "", ""
+
+    # Wait for response
+    time.sleep(2)
+
+    apa = driver.find_element_by_class_name("formatted-citation--style-apa").text
+
     driver.close()
 
-    return bibtex
+    return bibtex, apa
 
 if __name__ == '__main__' :
-    bibtex_dict = {}
+    warnings.filterwarnings('ignore')
 
-    for title in title_list:
-        bibtex = get_bibtex_from_title(title)
+    for title_file_name in os.listdir('data'):
+        input_path = 'data/' + title_file_name
+        output_path = 'output/bibtex_' + title_file_name
 
-        # Not found
-        if bibtex == "":
-            continue
+        input_f = open(input_path, 'rt', encoding='utf-16')
+        rdr = csv.reader(input_f, delimiter='+')
 
-        bibtex_dict[title] = bibtex
-    
-    print(bibtex_dict)
+        res_f = open(output_path, 'w', encoding='utf-16')
+        wr = csv.writer(res_f, delimiter='+', newline='')
+        wr.writerow(['title', 'author', 'conf_name', 'href', 'year', 'apa'])
+
+        for row in rdr:
+            title = row[0]
+            if len(title.split('] ')) > 1:
+                title = title.split('] ')[1]
+            
+            bibtex, apa = get_bibtex_and_APA_from_title(title)
+
+            # Not found
+            if bibtex == "":
+                continue
+
+            bib_dict = {"title" : title, "href" : row[1], "apa" : apa}
+
+            for bibrow in bibtex.split("\n"):
+                if "author" in bibrow:
+                    bib_dict['author'] = bibrow.split('{')[1].split('}')[0]
+                elif "journal" in bibrow:
+                    bib_dict['conf_name'] = bibrow.split('{')[1].split('}')[0]
+                elif "year" in bibrow:
+                    bib_dict['year'] = bibrow.split('{')[1].split('}')[0]
+
+            # if not journal, continue
+            if "journal" not in bib_dict:
+                continue
+
+            wr.writerow([bib_dict['title'], bib_dict['author'], bib_dict['conf_name'],
+                bib_dict['href'], bib_dict['year'], bib_dict['apa']])
+
+        input_f.close()
+        res_f.close()
