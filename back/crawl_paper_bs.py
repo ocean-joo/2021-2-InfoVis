@@ -18,8 +18,8 @@ def crawl(email, output) :
     except :
         print(soup.contents)
         exit()
-        
-    paper_num = int("".join([c for c in paper_num_str if c.isdigit()]))
+
+    paper_num = int("".join([c for c in paper_num_str.split("(")[0] if c.isdigit()]))
     print("[*] %s -> %d" % (email, paper_num))
 
     time.sleep(5)
