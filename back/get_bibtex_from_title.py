@@ -10,7 +10,7 @@ def get_bibtex_and_APA_from_title(target):
     options.add_argument('--disable-logging') 
     driver = webdriver.Chrome(executable_path='chromedriver', options=options)
 
-    print("[System] Try to find bibtex of " + target)
+    print("[System] %s : Start Crawling" % target)
 
     ss_path = 'https://www.semanticscholar.org/'
     driver.get(url=ss_path)
@@ -28,16 +28,19 @@ def get_bibtex_and_APA_from_title(target):
 
     # Wait for response
     time.sleep(3)
+    print("[System] %s : Search" % target)
 
     try:
         elements_list = driver.find_elements_by_class_name("cl-paper-row")
     except:
         # No result
+        print("[System] %s : No result" % target)
         driver.close()
         return "", ""
 
     # Maybe we don't need to check length of 0?
     if len(elements_list) == 0:
+        print("[System] %s : No result" % target)
         driver.close()
         return "", ""
 
@@ -57,6 +60,7 @@ def get_bibtex_and_APA_from_title(target):
 
     # If first title is different from target, continue
     if title.lower() != target.lower().replace(" ", ""):
+        print("[System] %s : First element not matched" % target)
         driver.close()
         return "", ""
 
@@ -65,28 +69,28 @@ def get_bibtex_and_APA_from_title(target):
         cite_button = first_element\
                     .find_elements_by_class_name("cl-paper-action__button")[-1]
         cite_button.click()
+
+        # Wait for response
+        time.sleep(2)
+        # get bibtex
+        bibtex = driver.find_element_by_class_name("formatted-citation--style-bibtex").text
     except:
+        print("[System] %s : No cite button" % target)
         driver.close()
         return "", ""
-
-    # Wait for response
-    time.sleep(2)
-
-    # get bibtex
-    bibtex = driver.find_element_by_class_name("formatted-citation--style-bibtex").text
 
     # Click APA button
     try:
         apa_button = driver.find_elements_by_class_name("cite-modal__button")[2]
         apa_button.click()
+
+        # Wait for response
+        time.sleep(2)
+        apa = driver.find_element_by_class_name("formatted-citation--style-apa").text
     except:
+        print("[System] %s : No APA button" % target)
         driver.close()
         return "", ""
-
-    # Wait for response
-    time.sleep(2)
-
-    apa = driver.find_element_by_class_name("formatted-citation--style-apa").text
 
     driver.close()
 
@@ -102,8 +106,8 @@ if __name__ == '__main__' :
         input_f = open(input_path, 'rt', encoding='utf-16')
         rdr = csv.reader(input_f, delimiter='+')
 
-        res_f = open(output_path, 'w', encoding='utf-16')
-        wr = csv.writer(res_f, delimiter='+', newline='')
+        res_f = open(output_path, 'w', encoding='utf-16', newline='')
+        wr = csv.writer(res_f, delimiter='+')
         wr.writerow(['title', 'author', 'conf_name', 'href', 'year', 'apa'])
 
         for row in rdr:
@@ -128,8 +132,11 @@ if __name__ == '__main__' :
                     bib_dict['year'] = bibrow.split('{')[1].split('}')[0]
 
             # if not journal, continue
-            if "journal" not in bib_dict:
+            if "conf_name" not in bib_dict:
+                print("[System] %s : Not journal or Conference" % title)
                 continue
+                
+            print("[System] %s : Success!" % title)
 
             wr.writerow([bib_dict['title'], bib_dict['author'], bib_dict['conf_name'],
                 bib_dict['href'], bib_dict['year'], bib_dict['apa']])
