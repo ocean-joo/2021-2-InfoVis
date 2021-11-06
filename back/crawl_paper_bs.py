@@ -12,7 +12,16 @@ def crawl(email, output) :
     soup = bs4.BeautifulSoup(result.content, 'html.parser')
 
     f = open(output, 'w',encoding='UTF-16')
-    paper_num = int(soup.select_one("#gs_ab_md > div").text.split("(")[0][7:-2])
+    
+    try :
+        paper_num_str = soup.select_one("#gs_ab_md > div").text
+    except :
+        print(soup.contents)
+        exit()
+        
+    paper_num = int("".join([c for c in paper_num_str if c.isdigit()]))
+    print("[*] %s -> %d" % (email, paper_num))
+
     time.sleep(5)
 
     for i in range(0, int((paper_num)/10)+1) :
@@ -24,9 +33,19 @@ def crawl(email, output) :
         sub_result = requests.get(sub_url, headers=header)
         sub_soup = bs4.BeautifulSoup(sub_result.content, 'html.parser')
 
+        time.sleep(3)
+
+        if len(sub_soup.select("#gs_res_ccl_mid > div")) == 0 :
+            print("MAYBE BANNED")
+
         for paper_content in sub_soup.select("#gs_res_ccl_mid > div") :
-            paper_name = paper_content.select_one("h3").text
-            link = paper_content.select_one("h3 > a").get("href")
+            try :
+                paper_name = paper_content.select_one("h3").text
+                # if paper_name.lower().startswith("[pdf]") :
+                #     paper_name = paper_name[6:]
+                link = paper_content.select_one("h3 > a").get("href")
+            except :
+                print("[FAILED] %s\n" % paper_name)
 
             print("[CRAWLED] %s, %s\n" % (paper_name, link))
             f.write("%s+%s\n" % (paper_name, link))
@@ -62,6 +81,6 @@ if __name__ == '__main__' :
         lines = f.readlines()
         for line in lines :
             name, email, _ = line.split(",")
-            path = "output/{}_{}.csv".format(CRAWL_SCHOOL, name)
+            path = "output/{}_title_{}.csv".format(CRAWL_SCHOOL, name)
 
             crawl(email, path) 
