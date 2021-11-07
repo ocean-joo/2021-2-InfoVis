@@ -6,7 +6,8 @@ url_list = [
     'https://research.com/conference-rankings/computer-science/2021/computer-vision/page/2',
     'https://research.com/conference-rankings/computer-science/2021/machine-learning/page/1',
     'https://research.com/conference-rankings/computer-science/2021/machine-learning/page/2',
-    'https://research.com/conference-rankings/computer-science/2021/machine-learning/page/3'
+    'https://research.com/conference-rankings/computer-science/2021/machine-learning/page/3',
+    'https://research.com/conference-rankings/computer-science/2021/computational-linguistics-speech-processing/page/1'
 ]
 
 output_list = {
@@ -27,6 +28,8 @@ def crawl(path, mode):
         if conf_a_element.text not in conf_dict:
             conference_metadata = {}
 
+            print("[System] " + conf_a_element.text + " Crawling Start")
+
             if mode == 'only_name':
                 conf_dict[conf_a_element.text] = conference_metadata
                 continue
@@ -40,6 +43,13 @@ def crawl(path, mode):
             sub_driver = webdriver.Chrome(executable_path='chromedriver')
             item_url = conf_a_element.get_attribute('href')
             sub_driver.get(url=item_url)
+
+            # Check 500 error
+            try:
+                sub_driver.find_element_by_class_name("conference-details")
+            except:
+                print("[System] Server may down, crawl next instance")
+                continue
 
             conference_details_elements = sub_driver.find_element_by_class_name("conference-details").find_elements_by_css_selector("p")
 
@@ -59,6 +69,8 @@ def crawl(path, mode):
 
             sub_driver.close()
 
+            print("[System] " + conf_a_element.text + " Crawling End")
+
     driver.close()
 
 if __name__ == '__main__' :
@@ -76,14 +88,17 @@ if __name__ == '__main__' :
     for url in url_list:
         crawl(url, CRAWL)
 
-    with open(output_list[CRAWL], 'w') as f:
+    with open(output_list[CRAWL], 'w', -1, "utf-8") as f:
         if CRAWL == 'only_name':
             for conf_name, metadata in sorted(conf_dict.items()):
                 f.write("%s\n" % conf_name)
         else:
-            f.write("Name,H5_index,impact_score,place,date,submission_deadline,website,research_ranking,published_by_top_scientist,contributing_top_scientist\n")
+            f.write("%s+%s+%s+%s+%s+%s+%s+%s+%s+%s\n" %
+                ("Name","H5_index","impact_score","place",
+                "date","submission_deadline","website","research_ranking",
+                "published_by_top_scientist","contributing_top_scientist"))
             for conf_name, metadata in sorted(conf_dict.items()):
-                f.write("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n" % (conf_name,
+                f.write("%s+%s+%s+%s+%s+%s+%s+%s+%s+%s\n" % (conf_name,
                     metadata['h5_index'], metadata['impact_score'], metadata['place'],
                     metadata['date'], metadata['submission_deadline'], metadata['website'],
                     metadata['research_ranking'], metadata['published_by_top_scientist'], metadata['contributing_top_scientist']))
