@@ -2,13 +2,21 @@ import csv
 import os
 import json
 
+# parameter
+W_THR = 0.01
+
+# will be dumped into json
 conf_list = []
 lab_list = []
-adj_matrix = []
+link_list = []
+
 school_list = ["snu", "kaist", "postech", "yonsei", "korea"]
+lab_in_conf_cnt = [] # lab_in_conf_cnt[A][B] : how many paper lab A published on conference B.
+adj_matrix = [] # adj_matrix[A][B] : weight, common conference for lab A and lab B
 
 if __name__ == '__main__' :
-    conf_idx = 0
+    lab_id_idx = 0
+    conf_id_idx = 0
             
     with open('output/conf_csv/conf_with_metadata.csv', 'rt', encoding='utf-8') as input_f:
         rdr = csv.reader(input_f, delimiter='+')
@@ -16,28 +24,39 @@ if __name__ == '__main__' :
         # Remove first line
         next(rdr)
         for row in rdr:
-            new_conf = {"id" : str(conf_idx), "name" : row[0], "impact_score" : float(row[2])}
+            new_conf = {"id" : str(conf_id_idx), "name" : row[0], "impact_score" : float(row[2])}
             conf_list.append(new_conf)
-            conf_idx += 1
+            conf_id_idx += 1
     
     for school in school_list:
         lab_info_file = 'output/lab_csv/{}_homepage.csv'.format(school)
         with open(lab_info_file, 'rt', encoding='utf-8') as input_f:
             rdr = csv.reader(input_f, delimiter=',')
+            for row in rdr:
+                lab_el = {}
+                lab_el["id"] = lab_id_idx
+                lab_el["prof_name"] = row[0]
+                lab_el["email"] = row[1]
+                lab_el["href"] = row[2]
 
-    for bibtex_file in os.listdir('output/bibtex_csv'):
-        if len(bibtex_file.split('.')) == 1 or bibtex_file.split('.')[1] != "csv":
-            continue
+                # TODO
+                # lab_el["name"]
+                # lab_el["description"]
 
-        with open('output/bibtex_csv/' + bibtex_file, 'rt', encoding='utf-16') as input_f:
+                lab_list.append(lab_el)
+                lab_id_idx += 1
+
+    for lab in lab_list:
+        bibtex_file = 'output/bibtex_csv/{}_bibtex_{}.csv'.format(lab["school"], lab["prof_name"])
+        with open(bibtex_file, 'rt', encoding='utf-16') as input_f:
             conf_num_list = [0 for _ in range(len(conf_list))]
-
-            rdr = csv.reader(input_f, delimiter='+')
-
             paper_list = []
 
+            rdr = csv.reader(input_f, delimiter='+')
             # Remove first line
             next(rdr)
+
+            # TODO : should separate top 1000 conf and total paper
             for row in rdr:
                 conf_in_paper = row[2]
                 for conf_idx, conf_dict in enumerate(conf_list):
@@ -45,59 +64,48 @@ if __name__ == '__main__' :
                         paper_list.append({"title" : row[0], "conf_id" : conf_idx, "href" : row[3], "year" : row[4], "apa" : row[5]})
                         conf_num_list[int(conf_dict["id"])] += 1
 
-            school_name = bibtex_file.split('_')[0]
-            prof_name = bibtex_file.split('_')[-1].split('.')[0]
-            lab_list[prof_name] = {"conf_num_list" : conf_num_list, "total_paper_num" : len(paper_list), "school_name" : school_name, "paper_list" : paper_list}
-    
-    for lab_a in lab_list:
+            lab["total_paper_num"] = len(paper_list)
+            lab["paper"] = paper_list
+
+            lab_in_conf_cnt.append(conf_num_list)
+
+    for (a_id, lab_a) in enumerate(lab_list):
         lab_a_adj = [{"value" : 0, "common_conf" : {}} for _ in range(len(lab_list))]
-        for (lab_b_idx, lab_b) in enumerate(lab_list):
-            for conf_idx in range(len(conf_list)):
-                if lab_list[lab_a]["conf_num_list"][conf_idx] > 0 and lab_list[lab_b]["conf_num_list"][conf_idx] > 0:
-                    lab_a_ratio = lab_list[lab_a]["conf_num_list"][conf_idx] / lab_list[lab_a]["total_paper_num"]
-                    lab_b_ratio = lab_list[lab_b]["conf_num_list"][conf_idx] / lab_list[lab_b]["total_paper_num"]
-                    lab_a_adj[lab_b_idx]["value"] += lab_a_ratio * lab_b_ratio
-                    lab_a_adj[lab_b_idx]["common_conf"][conf_idx] = [lab_list[lab_a]["conf_num_list"][conf_idx], lab_list[lab_b]["conf_num_list"][conf_idx]]
+        for (b_id, lab_b) in enumerate(lab_list):
+            for (conf_id, conf) in enumerate(lab_list):
+                if lab_in_conf_cnt[a_id][conf_id] > 0 and lab_in_conf_cnt[b_id][conf_id] > 0:
+                    lab_a_ratio = lab_in_conf_cnt[a_id][conf_id] / lab_a["total_paper_num"]
+                    lab_b_ratio = lab_in_conf_cnt[b_id][conf_id] / lab_b["total_paper_num"]
+                    lab_a_adj[b_id]["value"] += lab_a_ratio * lab_b_ratio
+                    lab_a_adj[b_id]["common_conf"][conf_idx] = [lab_in_conf_cnt[a_id][conf_id], lab_in_conf_cnt[b_id][conf_id]]
         
         adj_matrix.append(lab_a_adj)
 
     ### json encoding
-    lab_json_list = []
-    link_list = []
-
-    for (lab_idx, prof_name) in enumerate(lab_list):
-        new_node = {}
-        new_node["id"] = str(lab_idx)
-        new_node["name"] = prof_name
-        new_node["school"] = school_list.index(lab_list[prof_name]["school_name"])
-        new_node["description"] = "" # TODO
-        new_node["total_paper_num"] = lab_list[prof_name]["total_paper_num"]
-        new_node["href"] = "" # TODO
-        new_node["paper"] = lab_list[prof_name]["paper_list"]
-        lab_json_list.append(new_node)
-
-        for (a_b_adj_idx, a_b_adj) in enumerate(adj_matrix[lab_idx]):
-            if a_b_adj_idx <= lab_idx:
+    for (a_id, lab_a) in enumerate(lab_list):
+        for (b_id, lab_b) in enumerate(lab_list):
+            if a_id >= b_id:
                 continue
-            if a_b_adj["value"] > 0.01:
+            
+            if adj_matrix[a_id][b_id]["value"] > W_THR:
                 new_link = {}
-                new_link["id"] = str(lab_idx) + "-" + str(a_b_adj_idx)
-                new_link["source"] = lab_idx
-                new_link["target"] = a_b_adj_idx
+                new_link["id"] = str(a_id) + "-" + str(b_id)
+                new_link["source"] = a_id
+                new_link["target"] = b_id
                 # TODO : scale weight
-                new_link["weight"] = round(a_b_adj["value"] * 100, 2)
+                new_link["weight"] = round(adj_matrix[a_id][b_id]["value"] * 100, 2)
 
                 common_conf = []
 
-                for conf_idx in a_b_adj["common_conf"]:
-                    common_conf.append({"conf_id" : conf_idx, "source_num" : a_b_adj["common_conf"][conf_idx][0], "target_num" : a_b_adj["common_conf"][conf_idx][1]})
+                for conf_idx in adj_matrix[a_id][b_id]["common_conf"]:
+                    common_conf.append({"conf_id" : conf_idx, "source_num" : adj_matrix[a_id][b_id]["common_conf"][conf_idx][0], "target_num" : adj_matrix[a_id][b_id]["common_conf"][conf_idx][1]})
                 
                 new_link["common_conf"] = common_conf
                 
                 link_list.append(new_link)
 
     with open('output/json/lab.json', 'w', encoding='utf-8') as lab_json_file:
-        json.dump(lab_json_list, lab_json_file, ensure_ascii=False)
+        json.dump(lab_list, lab_json_file, ensure_ascii=False)
 
     with open('output/json/link.json', 'w', encoding='utf-8') as link_json_file:
         json.dump(link_list, link_json_file, ensure_ascii=False)
