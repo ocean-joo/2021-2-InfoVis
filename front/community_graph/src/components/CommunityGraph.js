@@ -1,8 +1,10 @@
 import React, { useRef, useEffect } from "react";
 import * as d3 from "d3";
 
-// import graph from "../data/graph.json"
 import graph from "../data/weight_0.01.json"
+import link from "../data/link.json"
+import conf from "../data/conf.json"
+import lab from "../data/lab.json"
 
 const CommunityGraph = (props) => {
   const comGraph = useRef(null);
@@ -32,9 +34,9 @@ const CommunityGraph = (props) => {
     const scaleFactor = 1.2;
     var polygon, centroid;
     var valueline = d3.line()
-                      .x(function(d) { return d[0]; })
-                      .y(function(d) { return d[1]; })
-                      .curve(d3.curveCatmullRomClosed);
+      .x(function (d) { return d[0]; })
+      .y(function (d) { return d[1]; })
+      .curve(d3.curveCatmullRomClosed);
 
     const z = d3.scaleOrdinal(d3.schemeCategory10);
 
@@ -108,41 +110,41 @@ const CommunityGraph = (props) => {
 
     // link popup 
     var div = d3.select('body')
-      .append("div")	
-      .attr("class", "tooltip")				
+      .append("div")
+      .attr("class", "tooltip")
       .style("opacity", 0);
 
     // for grouping
     var groups = svg.append('g')
-                    .attr('class', 'groups');
-    
-    var groupIds = Array.from(new Set(nodes.map(function(n) { return +n.cluster; })))
-                    .map( function (groupId) {
-                      return {
-                        groupId : groupId,
-                        count : nodes.filter(function(n) { return +n.cluster == groupId; }).length
-                      };
-                    });
+      .attr('class', 'groups');
+
+    var groupIds = Array.from(new Set(nodes.map(function (n) { return +n.cluster; })))
+      .map(function (groupId) {
+        return {
+          groupId: groupId,
+          count: nodes.filter(function (n) { return +n.cluster == groupId; }).length
+        };
+      });
 
     // console.log('groupIds', groupIds);
 
     var paths = groups.selectAll('.path_placeholder')
-                      .data(groupIds, function(d) {return +d})
-                      .enter()
-                      .append('g')
-                      .attr('class', 'path_placeholder')
-                      .append('path')
-                      .attr('stroke', d => z(d))
-                      .attr('fill', d => z(d))
-                      .attr('opacity', 0)
-                      .on('click', cluster_clicked);
-        
+      .data(groupIds, function (d) { return +d })
+      .enter()
+      .append('g')
+      .attr('class', 'path_placeholder')
+      .append('path')
+      .attr('stroke', d => z(d))
+      .attr('fill', d => z(d))
+      .attr('opacity', 0)
+      .on('click', cluster_clicked);
+
     paths
       .transition()
       .duration(200)
       .attr('opacity', 1);
 
-    
+
     // link
     let link = svg.selectAll('line')
       .data(links)
@@ -154,7 +156,7 @@ const CommunityGraph = (props) => {
       .style('stroke-width', '1px')  
       .attr('opacity', 0)    
       .on('click', link_clicked);
-      // .on('click', node_clicked);
+    // .on('click', node_clicked);
 
     // nodes
     const circles = svg.append('g')
@@ -162,30 +164,30 @@ const CommunityGraph = (props) => {
       .selectAll('.circle')
       .data(d => d)
       .enter().append('circle')
-        .attr('r', d => d.r)
-        .attr('fill', d => z(d.cluster))
-        .attr('stroke', 'black')
-        .attr('stroke-width', 0.3)
-        .attr('opacity', 0)   // initially invisible
-        .call(d3.drag()
-        .on('start', function(event, d) {
+      .attr('r', d => d.r)
+      .attr('fill', d => z(d.cluster))
+      .attr('stroke', 'black')
+      .attr('stroke-width', 0.3)
+      .attr('opacity', 0)   // initially invisible
+      .call(d3.drag()
+        .on('start', function (event, d) {
           if (!event.active) simulation.alphaTarget(0.3).restart();
           d.fx = d.x;
           d.fy = d.y;
         })
-        .on('drag', function(event, d) {
+        .on('drag', function (event, d) {
           d.fx = event.x;
           d.fy = event.y;
         })
-        .on('end', function(event, d) {
+        .on('end', function (event, d) {
           if (!event.active) simulation.alphaTarget(0);
           d.fx = null;
           d.fy = null;
         })
-        )
-        .on('click', node_clicked);
+      )
+      .on('click', node_clicked);
 
-    
+
     const simulation = d3.forceSimulation(nodes)
       .nodes(nodes)
       .velocityDecay(0.2)
@@ -193,17 +195,17 @@ const CommunityGraph = (props) => {
       .force('collide', collide)
       .force('link', d3.forceLink())
       .on('tick', ticked);
-  
+
     simulation.force('link')
       .links(graph.links)
-      .distance(function(d) {return d.weight*2;}).strength(0.1);
-      // .distance([85]);
-  
+      .distance(function (d) { return d.weight * 2; }).strength(0.1);
+    // .distance([85]);
+
 
     // helper functions
     function cluster_clicked(event, d) {
       var node;
-      nodes.forEach(function(n) {
+      nodes.forEach(function (n) {
         // TODO : lighter? 
         if (n.cluster == d.groupId) {
           node = n;
@@ -214,23 +216,23 @@ const CommunityGraph = (props) => {
 
     function link_clicked(event, d) {
       if (d && link_clicked !== d) {
-        div.transition()		
-          .duration(200)		
-          .style("opacity", .9);	
+        div.transition()
+          .duration(200)
+          .style("opacity", .9);
 
         div.html(d.id + "<br/>" + d.source_lab + "<br/>" + d.target_lab)
-          .style("left", (event.pageX) + "px")		
+          .style("left", (event.pageX) + "px")
           .style("top", (event.pageY - 28) + "px");
 
         link_clicked = d;
       } else {
-        div.transition()  
-        .duration(500)
-        .style("opacity", 0);
-    
+        div.transition()
+          .duration(500)
+          .style("opacity", 0);
+
         link_clicked = null;
       }
-      
+
     }
 
     function node_clicked(event, d) {
@@ -239,28 +241,27 @@ const CommunityGraph = (props) => {
       // they are magic numbers...
       const x_offset = 120;
       const y_offset = 100;
-  
+
       if (d && centered !== d) {
         x = d.x;
         y = d.y;
         k = 4;
         centered = d;
 
-      groups.transition()
-        .attr('opacity', 0);
+        groups.transition()
+          .attr('opacity', 0);
 
-      circles.transition()
-      .duration(dur)
-      .attr('opacity', 1)
-      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + (-x-x_offset) + "," + (-y-y_offset) + ")")
-  
-      circles.classed('active', centered && function(d) { return d === centered; });
-      
-
-      link.transition()
+        circles.transition()
           .duration(dur)
           .attr('opacity', 1)
-          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + (-x-x_offset) + "," + (-y-y_offset) + ")");    
+          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + (-x - x_offset) + "," + (-y - y_offset) + ")")
+
+        circles.classed('active', centered && function (d) { return d === centered; });
+
+        link.transition()
+          .duration(dur)
+          .attr('opacity', 1)
+          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + (-x - x_offset) + "," + (-y - y_offset) + ")");
 
       // TODO : thicker stroke for the links in d's cluster
 
@@ -271,25 +272,25 @@ const CommunityGraph = (props) => {
         k = 1;
         centered = null;
 
-          
+
         groups.transition()
           .duration(dur)
           .attr('opacity', 1);
 
         circles.transition()
-        .duration(dur)
-        .attr('opacity', 0)
-        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + (-x-x_offset) + "," + (-y-y_offset) + ")")
-      
-        circles.classed('active', centered && function(d) { return d === centered; });
+          .duration(dur)
+          .attr('opacity', 0)
+          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + (-x - x_offset) + "," + (-y - y_offset) + ")")
+
+        circles.classed('active', centered && function (d) { return d === centered; });
 
         link.transition()
-            .duration(dur)
-            .attr('opacity', 0)
-            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + (-x-x_offset) + "," + (-y-y_offset) + ")");    
-    
+          .duration(dur)
+          .attr('opacity', 0)
+          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + (-x - x_offset) + "," + (-y - y_offset) + ")");
+
       }
-      div.transition()  
+      div.transition()
         .duration(dur)
         .style("opacity", 0);
 
@@ -321,7 +322,7 @@ const CommunityGraph = (props) => {
         .attr('y1', d => d.source.y)
         .attr('x2', d => d.target.x)
         .attr('y2', d => d.target.y);
-  
+
       circles
         .attr('cx', d => d.x)
         .attr('cy', d => d.y);
@@ -347,13 +348,13 @@ const CommunityGraph = (props) => {
         }
       });
     }
-  
+
     function collide(alpha) {
       const quadtree = d3.quadtree()
         .x(d => d.x)
         .y(d => d.y)
         .addAll(nodes);
-  
+
       nodes.forEach((d) => {
         const r = d.r + maxRadius + Math.max(padding, clusterPadding);
         const nx1 = d.x - r;
@@ -379,29 +380,29 @@ const CommunityGraph = (props) => {
       });
     }
 
-    var polygonGenerator = function(groupId) {
+    var polygonGenerator = function (groupId) {
       var node_coords = circles
-                          .data()
-                          .filter(function(d) { return d.cluster == groupId.groupId; })
-                          .map(function(d) { return [d.x, d.y];});
+        .data()
+        .filter(function (d) { return d.cluster == groupId.groupId; })
+        .map(function (d) { return [d.x, d.y]; });
       return d3.polygonHull(node_coords);
       // return roundedHull(d3.polygonHull(node_coords));
     }
 
     function updateGroups() {
-      groupIds.forEach( function(groupId) {
+      groupIds.forEach(function (groupId) {
         var path = paths.filter(function (d) { return d == groupId; })
-                        .attr('transform', 'scale(1) translate(0,0)')
-                        .attr('d', function(d) {
-                          polygon = polygonGenerator(d);
-                          centroid = d3.polygonCentroid(polygon);
+          .attr('transform', 'scale(1) translate(0,0)')
+          .attr('d', function (d) {
+            polygon = polygonGenerator(d);
+            centroid = d3.polygonCentroid(polygon);
 
-                          return valueline(
-                            polygon.map(function(point) {
-                              return [ point[0] - centroid[0], point[1] - centroid[1] ];
-                            })
-                          );
-                        });
+            return valueline(
+              polygon.map(function (point) {
+                return [point[0] - centroid[0], point[1] - centroid[1]];
+              })
+            );
+          });
         d3.select(path.node().parentNode)
           .attr('transform', 'translate(' + centroid[0] + ',' + centroid[1] + `) scale(` + scaleFactor + ')')
       })
@@ -413,10 +414,10 @@ const CommunityGraph = (props) => {
     <div>
       <svg ref={comGraph} width={width} height={height}>
       </svg>
-      <svg ref={sideBar} width={sideBarWidth} height={sideBarHeight}> 
-			</svg>
+      <svg ref={sideBar} width={sideBarWidth} height={sideBarHeight}>
+      </svg>
 
-    </div>    
+    </div>
   )
 };
 

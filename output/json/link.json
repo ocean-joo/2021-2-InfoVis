@@ -1,0 +1,80 @@
+[
+    {
+        "id": "12-21",
+        "source": 12,
+        "target": 21,
+        "weight": 25.0,
+        "common_conf": [
+            {
+                "conf_id": 564,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "27-57",
+        "source": 27,
+        "target": 57,
+        "weight": 1.96,
+        "common_conf": [
+            {
+                "conf_id": 564,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "29-32",
+        "source": 29,
+        "target": 32,
+        "weight": 1.67,
+        "common_conf": [
+            {
+                "conf_id": 564,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "32-33",
+        "source": 32,
+        "target": 33,
+        "weight": 2.08,
+        "common_conf": [
+            {
+                "conf_id": 564,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "32-35",
+        "source": 32,
+        "target": 35,
+        "weight": 1.01,
+        "common_conf": [
+            {
+                "conf_id": 564,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "32-56",
+        "source": 32,
+        "target": 56,
+        "weight": 2.38,
+        "common_conf": [
+            {
+                "conf_id": 564,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    }
+]
