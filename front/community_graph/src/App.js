@@ -1,6 +1,5 @@
 import './App.css';
 import CommunityGraph from "./components/CommunityGraph";
-// import CommunityGraph from "./components/CommunityGraph_copy";
 
 function App() {
 
