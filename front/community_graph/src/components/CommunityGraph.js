@@ -73,10 +73,11 @@ const CommunityGraph = (props) => {
       .attr('width', sideBarWidth)
       .attr('transform', `translate(10,0)`);
 
+    // TODO : Add paper info
     var text = barSvg
       .selectAll('text')
-      // [id, name]
-      .data(['', ''])
+      // [name, school, prof_name, email, description, href]
+      .data(['', '', '', '', '', ''])
       .enter()
       .append('text')
       .text(function (d) {
@@ -296,12 +297,12 @@ const CommunityGraph = (props) => {
         .style("opacity", 0);
 
       text
-        .data([d.id, d.name])
+        .data([d.name, d.school, d.prof_name, d.email, d.desciption, d.href])
         .text(function (d) {
           return d;
         })
         .attr("x", function (d, i) {
-          return 30;
+          return 150;
         })
         .attr("y", function (d, i) {
           return 30 * (i + 1);

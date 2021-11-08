@@ -1,14 +1,4286 @@
 [
     {
+        "id": "0-7",
+        "source": 0,
+        "target": 7,
+        "weight": 14.29,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "0-19",
+        "source": 0,
+        "target": 19,
+        "weight": 5.49,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 394,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 5
+            }
+        ]
+    },
+    {
+        "id": "0-21",
+        "source": 0,
+        "target": 21,
+        "weight": 7.14,
+        "common_conf": [
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "0-22",
+        "source": 0,
+        "target": 22,
+        "weight": 1.1,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "0-23",
+        "source": 0,
+        "target": 23,
+        "weight": 9.87,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 6
+            },
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 3
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 37
+            },
+            {
+                "conf_id": 537,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "0-29",
+        "source": 0,
+        "target": 29,
+        "weight": 2.14,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "0-32",
+        "source": 0,
+        "target": 32,
+        "weight": 9.52,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "0-35",
+        "source": 0,
+        "target": 35,
+        "weight": 4.11,
+        "common_conf": [
+            {
+                "conf_id": 97,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 4
+            },
+            {
+                "conf_id": 394,
+                "source_num": 1,
+                "target_num": 3
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 11
+            }
+        ]
+    },
+    {
+        "id": "0-38",
+        "source": 0,
+        "target": 38,
+        "weight": 6.9,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 3
+            },
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 23
+            }
+        ]
+    },
+    {
+        "id": "0-40",
+        "source": 0,
+        "target": 40,
+        "weight": 13.19,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 6
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "0-45",
+        "source": 0,
+        "target": 45,
+        "weight": 5.49,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "0-50",
+        "source": 0,
+        "target": 50,
+        "weight": 10.0,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 3
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "0-52",
+        "source": 0,
+        "target": 52,
+        "weight": 14.29,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "0-57",
+        "source": 0,
+        "target": 57,
+        "weight": 4.2,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "0-59",
+        "source": 0,
+        "target": 59,
+        "weight": 8.93,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "0-68",
+        "source": 0,
+        "target": 68,
+        "weight": 14.29,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "0-74",
+        "source": 0,
+        "target": 74,
+        "weight": 9.52,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "0-75",
+        "source": 0,
+        "target": 75,
+        "weight": 4.76,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "0-80",
+        "source": 0,
+        "target": 80,
+        "weight": 3.43,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 10
+            }
+        ]
+    },
+    {
+        "id": "2-5",
+        "source": 2,
+        "target": 5,
+        "weight": 3.34,
+        "common_conf": [
+            {
+                "conf_id": 125,
+                "source_num": 1,
+                "target_num": 15
+            },
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "2-17",
+        "source": 2,
+        "target": 17,
+        "weight": 17.65,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "2-18",
+        "source": 2,
+        "target": 18,
+        "weight": 1.47,
+        "common_conf": [
+            {
+                "conf_id": 125,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "2-19",
+        "source": 2,
+        "target": 19,
+        "weight": 1.13,
+        "common_conf": [
+            {
+                "conf_id": 125,
+                "source_num": 1,
+                "target_num": 5
+            }
+        ]
+    },
+    {
+        "id": "2-22",
+        "source": 2,
+        "target": 22,
+        "weight": 3.62,
+        "common_conf": [
+            {
+                "conf_id": 90,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "2-23",
+        "source": 2,
+        "target": 23,
+        "weight": 4.5,
+        "common_conf": [
+            {
+                "conf_id": 125,
+                "source_num": 1,
+                "target_num": 4
+            },
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 8
+            }
+        ]
+    },
+    {
+        "id": "2-26",
+        "source": 2,
+        "target": 26,
+        "weight": 3.92,
+        "common_conf": [
+            {
+                "conf_id": 398,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "2-27",
+        "source": 2,
+        "target": 27,
+        "weight": 11.76,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "2-33",
+        "source": 2,
+        "target": 33,
+        "weight": 12.13,
+        "common_conf": [
+            {
+                "conf_id": 4,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 84,
+                "source_num": 2,
+                "target_num": 2
+            },
+            {
+                "conf_id": 318,
+                "source_num": 2,
+                "target_num": 2
+            },
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "2-34",
+        "source": 2,
+        "target": 34,
+        "weight": 35.29,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "2-35",
+        "source": 2,
+        "target": 35,
+        "weight": 6.95,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 13
+            }
+        ]
+    },
+    {
+        "id": "2-36",
+        "source": 2,
+        "target": 36,
+        "weight": 10.2,
+        "common_conf": [
+            {
+                "conf_id": 84,
+                "source_num": 2,
+                "target_num": 3
+            },
+            {
+                "conf_id": 318,
+                "source_num": 2,
+                "target_num": 4
+            },
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "2-39",
+        "source": 2,
+        "target": 39,
+        "weight": 5.88,
+        "common_conf": [
+            {
+                "conf_id": 125,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "2-41",
+        "source": 2,
+        "target": 41,
+        "weight": 35.29,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "2-43",
+        "source": 2,
+        "target": 43,
+        "weight": 35.29,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "2-45",
+        "source": 2,
+        "target": 45,
+        "weight": 10.86,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "2-47",
+        "source": 2,
+        "target": 47,
+        "weight": 6.72,
+        "common_conf": [
+            {
+                "conf_id": 84,
+                "source_num": 2,
+                "target_num": 2
+            },
+            {
+                "conf_id": 318,
+                "source_num": 2,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "2-50",
+        "source": 2,
+        "target": 50,
+        "weight": 3.53,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "2-56",
+        "source": 2,
+        "target": 56,
+        "weight": 7.98,
+        "common_conf": [
+            {
+                "conf_id": 318,
+                "source_num": 2,
+                "target_num": 4
+            },
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 5
+            }
+        ]
+    },
+    {
+        "id": "2-58",
+        "source": 2,
+        "target": 58,
+        "weight": 8.82,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "2-62",
+        "source": 2,
+        "target": 62,
+        "weight": 21.18,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "2-64",
+        "source": 2,
+        "target": 64,
+        "weight": 18.57,
+        "common_conf": [
+            {
+                "conf_id": 4,
+                "source_num": 1,
+                "target_num": 4
+            },
+            {
+                "conf_id": 7,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 90,
+                "source_num": 2,
+                "target_num": 3
+            },
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 15
+            }
+        ]
+    },
+    {
+        "id": "2-69",
+        "source": 2,
+        "target": 69,
+        "weight": 17.65,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "2-72",
+        "source": 2,
+        "target": 72,
+        "weight": 35.29,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "2-77",
+        "source": 2,
+        "target": 77,
+        "weight": 4.41,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "2-79",
+        "source": 2,
+        "target": 79,
+        "weight": 18.75,
+        "common_conf": [
+            {
+                "conf_id": 84,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 318,
+                "source_num": 2,
+                "target_num": 3
+            },
+            {
+                "conf_id": 398,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 7
+            }
+        ]
+    },
+    {
+        "id": "2-81",
+        "source": 2,
+        "target": 81,
+        "weight": 11.76,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "5-7",
+        "source": 5,
+        "target": 7,
+        "weight": 2.7,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "5-8",
+        "source": 5,
+        "target": 8,
+        "weight": 15.42,
+        "common_conf": [
+            {
+                "conf_id": 125,
+                "source_num": 15,
+                "target_num": 2
+            },
+            {
+                "conf_id": 215,
+                "source_num": 5,
+                "target_num": 8
+            },
+            {
+                "conf_id": 379,
+                "source_num": 9,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "5-9",
+        "source": 5,
+        "target": 9,
+        "weight": 8.76,
+        "common_conf": [
+            {
+                "conf_id": 125,
+                "source_num": 15,
+                "target_num": 1
+            },
+            {
+                "conf_id": 215,
+                "source_num": 5,
+                "target_num": 2
+            },
+            {
+                "conf_id": 379,
+                "source_num": 9,
+                "target_num": 7
+            },
+            {
+                "conf_id": 404,
+                "source_num": 2,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "5-17",
+        "source": 5,
+        "target": 17,
+        "weight": 1.35,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "5-18",
+        "source": 5,
+        "target": 18,
+        "weight": 16.22,
+        "common_conf": [
+            {
+                "conf_id": 125,
+                "source_num": 15,
+                "target_num": 1
+            },
+            {
+                "conf_id": 379,
+                "source_num": 9,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "5-19",
+        "source": 5,
+        "target": 19,
+        "weight": 13.83,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 125,
+                "source_num": 15,
+                "target_num": 5
+            },
+            {
+                "conf_id": 379,
+                "source_num": 9,
+                "target_num": 5
+            },
+            {
+                "conf_id": 404,
+                "source_num": 2,
+                "target_num": 3
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 5
+            }
+        ]
+    },
+    {
+        "id": "5-23",
+        "source": 5,
+        "target": 23,
+        "weight": 4.41,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 6
+            },
+            {
+                "conf_id": 125,
+                "source_num": 15,
+                "target_num": 4
+            },
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 8
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 37
+            }
+        ]
+    },
+    {
+        "id": "5-32",
+        "source": 5,
+        "target": 32,
+        "weight": 1.8,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "5-34",
+        "source": 5,
+        "target": 34,
+        "weight": 2.7,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "5-35",
+        "source": 5,
+        "target": 35,
+        "weight": 1.15,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 4
+            },
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 13
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 11
+            }
+        ]
+    },
+    {
+        "id": "5-38",
+        "source": 5,
+        "target": 38,
+        "weight": 1.91,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 3
+            },
+            {
+                "conf_id": 125,
+                "source_num": 15,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 23
+            }
+        ]
+    },
+    {
+        "id": "5-39",
+        "source": 5,
+        "target": 39,
+        "weight": 40.54,
+        "common_conf": [
+            {
+                "conf_id": 125,
+                "source_num": 15,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "5-40",
+        "source": 5,
+        "target": 40,
+        "weight": 2.49,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 6
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "5-41",
+        "source": 5,
+        "target": 41,
+        "weight": 2.7,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "5-43",
+        "source": 5,
+        "target": 43,
+        "weight": 2.7,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "5-45",
+        "source": 5,
+        "target": 45,
+        "weight": 1.66,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 4
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "5-50",
+        "source": 5,
+        "target": 50,
+        "weight": 2.16,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 3
+            },
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "5-52",
+        "source": 5,
+        "target": 52,
+        "weight": 2.7,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "5-59",
+        "source": 5,
+        "target": 59,
+        "weight": 1.35,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "5-62",
+        "source": 5,
+        "target": 62,
+        "weight": 1.62,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "5-64",
+        "source": 5,
+        "target": 64,
+        "weight": 1.35,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 15
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "5-68",
+        "source": 5,
+        "target": 68,
+        "weight": 2.7,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "5-69",
+        "source": 5,
+        "target": 69,
+        "weight": 1.35,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "5-72",
+        "source": 5,
+        "target": 72,
+        "weight": 2.7,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "5-74",
+        "source": 5,
+        "target": 74,
+        "weight": 1.8,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "5-75",
+        "source": 5,
+        "target": 75,
+        "weight": 1.44,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 404,
+                "source_num": 2,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "5-79",
+        "source": 5,
+        "target": 79,
+        "weight": 1.18,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 7
+            }
+        ]
+    },
+    {
+        "id": "7-19",
+        "source": 7,
+        "target": 19,
+        "weight": 14.62,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 5
+            }
+        ]
+    },
+    {
+        "id": "7-21",
+        "source": 7,
+        "target": 21,
+        "weight": 15.0,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "7-22",
+        "source": 7,
+        "target": 22,
+        "weight": 4.62,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "7-23",
+        "source": 7,
+        "target": 23,
+        "weight": 36.18,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 6
+            },
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 37
+            }
+        ]
+    },
+    {
+        "id": "7-29",
+        "source": 7,
+        "target": 29,
+        "weight": 5.0,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "7-32",
+        "source": 7,
+        "target": 32,
+        "weight": 33.33,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "7-35",
+        "source": 7,
+        "target": 35,
+        "weight": 12.42,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 4
+            },
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 11
+            }
+        ]
+    },
+    {
+        "id": "7-38",
+        "source": 7,
+        "target": 38,
+        "weight": 25.86,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 3
+            },
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 23
+            }
+        ]
+    },
+    {
+        "id": "7-40",
+        "source": 7,
+        "target": 40,
+        "weight": 46.15,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 6
+            },
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "7-45",
+        "source": 7,
+        "target": 45,
+        "weight": 15.38,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "7-50",
+        "source": 7,
+        "target": 50,
+        "weight": 36.0,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 3
+            },
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "7-52",
+        "source": 7,
+        "target": 52,
+        "weight": 50.0,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "7-57",
+        "source": 7,
+        "target": 57,
+        "weight": 15.29,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "7-59",
+        "source": 7,
+        "target": 59,
+        "weight": 25.0,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "7-64",
+        "source": 7,
+        "target": 64,
+        "weight": 1.88,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "7-68",
+        "source": 7,
+        "target": 68,
+        "weight": 60.0,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "7-74",
+        "source": 7,
+        "target": 74,
+        "weight": 33.33,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "7-75",
+        "source": 7,
+        "target": 75,
+        "weight": 14.67,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "7-80",
+        "source": 7,
+        "target": 80,
+        "weight": 12.8,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 10
+            }
+        ]
+    },
+    {
+        "id": "8-9",
+        "source": 8,
+        "target": 9,
+        "weight": 8.92,
+        "common_conf": [
+            {
+                "conf_id": 125,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 215,
+                "source_num": 8,
+                "target_num": 2
+            },
+            {
+                "conf_id": 379,
+                "source_num": 3,
+                "target_num": 7
+            },
+            {
+                "conf_id": 539,
+                "source_num": 1,
+                "target_num": 5
+            }
+        ]
+    },
+    {
+        "id": "8-18",
+        "source": 8,
+        "target": 18,
+        "weight": 7.35,
+        "common_conf": [
+            {
+                "conf_id": 125,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 379,
+                "source_num": 3,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "8-19",
+        "source": 8,
+        "target": 19,
+        "weight": 5.66,
+        "common_conf": [
+            {
+                "conf_id": 125,
+                "source_num": 2,
+                "target_num": 5
+            },
+            {
+                "conf_id": 379,
+                "source_num": 3,
+                "target_num": 5
+            }
+        ]
+    },
+    {
+        "id": "8-39",
+        "source": 8,
+        "target": 39,
+        "weight": 11.76,
+        "common_conf": [
+            {
+                "conf_id": 125,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "9-18",
+        "source": 9,
+        "target": 18,
+        "weight": 6.9,
+        "common_conf": [
+            {
+                "conf_id": 125,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 379,
+                "source_num": 7,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "9-19",
+        "source": 9,
+        "target": 19,
+        "weight": 7.43,
+        "common_conf": [
+            {
+                "conf_id": 125,
+                "source_num": 1,
+                "target_num": 5
+            },
+            {
+                "conf_id": 379,
+                "source_num": 7,
+                "target_num": 5
+            },
+            {
+                "conf_id": 394,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 403,
+                "source_num": 2,
+                "target_num": 3
+            },
+            {
+                "conf_id": 404,
+                "source_num": 3,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "9-26",
+        "source": 9,
+        "target": 26,
+        "weight": 2.3,
+        "common_conf": [
+            {
+                "conf_id": 403,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "9-39",
+        "source": 9,
+        "target": 39,
+        "weight": 3.45,
+        "common_conf": [
+            {
+                "conf_id": 125,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "9-59",
+        "source": 9,
+        "target": 59,
+        "weight": 1.72,
+        "common_conf": [
+            {
+                "conf_id": 403,
+                "source_num": 2,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "9-75",
+        "source": 9,
+        "target": 75,
+        "weight": 1.61,
+        "common_conf": [
+            {
+                "conf_id": 402,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 404,
+                "source_num": 3,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "9-77",
+        "source": 9,
+        "target": 77,
+        "weight": 1.72,
+        "common_conf": [
+            {
+                "conf_id": 228,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 402,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 521,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "9-80",
+        "source": 9,
+        "target": 80,
+        "weight": 1.1,
+        "common_conf": [
+            {
+                "conf_id": 402,
+                "source_num": 1,
+                "target_num": 12
+            },
+            {
+                "conf_id": 403,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 521,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "9-81",
+        "source": 9,
+        "target": 81,
+        "weight": 1.15,
+        "common_conf": [
+            {
+                "conf_id": 402,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
         "id": "12-21",
         "source": 12,
         "target": 21,
         "weight": 25.0,
         "common_conf": [
             {
-                "conf_id": 564,
+                "conf_id": 3,
                 "source_num": 1,
                 "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "13-22",
+        "source": 13,
+        "target": 22,
+        "weight": 25.64,
+        "common_conf": [
+            {
+                "conf_id": 87,
+                "source_num": 1,
+                "target_num": 4
+            },
+            {
+                "conf_id": 244,
+                "source_num": 1,
+                "target_num": 3
+            },
+            {
+                "conf_id": 438,
+                "source_num": 1,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "13-29",
+        "source": 13,
+        "target": 29,
+        "weight": 6.67,
+        "common_conf": [
+            {
+                "conf_id": 87,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 244,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 438,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "13-64",
+        "source": 13,
+        "target": 64,
+        "weight": 4.17,
+        "common_conf": [
+            {
+                "conf_id": 87,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 244,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 438,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "17-22",
+        "source": 17,
+        "target": 22,
+        "weight": 3.85,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "17-23",
+        "source": 17,
+        "target": 23,
+        "weight": 5.88,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 8
+            }
+        ]
+    },
+    {
+        "id": "17-27",
+        "source": 17,
+        "target": 27,
+        "weight": 16.67,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "17-33",
+        "source": 17,
+        "target": 33,
+        "weight": 12.5,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "17-34",
+        "source": 17,
+        "target": 34,
+        "weight": 50.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "17-35",
+        "source": 17,
+        "target": 35,
+        "weight": 9.85,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 13
+            }
+        ]
+    },
+    {
+        "id": "17-36",
+        "source": 17,
+        "target": 36,
+        "weight": 6.67,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "17-41",
+        "source": 17,
+        "target": 41,
+        "weight": 50.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "17-43",
+        "source": 17,
+        "target": 43,
+        "weight": 50.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "17-45",
+        "source": 17,
+        "target": 45,
+        "weight": 15.38,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "17-50",
+        "source": 17,
+        "target": 50,
+        "weight": 5.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "17-56",
+        "source": 17,
+        "target": 56,
+        "weight": 8.93,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 5
+            }
+        ]
+    },
+    {
+        "id": "17-58",
+        "source": 17,
+        "target": 58,
+        "weight": 12.5,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "17-62",
+        "source": 17,
+        "target": 62,
+        "weight": 30.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "17-64",
+        "source": 17,
+        "target": 64,
+        "weight": 23.44,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 15
+            }
+        ]
+    },
+    {
+        "id": "17-69",
+        "source": 17,
+        "target": 69,
+        "weight": 25.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "17-72",
+        "source": 17,
+        "target": 72,
+        "weight": 50.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "17-77",
+        "source": 17,
+        "target": 77,
+        "weight": 6.25,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "17-79",
+        "source": 17,
+        "target": 79,
+        "weight": 21.88,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 7
+            }
+        ]
+    },
+    {
+        "id": "17-81",
+        "source": 17,
+        "target": 81,
+        "weight": 16.67,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "18-19",
+        "source": 18,
+        "target": 19,
+        "weight": 9.62,
+        "common_conf": [
+            {
+                "conf_id": 125,
+                "source_num": 1,
+                "target_num": 5
+            },
+            {
+                "conf_id": 379,
+                "source_num": 1,
+                "target_num": 5
+            }
+        ]
+    },
+    {
+        "id": "18-23",
+        "source": 18,
+        "target": 23,
+        "weight": 1.47,
+        "common_conf": [
+            {
+                "conf_id": 125,
+                "source_num": 1,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "18-29",
+        "source": 18,
+        "target": 29,
+        "weight": 1.25,
+        "common_conf": [
+            {
+                "conf_id": 330,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "18-33",
+        "source": 18,
+        "target": 33,
+        "weight": 3.12,
+        "common_conf": [
+            {
+                "conf_id": 113,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 330,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "18-36",
+        "source": 18,
+        "target": 36,
+        "weight": 3.33,
+        "common_conf": [
+            {
+                "conf_id": 330,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "18-39",
+        "source": 18,
+        "target": 39,
+        "weight": 25.0,
+        "common_conf": [
+            {
+                "conf_id": 125,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "18-75",
+        "source": 18,
+        "target": 75,
+        "weight": 1.67,
+        "common_conf": [
+            {
+                "conf_id": 330,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "18-77",
+        "source": 18,
+        "target": 77,
+        "weight": 3.12,
+        "common_conf": [
+            {
+                "conf_id": 330,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "18-79",
+        "source": 18,
+        "target": 79,
+        "weight": 1.56,
+        "common_conf": [
+            {
+                "conf_id": 330,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "19-21",
+        "source": 19,
+        "target": 21,
+        "weight": 6.73,
+        "common_conf": [
+            {
+                "conf_id": 123,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 5,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "19-22",
+        "source": 19,
+        "target": 22,
+        "weight": 1.48,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 5,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "19-23",
+        "source": 19,
+        "target": 23,
+        "weight": 12.78,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 6
+            },
+            {
+                "conf_id": 123,
+                "source_num": 2,
+                "target_num": 3
+            },
+            {
+                "conf_id": 125,
+                "source_num": 5,
+                "target_num": 4
+            },
+            {
+                "conf_id": 403,
+                "source_num": 3,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 5,
+                "target_num": 37
+            }
+        ]
+    },
+    {
+        "id": "19-26",
+        "source": 19,
+        "target": 26,
+        "weight": 3.85,
+        "common_conf": [
+            {
+                "conf_id": 403,
+                "source_num": 3,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "19-29",
+        "source": 19,
+        "target": 29,
+        "weight": 1.73,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 123,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 5,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "19-32",
+        "source": 19,
+        "target": 32,
+        "weight": 8.97,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 5,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "19-35",
+        "source": 19,
+        "target": 35,
+        "weight": 3.85,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 4
+            },
+            {
+                "conf_id": 394,
+                "source_num": 1,
+                "target_num": 3
+            },
+            {
+                "conf_id": 534,
+                "source_num": 5,
+                "target_num": 11
+            }
+        ]
+    },
+    {
+        "id": "19-38",
+        "source": 19,
+        "target": 38,
+        "weight": 8.62,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 3
+            },
+            {
+                "conf_id": 123,
+                "source_num": 2,
+                "target_num": 2
+            },
+            {
+                "conf_id": 125,
+                "source_num": 5,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 5,
+                "target_num": 23
+            }
+        ]
+    },
+    {
+        "id": "19-39",
+        "source": 19,
+        "target": 39,
+        "weight": 19.23,
+        "common_conf": [
+            {
+                "conf_id": 125,
+                "source_num": 5,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "19-40",
+        "source": 19,
+        "target": 40,
+        "weight": 12.43,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 6
+            },
+            {
+                "conf_id": 534,
+                "source_num": 5,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "19-45",
+        "source": 19,
+        "target": 45,
+        "weight": 4.73,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 2
+            },
+            {
+                "conf_id": 123,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 5,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "19-50",
+        "source": 19,
+        "target": 50,
+        "weight": 10.0,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 3
+            },
+            {
+                "conf_id": 534,
+                "source_num": 5,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "19-52",
+        "source": 19,
+        "target": 52,
+        "weight": 13.46,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 5,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "19-57",
+        "source": 19,
+        "target": 57,
+        "weight": 4.98,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 2
+            },
+            {
+                "conf_id": 403,
+                "source_num": 3,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 5,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "19-59",
+        "source": 19,
+        "target": 59,
+        "weight": 10.58,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 2
+            },
+            {
+                "conf_id": 123,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 403,
+                "source_num": 3,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 5,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "19-68",
+        "source": 19,
+        "target": 68,
+        "weight": 19.23,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 5,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "19-74",
+        "source": 19,
+        "target": 74,
+        "weight": 8.97,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 5,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "19-75",
+        "source": 19,
+        "target": 75,
+        "weight": 6.41,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 123,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 404,
+                "source_num": 3,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 5,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "19-80",
+        "source": 19,
+        "target": 80,
+        "weight": 4.38,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 123,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 403,
+                "source_num": 3,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 5,
+                "target_num": 10
+            }
+        ]
+    },
+    {
+        "id": "21-22",
+        "source": 21,
+        "target": 22,
+        "weight": 1.92,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "21-23",
+        "source": 21,
+        "target": 23,
+        "weight": 14.71,
+        "common_conf": [
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 3
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 37
+            }
+        ]
+    },
+    {
+        "id": "21-29",
+        "source": 21,
+        "target": 29,
+        "weight": 2.5,
+        "common_conf": [
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "21-32",
+        "source": 21,
+        "target": 32,
+        "weight": 8.33,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "21-35",
+        "source": 21,
+        "target": 35,
+        "weight": 4.55,
+        "common_conf": [
+            {
+                "conf_id": 384,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 11
+            }
+        ]
+    },
+    {
+        "id": "21-38",
+        "source": 21,
+        "target": 38,
+        "weight": 11.21,
+        "common_conf": [
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 384,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 23
+            }
+        ]
+    },
+    {
+        "id": "21-40",
+        "source": 21,
+        "target": 40,
+        "weight": 11.54,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "21-45",
+        "source": 21,
+        "target": 45,
+        "weight": 5.77,
+        "common_conf": [
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "21-50",
+        "source": 21,
+        "target": 50,
+        "weight": 10.0,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "21-52",
+        "source": 21,
+        "target": 52,
+        "weight": 12.5,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "21-57",
+        "source": 21,
+        "target": 57,
+        "weight": 4.41,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "21-59",
+        "source": 21,
+        "target": 59,
+        "weight": 9.38,
+        "common_conf": [
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "21-68",
+        "source": 21,
+        "target": 68,
+        "weight": 25.0,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "21-74",
+        "source": 21,
+        "target": 74,
+        "weight": 8.33,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "21-75",
+        "source": 21,
+        "target": 75,
+        "weight": 6.67,
+        "common_conf": [
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "21-80",
+        "source": 21,
+        "target": 80,
+        "weight": 6.0,
+        "common_conf": [
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 384,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 10
+            }
+        ]
+    },
+    {
+        "id": "22-23",
+        "source": 22,
+        "target": 23,
+        "weight": 5.09,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 8
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 37
+            }
+        ]
+    },
+    {
+        "id": "22-27",
+        "source": 22,
+        "target": 27,
+        "weight": 2.56,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "22-29",
+        "source": 22,
+        "target": 29,
+        "weight": 5.77,
+        "common_conf": [
+            {
+                "conf_id": 87,
+                "source_num": 4,
+                "target_num": 2
+            },
+            {
+                "conf_id": 244,
+                "source_num": 3,
+                "target_num": 1
+            },
+            {
+                "conf_id": 438,
+                "source_num": 3,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "22-32",
+        "source": 22,
+        "target": 32,
+        "weight": 2.56,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "22-33",
+        "source": 22,
+        "target": 33,
+        "weight": 1.92,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "22-34",
+        "source": 22,
+        "target": 34,
+        "weight": 7.69,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "22-35",
+        "source": 22,
+        "target": 35,
+        "weight": 2.8,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 13
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 11
+            }
+        ]
+    },
+    {
+        "id": "22-36",
+        "source": 22,
+        "target": 36,
+        "weight": 1.03,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "22-38",
+        "source": 22,
+        "target": 38,
+        "weight": 3.05,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 23
+            }
+        ]
+    },
+    {
+        "id": "22-40",
+        "source": 22,
+        "target": 40,
+        "weight": 3.55,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "22-41",
+        "source": 22,
+        "target": 41,
+        "weight": 7.69,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "22-43",
+        "source": 22,
+        "target": 43,
+        "weight": 7.69,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "22-45",
+        "source": 22,
+        "target": 45,
+        "weight": 3.55,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 4
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "22-50",
+        "source": 22,
+        "target": 50,
+        "weight": 3.85,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "22-52",
+        "source": 22,
+        "target": 52,
+        "weight": 3.85,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "22-56",
+        "source": 22,
+        "target": 56,
+        "weight": 1.37,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 5
+            }
+        ]
+    },
+    {
+        "id": "22-57",
+        "source": 22,
+        "target": 57,
+        "weight": 1.36,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "22-58",
+        "source": 22,
+        "target": 58,
+        "weight": 1.92,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "22-59",
+        "source": 22,
+        "target": 59,
+        "weight": 1.92,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "22-62",
+        "source": 22,
+        "target": 62,
+        "weight": 4.62,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "22-64",
+        "source": 22,
+        "target": 64,
+        "weight": 7.93,
+        "common_conf": [
+            {
+                "conf_id": 87,
+                "source_num": 4,
+                "target_num": 2
+            },
+            {
+                "conf_id": 90,
+                "source_num": 1,
+                "target_num": 3
+            },
+            {
+                "conf_id": 244,
+                "source_num": 3,
+                "target_num": 1
+            },
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 15
+            },
+            {
+                "conf_id": 438,
+                "source_num": 3,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "22-68",
+        "source": 22,
+        "target": 68,
+        "weight": 7.69,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "22-69",
+        "source": 22,
+        "target": 69,
+        "weight": 3.85,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "22-72",
+        "source": 22,
+        "target": 72,
+        "weight": 7.69,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "22-74",
+        "source": 22,
+        "target": 74,
+        "weight": 2.56,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "22-75",
+        "source": 22,
+        "target": 75,
+        "weight": 1.54,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "22-79",
+        "source": 22,
+        "target": 79,
+        "weight": 3.37,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 7
+            }
+        ]
+    },
+    {
+        "id": "22-80",
+        "source": 22,
+        "target": 80,
+        "weight": 1.69,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 10
+            }
+        ]
+    },
+    {
+        "id": "22-81",
+        "source": 22,
+        "target": 81,
+        "weight": 2.56,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "23-27",
+        "source": 23,
+        "target": 27,
+        "weight": 3.92,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 8,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "23-29",
+        "source": 23,
+        "target": 29,
+        "weight": 3.38,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 6,
+                "target_num": 1
+            },
+            {
+                "conf_id": 123,
+                "source_num": 3,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 37,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "23-32",
+        "source": 23,
+        "target": 32,
+        "weight": 21.08,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 6,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 37,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "23-33",
+        "source": 23,
+        "target": 33,
+        "weight": 3.03,
+        "common_conf": [
+            {
+                "conf_id": 403,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 420,
+                "source_num": 8,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "23-34",
+        "source": 23,
+        "target": 34,
+        "weight": 11.76,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 8,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "23-35",
+        "source": 23,
+        "target": 35,
+        "weight": 12.81,
+        "common_conf": [
+            {
+                "conf_id": 94,
+                "source_num": 2,
+                "target_num": 8
+            },
+            {
+                "conf_id": 122,
+                "source_num": 6,
+                "target_num": 4
+            },
+            {
+                "conf_id": 197,
+                "source_num": 4,
+                "target_num": 6
+            },
+            {
+                "conf_id": 420,
+                "source_num": 8,
+                "target_num": 13
+            },
+            {
+                "conf_id": 534,
+                "source_num": 37,
+                "target_num": 11
+            }
+        ]
+    },
+    {
+        "id": "23-36",
+        "source": 23,
+        "target": 36,
+        "weight": 1.57,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 8,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "23-38",
+        "source": 23,
+        "target": 38,
+        "weight": 23.83,
+        "common_conf": [
+            {
+                "conf_id": 94,
+                "source_num": 2,
+                "target_num": 5
+            },
+            {
+                "conf_id": 122,
+                "source_num": 6,
+                "target_num": 3
+            },
+            {
+                "conf_id": 123,
+                "source_num": 3,
+                "target_num": 2
+            },
+            {
+                "conf_id": 125,
+                "source_num": 4,
+                "target_num": 1
+            },
+            {
+                "conf_id": 197,
+                "source_num": 4,
+                "target_num": 12
+            },
+            {
+                "conf_id": 288,
+                "source_num": 1,
+                "target_num": 3
+            },
+            {
+                "conf_id": 534,
+                "source_num": 37,
+                "target_num": 23
+            }
+        ]
+    },
+    {
+        "id": "23-39",
+        "source": 23,
+        "target": 39,
+        "weight": 5.88,
+        "common_conf": [
+            {
+                "conf_id": 125,
+                "source_num": 4,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "23-40",
+        "source": 23,
+        "target": 40,
+        "weight": 29.3,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 6,
+                "target_num": 6
+            },
+            {
+                "conf_id": 288,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 37,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "23-41",
+        "source": 23,
+        "target": 41,
+        "weight": 11.76,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 8,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "23-43",
+        "source": 23,
+        "target": 43,
+        "weight": 11.76,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 8,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "23-45",
+        "source": 23,
+        "target": 45,
+        "weight": 13.69,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 6,
+                "target_num": 2
+            },
+            {
+                "conf_id": 123,
+                "source_num": 3,
+                "target_num": 1
+            },
+            {
+                "conf_id": 420,
+                "source_num": 8,
+                "target_num": 4
+            },
+            {
+                "conf_id": 534,
+                "source_num": 37,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "23-50",
+        "source": 23,
+        "target": 50,
+        "weight": 26.18,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 6,
+                "target_num": 3
+            },
+            {
+                "conf_id": 197,
+                "source_num": 4,
+                "target_num": 1
+            },
+            {
+                "conf_id": 420,
+                "source_num": 8,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 37,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "23-52",
+        "source": 23,
+        "target": 52,
+        "weight": 31.62,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 6,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 37,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "23-56",
+        "source": 23,
+        "target": 56,
+        "weight": 2.1,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 8,
+                "target_num": 5
+            }
+        ]
+    },
+    {
+        "id": "23-57",
+        "source": 23,
+        "target": 57,
+        "weight": 10.73,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 6,
+                "target_num": 2
+            },
+            {
+                "conf_id": 403,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 37,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "23-58",
+        "source": 23,
+        "target": 58,
+        "weight": 2.94,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 8,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "23-59",
+        "source": 23,
+        "target": 59,
+        "weight": 16.91,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 6,
+                "target_num": 2
+            },
+            {
+                "conf_id": 123,
+                "source_num": 3,
+                "target_num": 1
+            },
+            {
+                "conf_id": 288,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 403,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 37,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "23-62",
+        "source": 23,
+        "target": 62,
+        "weight": 7.06,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 8,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "23-64",
+        "source": 23,
+        "target": 64,
+        "weight": 7.4,
+        "common_conf": [
+            {
+                "conf_id": 197,
+                "source_num": 4,
+                "target_num": 1
+            },
+            {
+                "conf_id": 420,
+                "source_num": 8,
+                "target_num": 15
+            },
+            {
+                "conf_id": 534,
+                "source_num": 37,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "23-68",
+        "source": 23,
+        "target": 68,
+        "weight": 54.41,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 37,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "23-69",
+        "source": 23,
+        "target": 69,
+        "weight": 5.88,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 8,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "23-72",
+        "source": 23,
+        "target": 72,
+        "weight": 11.76,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 8,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "23-74",
+        "source": 23,
+        "target": 74,
+        "weight": 21.08,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 6,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 37,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "23-75",
+        "source": 23,
+        "target": 75,
+        "weight": 12.16,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 6,
+                "target_num": 1
+            },
+            {
+                "conf_id": 123,
+                "source_num": 3,
+                "target_num": 1
+            },
+            {
+                "conf_id": 197,
+                "source_num": 4,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 37,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "23-77",
+        "source": 23,
+        "target": 77,
+        "weight": 1.47,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 8,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "23-79",
+        "source": 23,
+        "target": 79,
+        "weight": 5.15,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 8,
+                "target_num": 7
+            }
+        ]
+    },
+    {
+        "id": "23-80",
+        "source": 23,
+        "target": 80,
+        "weight": 11.65,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 6,
+                "target_num": 1
+            },
+            {
+                "conf_id": 123,
+                "source_num": 3,
+                "target_num": 1
+            },
+            {
+                "conf_id": 197,
+                "source_num": 4,
+                "target_num": 2
+            },
+            {
+                "conf_id": 403,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 420,
+                "source_num": 8,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 37,
+                "target_num": 10
+            }
+        ]
+    },
+    {
+        "id": "23-81",
+        "source": 23,
+        "target": 81,
+        "weight": 3.92,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 8,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "24-75",
+        "source": 24,
+        "target": 75,
+        "weight": 1.96,
+        "common_conf": [
+            {
+                "conf_id": 396,
+                "source_num": 5,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "24-80",
+        "source": 24,
+        "target": 80,
+        "weight": 1.18,
+        "common_conf": [
+            {
+                "conf_id": 396,
+                "source_num": 5,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "25-37",
+        "source": 25,
+        "target": 37,
+        "weight": 50.0,
+        "common_conf": [
+            {
+                "conf_id": 369,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "25-75",
+        "source": 25,
+        "target": 75,
+        "weight": 3.33,
+        "common_conf": [
+            {
+                "conf_id": 369,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "25-78",
+        "source": 25,
+        "target": 78,
+        "weight": 50.0,
+        "common_conf": [
+            {
+                "conf_id": 369,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "26-33",
+        "source": 26,
+        "target": 33,
+        "weight": 2.08,
+        "common_conf": [
+            {
+                "conf_id": 403,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "26-57",
+        "source": 26,
+        "target": 57,
+        "weight": 1.96,
+        "common_conf": [
+            {
+                "conf_id": 403,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "26-59",
+        "source": 26,
+        "target": 59,
+        "weight": 8.33,
+        "common_conf": [
+            {
+                "conf_id": 403,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "26-79",
+        "source": 26,
+        "target": 79,
+        "weight": 4.17,
+        "common_conf": [
+            {
+                "conf_id": 398,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "27-33",
+        "source": 27,
+        "target": 33,
+        "weight": 8.33,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "27-34",
+        "source": 27,
+        "target": 34,
+        "weight": 33.33,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "27-35",
+        "source": 27,
+        "target": 35,
+        "weight": 7.07,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 13
+            },
+            {
+                "conf_id": 560,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "27-36",
+        "source": 27,
+        "target": 36,
+        "weight": 4.44,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "27-41",
+        "source": 27,
+        "target": 41,
+        "weight": 33.33,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "27-43",
+        "source": 27,
+        "target": 43,
+        "weight": 33.33,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "27-45",
+        "source": 27,
+        "target": 45,
+        "weight": 10.26,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "27-50",
+        "source": 27,
+        "target": 50,
+        "weight": 3.33,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "27-56",
+        "source": 27,
+        "target": 56,
+        "weight": 5.95,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 5
             }
         ]
     },
@@ -16,10 +4288,132 @@
         "id": "27-57",
         "source": 27,
         "target": 57,
-        "weight": 1.96,
+        "weight": 5.88,
         "common_conf": [
             {
-                "conf_id": 564,
+                "conf_id": 14,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 560,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "27-58",
+        "source": 27,
+        "target": 58,
+        "weight": 8.33,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "27-62",
+        "source": 27,
+        "target": 62,
+        "weight": 20.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "27-64",
+        "source": 27,
+        "target": 64,
+        "weight": 15.62,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 15
+            }
+        ]
+    },
+    {
+        "id": "27-69",
+        "source": 27,
+        "target": 69,
+        "weight": 16.67,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "27-72",
+        "source": 27,
+        "target": 72,
+        "weight": 33.33,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "27-75",
+        "source": 27,
+        "target": 75,
+        "weight": 2.22,
+        "common_conf": [
+            {
+                "conf_id": 560,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "27-77",
+        "source": 27,
+        "target": 77,
+        "weight": 4.17,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "27-79",
+        "source": 27,
+        "target": 79,
+        "weight": 14.58,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 7
+            }
+        ]
+    },
+    {
+        "id": "27-81",
+        "source": 27,
+        "target": 81,
+        "weight": 11.11,
+        "common_conf": [
+            {
+                "conf_id": 420,
                 "source_num": 1,
                 "target_num": 1
             }
@@ -29,12 +4423,357 @@
         "id": "29-32",
         "source": 29,
         "target": 32,
-        "weight": 1.67,
+        "weight": 5.0,
         "common_conf": [
             {
-                "conf_id": 564,
+                "conf_id": 77,
                 "source_num": 1,
                 "target_num": 1
+            },
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "29-35",
+        "source": 29,
+        "target": 35,
+        "weight": 1.36,
+        "common_conf": [
+            {
+                "conf_id": 77,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 4
+            },
+            {
+                "conf_id": 165,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 11
+            }
+        ]
+    },
+    {
+        "id": "29-36",
+        "source": 29,
+        "target": 36,
+        "weight": 1.33,
+        "common_conf": [
+            {
+                "conf_id": 228,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 330,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 521,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "29-38",
+        "source": 29,
+        "target": 38,
+        "weight": 2.59,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 3
+            },
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 521,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 23
+            }
+        ]
+    },
+    {
+        "id": "29-40",
+        "source": 29,
+        "target": 40,
+        "weight": 4.62,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 6
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "29-45",
+        "source": 29,
+        "target": 45,
+        "weight": 1.92,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "29-50",
+        "source": 29,
+        "target": 50,
+        "weight": 3.5,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 3
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "29-52",
+        "source": 29,
+        "target": 52,
+        "weight": 5.0,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "29-57",
+        "source": 29,
+        "target": 57,
+        "weight": 1.47,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "29-59",
+        "source": 29,
+        "target": 59,
+        "weight": 3.12,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "29-64",
+        "source": 29,
+        "target": 64,
+        "weight": 1.09,
+        "common_conf": [
+            {
+                "conf_id": 87,
+                "source_num": 2,
+                "target_num": 2
+            },
+            {
+                "conf_id": 244,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 438,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "29-68",
+        "source": 29,
+        "target": 68,
+        "weight": 5.0,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "29-74",
+        "source": 29,
+        "target": 74,
+        "weight": 3.33,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "29-75",
+        "source": 29,
+        "target": 75,
+        "weight": 2.0,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 330,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "29-77",
+        "source": 29,
+        "target": 77,
+        "weight": 2.5,
+        "common_conf": [
+            {
+                "conf_id": 228,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 330,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 521,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "29-80",
+        "source": 29,
+        "target": 80,
+        "weight": 1.4,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 521,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 10
             }
         ]
     },
@@ -45,7 +4784,7 @@
         "weight": 2.08,
         "common_conf": [
             {
-                "conf_id": 564,
+                "conf_id": 77,
                 "source_num": 1,
                 "target_num": 1
             }
@@ -55,12 +4794,112 @@
         "id": "32-35",
         "source": 32,
         "target": 35,
-        "weight": 1.01,
+        "weight": 8.59,
         "common_conf": [
             {
-                "conf_id": 564,
+                "conf_id": 77,
                 "source_num": 1,
                 "target_num": 2
+            },
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 4
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 11
+            }
+        ]
+    },
+    {
+        "id": "32-38",
+        "source": 32,
+        "target": 38,
+        "weight": 14.94,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 3
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 23
+            }
+        ]
+    },
+    {
+        "id": "32-40",
+        "source": 32,
+        "target": 40,
+        "weight": 30.77,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 6
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "32-45",
+        "source": 32,
+        "target": 45,
+        "weight": 10.26,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "32-50",
+        "source": 32,
+        "target": 50,
+        "weight": 23.33,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 3
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "32-52",
+        "source": 32,
+        "target": 52,
+        "weight": 33.33,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
             }
         ]
     },
@@ -71,9 +4910,3894 @@
         "weight": 2.38,
         "common_conf": [
             {
-                "conf_id": 564,
+                "conf_id": 77,
                 "source_num": 1,
                 "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "32-57",
+        "source": 32,
+        "target": 57,
+        "weight": 9.8,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "32-59",
+        "source": 32,
+        "target": 59,
+        "weight": 16.67,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "32-64",
+        "source": 32,
+        "target": 64,
+        "weight": 1.04,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "32-68",
+        "source": 32,
+        "target": 68,
+        "weight": 33.33,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "32-74",
+        "source": 32,
+        "target": 74,
+        "weight": 22.22,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "32-75",
+        "source": 32,
+        "target": 75,
+        "weight": 8.89,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "32-80",
+        "source": 32,
+        "target": 80,
+        "weight": 7.33,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 10
+            }
+        ]
+    },
+    {
+        "id": "33-34",
+        "source": 33,
+        "target": 34,
+        "weight": 25.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "33-35",
+        "source": 33,
+        "target": 35,
+        "weight": 5.11,
+        "common_conf": [
+            {
+                "conf_id": 77,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 13
+            }
+        ]
+    },
+    {
+        "id": "33-36",
+        "source": 33,
+        "target": 36,
+        "weight": 10.83,
+        "common_conf": [
+            {
+                "conf_id": 84,
+                "source_num": 2,
+                "target_num": 3
+            },
+            {
+                "conf_id": 85,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 318,
+                "source_num": 2,
+                "target_num": 4
+            },
+            {
+                "conf_id": 330,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "33-41",
+        "source": 33,
+        "target": 41,
+        "weight": 25.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "33-43",
+        "source": 33,
+        "target": 43,
+        "weight": 25.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "33-45",
+        "source": 33,
+        "target": 45,
+        "weight": 7.69,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "33-47",
+        "source": 33,
+        "target": 47,
+        "weight": 10.71,
+        "common_conf": [
+            {
+                "conf_id": 84,
+                "source_num": 2,
+                "target_num": 2
+            },
+            {
+                "conf_id": 85,
+                "source_num": 2,
+                "target_num": 2
+            },
+            {
+                "conf_id": 318,
+                "source_num": 2,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "33-50",
+        "source": 33,
+        "target": 50,
+        "weight": 2.5,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "33-56",
+        "source": 33,
+        "target": 56,
+        "weight": 6.7,
+        "common_conf": [
+            {
+                "conf_id": 77,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 318,
+                "source_num": 2,
+                "target_num": 4
+            },
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 5
+            }
+        ]
+    },
+    {
+        "id": "33-58",
+        "source": 33,
+        "target": 58,
+        "weight": 6.25,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "33-59",
+        "source": 33,
+        "target": 59,
+        "weight": 1.56,
+        "common_conf": [
+            {
+                "conf_id": 403,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "33-62",
+        "source": 33,
+        "target": 62,
+        "weight": 16.88,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 6
+            },
+            {
+                "conf_id": 425,
+                "source_num": 1,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "33-64",
+        "source": 33,
+        "target": 64,
+        "weight": 12.5,
+        "common_conf": [
+            {
+                "conf_id": 4,
+                "source_num": 1,
+                "target_num": 4
+            },
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 15
+            }
+        ]
+    },
+    {
+        "id": "33-69",
+        "source": 33,
+        "target": 69,
+        "weight": 12.5,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "33-72",
+        "source": 33,
+        "target": 72,
+        "weight": 25.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "33-77",
+        "source": 33,
+        "target": 77,
+        "weight": 3.91,
+        "common_conf": [
+            {
+                "conf_id": 330,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "33-79",
+        "source": 33,
+        "target": 79,
+        "weight": 14.45,
+        "common_conf": [
+            {
+                "conf_id": 84,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 318,
+                "source_num": 2,
+                "target_num": 3
+            },
+            {
+                "conf_id": 330,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 7
+            }
+        ]
+    },
+    {
+        "id": "33-81",
+        "source": 33,
+        "target": 81,
+        "weight": 10.42,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 1
+            },
+            {
+                "conf_id": 425,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "34-35",
+        "source": 34,
+        "target": 35,
+        "weight": 19.7,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 13
+            }
+        ]
+    },
+    {
+        "id": "34-36",
+        "source": 34,
+        "target": 36,
+        "weight": 13.33,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "34-41",
+        "source": 34,
+        "target": 41,
+        "weight": 100.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "34-43",
+        "source": 34,
+        "target": 43,
+        "weight": 100.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "34-45",
+        "source": 34,
+        "target": 45,
+        "weight": 30.77,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "34-50",
+        "source": 34,
+        "target": 50,
+        "weight": 10.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "34-56",
+        "source": 34,
+        "target": 56,
+        "weight": 17.86,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 5
+            }
+        ]
+    },
+    {
+        "id": "34-58",
+        "source": 34,
+        "target": 58,
+        "weight": 25.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "34-62",
+        "source": 34,
+        "target": 62,
+        "weight": 60.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "34-64",
+        "source": 34,
+        "target": 64,
+        "weight": 46.88,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 15
+            }
+        ]
+    },
+    {
+        "id": "34-69",
+        "source": 34,
+        "target": 69,
+        "weight": 50.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "34-72",
+        "source": 34,
+        "target": 72,
+        "weight": 100.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "34-77",
+        "source": 34,
+        "target": 77,
+        "weight": 12.5,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "34-79",
+        "source": 34,
+        "target": 79,
+        "weight": 43.75,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 7
+            }
+        ]
+    },
+    {
+        "id": "34-80",
+        "source": 34,
+        "target": 80,
+        "weight": 2.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "34-81",
+        "source": 34,
+        "target": 81,
+        "weight": 33.33,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "35-36",
+        "source": 35,
+        "target": 36,
+        "weight": 2.63,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 13,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "35-38",
+        "source": 35,
+        "target": 38,
+        "weight": 9.87,
+        "common_conf": [
+            {
+                "conf_id": 94,
+                "source_num": 8,
+                "target_num": 5
+            },
+            {
+                "conf_id": 122,
+                "source_num": 4,
+                "target_num": 3
+            },
+            {
+                "conf_id": 197,
+                "source_num": 6,
+                "target_num": 12
+            },
+            {
+                "conf_id": 384,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 11,
+                "target_num": 23
+            }
+        ]
+    },
+    {
+        "id": "35-40",
+        "source": 35,
+        "target": 40,
+        "weight": 10.49,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 4,
+                "target_num": 6
+            },
+            {
+                "conf_id": 534,
+                "source_num": 11,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "35-41",
+        "source": 35,
+        "target": 41,
+        "weight": 19.7,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 13,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "35-43",
+        "source": 35,
+        "target": 43,
+        "weight": 19.7,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 13,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "35-45",
+        "source": 35,
+        "target": 45,
+        "weight": 9.56,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 4,
+                "target_num": 2
+            },
+            {
+                "conf_id": 420,
+                "source_num": 13,
+                "target_num": 4
+            },
+            {
+                "conf_id": 534,
+                "source_num": 11,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "35-46",
+        "source": 35,
+        "target": 46,
+        "weight": 2.02,
+        "common_conf": [
+            {
+                "conf_id": 508,
+                "source_num": 2,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "35-50",
+        "source": 35,
+        "target": 50,
+        "weight": 11.36,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 4,
+                "target_num": 3
+            },
+            {
+                "conf_id": 197,
+                "source_num": 6,
+                "target_num": 1
+            },
+            {
+                "conf_id": 420,
+                "source_num": 13,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 11,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "35-52",
+        "source": 35,
+        "target": 52,
+        "weight": 11.36,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 4,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 11,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "35-56",
+        "source": 35,
+        "target": 56,
+        "weight": 3.79,
+        "common_conf": [
+            {
+                "conf_id": 77,
+                "source_num": 2,
+                "target_num": 2
+            },
+            {
+                "conf_id": 420,
+                "source_num": 13,
+                "target_num": 5
+            },
+            {
+                "conf_id": 517,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "35-57",
+        "source": 35,
+        "target": 57,
+        "weight": 3.83,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 4,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 11,
+                "target_num": 3
+            },
+            {
+                "conf_id": 560,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "35-58",
+        "source": 35,
+        "target": 58,
+        "weight": 4.92,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 13,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "35-59",
+        "source": 35,
+        "target": 59,
+        "weight": 5.68,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 4,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 11,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "35-62",
+        "source": 35,
+        "target": 62,
+        "weight": 11.82,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 13,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "35-64",
+        "source": 35,
+        "target": 64,
+        "weight": 10.04,
+        "common_conf": [
+            {
+                "conf_id": 197,
+                "source_num": 6,
+                "target_num": 1
+            },
+            {
+                "conf_id": 420,
+                "source_num": 13,
+                "target_num": 15
+            },
+            {
+                "conf_id": 534,
+                "source_num": 11,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "35-68",
+        "source": 35,
+        "target": 68,
+        "weight": 16.67,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 11,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "35-69",
+        "source": 35,
+        "target": 69,
+        "weight": 9.85,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 13,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "35-72",
+        "source": 35,
+        "target": 72,
+        "weight": 19.7,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 13,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "35-74",
+        "source": 35,
+        "target": 74,
+        "weight": 7.58,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 4,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 11,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "35-75",
+        "source": 35,
+        "target": 75,
+        "weight": 4.44,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 4,
+                "target_num": 1
+            },
+            {
+                "conf_id": 197,
+                "source_num": 6,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 11,
+                "target_num": 3
+            },
+            {
+                "conf_id": 560,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "35-77",
+        "source": 35,
+        "target": 77,
+        "weight": 2.46,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 13,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "35-79",
+        "source": 35,
+        "target": 79,
+        "weight": 8.62,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 13,
+                "target_num": 7
+            }
+        ]
+    },
+    {
+        "id": "35-80",
+        "source": 35,
+        "target": 80,
+        "weight": 4.27,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 4,
+                "target_num": 1
+            },
+            {
+                "conf_id": 197,
+                "source_num": 6,
+                "target_num": 2
+            },
+            {
+                "conf_id": 384,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 420,
+                "source_num": 13,
+                "target_num": 1
+            },
+            {
+                "conf_id": 517,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 11,
+                "target_num": 10
+            }
+        ]
+    },
+    {
+        "id": "35-81",
+        "source": 35,
+        "target": 81,
+        "weight": 6.57,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 13,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "36-41",
+        "source": 36,
+        "target": 41,
+        "weight": 13.33,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "36-43",
+        "source": 36,
+        "target": 43,
+        "weight": 13.33,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "36-45",
+        "source": 36,
+        "target": 45,
+        "weight": 4.1,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "36-47",
+        "source": 36,
+        "target": 47,
+        "weight": 15.24,
+        "common_conf": [
+            {
+                "conf_id": 84,
+                "source_num": 3,
+                "target_num": 2
+            },
+            {
+                "conf_id": 85,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 318,
+                "source_num": 4,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "36-50",
+        "source": 36,
+        "target": 50,
+        "weight": 1.33,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "36-56",
+        "source": 36,
+        "target": 56,
+        "weight": 6.19,
+        "common_conf": [
+            {
+                "conf_id": 318,
+                "source_num": 4,
+                "target_num": 4
+            },
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 5
+            }
+        ]
+    },
+    {
+        "id": "36-58",
+        "source": 36,
+        "target": 58,
+        "weight": 3.33,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "36-62",
+        "source": 36,
+        "target": 62,
+        "weight": 8.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "36-64",
+        "source": 36,
+        "target": 64,
+        "weight": 6.25,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 15
+            }
+        ]
+    },
+    {
+        "id": "36-69",
+        "source": 36,
+        "target": 69,
+        "weight": 6.67,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "36-72",
+        "source": 36,
+        "target": 72,
+        "weight": 13.33,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "36-77",
+        "source": 36,
+        "target": 77,
+        "weight": 5.83,
+        "common_conf": [
+            {
+                "conf_id": 228,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 330,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 521,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "36-79",
+        "source": 36,
+        "target": 79,
+        "weight": 12.92,
+        "common_conf": [
+            {
+                "conf_id": 84,
+                "source_num": 3,
+                "target_num": 1
+            },
+            {
+                "conf_id": 318,
+                "source_num": 4,
+                "target_num": 3
+            },
+            {
+                "conf_id": 330,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 7
+            }
+        ]
+    },
+    {
+        "id": "36-81",
+        "source": 36,
+        "target": 81,
+        "weight": 4.44,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "37-75",
+        "source": 37,
+        "target": 75,
+        "weight": 6.67,
+        "common_conf": [
+            {
+                "conf_id": 369,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "37-78",
+        "source": 37,
+        "target": 78,
+        "weight": 100.0,
+        "common_conf": [
+            {
+                "conf_id": 369,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "37-80",
+        "source": 37,
+        "target": 80,
+        "weight": 2.0,
+        "common_conf": [
+            {
+                "conf_id": 369,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "38-39",
+        "source": 38,
+        "target": 39,
+        "weight": 1.72,
+        "common_conf": [
+            {
+                "conf_id": 125,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "38-40",
+        "source": 38,
+        "target": 40,
+        "weight": 21.09,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 3,
+                "target_num": 6
+            },
+            {
+                "conf_id": 288,
+                "source_num": 3,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 23,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "38-45",
+        "source": 38,
+        "target": 45,
+        "weight": 7.16,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 3,
+                "target_num": 2
+            },
+            {
+                "conf_id": 123,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 23,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "38-50",
+        "source": 38,
+        "target": 50,
+        "weight": 19.48,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 3,
+                "target_num": 3
+            },
+            {
+                "conf_id": 197,
+                "source_num": 12,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 23,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "38-52",
+        "source": 38,
+        "target": 52,
+        "weight": 22.41,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 3,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 23,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "38-57",
+        "source": 38,
+        "target": 57,
+        "weight": 7.61,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 3,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 23,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "38-59",
+        "source": 38,
+        "target": 59,
+        "weight": 12.28,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 3,
+                "target_num": 2
+            },
+            {
+                "conf_id": 123,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 288,
+                "source_num": 3,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 23,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "38-64",
+        "source": 38,
+        "target": 64,
+        "weight": 1.89,
+        "common_conf": [
+            {
+                "conf_id": 197,
+                "source_num": 12,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 23,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "38-68",
+        "source": 38,
+        "target": 68,
+        "weight": 39.66,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 23,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "38-74",
+        "source": 38,
+        "target": 74,
+        "weight": 14.94,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 3,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 23,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "38-75",
+        "source": 38,
+        "target": 75,
+        "weight": 9.89,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 3,
+                "target_num": 1
+            },
+            {
+                "conf_id": 123,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 197,
+                "source_num": 12,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 23,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "38-77",
+        "source": 38,
+        "target": 77,
+        "weight": 1.29,
+        "common_conf": [
+            {
+                "conf_id": 401,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 521,
+                "source_num": 2,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "38-80",
+        "source": 38,
+        "target": 80,
+        "weight": 9.24,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 3,
+                "target_num": 1
+            },
+            {
+                "conf_id": 123,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 197,
+                "source_num": 12,
+                "target_num": 2
+            },
+            {
+                "conf_id": 384,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 401,
+                "source_num": 2,
+                "target_num": 2
+            },
+            {
+                "conf_id": 521,
+                "source_num": 2,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 23,
+                "target_num": 10
+            }
+        ]
+    },
+    {
+        "id": "40-45",
+        "source": 40,
+        "target": 45,
+        "weight": 14.2,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 6,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 6,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "40-50",
+        "source": 40,
+        "target": 50,
+        "weight": 32.31,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 6,
+                "target_num": 3
+            },
+            {
+                "conf_id": 534,
+                "source_num": 6,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "40-52",
+        "source": 40,
+        "target": 52,
+        "weight": 46.15,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 6,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 6,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "40-57",
+        "source": 40,
+        "target": 57,
+        "weight": 13.57,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 6,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 6,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "40-59",
+        "source": 40,
+        "target": 59,
+        "weight": 24.04,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 6,
+                "target_num": 2
+            },
+            {
+                "conf_id": 288,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 6,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "40-64",
+        "source": 40,
+        "target": 64,
+        "weight": 1.44,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 6,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "40-68",
+        "source": 40,
+        "target": 68,
+        "weight": 46.15,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 6,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "40-74",
+        "source": 40,
+        "target": 74,
+        "weight": 30.77,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 6,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 6,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "40-75",
+        "source": 40,
+        "target": 75,
+        "weight": 12.31,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 6,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 6,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "40-80",
+        "source": 40,
+        "target": 80,
+        "weight": 10.15,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 6,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 6,
+                "target_num": 10
+            }
+        ]
+    },
+    {
+        "id": "41-43",
+        "source": 41,
+        "target": 43,
+        "weight": 100.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "41-45",
+        "source": 41,
+        "target": 45,
+        "weight": 30.77,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "41-50",
+        "source": 41,
+        "target": 50,
+        "weight": 10.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "41-56",
+        "source": 41,
+        "target": 56,
+        "weight": 17.86,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 5
+            }
+        ]
+    },
+    {
+        "id": "41-58",
+        "source": 41,
+        "target": 58,
+        "weight": 25.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "41-62",
+        "source": 41,
+        "target": 62,
+        "weight": 60.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "41-64",
+        "source": 41,
+        "target": 64,
+        "weight": 46.88,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 15
+            }
+        ]
+    },
+    {
+        "id": "41-69",
+        "source": 41,
+        "target": 69,
+        "weight": 50.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "41-72",
+        "source": 41,
+        "target": 72,
+        "weight": 100.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "41-77",
+        "source": 41,
+        "target": 77,
+        "weight": 12.5,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "41-79",
+        "source": 41,
+        "target": 79,
+        "weight": 43.75,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 7
+            }
+        ]
+    },
+    {
+        "id": "41-80",
+        "source": 41,
+        "target": 80,
+        "weight": 2.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "41-81",
+        "source": 41,
+        "target": 81,
+        "weight": 33.33,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "43-45",
+        "source": 43,
+        "target": 45,
+        "weight": 30.77,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "43-50",
+        "source": 43,
+        "target": 50,
+        "weight": 10.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "43-56",
+        "source": 43,
+        "target": 56,
+        "weight": 17.86,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 5
+            }
+        ]
+    },
+    {
+        "id": "43-58",
+        "source": 43,
+        "target": 58,
+        "weight": 25.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "43-62",
+        "source": 43,
+        "target": 62,
+        "weight": 60.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "43-64",
+        "source": 43,
+        "target": 64,
+        "weight": 46.88,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 15
+            }
+        ]
+    },
+    {
+        "id": "43-69",
+        "source": 43,
+        "target": 69,
+        "weight": 50.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "43-72",
+        "source": 43,
+        "target": 72,
+        "weight": 100.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "43-77",
+        "source": 43,
+        "target": 77,
+        "weight": 12.5,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "43-79",
+        "source": 43,
+        "target": 79,
+        "weight": 43.75,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 7
+            }
+        ]
+    },
+    {
+        "id": "43-80",
+        "source": 43,
+        "target": 80,
+        "weight": 2.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "43-81",
+        "source": 43,
+        "target": 81,
+        "weight": 33.33,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "45-50",
+        "source": 45,
+        "target": 50,
+        "weight": 13.85,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 3
+            },
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 2,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "45-52",
+        "source": 45,
+        "target": 52,
+        "weight": 15.38,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "45-56",
+        "source": 45,
+        "target": 56,
+        "weight": 5.49,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 5
+            }
+        ]
+    },
+    {
+        "id": "45-57",
+        "source": 45,
+        "target": 57,
+        "weight": 4.52,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 2,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "45-58",
+        "source": 45,
+        "target": 58,
+        "weight": 7.69,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "45-59",
+        "source": 45,
+        "target": 59,
+        "weight": 8.65,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 2
+            },
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 2,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "45-62",
+        "source": 45,
+        "target": 62,
+        "weight": 18.46,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "45-64",
+        "source": 45,
+        "target": 64,
+        "weight": 14.9,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 15
+            },
+            {
+                "conf_id": 534,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "45-68",
+        "source": 45,
+        "target": 68,
+        "weight": 15.38,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "45-69",
+        "source": 45,
+        "target": 69,
+        "weight": 19.23,
+        "common_conf": [
+            {
+                "conf_id": 105,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "45-72",
+        "source": 45,
+        "target": 72,
+        "weight": 30.77,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "45-74",
+        "source": 45,
+        "target": 74,
+        "weight": 10.26,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "45-75",
+        "source": 45,
+        "target": 75,
+        "weight": 4.62,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 2,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "45-77",
+        "source": 45,
+        "target": 77,
+        "weight": 3.85,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "45-79",
+        "source": 45,
+        "target": 79,
+        "weight": 13.46,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 7
+            }
+        ]
+    },
+    {
+        "id": "45-80",
+        "source": 45,
+        "target": 80,
+        "weight": 4.15,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 2,
+                "target_num": 10
+            }
+        ]
+    },
+    {
+        "id": "45-81",
+        "source": 45,
+        "target": 81,
+        "weight": 10.26,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 4,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "46-47",
+        "source": 46,
+        "target": 47,
+        "weight": 9.52,
+        "common_conf": [
+            {
+                "conf_id": 508,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "47-56",
+        "source": 47,
+        "target": 56,
+        "weight": 4.08,
+        "common_conf": [
+            {
+                "conf_id": 318,
+                "source_num": 2,
+                "target_num": 4
+            }
+        ]
+    },
+    {
+        "id": "47-79",
+        "source": 47,
+        "target": 79,
+        "weight": 7.14,
+        "common_conf": [
+            {
+                "conf_id": 84,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 318,
+                "source_num": 2,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "50-52",
+        "source": 50,
+        "target": 52,
+        "weight": 35.0,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 3,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 4,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "50-56",
+        "source": 50,
+        "target": 56,
+        "weight": 1.79,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 5
+            }
+        ]
+    },
+    {
+        "id": "50-57",
+        "source": 50,
+        "target": 57,
+        "weight": 13.53,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 3,
+                "target_num": 2
+            },
+            {
+                "conf_id": 405,
+                "source_num": 1,
+                "target_num": 5
+            },
+            {
+                "conf_id": 534,
+                "source_num": 4,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "50-58",
+        "source": 50,
+        "target": 58,
+        "weight": 2.5,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "50-59",
+        "source": 50,
+        "target": 59,
+        "weight": 17.5,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 3,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 4,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "50-62",
+        "source": 50,
+        "target": 62,
+        "weight": 6.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "50-64",
+        "source": 50,
+        "target": 64,
+        "weight": 6.25,
+        "common_conf": [
+            {
+                "conf_id": 197,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 15
+            },
+            {
+                "conf_id": 534,
+                "source_num": 4,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "50-68",
+        "source": 50,
+        "target": 68,
+        "weight": 40.0,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 4,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "50-69",
+        "source": 50,
+        "target": 69,
+        "weight": 5.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "50-72",
+        "source": 50,
+        "target": 72,
+        "weight": 10.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "50-74",
+        "source": 50,
+        "target": 74,
+        "weight": 23.33,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 3,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 4,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "50-75",
+        "source": 50,
+        "target": 75,
+        "weight": 11.33,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 3,
+                "target_num": 1
+            },
+            {
+                "conf_id": 197,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 405,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 4,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "50-77",
+        "source": 50,
+        "target": 77,
+        "weight": 1.25,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "50-79",
+        "source": 50,
+        "target": 79,
+        "weight": 4.38,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 7
+            }
+        ]
+    },
+    {
+        "id": "50-80",
+        "source": 50,
+        "target": 80,
+        "weight": 9.2,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 3,
+                "target_num": 1
+            },
+            {
+                "conf_id": 197,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 4,
+                "target_num": 10
+            }
+        ]
+    },
+    {
+        "id": "50-81",
+        "source": 50,
+        "target": 81,
+        "weight": 3.33,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "52-57",
+        "source": 52,
+        "target": 57,
+        "weight": 14.71,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "52-59",
+        "source": 52,
+        "target": 59,
+        "weight": 25.0,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "52-64",
+        "source": 52,
+        "target": 64,
+        "weight": 1.56,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "52-68",
+        "source": 52,
+        "target": 68,
+        "weight": 50.0,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "52-74",
+        "source": 52,
+        "target": 74,
+        "weight": 33.33,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "52-75",
+        "source": 52,
+        "target": 75,
+        "weight": 13.33,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "52-80",
+        "source": 52,
+        "target": 80,
+        "weight": 11.0,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 10
+            }
+        ]
+    },
+    {
+        "id": "56-58",
+        "source": 56,
+        "target": 58,
+        "weight": 6.7,
+        "common_conf": [
+            {
+                "conf_id": 34,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 37,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 54,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 154,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 155,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 238,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 270,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 332,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 360,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 420,
+                "source_num": 5,
+                "target_num": 6
+            },
+            {
+                "conf_id": 454,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 554,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "56-62",
+        "source": 56,
+        "target": 62,
+        "weight": 10.71,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 5,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "56-64",
+        "source": 56,
+        "target": 64,
+        "weight": 8.37,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 5,
+                "target_num": 15
+            }
+        ]
+    },
+    {
+        "id": "56-69",
+        "source": 56,
+        "target": 69,
+        "weight": 8.93,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 5,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "56-72",
+        "source": 56,
+        "target": 72,
+        "weight": 17.86,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 5,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "56-77",
+        "source": 56,
+        "target": 77,
+        "weight": 2.23,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 5,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "56-79",
+        "source": 56,
+        "target": 79,
+        "weight": 10.49,
+        "common_conf": [
+            {
+                "conf_id": 318,
+                "source_num": 4,
+                "target_num": 3
+            },
+            {
+                "conf_id": 420,
+                "source_num": 5,
+                "target_num": 7
+            }
+        ]
+    },
+    {
+        "id": "56-81",
+        "source": 56,
+        "target": 81,
+        "weight": 5.95,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 5,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "57-59",
+        "source": 57,
+        "target": 59,
+        "weight": 8.82,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 2
+            },
+            {
+                "conf_id": 403,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "57-68",
+        "source": 57,
+        "target": 68,
+        "weight": 17.65,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "57-74",
+        "source": 57,
+        "target": 74,
+        "weight": 9.8,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "57-75",
+        "source": 57,
+        "target": 75,
+        "weight": 7.06,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 405,
+                "source_num": 5,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 3
+            },
+            {
+                "conf_id": 560,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "57-80",
+        "source": 57,
+        "target": 80,
+        "weight": 3.88,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 403,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 10
+            }
+        ]
+    },
+    {
+        "id": "58-62",
+        "source": 58,
+        "target": 62,
+        "weight": 15.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 6
+            }
+        ]
+    },
+    {
+        "id": "58-64",
+        "source": 58,
+        "target": 64,
+        "weight": 11.72,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 15
+            }
+        ]
+    },
+    {
+        "id": "58-69",
+        "source": 58,
+        "target": 69,
+        "weight": 12.5,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "58-72",
+        "source": 58,
+        "target": 72,
+        "weight": 25.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "58-77",
+        "source": 58,
+        "target": 77,
+        "weight": 3.12,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "58-79",
+        "source": 58,
+        "target": 79,
+        "weight": 10.94,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 7
+            }
+        ]
+    },
+    {
+        "id": "58-81",
+        "source": 58,
+        "target": 81,
+        "weight": 8.33,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "59-68",
+        "source": 59,
+        "target": 68,
+        "weight": 25.0,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "59-74",
+        "source": 59,
+        "target": 74,
+        "weight": 16.67,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 2,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "59-75",
+        "source": 59,
+        "target": 75,
+        "weight": 7.5,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 2,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "59-80",
+        "source": 59,
+        "target": 80,
+        "weight": 6.25,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 403,
+                "source_num": 2,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 2,
+                "target_num": 10
+            }
+        ]
+    },
+    {
+        "id": "62-64",
+        "source": 62,
+        "target": 64,
+        "weight": 28.12,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 15
+            }
+        ]
+    },
+    {
+        "id": "62-69",
+        "source": 62,
+        "target": 69,
+        "weight": 30.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "62-72",
+        "source": 62,
+        "target": 72,
+        "weight": 60.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "62-77",
+        "source": 62,
+        "target": 77,
+        "weight": 7.5,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "62-79",
+        "source": 62,
+        "target": 79,
+        "weight": 26.25,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 7
+            }
+        ]
+    },
+    {
+        "id": "62-80",
+        "source": 62,
+        "target": 80,
+        "weight": 1.2,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "62-81",
+        "source": 62,
+        "target": 81,
+        "weight": 30.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 6,
+                "target_num": 1
+            },
+            {
+                "conf_id": 425,
+                "source_num": 3,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "64-68",
+        "source": 64,
+        "target": 68,
+        "weight": 3.12,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "64-69",
+        "source": 64,
+        "target": 69,
+        "weight": 23.44,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 15,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "64-72",
+        "source": 64,
+        "target": 72,
+        "weight": 46.88,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 15,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "64-74",
+        "source": 64,
+        "target": 74,
+        "weight": 1.04,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "64-77",
+        "source": 64,
+        "target": 77,
+        "weight": 5.86,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 15,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "64-79",
+        "source": 64,
+        "target": 79,
+        "weight": 20.51,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 15,
+                "target_num": 7
+            }
+        ]
+    },
+    {
+        "id": "64-80",
+        "source": 64,
+        "target": 80,
+        "weight": 1.69,
+        "common_conf": [
+            {
+                "conf_id": 197,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 420,
+                "source_num": 15,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 10
+            }
+        ]
+    },
+    {
+        "id": "64-81",
+        "source": 64,
+        "target": 81,
+        "weight": 15.62,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 15,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "68-74",
+        "source": 68,
+        "target": 74,
+        "weight": 33.33,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "68-75",
+        "source": 68,
+        "target": 75,
+        "weight": 20.0,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "68-80",
+        "source": 68,
+        "target": 80,
+        "weight": 20.0,
+        "common_conf": [
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 10
+            }
+        ]
+    },
+    {
+        "id": "69-72",
+        "source": 69,
+        "target": 72,
+        "weight": 50.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "69-77",
+        "source": 69,
+        "target": 77,
+        "weight": 6.25,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "69-79",
+        "source": 69,
+        "target": 79,
+        "weight": 21.88,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 7
+            }
+        ]
+    },
+    {
+        "id": "69-81",
+        "source": 69,
+        "target": 81,
+        "weight": 16.67,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "72-77",
+        "source": 72,
+        "target": 77,
+        "weight": 12.5,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "72-79",
+        "source": 72,
+        "target": 79,
+        "weight": 43.75,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 7
+            }
+        ]
+    },
+    {
+        "id": "72-80",
+        "source": 72,
+        "target": 80,
+        "weight": 2.0,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "72-81",
+        "source": 72,
+        "target": 81,
+        "weight": 33.33,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "74-75",
+        "source": 74,
+        "target": 75,
+        "weight": 8.89,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 3
+            }
+        ]
+    },
+    {
+        "id": "74-80",
+        "source": 74,
+        "target": 80,
+        "weight": 7.33,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 534,
+                "source_num": 1,
+                "target_num": 10
+            }
+        ]
+    },
+    {
+        "id": "75-77",
+        "source": 75,
+        "target": 77,
+        "weight": 1.67,
+        "common_conf": [
+            {
+                "conf_id": 330,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 402,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "75-78",
+        "source": 75,
+        "target": 78,
+        "weight": 6.67,
+        "common_conf": [
+            {
+                "conf_id": 369,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "75-80",
+        "source": 75,
+        "target": 80,
+        "weight": 6.53,
+        "common_conf": [
+            {
+                "conf_id": 122,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 123,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 197,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 369,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 396,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 402,
+                "source_num": 1,
+                "target_num": 12
+            },
+            {
+                "conf_id": 534,
+                "source_num": 3,
+                "target_num": 10
+            }
+        ]
+    },
+    {
+        "id": "75-81",
+        "source": 75,
+        "target": 81,
+        "weight": 2.22,
+        "common_conf": [
+            {
+                "conf_id": 402,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "77-79",
+        "source": 77,
+        "target": 79,
+        "weight": 6.25,
+        "common_conf": [
+            {
+                "conf_id": 330,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 7
+            }
+        ]
+    },
+    {
+        "id": "77-80",
+        "source": 77,
+        "target": 80,
+        "weight": 4.75,
+        "common_conf": [
+            {
+                "conf_id": 401,
+                "source_num": 1,
+                "target_num": 2
+            },
+            {
+                "conf_id": 402,
+                "source_num": 1,
+                "target_num": 12
+            },
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 521,
+                "source_num": 2,
+                "target_num": 2
+            }
+        ]
+    },
+    {
+        "id": "77-81",
+        "source": 77,
+        "target": 81,
+        "weight": 8.33,
+        "common_conf": [
+            {
+                "conf_id": 402,
+                "source_num": 1,
+                "target_num": 1
+            },
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "78-80",
+        "source": 78,
+        "target": 80,
+        "weight": 2.0,
+        "common_conf": [
+            {
+                "conf_id": 369,
+                "source_num": 1,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "79-81",
+        "source": 79,
+        "target": 81,
+        "weight": 14.58,
+        "common_conf": [
+            {
+                "conf_id": 420,
+                "source_num": 7,
+                "target_num": 1
+            }
+        ]
+    },
+    {
+        "id": "80-81",
+        "source": 80,
+        "target": 81,
+        "weight": 8.67,
+        "common_conf": [
+            {
+                "conf_id": 402,
+                "source_num": 12,
+                "target_num": 1
+            },
+            {
+                "conf_id": 420,
+                "source_num": 1,
+                "target_num": 1
             }
         ]
     }
