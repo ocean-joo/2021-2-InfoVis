@@ -7,7 +7,13 @@ import conf_json from "../data/conf.json"
 import lab_json from "../data/lab.json"
 
 const CommunityGraph = (props) => {
-  const schoolList = ["snu", "kaist", "postech", "yonsei", "korea"]
+  const schoolList = {
+    "snu": { "id": 0, "name": "Seoul National University" },
+    "kaist": { "id": 1, "name": "KAIST" },
+    "postech": { "id": 2, "name": "POSTECH" },
+    "yonsei": { "id": 3, "name": "Yonsei University" },
+    "korea": { "id": 4, "name": "Korea University" }
+  }
   const comGraph = useRef(null);
   const sideBar = useRef(null);
 
@@ -58,7 +64,7 @@ const CommunityGraph = (props) => {
     // collect clusters from nodes
     const clusters = {};
     nodes.forEach((node) => {
-      const clusterID = schoolList.findIndex(e => e === node.school);
+      const clusterID = schoolList[node.school]["id"];
       if (!clusters[clusterID]) {
         clusters[clusterID] = node;
       }
@@ -120,11 +126,11 @@ const CommunityGraph = (props) => {
     var groups = svg.append('g')
       .attr('class', 'groups');
 
-    var groupIds = Array.from(new Set(nodes.map(function (n) { return +schoolList.findIndex(e => e === n.school); })))
+    var groupIds = Array.from(new Set(nodes.map(function (n) { return +schoolList[n.school]["id"]; })))
       .map(function (groupId) {
         return {
           groupId: groupId,
-          count: nodes.filter(function (n) { return +schoolList.findIndex(e => e === n.school) === groupId; }).length
+          count: nodes.filter(function (n) { return +schoolList[n.school]["id"] === groupId; }).length
         };
       });
 
@@ -167,7 +173,7 @@ const CommunityGraph = (props) => {
       .data(d => d)
       .enter().append('circle')
       .attr('r', d => d.r)
-      .attr('fill', d => z(schoolList.findIndex(e => e === d.school)))
+      .attr('fill', d => z(schoolList[d.school]["id"]))
       .attr('stroke', 'black')
       .attr('stroke-width', 0.3)
       .attr('opacity', 0)   // initially invisible
@@ -209,7 +215,7 @@ const CommunityGraph = (props) => {
       var node;
       nodes.forEach(function (n) {
         // TODO : lighter? 
-        if (schoolList.findIndex(e => e === n.school) === d.groupId) {
+        if (schoolList[n.school]["id"] === d.groupId) {
           node = n;
         }
       });
@@ -297,7 +303,7 @@ const CommunityGraph = (props) => {
         .style("opacity", 0);
 
       text
-        .data([d.name, d.school, d.prof_name, d.email, d.desciption, d.href])
+        .data([d.name, schoolList[d.school]["name"], d.prof_name, d.email, d.desciption, d.href])
         .text(function (d) {
           return d;
         })
@@ -311,12 +317,7 @@ const CommunityGraph = (props) => {
         .attr("font-size", "11px")
         .attr("fill", "black")
         .attr("text-anchor", "middle");
-
-
     }
-
-
-
 
     function ticked() {
       link
@@ -335,7 +336,7 @@ const CommunityGraph = (props) => {
     // These are implementations of the custom forces
     function clustering(alpha) {
       nodes.forEach((d) => {
-        const cluster = clusters[schoolList.findIndex(e => e === d.school)];
+        const cluster = clusters[schoolList[d.school]["id"]];
         if (cluster === d) return;
         let x = d.x - cluster.x;
         let y = d.y - cluster.y;
@@ -368,7 +369,7 @@ const CommunityGraph = (props) => {
             let x = d.x - quad.data.x;
             let y = d.y - quad.data.y;
             let l = Math.sqrt((x * x) + (y * y));
-            const r = d.r + quad.data.r + (schoolList.findIndex(e => e === n.school) === schoolList.findIndex(e => e === quad.data.school) ? padding : clusterPadding);
+            const r = d.r + quad.data.r + (schoolList[d.school]["id"] === schoolList[quad.data.school]["id"] ? padding : clusterPadding);
             if (l < r) {
               l = ((l - r) / l) * alpha;
               d.x -= x *= l;
@@ -385,7 +386,7 @@ const CommunityGraph = (props) => {
     var polygonGenerator = function (groupId) {
       var node_coords = circles
         .data()
-        .filter(function (d) { return schoolList.findIndex(e => e === d.school) === groupId.groupId; })
+        .filter(function (d) { return schoolList[d.school]["id"] === groupId.groupId; })
         .map(function (d) { return [d.x, d.y]; });
       return d3.polygonHull(node_coords);
       // return roundedHull(d3.polygonHull(node_coords));
