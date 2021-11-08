@@ -58,7 +58,7 @@ const CommunityGraph = (props) => {
     // collect clusters from nodes
     const clusters = {};
     nodes.forEach((node) => {
-      const clusterID = schoolList.findIndex(e => e == node.school);
+      const clusterID = schoolList.findIndex(e => e === node.school);
       if (!clusters[clusterID]) {
         clusters[clusterID] = node;
       }
@@ -119,11 +119,11 @@ const CommunityGraph = (props) => {
     var groups = svg.append('g')
       .attr('class', 'groups');
 
-    var groupIds = Array.from(new Set(nodes.map(function (n) { return +schoolList.findIndex(e => e == n.school); })))
+    var groupIds = Array.from(new Set(nodes.map(function (n) { return +schoolList.findIndex(e => e === n.school); })))
       .map(function (groupId) {
         return {
           groupId: groupId,
-          count: nodes.filter(function (n) { return +schoolList.findIndex(e => e == n.school) == groupId; }).length
+          count: nodes.filter(function (n) { return +schoolList.findIndex(e => e === n.school) === groupId; }).length
         };
       });
 
@@ -166,7 +166,7 @@ const CommunityGraph = (props) => {
       .data(d => d)
       .enter().append('circle')
       .attr('r', d => d.r)
-      .attr('fill', d => z(schoolList.findIndex(e => e == d.school)))
+      .attr('fill', d => z(schoolList.findIndex(e => e === d.school)))
       .attr('stroke', 'black')
       .attr('stroke-width', 0.3)
       .attr('opacity', 0)   // initially invisible
@@ -208,7 +208,7 @@ const CommunityGraph = (props) => {
       var node;
       nodes.forEach(function (n) {
         // TODO : lighter? 
-        if (schoolList.findIndex(e => e == n.school) == d.groupId) {
+        if (schoolList.findIndex(e => e === n.school) === d.groupId) {
           node = n;
         }
       });
@@ -221,7 +221,7 @@ const CommunityGraph = (props) => {
           .duration(200)
           .style("opacity", .9);
 
-        div.html(d.id + "<br/>" + d.source_lab + "<br/>" + d.target_lab)
+        div.html(d.id + "<br/>" + d.source.name + "<br/>" + d.target.name)
           .style("left", (event.pageX) + "px")
           .style("top", (event.pageY - 28) + "px");
 
@@ -334,7 +334,7 @@ const CommunityGraph = (props) => {
     // These are implementations of the custom forces
     function clustering(alpha) {
       nodes.forEach((d) => {
-        const cluster = clusters[schoolList.findIndex(e => e == d.school)];
+        const cluster = clusters[schoolList.findIndex(e => e === d.school)];
         if (cluster === d) return;
         let x = d.x - cluster.x;
         let y = d.y - cluster.y;
@@ -367,7 +367,7 @@ const CommunityGraph = (props) => {
             let x = d.x - quad.data.x;
             let y = d.y - quad.data.y;
             let l = Math.sqrt((x * x) + (y * y));
-            const r = d.r + quad.data.r + (schoolList.findIndex(e => e == n.school) === schoolList.findIndex(e => e == quad.data.school) ? padding : clusterPadding);
+            const r = d.r + quad.data.r + (schoolList.findIndex(e => e === n.school) === schoolList.findIndex(e => e === quad.data.school) ? padding : clusterPadding);
             if (l < r) {
               l = ((l - r) / l) * alpha;
               d.x -= x *= l;
@@ -384,7 +384,7 @@ const CommunityGraph = (props) => {
     var polygonGenerator = function (groupId) {
       var node_coords = circles
         .data()
-        .filter(function (d) { return schoolList.findIndex(e => e == d.school) == groupId.groupId; })
+        .filter(function (d) { return schoolList.findIndex(e => e === d.school) === groupId.groupId; })
         .map(function (d) { return [d.x, d.y]; });
       return d3.polygonHull(node_coords);
       // return roundedHull(d3.polygonHull(node_coords));
@@ -392,7 +392,7 @@ const CommunityGraph = (props) => {
 
     function updateGroups() {
       groupIds.forEach(function (groupId) {
-        var path = paths.filter(function (d) { return d == groupId; })
+        var path = paths.filter(function (d) { return d === groupId; })
           .attr('transform', 'scale(1) translate(0,0)')
           .attr('d', function (d) {
             polygon = polygonGenerator(d);
