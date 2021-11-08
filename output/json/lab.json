@@ -1,0 +1,500 @@
+[
+    {
+        "id": "0",
+        "name": "김기응",
+        "scale": 1,
+        "cluster": 1
+    },
+    {
+        "id": "1",
+        "name": "서민준",
+        "scale": 0,
+        "cluster": 1
+    },
+    {
+        "id": "2",
+        "name": "신진우",
+        "scale": 13,
+        "cluster": 1
+    },
+    {
+        "id": "3",
+        "name": "양은호",
+        "scale": 3,
+        "cluster": 1
+    },
+    {
+        "id": "4",
+        "name": "윤세영",
+        "scale": 7,
+        "cluster": 1
+    },
+    {
+        "id": "5",
+        "name": "윤철희",
+        "scale": 0,
+        "cluster": 1
+    },
+    {
+        "id": "6",
+        "name": "이주호",
+        "scale": 0,
+        "cluster": 1
+    },
+    {
+        "id": "7",
+        "name": "정송",
+        "scale": 0,
+        "cluster": 1
+    },
+    {
+        "id": "8",
+        "name": "주재걸",
+        "scale": 10,
+        "cluster": 1
+    },
+    {
+        "id": "9",
+        "name": "최윤재",
+        "scale": 0,
+        "cluster": 1
+    },
+    {
+        "id": "10",
+        "name": "최재식",
+        "scale": 2,
+        "cluster": 1
+    },
+    {
+        "id": "11",
+        "name": "황성주",
+        "scale": 0,
+        "cluster": 1
+    },
+    {
+        "id": "12",
+        "name": "Christian Wallraven",
+        "scale": 15,
+        "cluster": 4
+    },
+    {
+        "id": "13",
+        "name": "감태의",
+        "scale": 0,
+        "cluster": 4
+    },
+    {
+        "id": "14",
+        "name": "석흥일",
+        "scale": 8,
+        "cluster": 4
+    },
+    {
+        "id": "15",
+        "name": "성준경",
+        "scale": 1,
+        "cluster": 4
+    },
+    {
+        "id": "16",
+        "name": "이상근",
+        "scale": 16,
+        "cluster": 4
+    },
+    {
+        "id": "17",
+        "name": "이성환",
+        "scale": 50,
+        "cluster": 4
+    },
+    {
+        "id": "18",
+        "name": "정원주",
+        "scale": 3,
+        "cluster": 4
+    },
+    {
+        "id": "19",
+        "name": "최성준",
+        "scale": 0,
+        "cluster": 4
+    },
+    {
+        "id": "20",
+        "name": "곽수하",
+        "scale": 0,
+        "cluster": 2
+    },
+    {
+        "id": "21",
+        "name": "김동우",
+        "scale": 0,
+        "cluster": 2
+    },
+    {
+        "id": "22",
+        "name": "김원화",
+        "scale": 0,
+        "cluster": 2
+    },
+    {
+        "id": "23",
+        "name": "박은혁",
+        "scale": 0,
+        "cluster": 2
+    },
+    {
+        "id": "24",
+        "name": "서영주",
+        "scale": 10,
+        "cluster": 2
+    },
+    {
+        "id": "25",
+        "name": "성효진",
+        "scale": 0,
+        "cluster": 2
+    },
+    {
+        "id": "26",
+        "name": "안희갑",
+        "scale": 1,
+        "cluster": 2
+    },
+    {
+        "id": "27",
+        "name": "옥정슬",
+        "scale": 2,
+        "cluster": 2
+    },
+    {
+        "id": "28",
+        "name": "유환조",
+        "scale": 32,
+        "cluster": 2
+    },
+    {
+        "id": "29",
+        "name": "이근배",
+        "scale": 28,
+        "cluster": 2
+    },
+    {
+        "id": "30",
+        "name": "이승용",
+        "scale": 17,
+        "cluster": 2
+    },
+    {
+        "id": "31",
+        "name": "이종혁",
+        "scale": 24,
+        "cluster": 2
+    },
+    {
+        "id": "32",
+        "name": "정재훈",
+        "scale": 0,
+        "cluster": 2
+    },
+    {
+        "id": "33",
+        "name": "조민수",
+        "scale": 8,
+        "cluster": 2
+    },
+    {
+        "id": "34",
+        "name": "조성현",
+        "scale": 1,
+        "cluster": 2
+    },
+    {
+        "id": "35",
+        "name": "한욱신",
+        "scale": 0,
+        "cluster": 2
+    },
+    {
+        "id": "36",
+        "name": "황형주",
+        "scale": 0,
+        "cluster": 2
+    },
+    {
+        "id": "37",
+        "name": "강명주",
+        "scale": 7,
+        "cluster": 0
+    },
+    {
+        "id": "38",
+        "name": "강병남",
+        "scale": 0,
+        "cluster": 0
+    },
+    {
+        "id": "39",
+        "name": "강유",
+        "scale": 17,
+        "cluster": 0
+    },
+    {
+        "id": "40",
+        "name": "강현구",
+        "scale": 0,
+        "cluster": 0
+    },
+    {
+        "id": "41",
+        "name": "김장우",
+        "scale": 0,
+        "cluster": 0
+    },
+    {
+        "id": "42",
+        "name": "김현진",
+        "scale": 37,
+        "cluster": 0
+    },
+    {
+        "id": "43",
+        "name": "류경석",
+        "scale": 0,
+        "cluster": 0
+    },
+    {
+        "id": "44",
+        "name": "문태섭",
+        "scale": 5,
+        "cluster": 0
+    },
+    {
+        "id": "45",
+        "name": "박재흥",
+        "scale": 17,
+        "cluster": 0
+    },
+    {
+        "id": "46",
+        "name": "박종우",
+        "scale": 29,
+        "cluster": 0
+    },
+    {
+        "id": "47",
+        "name": "백대현",
+        "scale": 0,
+        "cluster": 0
+    },
+    {
+        "id": "48",
+        "name": "백용주",
+        "scale": 0,
+        "cluster": 0
+    },
+    {
+        "id": "49",
+        "name": "서봉원",
+        "scale": 1,
+        "cluster": 0
+    },
+    {
+        "id": "50",
+        "name": "석차옥",
+        "scale": 3,
+        "cluster": 0
+    },
+    {
+        "id": "51",
+        "name": "손석우",
+        "scale": 0,
+        "cluster": 0
+    },
+    {
+        "id": "52",
+        "name": "송현오",
+        "scale": 0,
+        "cluster": 0
+    },
+    {
+        "id": "53",
+        "name": "안우영",
+        "scale": 0,
+        "cluster": 0
+    },
+    {
+        "id": "54",
+        "name": "안정호",
+        "scale": 2,
+        "cluster": 0
+    },
+    {
+        "id": "55",
+        "name": "양인순",
+        "scale": 4,
+        "cluster": 0
+    },
+    {
+        "id": "56",
+        "name": "오성회",
+        "scale": 26,
+        "cluster": 0
+    },
+    {
+        "id": "57",
+        "name": "원중호",
+        "scale": 0,
+        "cluster": 0
+    },
+    {
+        "id": "58",
+        "name": "유승주",
+        "scale": 4,
+        "cluster": 0
+    },
+    {
+        "id": "59",
+        "name": "윤성로",
+        "scale": 13,
+        "cluster": 0
+    },
+    {
+        "id": "60",
+        "name": "이경무",
+        "scale": 68,
+        "cluster": 0
+    },
+    {
+        "id": "61",
+        "name": "이경수",
+        "scale": 17,
+        "cluster": 0
+    },
+    {
+        "id": "62",
+        "name": "이재성",
+        "scale": 2,
+        "cluster": 0
+    },
+    {
+        "id": "63",
+        "name": "이재욱",
+        "scale": 3,
+        "cluster": 0
+    },
+    {
+        "id": "64",
+        "name": "이준환",
+        "scale": 3,
+        "cluster": 0
+    },
+    {
+        "id": "65",
+        "name": "이혁재",
+        "scale": 0,
+        "cluster": 0
+    },
+    {
+        "id": "66",
+        "name": "장병탁",
+        "scale": 20,
+        "cluster": 0
+    },
+    {
+        "id": "67",
+        "name": "전동석",
+        "scale": 0,
+        "cluster": 0
+    },
+    {
+        "id": "68",
+        "name": "전병곤",
+        "scale": 0,
+        "cluster": 0
+    },
+    {
+        "id": "69",
+        "name": "전세영",
+        "scale": 3,
+        "cluster": 0
+    },
+    {
+        "id": "70",
+        "name": "정교민",
+        "scale": 16,
+        "cluster": 0
+    },
+    {
+        "id": "71",
+        "name": "정민화",
+        "scale": 2,
+        "cluster": 0
+    },
+    {
+        "id": "72",
+        "name": "조남익",
+        "scale": 66,
+        "cluster": 0
+    },
+    {
+        "id": "73",
+        "name": "조성준",
+        "scale": 15,
+        "cluster": 0
+    },
+    {
+        "id": "74",
+        "name": "차지욱",
+        "scale": 1,
+        "cluster": 0
+    },
+    {
+        "id": "75",
+        "name": "최진영",
+        "scale": 58,
+        "cluster": 0
+    },
+    {
+        "id": "76",
+        "name": "하순회",
+        "scale": 1,
+        "cluster": 0
+    },
+    {
+        "id": "77",
+        "name": "한보형",
+        "scale": 13,
+        "cluster": 0
+    },
+    {
+        "id": "78",
+        "name": "황승원",
+        "scale": 1,
+        "cluster": 0
+    },
+    {
+        "id": "79",
+        "name": "김영석",
+        "scale": 0,
+        "cluster": 3
+    },
+    {
+        "id": "80",
+        "name": "박노성",
+        "scale": 1,
+        "cluster": 3
+    },
+    {
+        "id": "81",
+        "name": "여진영",
+        "scale": 0,
+        "cluster": 3
+    },
+    {
+        "id": "82",
+        "name": "이진호",
+        "scale": 3,
+        "cluster": 3
+    }
+]
