@@ -5,10 +5,14 @@ import graph from "../data/graph.json"
 
 const CommunityGraph = (props) => {
   const comGraph = useRef(null);
+  const sideBar = useRef(null);
 
   const width = 960;
   const height = 750;
-  const width_padding = 200;
+  const sideBarWidth = 300;
+  const sideBarHeight = 750;
+
+  const width_padding = 0;
   var dur = 600;
 
   useEffect(() => {
@@ -57,6 +61,17 @@ const CommunityGraph = (props) => {
     });
     // console.log('clusters', clusters);
 
+    // side bar
+    var bar = d3.select(sideBar.current);
+    var barSvg = bar
+      .attr("style", "outline: thin dashed black;")
+      .attr('height', sideBarHeight)
+      .attr('width', sideBarWidth)
+      .attr('transform', `translate(10,0)`);
+    
+
+
+    // community graph
     var cur = d3.select(comGraph.current);
 
     var svg = cur
@@ -356,6 +371,9 @@ const CommunityGraph = (props) => {
     <div>
       <svg ref={comGraph} width={width} height={height}>
       </svg>
+      <svg ref={sideBar} width={sideBarWidth} height={sideBarHeight}> 
+			</svg>
+
     </div>    
   )
 };
