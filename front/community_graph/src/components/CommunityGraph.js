@@ -1,7 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import * as d3 from "d3";
 
-import graph from "../data/graph.json"
+// import graph from "../data/graph.json"
+import graph from "../data/weight_0.01.json"
 
 const CommunityGraph = (props) => {
   const comGraph = useRef(null);
@@ -20,11 +21,11 @@ const CommunityGraph = (props) => {
     const links = graph.links;
 
     // separation between same-color circles
-    const padding = 10;
+    const padding = 50;
     // separation between different-color circles
-    const clusterPadding = padding * 15;
+    const clusterPadding = padding * 2;
 
-    var maxRadius = -1;
+    var maxRadius = 30;
     const defaultRadius = 4;
 
     var centered;
@@ -41,13 +42,13 @@ const CommunityGraph = (props) => {
     const n = nodes.length;
 
     nodes.forEach(function (node) {
-      // node.r = defaultRadius;
+      node.r = defaultRadius;
 
       // node size is mapped to "scale" property
-      if (maxRadius < node.scale / 2) {
-        maxRadius = node.scale / 2;
-      }
-      node.r = node.scale / 2;
+      // if (maxRadius < node.scale / 2) {
+        // maxRadius = node.scale / 2;
+      // }
+      // node.r = node.scale / 2;
     });
     // console.log('maxRadius', maxRadius);
 
@@ -69,6 +70,26 @@ const CommunityGraph = (props) => {
       .attr('width', sideBarWidth)
       .attr('transform', `translate(10,0)`);
     
+    var text = barSvg
+                    .selectAll('text')
+                    // [id, name]
+                    .data(['', ''])
+                    .enter()
+                    .append('text')
+                    .text(function(d) {
+                      return d;
+                    })
+                    .attr("x", function(d, i) {
+                      return 30;
+                    })
+                    .attr("y", function(d, i) {
+                        return 30 * (i+1);
+                    })
+                    .attr("font-family", "sans-serif")
+                    .attr("font-size", "11px")
+                    .attr("fill", "black")
+                    .attr("text-anchor", "middle")
+                    .attr('class', 'node_text');
 
 
     // community graph
@@ -83,7 +104,7 @@ const CommunityGraph = (props) => {
       // graph
       .append('g')
         .attr('transform', `translate(${width / 2} , ${height / 2})`)
-        .attr("style", "outline: thin solid black;");
+        // .attr("style", "outline: thin solid black;");
 
     // link popup 
     var div = d3.select('body')
@@ -130,7 +151,7 @@ const CommunityGraph = (props) => {
     link
       .attr('class', 'link')
       .style('stroke', 'darkgray')
-      .style('stroke-width', '6px')  
+      .style('stroke-width', '1px')  
       .attr('opacity', 0)    
       .on('click', link_clicked);
       // .on('click', node_clicked);
@@ -220,7 +241,6 @@ const CommunityGraph = (props) => {
       const y_offset = 100;
   
       if (d && centered !== d) {
-        // console.log('cenetered is not d');
         x = d.x;
         y = d.y;
         k = 4;
@@ -235,11 +255,14 @@ const CommunityGraph = (props) => {
       .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + (-x-x_offset) + "," + (-y-y_offset) + ")")
   
       circles.classed('active', centered && function(d) { return d === centered; });
+      
 
       link.transition()
           .duration(dur)
           .attr('opacity', 1)
           .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + (-x-x_offset) + "," + (-y-y_offset) + ")");    
+
+      // TODO : thicker stroke for the links in d's cluster
 
       } else {
         // if clicked again, restore
@@ -270,7 +293,26 @@ const CommunityGraph = (props) => {
         .duration(dur)
         .style("opacity", 0);
 
+      text
+        .data([d.id, d.name])
+        .text(function(d) {
+          return d;
+        })
+        .attr("x", function(d, i) {
+          return 30;
+        })
+        .attr("y", function(d, i) {
+            return 30 * (i+1);
+        })
+        .attr("font-family", "sans-serif")
+        .attr("font-size", "11px")
+        .attr("fill", "black")
+        .attr("text-anchor", "middle");
+
+
       }
+
+
 
   
     function ticked() {
