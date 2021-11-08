@@ -71,7 +71,7 @@ if __name__ == '__main__' :
         for (a_b_adj_idx, a_b_adj) in enumerate(adj_matrix[lab_idx]):
             if a_b_adj_idx >= lab_idx:
                 continue
-            if a_b_adj > 0:
+            if a_b_adj > 0.01:
                 new_link = {}
                 new_link["id"] = str(lab_idx) + "-" + str(a_b_adj_idx)
                 new_link["source"] = lab_idx
@@ -83,5 +83,5 @@ if __name__ == '__main__' :
     json_dict["nodes"] = nodes_list
     json_dict["links"] = links_list
 
-    with open('output/json/weight.json', 'w') as json_file:
-        json.dump(json_dict, json_file)
+    with open('output/json/weight.json', 'w', encoding='utf-8') as json_file:
+        json.dump(json_dict, json_file, ensure_ascii=False)
