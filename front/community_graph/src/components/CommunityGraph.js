@@ -1,12 +1,13 @@
 import React, { useRef, useEffect } from "react";
 import * as d3 from "d3";
 
-import graph from "../data/weight_0.01.json"
-import link from "../data/link.json"
-import conf from "../data/conf.json"
-import lab from "../data/lab.json"
+// import graph from "../data / weight_0.01.json"
+import link_json from "../data/link.json"
+import conf_json from "../data/conf.json"
+import lab_json from "../data/lab.json"
 
 const CommunityGraph = (props) => {
+  const schoolList = ["snu", "kaist", "postech", "yonsei", "korea"]
   const comGraph = useRef(null);
   const sideBar = useRef(null);
 
@@ -19,11 +20,11 @@ const CommunityGraph = (props) => {
   var dur = 600;
 
   useEffect(() => {
-    const nodes = graph.nodes;
-    const links = graph.links;
+    const nodes = lab_json;
+    const links = link_json;
 
     // separation between same-color circles
-    const padding = 50;
+    const padding = 30;
     // separation between different-color circles
     const clusterPadding = padding * 2;
 
@@ -48,7 +49,7 @@ const CommunityGraph = (props) => {
 
       // node size is mapped to "scale" property
       // if (maxRadius < node.scale / 2) {
-        // maxRadius = node.scale / 2;
+      // maxRadius = node.scale / 2;
       // }
       // node.r = node.scale / 2;
     });
@@ -57,7 +58,7 @@ const CommunityGraph = (props) => {
     // collect clusters from nodes
     const clusters = {};
     nodes.forEach((node) => {
-      const clusterID = node.cluster;
+      const clusterID = schoolList.findIndex(e => e == node.school);
       if (!clusters[clusterID]) {
         clusters[clusterID] = node;
       }
@@ -71,27 +72,27 @@ const CommunityGraph = (props) => {
       .attr('height', sideBarHeight)
       .attr('width', sideBarWidth)
       .attr('transform', `translate(10,0)`);
-    
+
     var text = barSvg
-                    .selectAll('text')
-                    // [id, name]
-                    .data(['', ''])
-                    .enter()
-                    .append('text')
-                    .text(function(d) {
-                      return d;
-                    })
-                    .attr("x", function(d, i) {
-                      return 30;
-                    })
-                    .attr("y", function(d, i) {
-                        return 30 * (i+1);
-                    })
-                    .attr("font-family", "sans-serif")
-                    .attr("font-size", "11px")
-                    .attr("fill", "black")
-                    .attr("text-anchor", "middle")
-                    .attr('class', 'node_text');
+      .selectAll('text')
+      // [id, name]
+      .data(['', ''])
+      .enter()
+      .append('text')
+      .text(function (d) {
+        return d;
+      })
+      .attr("x", function (d, i) {
+        return 30;
+      })
+      .attr("y", function (d, i) {
+        return 30 * (i + 1);
+      })
+      .attr("font-family", "sans-serif")
+      .attr("font-size", "11px")
+      .attr("fill", "black")
+      .attr("text-anchor", "middle")
+      .attr('class', 'node_text');
 
 
     // community graph
@@ -105,8 +106,8 @@ const CommunityGraph = (props) => {
 
       // graph
       .append('g')
-        .attr('transform', `translate(${width / 2} , ${height / 2})`)
-        // .attr("style", "outline: thin solid black;");
+      .attr('transform', `translate(${width / 2} , ${height / 2})`)
+    // .attr("style", "outline: thin solid black;");
 
     // link popup 
     var div = d3.select('body')
@@ -118,11 +119,11 @@ const CommunityGraph = (props) => {
     var groups = svg.append('g')
       .attr('class', 'groups');
 
-    var groupIds = Array.from(new Set(nodes.map(function (n) { return +n.cluster; })))
+    var groupIds = Array.from(new Set(nodes.map(function (n) { return +schoolList.findIndex(e => e == n.school); })))
       .map(function (groupId) {
         return {
           groupId: groupId,
-          count: nodes.filter(function (n) { return +n.cluster == groupId; }).length
+          count: nodes.filter(function (n) { return +schoolList.findIndex(e => e == n.school) == groupId; }).length
         };
       });
 
@@ -153,8 +154,8 @@ const CommunityGraph = (props) => {
     link
       .attr('class', 'link')
       .style('stroke', 'darkgray')
-      .style('stroke-width', '1px')  
-      .attr('opacity', 0)    
+      .style('stroke-width', '1px')
+      .attr('opacity', 0)
       .on('click', link_clicked);
     // .on('click', node_clicked);
 
@@ -165,7 +166,7 @@ const CommunityGraph = (props) => {
       .data(d => d)
       .enter().append('circle')
       .attr('r', d => d.r)
-      .attr('fill', d => z(d.cluster))
+      .attr('fill', d => z(schoolList.findIndex(e => e == d.school)))
       .attr('stroke', 'black')
       .attr('stroke-width', 0.3)
       .attr('opacity', 0)   // initially invisible
@@ -197,7 +198,7 @@ const CommunityGraph = (props) => {
       .on('tick', ticked);
 
     simulation.force('link')
-      .links(graph.links)
+      .links(link_json)
       .distance(function (d) { return d.weight * 2; }).strength(0.1);
     // .distance([85]);
 
@@ -207,7 +208,7 @@ const CommunityGraph = (props) => {
       var node;
       nodes.forEach(function (n) {
         // TODO : lighter? 
-        if (n.cluster == d.groupId) {
+        if (schoolList.findIndex(e => e == n.school) == d.groupId) {
           node = n;
         }
       });
@@ -263,7 +264,7 @@ const CommunityGraph = (props) => {
           .attr('opacity', 1)
           .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + (-x - x_offset) + "," + (-y - y_offset) + ")");
 
-      // TODO : thicker stroke for the links in d's cluster
+        // TODO : thicker stroke for the links in d's cluster
 
       } else {
         // if clicked again, restore
@@ -296,14 +297,14 @@ const CommunityGraph = (props) => {
 
       text
         .data([d.id, d.name])
-        .text(function(d) {
+        .text(function (d) {
           return d;
         })
-        .attr("x", function(d, i) {
+        .attr("x", function (d, i) {
           return 30;
         })
-        .attr("y", function(d, i) {
-            return 30 * (i+1);
+        .attr("y", function (d, i) {
+          return 30 * (i + 1);
         })
         .attr("font-family", "sans-serif")
         .attr("font-size", "11px")
@@ -311,11 +312,11 @@ const CommunityGraph = (props) => {
         .attr("text-anchor", "middle");
 
 
-      }
+    }
 
 
 
-  
+
     function ticked() {
       link
         .attr('x1', d => d.source.x)
@@ -333,7 +334,7 @@ const CommunityGraph = (props) => {
     // These are implementations of the custom forces
     function clustering(alpha) {
       nodes.forEach((d) => {
-        const cluster = clusters[d.cluster];
+        const cluster = clusters[schoolList.findIndex(e => e == d.school)];
         if (cluster === d) return;
         let x = d.x - cluster.x;
         let y = d.y - cluster.y;
@@ -366,7 +367,7 @@ const CommunityGraph = (props) => {
             let x = d.x - quad.data.x;
             let y = d.y - quad.data.y;
             let l = Math.sqrt((x * x) + (y * y));
-            const r = d.r + quad.data.r + (d.cluster === quad.data.cluster ? padding : clusterPadding);
+            const r = d.r + quad.data.r + (schoolList.findIndex(e => e == n.school) === schoolList.findIndex(e => e == quad.data.school) ? padding : clusterPadding);
             if (l < r) {
               l = ((l - r) / l) * alpha;
               d.x -= x *= l;
@@ -383,7 +384,7 @@ const CommunityGraph = (props) => {
     var polygonGenerator = function (groupId) {
       var node_coords = circles
         .data()
-        .filter(function (d) { return d.cluster == groupId.groupId; })
+        .filter(function (d) { return schoolList.findIndex(e => e == d.school) == groupId.groupId; })
         .map(function (d) { return [d.x, d.y]; });
       return d3.polygonHull(node_coords);
       // return roundedHull(d3.polygonHull(node_coords));
