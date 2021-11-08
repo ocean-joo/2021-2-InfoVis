@@ -7,6 +7,7 @@ W_THR = 0.01
 
 # will be dumped into json
 conf_list = []
+raw_lab_list = []
 lab_list = []
 link_list = []
 
@@ -27,25 +28,55 @@ if __name__ == '__main__' :
             new_conf = {"id" : str(conf_id_idx), "name" : row[0], "impact_score" : float(row[2])}
             conf_list.append(new_conf)
             conf_id_idx += 1
-    
+
+    with open('output/conf_csv/journal_with_metadata.csv', 'rt', encoding='utf-8') as input_f:
+        rdr = csv.reader(input_f, delimiter='+')
+
+        # Remove first line
+        next(rdr)
+        for row in rdr:
+            conf_list.append({"id" : str(conf_id_idx), "name" : row[0], "impact_score" : float(row[1])})
+            conf_id_idx += 1
+
     for school in school_list:
         lab_info_file = 'output/lab_csv/{}_homepage.csv'.format(school)
-        with open(lab_info_file, 'rt', encoding='utf-8') as input_f:
+
+        with open(lab_info_file, 'rt', encoding='cp949') as input_f:
             rdr = csv.reader(input_f, delimiter=',')
             for row in rdr:
                 lab_el = {}
-                lab_el["id"] = lab_id_idx
                 lab_el["prof_name"] = row[0]
                 lab_el["email"] = row[1]
                 lab_el["href"] = row[2]
+                lab_el["name"] = row[3]
+                lab_el["description"] = row[4]
+                lab_el["school"] = school
 
-                # TODO
-                # lab_el["name"]
-                # lab_el["description"]
+                raw_lab_list.append(lab_el)
 
-                lab_list.append(lab_el)
-                lab_id_idx += 1
+    # Filter lab which does not have paper in google scholar
+    for lab in raw_lab_list:
+        bibtex_file = 'output/bibtex_csv/{}_bibtex_{}.csv'.format(lab["school"], lab["prof_name"])
 
+        if not os.path.exists(bibtex_file):
+            continue
+        
+        with open(bibtex_file, 'rt', encoding='utf-16') as input_f:
+            if len(input_f.readlines()) == 1:
+                continue
+        
+        lab_el = {}
+        lab_el["id"] = lab_id_idx
+        lab_el["prof_name"] = lab["prof_name"]
+        lab_el["email"] = lab["email"]
+        lab_el["href"] = lab["href"]
+        lab_el["name"] = lab["name"]
+        lab_el["school"] = lab["school"]
+        lab_el["description"] = lab["description"]
+
+        lab_list.append(lab_el)
+        lab_id_idx += 1
+    
     for lab in lab_list:
         bibtex_file = 'output/bibtex_csv/{}_bibtex_{}.csv'.format(lab["school"], lab["prof_name"])
         with open(bibtex_file, 'rt', encoding='utf-16') as input_f:
