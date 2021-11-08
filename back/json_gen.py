@@ -90,10 +90,10 @@ if __name__ == '__main__' :
             # TODO : should separate top 1000 conf and total paper
             for row in rdr:
                 conf_in_paper = row[2]
-                for conf_idx, conf_dict in enumerate(conf_list):
+                for conf_id, conf_dict in enumerate(conf_list):
                     if conf_in_paper in conf_dict["name"] or conf_dict["name"] in conf_in_paper:
-                        paper_list.append({"title" : row[0], "conf_id" : conf_idx, "href" : row[3], "year" : row[4], "apa" : row[5]})
-                        conf_num_list[int(conf_dict["id"])] += 1
+                        paper_list.append({"title" : row[0], "conf_id" : conf_id, "href" : row[3], "year" : row[4], "apa" : row[5]})
+                        conf_num_list[conf_id] += 1
 
             lab["total_paper_num"] = len(paper_list)
             lab["paper"] = paper_list
@@ -103,12 +103,12 @@ if __name__ == '__main__' :
     for (a_id, lab_a) in enumerate(lab_list):
         lab_a_adj = [{"value" : 0, "common_conf" : {}} for _ in range(len(lab_list))]
         for (b_id, lab_b) in enumerate(lab_list):
-            for (conf_id, conf) in enumerate(lab_list):
+            for (conf_id, conf) in enumerate(conf_list):
                 if lab_in_conf_cnt[a_id][conf_id] > 0 and lab_in_conf_cnt[b_id][conf_id] > 0:
                     lab_a_ratio = lab_in_conf_cnt[a_id][conf_id] / lab_a["total_paper_num"]
                     lab_b_ratio = lab_in_conf_cnt[b_id][conf_id] / lab_b["total_paper_num"]
                     lab_a_adj[b_id]["value"] += lab_a_ratio * lab_b_ratio
-                    lab_a_adj[b_id]["common_conf"][conf_idx] = [lab_in_conf_cnt[a_id][conf_id], lab_in_conf_cnt[b_id][conf_id]]
+                    lab_a_adj[b_id]["common_conf"][conf_id] = [lab_in_conf_cnt[a_id][conf_id], lab_in_conf_cnt[b_id][conf_id]]
         
         adj_matrix.append(lab_a_adj)
 
