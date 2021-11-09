@@ -228,7 +228,7 @@ const CommunityGraph = (props) => {
           .duration(200)
           .style("opacity", .9);
 
-        div.html(d.id + "<br/>" + d.source.name + "<br/>" + d.target.name)
+        div.html(d.source.name + "<br/>" + d.target.name)
           .style("left", (event.pageX) + "px")
           .style("top", (event.pageY - 28) + "px");
 
