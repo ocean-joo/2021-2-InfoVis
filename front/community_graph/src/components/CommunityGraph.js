@@ -179,7 +179,7 @@ const CommunityGraph = (props) => {
       .attr('opacity', 0)   // initially invisible
       .call(d3.drag()
         .on('start', function (event, d) {
-          if (!event.active) simulation.alphaTarget(0.3).restart();
+          if (!event.active) simulation.alphaTarget(0.005).restart();
           d.fx = d.x;
           d.fy = d.y;
         })
