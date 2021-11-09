@@ -25,7 +25,7 @@ if __name__ == '__main__' :
         # Remove first line
         next(rdr)
         for row in rdr:
-            new_conf = {"id" : str(conf_id_idx), "name" : row[0], "impact_score" : float(row[2])}
+            new_conf = {"id" : str(conf_id_idx), "name" : row[0], "impact_score" : float(row[2]), "isConf" : True}
             conf_list.append(new_conf)
             conf_id_idx += 1
 
@@ -35,7 +35,7 @@ if __name__ == '__main__' :
         # Remove first line
         next(rdr)
         for row in rdr:
-            conf_list.append({"id" : str(conf_id_idx), "name" : row[0], "impact_score" : float(row[1])})
+            conf_list.append({"id" : str(conf_id_idx), "name" : row[0], "impact_score" : float(row[1]), "isConf" : False})
             conf_id_idx += 1
 
     for school in school_list:
@@ -91,7 +91,10 @@ if __name__ == '__main__' :
             for row in rdr:
                 conf_in_paper = row[2]
                 for conf_id, conf_dict in enumerate(conf_list):
-                    if conf_in_paper in conf_dict["name"] or conf_dict["name"] in conf_in_paper:
+                    if conf_dict["isConf"] and conf_dict["name"] in conf_in_paper:
+                        paper_list.append({"title" : row[0], "conf_id" : conf_id, "href" : row[3], "year" : row[4], "apa" : row[5]})
+                        conf_num_list[conf_id] += 1
+                    elif not conf_dict["isConf"] and conf_in_paper == conf_dict["name"]:
                         paper_list.append({"title" : row[0], "conf_id" : conf_id, "href" : row[3], "year" : row[4], "apa" : row[5]})
                         conf_num_list[conf_id] += 1
 
