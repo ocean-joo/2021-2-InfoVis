@@ -345,7 +345,7 @@ const CommunityGraph = (props) => {
         .style("opacity", 0);
 
       text
-        .data([d.name, schoolList[d.school]["name"], d.prof_name, d.email, d.desciption, d.href])
+        .data([d.name, schoolList[d.school]["name"], d.prof_name, d.email, d.description, d.href])
         .text(function (d) {
           return d;
         })
