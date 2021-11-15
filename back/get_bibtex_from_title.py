@@ -16,7 +16,7 @@ def get_bibtex_and_APA_from_title(target):
     driver.get(url=ss_path)
 
     # Wait for loading page
-    time.sleep(5)
+    time.sleep(3)
 
     # Write title in input
     try:
@@ -75,7 +75,7 @@ def get_bibtex_and_APA_from_title(target):
         cite_button.click()
 
         # Wait for response
-        time.sleep(2)
+        time.sleep(1)
         # get bibtex
         bibtex = driver.find_element_by_class_name("formatted-citation--style-bibtex").text
     except:
@@ -89,7 +89,7 @@ def get_bibtex_and_APA_from_title(target):
         apa_button.click()
 
         # Wait for response
-        time.sleep(2)
+        time.sleep(1)
         apa = driver.find_element_by_class_name("formatted-citation--style-apa").text
     except:
         print("[System] %s : No APA button" % target)
@@ -119,6 +119,9 @@ if __name__ == '__main__' :
             if len(title.split('] ')) > 1:
                 title = title.split('] ')[1]
             
+            if title.strip().endswith(".") :
+                title = title.strip()[:-1]
+            
             bibtex, apa = get_bibtex_and_APA_from_title(title)
 
             # Not found
@@ -130,7 +133,7 @@ if __name__ == '__main__' :
             for bibrow in bibtex.split("\n"):
                 if "author" in bibrow:
                     bib_dict['author'] = bibrow.split('{')[1].split('}')[0]
-                elif "journal" in bibrow:
+                elif "journal" in bibrow or "booktitle" in bibrow :
                     bib_dict['conf_name'] = bibrow.split('{')[1].split('}')[0]
                 elif "year" in bibrow:
                     bib_dict['year'] = bibrow.split('{')[1].split('}')[0]
