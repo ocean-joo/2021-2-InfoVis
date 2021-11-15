@@ -15,28 +15,28 @@ const CommunityGraph = (props) => {
     "korea": { "id": 4, "name": "Korea University" }
   }
   const comGraph = useRef(null);
-  const sideBar = useRef(null);
+  const detailSideBar = useRef(null);
 
-  const width = 960;
-  const height = 750;
-  const sideBarWidth = 300;
-  const sideBarHeight = 750;
+  // parameters for community graph location 
+  const comGraphWidth = 960;
+  const comGraphHeight = 750;
+  const comGraphWidthOffset = 80;
+  const comGraphHeightOffset = 0;
 
-  const width_padding = 0;
+  const comGraphWidthPadding = 0;
   var dur = 600;
+
+  const detailSideBarWidth = 300;
+  const detailSideBarHeight = 750;
 
   useEffect(() => {
     const nodes = lab_json;
     const links = link_json;
 
     // separation between same-color circles
-    const padding = 73;
+    const nodePadding = 73;
     // separation between different-color circles
-    const clusterPadding = padding * 2;
-
-    // parameters for community graph location
-    const graph_width_offset = 80;
-    const graph_height_offset = 0;
+    const clusterPadding = nodePadding * 2;
 
     var maxRadius = 30;
     const defaultRadius = 4;
@@ -52,7 +52,7 @@ const CommunityGraph = (props) => {
     const schoolScale = d3.scaleOrdinal(d3.schemeCategory10);
 
     // total number of nodes
-    const n = nodes.length;
+    const nodeNum = nodes.length;
 
     nodes.forEach(function (node) {
       node.r = defaultRadius;
@@ -76,15 +76,14 @@ const CommunityGraph = (props) => {
     // console.log('clusters', clusters);
 
     // side bar
-    var bar = d3.select(sideBar.current);
-    var barSvg = bar
+    var detailSideBarSVG = d3.select(detailSideBar.current)
       .attr("style", "outline: thin dashed black;")
-      .attr('height', sideBarHeight)
-      .attr('width', sideBarWidth)
+      .attr('height', detailSideBarHeight)
+      .attr('width', detailSideBarWidth)
       .attr('transform', `translate(10,0)`);
 
     // TODO : Add paper info
-    var text = barSvg
+    var detailSideBarText = detailSideBarSVG
       .selectAll('text')
       // [name, school, prof_name, email, description, href]
       .data(['', '', '', '', '', ''])
@@ -107,30 +106,27 @@ const CommunityGraph = (props) => {
 
 
     // community graph
-    var cur = d3.select(comGraph.current);
-
-    var svg = cur
+    var comGraphSVG = d3.select(comGraph.current)
       .attr("style", "outline: thin dashed black;")
-      .attr('height', height)
-      .attr('width', width)
-      .attr('transform', `translate(${width_padding}, 0)`)
-
+      .attr('height', comGraphHeight)
+      .attr('width', comGraphWidth)
+      .attr('transform', `translate(${comGraphWidthPadding}, 0)`)
       // graph
       .append('g')
-      .attr('transform', `translate(${width / 2 + graph_width_offset} , ${height / 2 + graph_height_offset})`)
+      .attr('transform', `translate(${comGraphWidth / 2 + comGraphWidthOffset} , ${comGraphHeight / 2 + comGraphHeightOffset})`)
     // .attr("style", "outline: thin solid black;");
 
     // link popup 
-    var div = d3.select('body')
+    var linkPopup = d3.select('body')
       .append("div")
       .attr("class", "tooltip")
       .style("opacity", 0);
 
     // for grouping
-    var groups = svg.append('g')
-      .attr('class', 'groups');
+    var schoolNode = comGraphSVG.append('g')
+      .attr('class', 'schoolNode');
 
-    var groupIds = Array.from(new Set(nodes.map(function (n) { return +schoolList[n.school]["id"]; })))
+    var schoolNodeData = Array.from(new Set(nodes.map(function (n) { return +schoolList[n.school]["id"]; })))
       .map(function (groupId) {
         return {
           groupId: groupId,
@@ -140,9 +136,8 @@ const CommunityGraph = (props) => {
         };
       });
 
-
-    var paths = groups.selectAll('.path_placeholder')
-      .data(groupIds, function (d) { return +d })
+    var schoolNodeEdge = schoolNode.selectAll('.path_placeholder')
+      .data(schoolNodeData, function (d) { return +d })
       .enter()
       .append('g')
       .append('path')
@@ -151,14 +146,13 @@ const CommunityGraph = (props) => {
       .attr('opacity', 0)
       .on('click', cluster_clicked);
 
-    paths
+    schoolNodeEdge
       .transition()
       .duration(200)
       .attr('opacity', 1);
 
-
-    var schoolText = groups.selectAll('.path_placeholder')
-      .data(groupIds, function (d) { return +d })
+    var schoolText = schoolNode.selectAll('.path_placeholder')
+      .data(schoolNodeData, function (d) { return +d })
       .enter()
       .append('g')
       .append('text')
@@ -171,12 +165,12 @@ const CommunityGraph = (props) => {
         return schoolNameArray[i]
       })
 
-    // link
-    let link = svg.selectAll('line')
+    // link for lab
+    let labLink = comGraphSVG.selectAll('line')
       .data(links)
       .enter().append('line');
 
-    link
+    labLink
       .attr('class', 'link')
       .style('stroke', 'darkgray')
       .style('stroke-width', '0.3px')
@@ -184,8 +178,8 @@ const CommunityGraph = (props) => {
       .on('click', link_clicked);
     // .on('click', node_clicked);
 
-    // nodes
-    const circles = svg.append('g')
+    // node for lab
+    const labNode = comGraphSVG.append('g')
       .datum(nodes)
       .selectAll('.circle')
       .data(d => d)
@@ -213,7 +207,7 @@ const CommunityGraph = (props) => {
       )
       .on('click', node_clicked);
 
-    var nodeText = svg.append('g')
+    var labText = comGraphSVG.append('g')
       .datum(nodes)
       .selectAll('.text')
       .data(d => d)
@@ -241,7 +235,6 @@ const CommunityGraph = (props) => {
       .distance(function (d) { return d.weight * 2; }).strength(0.1);
     // .distance([85]);
 
-
     // helper functions
     function cluster_clicked(event, d) {
       var node;
@@ -256,17 +249,17 @@ const CommunityGraph = (props) => {
 
     function link_clicked(event, d) {
       if (d && link_clicked !== d) {
-        div.transition()
+        linkPopup.transition()
           .duration(200)
           .style("opacity", .9);
 
-        div.html(d.source.name + "<br/>" + d.target.name)
+        linkPopup.html(d.source.name + "<br/>" + d.target.name)
           .style("left", (event.pageX) + "px")
           .style("top", (event.pageY - 28) + "px");
 
         link_clicked = d;
       } else {
-        div.transition()
+        linkPopup.transition()
           .duration(500)
           .style("opacity", 0);
 
@@ -288,63 +281,63 @@ const CommunityGraph = (props) => {
         k = 4;
         centered = d;
 
-        groups.transition()
+        schoolNode.transition()
           .attr('opacity', 0);
 
-        nodeText.transition()
+        labText.transition()
           .duration(dur)
           .attr('opacity', 1)
-          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + (-x - x_offset) + "," + (-y - y_offset) + ")")
+          .attr("transform", "translate(" + comGraphWidth / 2 + "," + comGraphHeight / 2 + ")scale(" + k + ")translate(" + (-x - x_offset) + "," + (-y - y_offset) + ")")
 
-        circles.transition()
+        labNode.transition()
           .duration(dur)
           .attr('opacity', 1)
-          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + (-x - x_offset) + "," + (-y - y_offset) + ")")
+          .attr("transform", "translate(" + comGraphWidth / 2 + "," + comGraphHeight / 2 + ")scale(" + k + ")translate(" + (-x - x_offset) + "," + (-y - y_offset) + ")")
 
-        circles.classed('active', centered && function (d) { return d === centered; });
+        labNode.classed('active', centered && function (d) { return d === centered; });
 
-        link.transition()
+        labLink.transition()
           .duration(dur)
           .attr('opacity', 1)
-          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + (-x - x_offset) + "," + (-y - y_offset) + ")");
+          .attr("transform", "translate(" + comGraphWidth / 2 + "," + comGraphHeight / 2 + ")scale(" + k + ")translate(" + (-x - x_offset) + "," + (-y - y_offset) + ")");
 
         // TODO : thicker stroke for the links in d's cluster
 
       } else {
         // if clicked again, restore
-        x = width / 2 - x_offset;
-        y = height / 2 - y_offset;
+        x = comGraphWidth / 2 - x_offset;
+        y = comGraphHeight / 2 - y_offset;
         k = 1;
         centered = null;
 
 
-        groups.transition()
+        schoolNode.transition()
           .duration(dur)
           .attr('opacity', 1);
 
-        nodeText.transition()
+        labText.transition()
           .duration(dur)
           .attr('opacity', 0)
-          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + (-x - x_offset) + "," + (-y - y_offset) + ")")
+          .attr("transform", "translate(" + comGraphWidth / 2 + "," + comGraphHeight / 2 + ")scale(" + k + ")translate(" + (-x - x_offset) + "," + (-y - y_offset) + ")")
 
-        circles.transition()
+        labNode.transition()
           .duration(dur)
           .attr('opacity', 0)
-          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + (-x - x_offset) + "," + (-y - y_offset) + ")")
+          .attr("transform", "translate(" + comGraphWidth / 2 + "," + comGraphHeight / 2 + ")scale(" + k + ")translate(" + (-x - x_offset) + "," + (-y - y_offset) + ")")
 
-        circles.classed('active', centered && function (d) { return d === centered; });
+        labNode.classed('active', centered && function (d) { return d === centered; });
 
-        link.transition()
+        labLink.transition()
           .duration(dur)
           .attr('opacity', 0)
-          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + (-x - x_offset) + "," + (-y - y_offset) + ")");
+          .attr("transform", "translate(" + comGraphWidth / 2 + "," + comGraphHeight / 2 + ")scale(" + k + ")translate(" + (-x - x_offset) + "," + (-y - y_offset) + ")");
 
       }
-      div.transition()
+      linkPopup.transition()
         .duration(dur)
         .style("opacity", 0);
 
-      text
+      detailSideBarText
         .data([d.name, schoolList[d.school]["name"], d.prof_name, d.email, d.description, d.href])
         .text(function (d) {
           return d;
@@ -362,17 +355,17 @@ const CommunityGraph = (props) => {
     }
 
     function ticked() {
-      link
+      labLink
         .attr('x1', d => d.source.x)
         .attr('y1', d => d.source.y)
         .attr('x2', d => d.target.x)
         .attr('y2', d => d.target.y);
 
-      circles
+      labNode
         .attr('cx', d => d.x)
         .attr('cy', d => d.y);
 
-      nodeText
+      labText
         .attr('x', d => d.x)
         .attr('y', d => d.y - 5);
 
@@ -410,7 +403,7 @@ const CommunityGraph = (props) => {
         .addAll(nodes);
 
       nodes.forEach((d) => {
-        const r = d.r + maxRadius + Math.max(padding, clusterPadding);
+        const r = d.r + maxRadius + Math.max(nodePadding, clusterPadding);
         const nx1 = d.x - r;
         const nx2 = d.x + r;
         const ny1 = d.y - r;
@@ -420,7 +413,7 @@ const CommunityGraph = (props) => {
             let x = d.x - quad.data.x;
             let y = d.y - quad.data.y;
             let l = Math.sqrt((x * x) + (y * y));
-            const r = d.r + quad.data.r + (schoolList[d.school]["id"] === schoolList[quad.data.school]["id"] ? padding : clusterPadding);
+            const r = d.r + quad.data.r + (schoolList[d.school]["id"] === schoolList[quad.data.school]["id"] ? nodePadding : clusterPadding);
             if (l < r) {
               l = ((l - r) / l) * alpha;
               d.x -= x *= l;
@@ -435,7 +428,7 @@ const CommunityGraph = (props) => {
     }
 
     var polygonGenerator = function (groupId) {
-      var node_coords = circles
+      var node_coords = labNode
         .data()
         .filter(function (d) { return schoolList[d.school]["id"] === groupId.groupId; })
         .map(function (d) { return [d.x, d.y]; });
@@ -444,8 +437,8 @@ const CommunityGraph = (props) => {
     }
 
     function updateGroups() {
-      groupIds.forEach(function (groupId) {
-        var path = paths.filter(function (d) { return d === groupId; })
+      schoolNodeData.forEach(function (groupId) {
+        var path = schoolNodeEdge.filter(function (d) { return d === groupId; })
           .attr('transform', 'scale(1) translate(0,0)')
           .attr('d', function (d) {
             polygon = polygonGenerator(d);
@@ -469,9 +462,9 @@ const CommunityGraph = (props) => {
 
   return (
     <div>
-      <svg ref={comGraph} width={width} height={height}>
+      <svg ref={comGraph} width={comGraphWidth} height={comGraphHeight}>
       </svg>
-      <svg ref={sideBar} width={sideBarWidth} height={sideBarHeight}>
+      <svg ref={detailSideBar} width={detailSideBarWidth} height={detailSideBarHeight}>
       </svg>
 
     </div>
