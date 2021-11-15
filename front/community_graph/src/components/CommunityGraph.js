@@ -30,9 +30,13 @@ const CommunityGraph = (props) => {
     const links = link_json;
 
     // separation between same-color circles
-    const padding = 30;
+    const padding = 73;
     // separation between different-color circles
     const clusterPadding = padding * 2;
+
+    // parameters for community graph location
+    const graph_width_offset = 80;
+    const graph_height_offset = 0;
 
     var maxRadius = 30;
     const defaultRadius = 4;
@@ -113,7 +117,7 @@ const CommunityGraph = (props) => {
 
       // graph
       .append('g')
-      .attr('transform', `translate(${width / 2} , ${height / 2})`)
+      .attr('transform', `translate(${width / 2 + graph_width_offset} , ${height / 2 + graph_height_offset})`)
     // .attr("style", "outline: thin solid black;");
 
     // link popup 
