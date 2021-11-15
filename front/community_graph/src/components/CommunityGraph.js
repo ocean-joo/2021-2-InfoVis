@@ -1,6 +1,9 @@
 import React, { useRef, useEffect } from "react";
 import * as d3 from "d3";
 
+import DetailSideBar from "./DetailSideBar"
+import ControlPanel from "./ControlPanel"
+
 import link_json from "../data/link.json"
 import conf_json from "../data/conf.json"
 import lab_json from "../data/lab.json"
@@ -462,11 +465,10 @@ const CommunityGraph = (props) => {
 
   return (
     <div>
-      <svg ref={comGraph} width={comGraphWidth} height={comGraphHeight}>
-      </svg>
-      <svg ref={detailSideBar} width={detailSideBarWidth} height={detailSideBarHeight}>
-      </svg>
-
+      <ControlPanel />
+      <svg ref={comGraph} width={comGraphWidth} height={comGraphHeight} />
+      <svg ref={detailSideBar} width={detailSideBarWidth} height={detailSideBarHeight} />
+      <DetailSideBar labInfo={null} ConfInfo={null} shouldVisualizeConf={false} />
     </div>
   )
 };
