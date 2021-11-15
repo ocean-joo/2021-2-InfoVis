@@ -98,7 +98,7 @@ const CommunityGraph = (props) => {
       .attr("font-size", "11px")
       .attr("fill", "black")
       .attr("text-anchor", "middle")
-      .attr('class', 'node_text');
+      .attr('class', 'detail_text');
 
 
     // community graph
@@ -160,7 +160,7 @@ const CommunityGraph = (props) => {
     link
       .attr('class', 'link')
       .style('stroke', 'darkgray')
-      .style('stroke-width', '1px')
+      .style('stroke-width', '0.3px')
       .attr('opacity', 0)
       .on('click', link_clicked);
     // .on('click', node_clicked);
@@ -204,7 +204,10 @@ const CommunityGraph = (props) => {
       .attr("fill", "black")
       .attr("text-anchor", "middle")
       .attr("opacity", 0)
-      .text(d => d.name)
+      .text(d => {
+        if (d.name == "_") return ""
+        else return d.name
+      })
 
     const simulation = d3.forceSimulation(nodes)
       .nodes(nodes)
