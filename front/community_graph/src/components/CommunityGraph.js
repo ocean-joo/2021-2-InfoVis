@@ -136,11 +136,11 @@ const CommunityGraph = (props) => {
         };
       });
 
+
     var paths = groups.selectAll('.path_placeholder')
       .data(groupIds, function (d) { return +d })
       .enter()
       .append('g')
-      .attr('class', 'path_placeholder')
       .append('path')
       .attr('stroke', d => schoolScale(d))
       .attr('fill', d => schoolScale(d))
@@ -151,6 +151,7 @@ const CommunityGraph = (props) => {
       .transition()
       .duration(200)
       .attr('opacity', 1);
+
 
     var schoolText = groups.selectAll('.path_placeholder')
       .data(groupIds, function (d) { return +d })
@@ -163,7 +164,6 @@ const CommunityGraph = (props) => {
       .attr("text-anchor", "middle")
       .attr("opacity", 1)
       .text((d, i) => {
-        console.log(d)
         return schoolNameArray[i]
       })
 
