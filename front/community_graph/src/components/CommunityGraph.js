@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import * as d3 from "d3";
 
-// import graph from "../data / weight_0.01.json"
 import link_json from "../data/link.json"
 import conf_json from "../data/conf.json"
 import lab_json from "../data/lab.json"
@@ -45,7 +44,7 @@ const CommunityGraph = (props) => {
       .y(function (d) { return d[1]; })
       .curve(d3.curveCatmullRomClosed);
 
-    const z = d3.scaleOrdinal(d3.schemeCategory10);
+    const schoolScale = d3.scaleOrdinal(d3.schemeCategory10);
 
     // total number of nodes
     const n = nodes.length;
@@ -142,8 +141,8 @@ const CommunityGraph = (props) => {
       .append('g')
       .attr('class', 'path_placeholder')
       .append('path')
-      .attr('stroke', d => z(d))
-      .attr('fill', d => z(d))
+      .attr('stroke', d => schoolScale(d))
+      .attr('fill', d => schoolScale(d))
       .attr('opacity', 0)
       .on('click', cluster_clicked);
 
@@ -173,7 +172,7 @@ const CommunityGraph = (props) => {
       .data(d => d)
       .enter().append('circle')
       .attr('r', d => d.r)
-      .attr('fill', d => z(schoolList[d.school]["id"]))
+      .attr('fill', d => schoolScale(schoolList[d.school]["id"]))
       .attr('stroke', 'black')
       .attr('stroke-width', 0.3)
       .attr('opacity', 0)   // initially invisible
@@ -195,6 +194,17 @@ const CommunityGraph = (props) => {
       )
       .on('click', node_clicked);
 
+    var nodeText = svg.append('g')
+      .datum(nodes)
+      .selectAll('.text')
+      .data(d => d)
+      .enter().append('text')
+      .attr("font-family", "sans-serif")
+      .attr("font-size", "4px")
+      .attr("fill", "black")
+      .attr("text-anchor", "middle")
+      .attr("opacity", 0)
+      .text(d => d.name)
 
     const simulation = d3.forceSimulation(nodes)
       .nodes(nodes)
@@ -259,6 +269,11 @@ const CommunityGraph = (props) => {
         groups.transition()
           .attr('opacity', 0);
 
+        nodeText.transition()
+          .duration(dur)
+          .attr('opacity', 1)
+          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + (-x - x_offset) + "," + (-y - y_offset) + ")")
+
         circles.transition()
           .duration(dur)
           .attr('opacity', 1)
@@ -284,6 +299,11 @@ const CommunityGraph = (props) => {
         groups.transition()
           .duration(dur)
           .attr('opacity', 1);
+
+        nodeText.transition()
+          .duration(dur)
+          .attr('opacity', 0)
+          .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + (-x - x_offset) + "," + (-y - y_offset) + ")")
 
         circles.transition()
           .duration(dur)
@@ -329,6 +349,10 @@ const CommunityGraph = (props) => {
       circles
         .attr('cx', d => d.x)
         .attr('cy', d => d.y);
+
+      nodeText
+        .attr('x', d => d.x)
+        .attr('y', d => d.y - 5);
 
       updateGroups();
     }
