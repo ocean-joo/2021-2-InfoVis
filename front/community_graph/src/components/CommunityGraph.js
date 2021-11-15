@@ -178,7 +178,7 @@ const CommunityGraph = (props) => {
       .attr('opacity', 0)   // initially invisible
       .call(d3.drag()
         .on('start', function (event, d) {
-          if (!event.active) simulation.alphaTarget(0.3).restart();
+          if (!event.active) simulation.alphaTarget(0.005).restart();
           d.fx = d.x;
           d.fy = d.y;
         })
@@ -241,7 +241,7 @@ const CommunityGraph = (props) => {
           .duration(200)
           .style("opacity", .9);
 
-        div.html(d.id + "<br/>" + d.source.name + "<br/>" + d.target.name)
+        div.html(d.source.name + "<br/>" + d.target.name)
           .style("left", (event.pageX) + "px")
           .style("top", (event.pageY - 28) + "px");
 
