@@ -6,6 +6,7 @@ import conf_json from "../data/conf.json"
 import lab_json from "../data/lab.json"
 
 const CommunityGraph = (props) => {
+  const schoolNameArray = ["Seoul National University", "KAIST", "POSTECH", "Yonsei University", "Korea University"]
   const schoolList = {
     "snu": { "id": 0, "name": "Seoul National University" },
     "kaist": { "id": 1, "name": "KAIST" },
@@ -129,11 +130,11 @@ const CommunityGraph = (props) => {
       .map(function (groupId) {
         return {
           groupId: groupId,
-          count: nodes.filter(function (n) { return +schoolList[n.school]["id"] === groupId; }).length
+          count: nodes.filter(function (n) { return +schoolList[n.school]["id"] === groupId; }).length,
+          x: 0,
+          y: 0
         };
       });
-
-    // console.log('groupIds', groupIds);
 
     var paths = groups.selectAll('.path_placeholder')
       .data(groupIds, function (d) { return +d })
@@ -151,6 +152,20 @@ const CommunityGraph = (props) => {
       .duration(200)
       .attr('opacity', 1);
 
+    var schoolText = groups.selectAll('.path_placeholder')
+      .data(groupIds, function (d) { return +d })
+      .enter()
+      .append('g')
+      .append('text')
+      .attr("font-family", "sans-serif")
+      .attr("font-size", "13px")
+      .attr("fill", "black")
+      .attr("text-anchor", "middle")
+      .attr("opacity", 1)
+      .text((d, i) => {
+        console.log(d)
+        return schoolNameArray[i]
+      })
 
     // link
     let link = svg.selectAll('line')
@@ -357,6 +372,11 @@ const CommunityGraph = (props) => {
         .attr('x', d => d.x)
         .attr('y', d => d.y - 5);
 
+      schoolText
+        .attr('x', d => d.x)
+        .attr('y', d => d.y);
+
+
       updateGroups();
     }
 
@@ -435,6 +455,9 @@ const CommunityGraph = (props) => {
           });
         d3.select(path.node().parentNode)
           .attr('transform', 'translate(' + centroid[0] + ',' + centroid[1] + `) scale(` + scaleFactor + ')')
+
+        groupId.x = centroid[0]
+        groupId.y = centroid[1]
       })
     }
 
