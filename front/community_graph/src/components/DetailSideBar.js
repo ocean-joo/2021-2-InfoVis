@@ -2,7 +2,7 @@ const DetailSideBar = (props) => {
 
     return (
         <div>
-            hi
+            {props.labDetail.name}
         </div>
     );
 };

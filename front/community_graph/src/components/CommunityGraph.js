@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import * as d3 from "d3";
 
 import DetailSideBar from "./DetailSideBar"
@@ -9,6 +9,8 @@ import conf_json from "../data/conf.json"
 import lab_json from "../data/lab.json"
 
 const CommunityGraph = (props) => {
+  const [labDetail, setLabDetail] = useState({});
+
   const schoolNameArray = ["Seoul National University", "KAIST", "POSTECH", "Yonsei University", "Korea University"]
   const schoolList = {
     "snu": { "id": 0, "name": "Seoul National University" },
@@ -279,6 +281,7 @@ const CommunityGraph = (props) => {
       const y_offset = 100;
 
       if (d && centered !== d) {
+        // TODO : thicker stroke for the links in d's cluster
         x = d.x;
         y = d.y;
         k = 4;
@@ -304,10 +307,22 @@ const CommunityGraph = (props) => {
           .attr('opacity', 1)
           .attr("transform", "translate(" + comGraphWidth / 2 + "," + comGraphHeight / 2 + ")scale(" + k + ")translate(" + (-x - x_offset) + "," + (-y - y_offset) + ")");
 
-        // TODO : thicker stroke for the links in d's cluster
+        // set lab detail info
+        // TODO : Add paper Info
+        var selectedLabDetail = {
+          'name': d.name,
+          'school': d.school,
+          'prof_name': d.prof_name,
+          'email': d.email,
+          'description': d.description,
+          'href': d.href
+        }
+        setLabDetail(selectedLabDetail);
 
       } else {
         // if clicked again, restore
+        setLabDetail({});
+
         x = comGraphWidth / 2 - x_offset;
         y = comGraphHeight / 2 - y_offset;
         k = 1;
@@ -468,7 +483,7 @@ const CommunityGraph = (props) => {
       <ControlPanel />
       <svg ref={comGraph} width={comGraphWidth} height={comGraphHeight} />
       <svg ref={detailSideBar} width={detailSideBarWidth} height={detailSideBarHeight} />
-      <DetailSideBar labInfo={null} ConfInfo={null} shouldVisualizeConf={false} />
+      <DetailSideBar labDetail={labDetail} ConfDetail={null} shouldVisualizeConf={false} />
     </div>
   )
 };
