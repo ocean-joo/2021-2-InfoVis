@@ -10,7 +10,22 @@ import lab_json from "../data/lab.json"
 
 const CommunityGraph = (props) => {
   const [labDetail, setLabDetail] = useState({});
-  const [weightRange, setWeightRange] = useState({ 'min': 0, 'max': 1 });
+  const [isLabView, setLabView] = useState(false);
+  // it's percentage. should divide by 100 in below code
+  const [weightRange, setWeightRange] = useState({ min: 0, max: 100 });
+
+  const onChangeWeightRange = (e) => {
+    setWeightRange(e)
+
+    if (!isLabView) return
+    const filteredLabLink = d3.selectAll('line').filter(d => d.weight > weightRange.min && d.weight < weightRange.max)
+    const TransparentLabLink = d3.selectAll('line').filter(d => d.weight < weightRange.min || d.weight > weightRange.max)
+
+    console.log(weightRange, filteredLabLink.size(), TransparentLabLink.size())
+
+    filteredLabLink.attr('opacity', 1);
+    TransparentLabLink.attr('opacity', 0);
+  }
 
   const schoolNameArray = ["Seoul National University", "KAIST", "POSTECH", "Yonsei University", "Korea University"]
   const schoolList = {
@@ -282,6 +297,8 @@ const CommunityGraph = (props) => {
       const y_offset = 100;
 
       if (d && centered !== d) {
+        setLabView(true);
+
         // TODO : thicker stroke for the links in d's cluster
         x = d.x;
         y = d.y;
@@ -322,6 +339,7 @@ const CommunityGraph = (props) => {
 
       } else {
         // if clicked again, restore
+        setLabView(false);
         setLabDetail({});
 
         x = comGraphWidth / 2 - x_offset;
@@ -481,7 +499,7 @@ const CommunityGraph = (props) => {
 
   return (
     <div>
-      <ControlPanel weightRange={weightRange} onChangeWeightRange={setWeightRange} />
+      <ControlPanel weightRange={weightRange} setWeightRange={onChangeWeightRange} />
       <svg ref={comGraph} width={comGraphWidth} height={comGraphHeight} />
       <svg ref={detailSideBar} width={detailSideBarWidth} height={detailSideBarHeight} />
       <DetailSideBar labDetail={labDetail} ConfDetail={null} shouldVisualizeConf={false} />

@@ -2,47 +2,33 @@ import React from "react";
 import { Range } from "rc-slider";
 import 'rc-slider/assets/index.css';
 
-class CustomizedRange extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            lowerBound: 0,
-            upperBound: 100
-        };
-    }
+const ControlPanel = (props) => {
 
-    onLowerBoundChange = (e) => {
+    const onLowerBoundChange = (e) => {
         if (+e.target.value < 0 || +e.target.value > this.state.upperBound) return
-        this.setState({
-            lowerBound: +e.target.value,
-            value: [+e.target.value, this.state.upperBound]
-        });
+
+        props.setWeightRange({ min: +e.target.value, max: props.weightRange.max })
     };
 
-    onUpperBoundChange = (e) => {
+    const onUpperBoundChange = (e) => {
         if (+e.target.value > 100 || +e.target.value < this.state.lowerBound) return
-        this.setState({
-            upperBound: +e.target.value,
-            value: [this.state.lowerBound, +e.target.value]
-        });
+
+        props.setWeightRange({ min: props.weightRange.min, max: +e.target.value })
     };
 
-    onSliderChange = (value) => {
-        this.setState({
-            lowerBound: value[0],
-            upperBound: value[1],
-        });
+    const onSliderChange = (value) => {
+        props.setWeightRange({ min: value[0], max: value[1] })
     };
 
-    render() {
-        return (
-            <div>
+    return (
+        <div style={{ width: 400, margin: 50, display: "inline-flex" }}>
+            <div className="Slider">
                 <label>LowerBound: </label>
-                <input type="number" value={this.state.lowerBound} onChange={this.onLowerBoundChange} />
+                <input type="number" value={props.weightRange.min} onChange={onLowerBoundChange} />
                 <label> %</label>
                 <br />
                 <label>UpperBound: </label>
-                <input type="number" value={this.state.upperBound} onChange={this.onUpperBoundChange} />
+                <input type="number" value={props.weightRange.max} onChange={onUpperBoundChange} />
                 <label> %</label>
                 <br />
                 <br />
@@ -50,18 +36,10 @@ class CustomizedRange extends React.Component {
                     allowCross={false}
                     min={0}
                     max={100}
-                    value={[this.state.lowerBound, this.state.upperBound]}
-                    onChange={this.onSliderChange}
+                    value={[props.weightRange.min, props.weightRange.max]}
+                    onChange={onSliderChange}
                 />
             </div>
-        );
-    }
-}
-
-const ControlPanel = (props) => {
-    return (
-        <div style={{ width: 400, margin: 50, display: "inline-flex" }}>
-            <CustomizedRange />
         </div>
     );
 };
