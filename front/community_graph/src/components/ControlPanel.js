@@ -13,22 +13,27 @@ class CustomizedRange extends React.Component {
     }
 
     onLowerBoundChange = (e) => {
-        this.setState({ lowerBound: +e.target.value });
+        if (+e.target.value < 0 || +e.target.value > this.state.value[1]) return
+        this.setState({
+            lowerBound: +e.target.value,
+            value: [+e.target.value, this.state.value[1]]
+        });
     };
 
     onUpperBoundChange = (e) => {
-        this.setState({ upperBound: +e.target.value });
+        if (+e.target.value > 100 || +e.target.value < this.state.value[0]) return
+        this.setState({
+            upperBound: +e.target.value,
+            value: [this.state.value[0], +e.target.value]
+        });
     };
 
     onSliderChange = (value) => {
         this.setState({
-            value,
+            lowerBound: value[0],
+            upperBound: value[1],
+            value: value,
         });
-    };
-
-    handleApply = () => {
-        const { lowerBound, upperBound } = this.state;
-        this.setState({ value: [lowerBound, upperBound] });
     };
 
     render() {
@@ -39,10 +44,6 @@ class CustomizedRange extends React.Component {
                 <br />
                 <label>UpperBound: </label>
                 <input type="number" value={this.state.upperBound} onChange={this.onUpperBoundChange} />
-                <br />
-                <button type="button" onClick={this.handleApply}>
-                    Apply
-          </button>
                 <br />
                 <br />
                 <Range allowCross={false} value={this.state.value} onChange={this.onSliderChange} />
