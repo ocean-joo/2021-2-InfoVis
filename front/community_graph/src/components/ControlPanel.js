@@ -1,7 +1,9 @@
+import React from "react";
+
 const ControlPanel = (props) => {
 
     return (
-        <div>
+        <div style={{ display: "inline-flex" }}>
             hi
         </div>
     );

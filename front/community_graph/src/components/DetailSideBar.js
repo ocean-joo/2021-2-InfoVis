@@ -1,7 +1,7 @@
 const DetailSideBar = (props) => {
 
     return (
-        <div>
+        <div style={{ display: "inline-flex" }} >
             {props.labDetail.name}
         </div>
     );

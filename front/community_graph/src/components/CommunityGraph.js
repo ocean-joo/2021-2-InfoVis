@@ -10,6 +10,7 @@ import lab_json from "../data/lab.json"
 
 const CommunityGraph = (props) => {
   const [labDetail, setLabDetail] = useState({});
+  const [weightRange, setWeightRange] = useState({ 'min': 0, 'max': 1 });
 
   const schoolNameArray = ["Seoul National University", "KAIST", "POSTECH", "Yonsei University", "Korea University"]
   const schoolList = {
@@ -480,7 +481,7 @@ const CommunityGraph = (props) => {
 
   return (
     <div>
-      <ControlPanel />
+      <ControlPanel weightRange={weightRange} onChangeWeightRange={setWeightRange} />
       <svg ref={comGraph} width={comGraphWidth} height={comGraphHeight} />
       <svg ref={detailSideBar} width={detailSideBarWidth} height={detailSideBarHeight} />
       <DetailSideBar labDetail={labDetail} ConfDetail={null} shouldVisualizeConf={false} />
