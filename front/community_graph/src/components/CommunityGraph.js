@@ -152,8 +152,7 @@ const CommunityGraph = (props) => {
       .append("g")
       .attr(
         "transform",
-        `translate(${comGraphWidth / 2 + comGraphWidthOffset} , ${
-          comGraphHeight / 2 + comGraphHeightOffset
+        `translate(${comGraphWidth / 2 + comGraphWidthOffset} , ${comGraphHeight / 2 + comGraphHeightOffset
         })`
       );
     // .attr("style", "outline: thin solid black;");
@@ -354,16 +353,16 @@ const CommunityGraph = (props) => {
           .attr(
             "transform",
             "translate(" +
-              comGraphWidth / 2 +
-              "," +
-              comGraphHeight / 2 +
-              ")scale(" +
-              k +
-              ")translate(" +
-              (-x - x_offset) +
-              "," +
-              (-y - y_offset) +
-              ")"
+            comGraphWidth / 2 +
+            "," +
+            comGraphHeight / 2 +
+            ")scale(" +
+            k +
+            ")translate(" +
+            (-x - x_offset) +
+            "," +
+            (-y - y_offset) +
+            ")"
           );
 
         labNode
@@ -373,24 +372,24 @@ const CommunityGraph = (props) => {
           .attr(
             "transform",
             "translate(" +
-              comGraphWidth / 2 +
-              "," +
-              comGraphHeight / 2 +
-              ")scale(" +
-              k +
-              ")translate(" +
-              (-x - x_offset) +
-              "," +
-              (-y - y_offset) +
-              ")"
+            comGraphWidth / 2 +
+            "," +
+            comGraphHeight / 2 +
+            ")scale(" +
+            k +
+            ")translate(" +
+            (-x - x_offset) +
+            "," +
+            (-y - y_offset) +
+            ")"
           );
 
         labNode.classed(
           "active",
           centered &&
-            function (d) {
-              return d === centered;
-            }
+          function (d) {
+            return d === centered;
+          }
         );
 
         labLink
@@ -400,16 +399,16 @@ const CommunityGraph = (props) => {
           .attr(
             "transform",
             "translate(" +
-              comGraphWidth / 2 +
-              "," +
-              comGraphHeight / 2 +
-              ")scale(" +
-              k +
-              ")translate(" +
-              (-x - x_offset) +
-              "," +
-              (-y - y_offset) +
-              ")"
+            comGraphWidth / 2 +
+            "," +
+            comGraphHeight / 2 +
+            ")scale(" +
+            k +
+            ")translate(" +
+            (-x - x_offset) +
+            "," +
+            (-y - y_offset) +
+            ")"
           );
 
         // set lab detail info
@@ -442,16 +441,16 @@ const CommunityGraph = (props) => {
           .attr(
             "transform",
             "translate(" +
-              comGraphWidth / 2 +
-              "," +
-              comGraphHeight / 2 +
-              ")scale(" +
-              k +
-              ")translate(" +
-              (-x - x_offset) +
-              "," +
-              (-y - y_offset) +
-              ")"
+            comGraphWidth / 2 +
+            "," +
+            comGraphHeight / 2 +
+            ")scale(" +
+            k +
+            ")translate(" +
+            (-x - x_offset) +
+            "," +
+            (-y - y_offset) +
+            ")"
           );
 
         labNode
@@ -461,24 +460,24 @@ const CommunityGraph = (props) => {
           .attr(
             "transform",
             "translate(" +
-              comGraphWidth / 2 +
-              "," +
-              comGraphHeight / 2 +
-              ")scale(" +
-              k +
-              ")translate(" +
-              (-x - x_offset) +
-              "," +
-              (-y - y_offset) +
-              ")"
+            comGraphWidth / 2 +
+            "," +
+            comGraphHeight / 2 +
+            ")scale(" +
+            k +
+            ")translate(" +
+            (-x - x_offset) +
+            "," +
+            (-y - y_offset) +
+            ")"
           );
 
         labNode.classed(
           "active",
           centered &&
-            function (d) {
-              return d === centered;
-            }
+          function (d) {
+            return d === centered;
+          }
         );
 
         labLink
@@ -488,16 +487,16 @@ const CommunityGraph = (props) => {
           .attr(
             "transform",
             "translate(" +
-              comGraphWidth / 2 +
-              "," +
-              comGraphHeight / 2 +
-              ")scale(" +
-              k +
-              ")translate(" +
-              (-x - x_offset) +
-              "," +
-              (-y - y_offset) +
-              ")"
+            comGraphWidth / 2 +
+            "," +
+            comGraphHeight / 2 +
+            ")scale(" +
+            k +
+            ")translate(" +
+            (-x - x_offset) +
+            "," +
+            (-y - y_offset) +
+            ")"
           );
       }
       linkPopup.transition().duration(dur).style("opacity", 0);
@@ -631,12 +630,12 @@ const CommunityGraph = (props) => {
         d3.select(path.node().parentNode).attr(
           "transform",
           "translate(" +
-            centroid[0] +
-            "," +
-            centroid[1] +
-            `) scale(` +
-            scaleFactor +
-            ")"
+          centroid[0] +
+          "," +
+          centroid[1] +
+          `) scale(` +
+          scaleFactor +
+          ")"
         );
 
         groupId.x = centroid[0];
