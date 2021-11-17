@@ -46,7 +46,6 @@ const CommunityGraph = (props) => {
     korea: { id: 4, name: "Korea University" },
   };
   const comGraph = useRef(null);
-  const detailSideBar = useRef(null);
 
   // parameters for community graph location
   const comGraphWidth = 960;
@@ -56,9 +55,6 @@ const CommunityGraph = (props) => {
 
   const comGraphWidthPadding = 0;
   var dur = 600;
-
-  const detailSideBarWidth = 300;
-  const detailSideBarHeight = 750;
 
   useEffect(() => {
     const nodes = lab_json;
@@ -110,36 +106,6 @@ const CommunityGraph = (props) => {
       }
     });
     // console.log('clusters', clusters);
-
-    // side bar
-    var detailSideBarSVG = d3
-      .select(detailSideBar.current)
-      .attr("style", "outline: thin dashed black;")
-      .attr("height", detailSideBarHeight)
-      .attr("width", detailSideBarWidth)
-      .attr("transform", `translate(10,0)`);
-
-    // TODO : Add paper info
-    var detailSideBarText = detailSideBarSVG
-      .selectAll("text")
-      // [name, school, prof_name, email, description, href]
-      .data(["", "", "", "", "", ""])
-      .enter()
-      .append("text")
-      .text(function (d) {
-        return d;
-      })
-      .attr("x", function (d, i) {
-        return 30;
-      })
-      .attr("y", function (d, i) {
-        return 30 * (i + 1);
-      })
-      .attr("font-family", "sans-serif")
-      .attr("font-size", "11px")
-      .attr("fill", "black")
-      .attr("text-anchor", "middle")
-      .attr("class", "detail_text");
 
     // community graph
     var comGraphSVG = d3
@@ -501,28 +467,6 @@ const CommunityGraph = (props) => {
       }
       linkPopup.transition().duration(dur).style("opacity", 0);
 
-      detailSideBarText
-        .data([
-          d.name,
-          schoolList[d.school]["name"],
-          d.prof_name,
-          d.email,
-          d.description,
-          d.href,
-        ])
-        .text(function (d) {
-          return d;
-        })
-        .attr("x", function (d, i) {
-          return 150;
-        })
-        .attr("y", function (d, i) {
-          return 30 * (i + 1);
-        })
-        .attr("font-family", "sans-serif")
-        .attr("font-size", "11px")
-        .attr("fill", "black")
-        .attr("text-anchor", "middle");
     }
 
     function ticked() {
@@ -651,11 +595,6 @@ const CommunityGraph = (props) => {
         setWeightRange={onChangeWeightRange}
       />
       <svg ref={comGraph} width={comGraphWidth} height={comGraphHeight} />
-      <svg
-        ref={detailSideBar}
-        width={detailSideBarWidth}
-        height={detailSideBarHeight}
-      />
       <DetailSideBar
         labDetail={labDetail}
         ConfDetail={null}
