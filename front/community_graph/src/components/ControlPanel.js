@@ -4,13 +4,13 @@ import "rc-slider/assets/index.css";
 
 const ControlPanel = (props) => {
   const onLowerBoundChange = (e) => {
-    if (+e.target.value < 0 || +e.target.value > this.state.upperBound) return;
+    if (+e.target.value < 0 || +e.target.value > props.weightRange.max) return;
 
     props.setWeightRange({ min: +e.target.value, max: props.weightRange.max });
   };
 
   const onUpperBoundChange = (e) => {
-    if (+e.target.value > 100 || +e.target.value < this.state.lowerBound)
+    if (+e.target.value > 100 || +e.target.value < props.weightRange.min)
       return;
 
     props.setWeightRange({ min: props.weightRange.min, max: +e.target.value });
