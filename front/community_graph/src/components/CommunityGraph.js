@@ -7,7 +7,7 @@ import ControlPanel from "./ControlPanel";
 import link_json from "../data/link.json";
 import conf_json from "../data/conf.json";
 import lab_json from "../data/lab.json";
-import group_link_json from "../data/group_link.json"
+import school_link_json from "../data/school_link.json"
 
 const CommunityGraph = (props) => {
   const [labDetail, setLabDetail] = useState({});
@@ -60,7 +60,7 @@ const CommunityGraph = (props) => {
   useEffect(() => {
     const nodes = lab_json;
     const links = link_json;
-    const group_link = group_link_json;
+    const school_link = school_link_json;
 
     // separation between same-color circles
     const nodePadding = 73;
@@ -125,7 +125,7 @@ const CommunityGraph = (props) => {
       );
     // .attr("style", "outline: thin solid black;");
 
-    // z-index
+    // to draw schoolLink before than schoolNodaEdge
     comGraphSVG.append('g').attr('id', "schoolLink");
 
     // link popup
@@ -160,13 +160,13 @@ const CommunityGraph = (props) => {
     let schoolLink = comGraphSVG
     .select("#schoolLink")
     .selectAll("school_line")
-    .data(group_link)
+    .data(school_link)
     .enter()
     .append("line");
 
     schoolLink
       .attr("class", "school_link")
-      .style("stroke", "lightskyblue")
+      .style("stroke", "lightgray")
       .style("stroke-width", (d) => d.weight * 20)
       .style("fill", "none")
       .attr("opacity", 1)
