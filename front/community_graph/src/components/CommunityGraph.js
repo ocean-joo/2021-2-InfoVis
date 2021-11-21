@@ -7,6 +7,7 @@ import ControlPanel from "./ControlPanel";
 import link_json from "../data/link.json";
 import conf_json from "../data/conf.json";
 import lab_json from "../data/lab.json";
+import group_link_json from "../data/group_link.json"
 
 const CommunityGraph = (props) => {
   const [labDetail, setLabDetail] = useState({});
@@ -59,6 +60,7 @@ const CommunityGraph = (props) => {
   useEffect(() => {
     const nodes = lab_json;
     const links = link_json;
+    const group_link = group_link_json;
 
     // separation between same-color circles
     const nodePadding = 73;
@@ -123,6 +125,9 @@ const CommunityGraph = (props) => {
       );
     // .attr("style", "outline: thin solid black;");
 
+    // z-index
+    comGraphSVG.append('g').attr('id', "schoolLink");
+
     // link popup
     var linkPopup = d3
       .select("body")
@@ -142,6 +147,7 @@ const CommunityGraph = (props) => {
     ).map(function (groupId) {
       return {
         groupId: groupId,
+        groupName : schoolNameArray[groupId],
         count: nodes.filter(function (n) {
           return +schoolList[n.school]["id"] === groupId;
         }).length,
@@ -149,6 +155,21 @@ const CommunityGraph = (props) => {
         y: 0,
       };
     });
+
+    // link for school
+    let schoolLink = comGraphSVG
+    .select("#schoolLink")
+    .selectAll("school_line")
+    .data(group_link)
+    .enter()
+    .append("line");
+
+    schoolLink
+      .attr("class", "school_link")
+      .style("stroke", "lightskyblue")
+      .style("stroke-width", (d) => d.weight * 20)
+      .style("fill", "none")
+      .attr("opacity", 1)
 
     var schoolNodeEdge = schoolNode
       .selectAll(".path_placeholder")
@@ -164,7 +185,7 @@ const CommunityGraph = (props) => {
       .on("click", cluster_clicked);
 
     schoolNodeEdge.transition().duration(200).attr("opacity", 1);
-
+    
     var schoolText = schoolNode
       .selectAll(".path_placeholder")
       .data(schoolNodeData, function (d) {
@@ -184,7 +205,7 @@ const CommunityGraph = (props) => {
 
     // link for lab
     let labLink = comGraphSVG
-      .selectAll("line")
+      .selectAll("lab_line")
       .data(links)
       .enter()
       .append("line");
@@ -264,7 +285,7 @@ const CommunityGraph = (props) => {
       })
       .strength(0.1);
     // .distance([85]);
-
+    
     // helper functions
     function cluster_clicked(event, d) {
       var node;
@@ -311,6 +332,7 @@ const CommunityGraph = (props) => {
         centered = d;
 
         schoolNode.transition().attr("opacity", 0);
+        schoolLink.transition().attr("opacity", 0);
 
         labText
           .transition()
@@ -399,6 +421,7 @@ const CommunityGraph = (props) => {
         centered = null;
 
         schoolNode.transition().duration(dur).attr("opacity", 1);
+        schoolLink.transition().duration(dur).attr('opacity', 1);
 
         labText
           .transition()
@@ -481,6 +504,12 @@ const CommunityGraph = (props) => {
       labText.attr("x", (d) => d.x).attr("y", (d) => d.y - 5);
 
       schoolText.attr("x", (d) => d.x).attr("y", (d) => d.y);
+
+      schoolLink
+        .attr('x1', (d) => schoolNodeData[d.source_group]["x"])
+        .attr('y1', (d) => schoolNodeData[d.source_group]["y"])
+        .attr('x2', (d) => schoolNodeData[d.target_group]["x"])
+        .attr('y2', (d) => schoolNodeData[d.target_group]["y"])
 
       updateGroups();
     }
