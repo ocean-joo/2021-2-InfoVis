@@ -7,6 +7,23 @@ const schoolNameList = {
 };
 
 const DetailSideBar = (props) => {
+  console.log(props.labDetail);
+  var details = props.labDetail.selectedLabDetail;
+  var listItem ;
+
+  if ('selectedLabDetail' in props.labDetail) {
+    listItem = details.paper.map((obj) =>
+      <li>
+        {obj.apa}
+        <a href=""onclick="obj.link">[link]</a>
+      </li>
+    );
+  } else {
+    listItem = "";
+    details = {};
+  }
+  
+
   return (
     <div
       style={{
@@ -17,15 +34,21 @@ const DetailSideBar = (props) => {
       }}
     >
       <h1>
-        {props.labDetail.name}
+        {details.name}
       </h1>
+      <h2>
+        Information
+      </h2>
       <text>
-        {schoolNameList[props.labDetail.school]} <br />
-        {props.labDetail.prof_name} <br />
-        {props.labDetail.email} <br />
-        {props.labDetail.description} <br />
-        {props.labDetail.href}
+        {details.prof_name}, {schoolNameList[details.school]} <br />
+        E - mail: {details.email} <br />
+        Interest: {details.description} <br />
+        Lab link: {details.href}
       </text>
+      <h2>
+        Paper List
+      </h2>
+      <ul>{listItem}</ul>
     </div>
   );
 };

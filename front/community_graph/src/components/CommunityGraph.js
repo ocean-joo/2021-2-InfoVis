@@ -398,7 +398,6 @@ const CommunityGraph = (props) => {
             (-y - y_offset) +
             ")"
           );
-
         // set lab detail info
         // TODO : Add paper Info
         var selectedLabDetail = {
@@ -408,8 +407,9 @@ const CommunityGraph = (props) => {
           email: d.email,
           description: d.description,
           href: d.href,
+          paper:d.paper,
         };
-        setLabDetail(selectedLabDetail);
+        setLabDetail({selectedLabDetail});
       } else {
         // if clicked again, restore
         setLabView(false);
