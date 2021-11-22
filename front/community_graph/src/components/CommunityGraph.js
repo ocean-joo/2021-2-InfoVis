@@ -302,8 +302,15 @@ const CommunityGraph = (props) => {
       if (d && link_clicked !== d) {
         linkPopup.transition().duration(200).style("opacity", 0.9);
 
+        var conf_text = ""
+        d.common_conf.forEach(function (c) {
+          var conf_name = conf_json[c.conf_id]["name"];
+          conf_text += conf_name + " " + c.source_num + " " + c.target_num;
+          conf_text += "<br/>"
+        }) 
+
         linkPopup
-          .html(d.source.name + "<br/>" + d.target.name)
+          .html("[" + d.source.name + "] [" + d.target.name + "]<br/>" + conf_text)
           .style("left", event.pageX + "px")
           .style("top", event.pageY - 28 + "px");
 
