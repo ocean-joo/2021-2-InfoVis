@@ -1,3 +1,5 @@
+import { autoType } from "d3-dsv";
+
 const schoolNameList = {
   snu: "Seoul National University",
   kaist: "KAIST",
@@ -7,50 +9,107 @@ const schoolNameList = {
 };
 
 const DetailSideBar = (props) => {
-  console.log(props.labDetail);
-  var details = props.labDetail.selectedLabDetail;
+  // props -> confDetail, flag
+  // confDetail attrib: title, impactScore
+  // flag -> 0 for labDetail, 1 for confDetail, 2 for nothing selected
+
+  // dummy define
+  var flag = 0 ;
+  var confInformation = {
+    title: "RTSS: ...",
+    impactScore: 10,
+  };
+  
+  var labInformation = props.labDetail.selectedLabDetail;
   var listItem ;
+  var paperlist = "";
 
   if ('selectedLabDetail' in props.labDetail) {
-    listItem = details.paper.map((obj) =>
+    listItem = labInformation.paper.map((obj) =>
       <li>
-        {obj.apa}
-        <a href=""onclick="obj.link">[link]</a>
+        {obj.title}
+        <a href={obj.link}>[link]</a>
       </li>
     );
+    if (labInformation.paper.length !== 0) {
+      paperlist = "Paper List";
+    }
   } else {
     listItem = "";
-    details = {};
+    labInformation = {};
   }
-  
 
-  return (
-    <div
+  // nothing selected
+  if (!('selectedLabDetail' in props.labDetail)) {
+    return (
+      <div
       style={{
         width: "400px",
+        height: "710px",
         marginLeft: 20,
         padding: 20,
         outline: "thin dashed black",
+        overflow: "scroll",
       }}
-    >
-      <h1>
-        {details.name}
-      </h1>
-      <h2>
-        Information
-      </h2>
-      <text>
-        {details.prof_name}, {schoolNameList[details.school]} <br />
-        E - mail: {details.email} <br />
-        Interest: {details.description} <br />
-        Lab link: {details.href}
-      </text>
-      <h2>
-        Paper List
-      </h2>
-      <ul>{listItem}</ul>
-    </div>
-  );
+      ></div>
+    );
+  }
+
+  if (flag == 0) {
+    return (
+      <div
+        style={{
+          width: "400px",
+          height: "710px",
+          marginLeft: 20,
+          padding: 20,
+          outline: "thin dashed black",
+          overflow: "scroll",
+        }}
+      >
+        <h1>
+          {labInformation.name}
+        </h1>
+        <h2>
+          Information
+        </h2>
+        <text>
+          {labInformation.prof_name}, {schoolNameList[labInformation.school]} <br />
+          <b>E - mail</b>: {labInformation.email} <br />
+          <b>Interest</b>: {labInformation.description} <br />
+          <b>Lab link</b>: {labInformation.href}
+        </text>
+        <h2>
+          {paperlist}
+        </h2>
+        <ul>{listItem}</ul>
+      </div>
+    );
+  } else if (flag == 1) {
+    return (
+      <div
+        style={{
+          width: "400px",
+          height: "710px",
+          marginLeft: 20,
+          padding: 20,
+          outline: "thin dashed black",
+          overflow: "scroll",
+        }}
+      >
+        <h1>
+          {confInformation.title}
+        </h1>
+        <h2>
+          Information
+        </h2>
+        <text>
+          <b>Impact Score</b>: {confInformation.impactScore} <br />
+        </text>
+      </div>
+    );
+  }
+  
 };
 
 export default DetailSideBar;
