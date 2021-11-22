@@ -27,8 +27,9 @@ const DetailSideBar = (props) => {
   if ('selectedLabDetail' in props.labDetail) {
     listItem = labInformation.paper.map((obj) =>
       <li>
-        {obj.title}
-        <a href={obj.link}>[link]</a>
+        <b>{obj.title}</b> <br />
+        <i>{obj.apa}</i>
+        <a href={obj.href}>[link]</a>
       </li>
     );
     if (labInformation.paper.length !== 0) {
@@ -77,7 +78,7 @@ const DetailSideBar = (props) => {
           {labInformation.prof_name}, {schoolNameList[labInformation.school]} <br />
           <b>E - mail</b>: {labInformation.email} <br />
           <b>Interest</b>: {labInformation.description} <br />
-          <b>Lab link</b>: {labInformation.href}
+          <b>Lab link</b>: <a href={labInformation.href}>{labInformation.href}</a>
         </text>
         <h2>
           {paperlist}
