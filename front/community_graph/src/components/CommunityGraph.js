@@ -56,6 +56,8 @@ const CommunityGraph = (props) => {
 
   const comGraphWidthPadding = 0;
   var dur = 600;
+  const link_popup_padding = 5*2;
+  const link_popup_width = 500 + link_popup_padding;
 
   useEffect(() => {
     const nodes = lab_json;
@@ -133,6 +135,7 @@ const CommunityGraph = (props) => {
       .select("body")
       .append("div")
       .attr("class", "tooltip")
+      .attr("width", link_popup_width)
       .style("opacity", 0);
 
     // for grouping
@@ -213,7 +216,7 @@ const CommunityGraph = (props) => {
     labLink
       .attr("class", "link")
       .style("stroke", "darkgray")
-      .style("stroke-width", "0.3px")
+      .style("stroke-width", "1.3px")
       .attr("opacity", 0)
       .on("click", link_clicked);
     // .on('click', node_clicked);
@@ -298,19 +301,52 @@ const CommunityGraph = (props) => {
       node_clicked(event, node);
     }
 
+    function split_to_lines(long_line, limit) {
+      var lines = [""]
+      var line_num = 0
+      var chunks = long_line.split(" ");
+      for (var i = 0; i< chunks.length; i++) {
+        if (lines[line_num].length + chunks[i].length <= limit) {
+          lines[line_num] += chunks[i]+ " ";
+        } else {
+          lines[line_num] += make_space((limit - lines[line_num].length)*2);
+          line_num++;
+          lines.push(chunks[i] + " ");
+        }
+      }
+      return lines
+    }
+
+    function make_space(_len) {
+      var pad = "";
+      for (var i = 0; i < _len; i++) pad += "&nbsp;";
+      return pad;
+    }
+
     function link_clicked(event, d) {
       if (d && link_clicked !== d) {
         linkPopup.transition().duration(200).style("opacity", 0.9);
 
+        // var one_third = (link_popup_width - link_popup_padding) / 3;
+        var one_third = 25;
         var conf_text = ""
         d.common_conf.forEach(function (c) {
           var conf_name = conf_json[c.conf_id]["name"];
-          conf_text += conf_name + " " + c.source_num + " " + c.target_num;
-          conf_text += "<br/>"
-        }) 
+          var conf_name_split = split_to_lines(conf_name, one_third);
 
+          if (conf_name_split.length > 1)
+            conf_text = conf_name_split.slice(0,2).join("<br/>");
+          else
+            conf_text = conf_name_split[0];
+          var source_pad = make_space(d.source.name.length * 1);
+          var target_pad = make_space(d.target.name.length * 1);
+          conf_text += source_pad + c.source_num + source_pad + target_pad + c.target_num + target_pad + "<br/>";
+          conf_text += conf_name_split.slice(2).join("<br/>");
+        }) 
+        
+        var pad = make_space(one_third * 1.7);
         linkPopup
-          .html("[" + d.source.name + "] [" + d.target.name + "]<br/>" + conf_text)
+          .html(pad + "[" + d.source.name + "] [" + d.target.name + "]<br/>" + conf_text)
           .style("left", event.pageX + "px")
           .style("top", event.pageY - 28 + "px");
 
