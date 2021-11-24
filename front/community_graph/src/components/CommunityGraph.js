@@ -327,12 +327,11 @@ const CommunityGraph = (props) => {
       if (d && link_clicked !== d) {
         linkPopup.transition().duration(200).style("opacity", 0.9);
 
-        // var one_third = (link_popup_width - link_popup_padding) / 3;
-        var one_third = 25;
+        var line_width = 25;
         var conf_text = ""
         d.common_conf.forEach(function (c) {
           var conf_name = conf_json[c.conf_id]["name"];
-          var conf_name_split = split_to_lines(conf_name, one_third);
+          var conf_name_split = split_to_lines(conf_name, line_width);
 
           if (conf_name_split.length > 1)
             conf_text = conf_name_split.slice(0,2).join("<br/>");
@@ -344,7 +343,7 @@ const CommunityGraph = (props) => {
           conf_text += conf_name_split.slice(2).join("<br/>");
         }) 
         
-        var pad = make_space(one_third * 1.7);
+        var pad = make_space(line_width * 1.7);
         linkPopup
           .html(pad + "[" + d.source.name + "] [" + d.target.name + "]<br/>" + conf_text)
           .style("left", event.pageX + "px")
