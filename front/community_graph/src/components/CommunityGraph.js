@@ -159,6 +159,29 @@ const CommunityGraph = (props) => {
       };
     });
 
+
+    // sum weights of link between school
+    var dic = {};
+    for (var i=0; i<schoolNameArray.length; i++) {
+      for (var j=i+1; j<schoolNameArray.length; j++) {
+        var k = String(i)+String(j);
+        dic[k] = 0;
+      }
+    }
+    link_json.forEach(function(l) {
+      var src_school_id = schoolList[lab_json[l.source]["school"]]["id"];
+      var tar_school_id = schoolList[lab_json[l.target]["school"]]["id"];
+      if (src_school_id < tar_school_id) {
+        dic[String(src_school_id)+String(tar_school_id)] += l.weight;
+      } else if (src_school_id > tar_school_id) {
+        dic[String(tar_school_id)+String(src_school_id)] += l.weight;
+      }
+    })
+
+    school_link_json.forEach(function(l) {
+      l.weight = dic[String(l.source_group)+String(l.target_group)];
+    })
+
     // link for school
     let schoolLink = comGraphSVG
     .select("#schoolLink")
@@ -170,7 +193,7 @@ const CommunityGraph = (props) => {
     schoolLink
       .attr("class", "school_link")
       .style("stroke", "lightgray")
-      .style("stroke-width", (d) => d.weight * 20)
+      .style("stroke-width", (d) => d.weight / 10)
       .style("fill", "none")
       .attr("opacity", 1)
 
