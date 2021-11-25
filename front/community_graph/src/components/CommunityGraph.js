@@ -7,7 +7,6 @@ import ControlPanel from "./ControlPanel";
 import link_json from "../data/link.json";
 import conf_json from "../data/conf.json";
 import lab_json from "../data/lab.json";
-import school_link_json from "../data/school_link.json"
 
 const CommunityGraph = (props) => {
   const [labDetail, setLabDetail] = useState({});
@@ -62,7 +61,6 @@ const CommunityGraph = (props) => {
   useEffect(() => {
     const nodes = lab_json;
     const links = link_json;
-    const school_link = school_link_json;
 
     // separation between same-color circles
     const nodePadding = 73;
@@ -162,9 +160,14 @@ const CommunityGraph = (props) => {
 
     // sum weights of link between school
     var dic = {};
+    var school_link = [];
     for (var i=0; i<schoolNameArray.length; i++) {
       for (var j=i+1; j<schoolNameArray.length; j++) {
         var k = String(i)+String(j);
+        school_link.push({
+          "source_group" : i,
+          "target_group" : j
+        })
         dic[k] = 0;
       }
     }
@@ -178,7 +181,7 @@ const CommunityGraph = (props) => {
       }
     })
 
-    school_link_json.forEach(function(l) {
+    school_link.forEach(function(l) {
       l.weight = dic[String(l.source_group)+String(l.target_group)];
     })
 
