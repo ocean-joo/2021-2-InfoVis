@@ -10,6 +10,7 @@ import lab_json from "../data/lab.json";
 
 const CommunityGraph = (props) => {
   const [labDetail, setLabDetail] = useState({});
+  const [confDetail, setConfDetail] = useState({});
   const [isLabView, setLabView] = useState(false);
   // it's percentage. should divide by 100 in below code
   const [weightRange, setWeightRange] = useState({ min: 0, max: 100 });
@@ -55,8 +56,7 @@ const CommunityGraph = (props) => {
 
   const comGraphWidthPadding = 0;
   var dur = 600;
-  const link_popup_padding = 5*2;
-  const link_popup_width = 500 + link_popup_padding;
+  const link_popup_width = 100;
 
   useEffect(() => {
     const nodes = lab_json;
@@ -353,30 +353,41 @@ const CommunityGraph = (props) => {
       if (d && link_clicked !== d) {
         linkPopup.transition().duration(200).style("opacity", 0.9);
 
-        var line_width = 25;
+        var offset = 20;
         var conf_text = ""
         d.common_conf.forEach(function (c) {
           var conf_name = conf_json[c.conf_id]["name"];
-          var conf_name_split = split_to_lines(conf_name, line_width);
-
-          if (conf_name_split.length > 1)
-            conf_text = conf_name_split.slice(0,2).join("<br/>");
-          else
-            conf_text = conf_name_split[0];
-          var source_pad = make_space(d.source.name.length * 1);
-          var target_pad = make_space(d.target.name.length * 1);
-          conf_text += source_pad + c.source_num + source_pad + target_pad + c.target_num + target_pad + "<br/>";
-          conf_text += conf_name_split.slice(2).join("<br/>");
+          conf_text += "<button>" + conf_name + "</button> ";
+          conf_text += make_space(3) +c.source_num + make_space(4) + c.target_num + "</br>";
         }) 
-        
-        var pad = make_space(line_width * 1.7);
+
         linkPopup
-          .html(pad + "[" + d.source.name + "] [" + d.target.name + "]<br/>" + conf_text)
+          .html("<b>Conference List    (Lab1)  (Lab2)</b></br>"+"Lab 1:  " + d.source.name + "</br>Lab 2:  " + d.target.name + "</br>"+ conf_text)
           .style("left", event.pageX + "px")
           .style("top", event.pageY - 28 + "px");
-
+        
+        linkPopup.selectAll('button')
+          .on("click", function (b, i) {
+            var _impact_score = 0;
+            var _title = b.path[0].innerText;
+            for (var c = 0; c < conf_json.length; c++) {
+              if (conf_json[c]["name"] == _title) {
+                _impact_score = conf_json[c]["impact_score"];
+                break;
+              }
+            }
+            var selectedConfDetail = {
+              title : _title,
+              impactScore : _impact_score
+            };
+            setConfDetail({selectedConfDetail});
+            console.log('community graph', selectedConfDetail);
+          })
+      
+          
         link_clicked = d;
       } else {
+        setConfDetail({});
         linkPopup.transition().duration(500).style("opacity", 0);
 
         link_clicked = null;
@@ -694,7 +705,7 @@ const CommunityGraph = (props) => {
       <svg ref={comGraph} width={comGraphWidth} height={comGraphHeight} />
       <DetailSideBar
         labDetail={labDetail}
-        ConfDetail={null}
+        confDetail={confDetail}
         shouldVisualizeConf={false}
       />
     </div>
