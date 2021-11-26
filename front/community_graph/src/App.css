@@ -1,30 +1,37 @@
-div.tooltip {	
-    position: absolute;			
-    text-align: left;			
-    padding: 2px;				
-    font: 15px sans-serif;		
-    background: lightsteelblue;	
-    border: 0px;		
-    border-radius: 8px;			
+div.tooltip {
+  position: absolute;
+  text-align: left;
+  padding: 2px;
+  font: 15px sans-serif;
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 8px;
 }
 
 .active {
-    stroke-width : 0.7
+  stroke-width: 0.7;
 }
 
 .background {
-    fill: none;
-    pointer-events: all;
-  }
+  fill: none;
+  pointer-events: all;
+}
 
-  svg text{
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
- }
+svg text {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
- button {
-    border: 0.1px dashed #ccc;
-    cursor: pointer;
-  }
+button {
+  border: 0.1px dashed #ccc;
+  cursor: pointer;
+}
+
+.transparent {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

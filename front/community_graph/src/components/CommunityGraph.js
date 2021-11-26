@@ -120,13 +120,14 @@ const CommunityGraph = (props) => {
       .append("g")
       .attr(
         "transform",
-        `translate(${comGraphWidth / 2 + comGraphWidthOffset} , ${comGraphHeight / 2 + comGraphHeightOffset
+        `translate(${comGraphWidth / 2 + comGraphWidthOffset} , ${
+          comGraphHeight / 2 + comGraphHeightOffset
         })`
       );
     // .attr("style", "outline: thin solid black;");
 
     // to draw schoolLink before than schoolNodaEdge
-    comGraphSVG.append('g').attr('id', "schoolLink");
+    comGraphSVG.append("g").attr("id", "schoolLink");
 
     // link popup
     var linkPopup = d3
@@ -148,7 +149,7 @@ const CommunityGraph = (props) => {
     ).map(function (groupId) {
       return {
         groupId: groupId,
-        groupName : schoolNameArray[groupId],
+        groupName: schoolNameArray[groupId],
         count: nodes.filter(function (n) {
           return +schoolList[n.school]["id"] === groupId;
         }).length,
@@ -157,48 +158,47 @@ const CommunityGraph = (props) => {
       };
     });
 
-
     // sum weights of link between school
     var dic = {};
     var school_link = [];
-    for (var i=0; i<schoolNameArray.length; i++) {
-      for (var j=i+1; j<schoolNameArray.length; j++) {
-        var k = String(i)+String(j);
+    for (var i = 0; i < schoolNameArray.length; i++) {
+      for (var j = i + 1; j < schoolNameArray.length; j++) {
+        var k = String(i) + String(j);
         school_link.push({
-          "source_group" : i,
-          "target_group" : j
-        })
+          source_group: i,
+          target_group: j,
+        });
         dic[k] = 0;
       }
     }
-    link_json.forEach(function(l) {
+    link_json.forEach(function (l) {
       var src_school_id = schoolList[lab_json[l.source]["school"]]["id"];
       var tar_school_id = schoolList[lab_json[l.target]["school"]]["id"];
       if (src_school_id < tar_school_id) {
-        dic[String(src_school_id)+String(tar_school_id)] += l.weight;
+        dic[String(src_school_id) + String(tar_school_id)] += l.weight;
       } else if (src_school_id > tar_school_id) {
-        dic[String(tar_school_id)+String(src_school_id)] += l.weight;
+        dic[String(tar_school_id) + String(src_school_id)] += l.weight;
       }
-    })
+    });
 
-    school_link.forEach(function(l) {
-      l.weight = dic[String(l.source_group)+String(l.target_group)];
-    })
+    school_link.forEach(function (l) {
+      l.weight = dic[String(l.source_group) + String(l.target_group)];
+    });
 
     // link for school
     let schoolLink = comGraphSVG
-    .select("#schoolLink")
-    .selectAll("school_line")
-    .data(school_link)
-    .enter()
-    .append("line");
+      .select("#schoolLink")
+      .selectAll("school_line")
+      .data(school_link)
+      .enter()
+      .append("line");
 
     schoolLink
       .attr("class", "school_link")
       .style("stroke", "lightgray")
       .style("stroke-width", (d) => d.weight / 10)
       .style("fill", "none")
-      .attr("opacity", 1)
+      .attr("opacity", 1);
 
     var schoolNodeEdge = schoolNode
       .selectAll(".path_placeholder")
@@ -214,7 +214,7 @@ const CommunityGraph = (props) => {
       .on("click", cluster_clicked);
 
     schoolNodeEdge.transition().duration(200).attr("opacity", 1);
-    
+
     var schoolText = schoolNode
       .selectAll(".path_placeholder")
       .data(schoolNodeData, function (d) {
@@ -314,7 +314,7 @@ const CommunityGraph = (props) => {
       })
       .strength(0.1);
     // .distance([85]);
-    
+
     // helper functions
     function cluster_clicked(event, d) {
       var node;
@@ -328,19 +328,19 @@ const CommunityGraph = (props) => {
     }
 
     function split_to_lines(long_line, limit) {
-      var lines = [""]
-      var line_num = 0
+      var lines = [""];
+      var line_num = 0;
       var chunks = long_line.split(" ");
-      for (var i = 0; i< chunks.length; i++) {
+      for (var i = 0; i < chunks.length; i++) {
         if (lines[line_num].length + chunks[i].length <= limit) {
-          lines[line_num] += chunks[i]+ " ";
+          lines[line_num] += chunks[i] + " ";
         } else {
-          lines[line_num] += make_space((limit - lines[line_num].length)*2);
+          lines[line_num] += make_space((limit - lines[line_num].length) * 2);
           line_num++;
           lines.push(chunks[i] + " ");
         }
       }
-      return lines
+      return lines;
     }
 
     function make_space(_len) {
@@ -354,37 +354,48 @@ const CommunityGraph = (props) => {
         linkPopup.transition().duration(200).style("opacity", 0.9);
 
         var offset = 20;
-        var conf_text = ""
+        var conf_text = "";
         d.common_conf.forEach(function (c) {
           var conf_name = conf_json[c.conf_id]["name"];
           conf_text += "<button>" + conf_name + "</button> ";
-          conf_text += make_space(3) +c.source_num + make_space(4) + c.target_num + "</br>";
-        }) 
+          conf_text +=
+            make_space(3) +
+            c.source_num +
+            make_space(4) +
+            c.target_num +
+            "</br>";
+        });
 
         linkPopup
-          .html("<b>Conference List    (Lab1)  (Lab2)</b></br>"+"Lab 1:  " + d.source.name + "</br>Lab 2:  " + d.target.name + "</br>"+ conf_text)
+          .html(
+            "<b>Conference List    (Lab1)  (Lab2)</b></br>" +
+              "Lab 1:  " +
+              d.source.name +
+              "</br>Lab 2:  " +
+              d.target.name +
+              "</br>" +
+              conf_text
+          )
           .style("left", event.pageX + "px")
           .style("top", event.pageY - 28 + "px");
-        
-        linkPopup.selectAll('button')
-          .on("click", function (b, i) {
-            var _impact_score = 0;
-            var _title = b.path[0].innerText;
-            for (var c = 0; c < conf_json.length; c++) {
-              if (conf_json[c]["name"] == _title) {
-                _impact_score = conf_json[c]["impact_score"];
-                break;
-              }
+
+        linkPopup.selectAll("button").on("click", function (b, i) {
+          var _impact_score = 0;
+          var _title = b.path[0].innerText;
+          for (var c = 0; c < conf_json.length; c++) {
+            if (conf_json[c]["name"] == _title) {
+              _impact_score = conf_json[c]["impact_score"];
+              break;
             }
-            var selectedConfDetail = {
-              title : _title,
-              impactScore : _impact_score
-            };
-            setConfDetail({selectedConfDetail});
-            console.log('community graph', selectedConfDetail);
-          })
-      
-          
+          }
+          var selectedConfDetail = {
+            title: _title,
+            impactScore: _impact_score,
+          };
+          setConfDetail({ selectedConfDetail });
+          console.log("community graph", selectedConfDetail);
+        });
+
         link_clicked = d;
       } else {
         setConfDetail({});
@@ -420,16 +431,16 @@ const CommunityGraph = (props) => {
           .attr(
             "transform",
             "translate(" +
-            comGraphWidth / 2 +
-            "," +
-            comGraphHeight / 2 +
-            ")scale(" +
-            k +
-            ")translate(" +
-            (-x - x_offset) +
-            "," +
-            (-y - y_offset) +
-            ")"
+              comGraphWidth / 2 +
+              "," +
+              comGraphHeight / 2 +
+              ")scale(" +
+              k +
+              ")translate(" +
+              (-x - x_offset) +
+              "," +
+              (-y - y_offset) +
+              ")"
           );
 
         labNode
@@ -439,24 +450,24 @@ const CommunityGraph = (props) => {
           .attr(
             "transform",
             "translate(" +
-            comGraphWidth / 2 +
-            "," +
-            comGraphHeight / 2 +
-            ")scale(" +
-            k +
-            ")translate(" +
-            (-x - x_offset) +
-            "," +
-            (-y - y_offset) +
-            ")"
+              comGraphWidth / 2 +
+              "," +
+              comGraphHeight / 2 +
+              ")scale(" +
+              k +
+              ")translate(" +
+              (-x - x_offset) +
+              "," +
+              (-y - y_offset) +
+              ")"
           );
 
         labNode.classed(
           "active",
           centered &&
-          function (d) {
-            return d === centered;
-          }
+            function (d) {
+              return d === centered;
+            }
         );
 
         labLink
@@ -466,16 +477,16 @@ const CommunityGraph = (props) => {
           .attr(
             "transform",
             "translate(" +
-            comGraphWidth / 2 +
-            "," +
-            comGraphHeight / 2 +
-            ")scale(" +
-            k +
-            ")translate(" +
-            (-x - x_offset) +
-            "," +
-            (-y - y_offset) +
-            ")"
+              comGraphWidth / 2 +
+              "," +
+              comGraphHeight / 2 +
+              ")scale(" +
+              k +
+              ")translate(" +
+              (-x - x_offset) +
+              "," +
+              (-y - y_offset) +
+              ")"
           );
         // set lab detail info
         // TODO : Add paper Info
@@ -486,9 +497,9 @@ const CommunityGraph = (props) => {
           email: d.email,
           description: d.description,
           href: d.href,
-          paper:d.paper,
+          paper: d.paper,
         };
-        setLabDetail({selectedLabDetail});
+        setLabDetail({ selectedLabDetail });
       } else {
         // if clicked again, restore
         setLabView(false);
@@ -500,7 +511,7 @@ const CommunityGraph = (props) => {
         centered = null;
 
         schoolNode.transition().duration(dur).attr("opacity", 1);
-        schoolLink.transition().duration(dur).attr('opacity', 1);
+        schoolLink.transition().duration(dur).attr("opacity", 1);
 
         labText
           .transition()
@@ -509,16 +520,16 @@ const CommunityGraph = (props) => {
           .attr(
             "transform",
             "translate(" +
-            comGraphWidth / 2 +
-            "," +
-            comGraphHeight / 2 +
-            ")scale(" +
-            k +
-            ")translate(" +
-            (-x - x_offset) +
-            "," +
-            (-y - y_offset) +
-            ")"
+              comGraphWidth / 2 +
+              "," +
+              comGraphHeight / 2 +
+              ")scale(" +
+              k +
+              ")translate(" +
+              (-x - x_offset) +
+              "," +
+              (-y - y_offset) +
+              ")"
           );
 
         labNode
@@ -528,24 +539,24 @@ const CommunityGraph = (props) => {
           .attr(
             "transform",
             "translate(" +
-            comGraphWidth / 2 +
-            "," +
-            comGraphHeight / 2 +
-            ")scale(" +
-            k +
-            ")translate(" +
-            (-x - x_offset) +
-            "," +
-            (-y - y_offset) +
-            ")"
+              comGraphWidth / 2 +
+              "," +
+              comGraphHeight / 2 +
+              ")scale(" +
+              k +
+              ")translate(" +
+              (-x - x_offset) +
+              "," +
+              (-y - y_offset) +
+              ")"
           );
 
         labNode.classed(
           "active",
           centered &&
-          function (d) {
-            return d === centered;
-          }
+            function (d) {
+              return d === centered;
+            }
         );
 
         labLink
@@ -555,20 +566,19 @@ const CommunityGraph = (props) => {
           .attr(
             "transform",
             "translate(" +
-            comGraphWidth / 2 +
-            "," +
-            comGraphHeight / 2 +
-            ")scale(" +
-            k +
-            ")translate(" +
-            (-x - x_offset) +
-            "," +
-            (-y - y_offset) +
-            ")"
+              comGraphWidth / 2 +
+              "," +
+              comGraphHeight / 2 +
+              ")scale(" +
+              k +
+              ")translate(" +
+              (-x - x_offset) +
+              "," +
+              (-y - y_offset) +
+              ")"
           );
       }
       linkPopup.transition().duration(dur).style("opacity", 0);
-
     }
 
     function ticked() {
@@ -585,10 +595,10 @@ const CommunityGraph = (props) => {
       schoolText.attr("x", (d) => d.x).attr("y", (d) => d.y);
 
       schoolLink
-        .attr('x1', (d) => schoolNodeData[d.source_group]["x"])
-        .attr('y1', (d) => schoolNodeData[d.source_group]["y"])
-        .attr('x2', (d) => schoolNodeData[d.target_group]["x"])
-        .attr('y2', (d) => schoolNodeData[d.target_group]["y"])
+        .attr("x1", (d) => schoolNodeData[d.source_group]["x"])
+        .attr("y1", (d) => schoolNodeData[d.source_group]["y"])
+        .attr("x2", (d) => schoolNodeData[d.target_group]["x"])
+        .attr("y2", (d) => schoolNodeData[d.target_group]["y"]);
 
       updateGroups();
     }
@@ -682,12 +692,12 @@ const CommunityGraph = (props) => {
         d3.select(path.node().parentNode).attr(
           "transform",
           "translate(" +
-          centroid[0] +
-          "," +
-          centroid[1] +
-          `) scale(` +
-          scaleFactor +
-          ")"
+            centroid[0] +
+            "," +
+            centroid[1] +
+            `) scale(` +
+            scaleFactor +
+            ")"
         );
 
         groupId.x = centroid[0];
