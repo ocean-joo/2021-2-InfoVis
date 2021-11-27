@@ -9,24 +9,18 @@ const schoolNameList = {
 };
 
 const DetailSideBar = (props) => {
-  // props -> confDetail, flag
+  // props -> labDetail, confDetail, shouldVisualizeConf(flag)
   // confDetail attrib: title, impactScore
   // flag -> 0 for labDetail, 1 for confDetail, 2 for nothing selected
 
-  // dummy define
-  var flag = 0 ;
-  var confInformation = {
-    title: "RTSS: ...",
-    impactScore: 10,
-  };
-  
   var labInformation = props.labDetail.selectedLabDetail;
+  var confInformation = props.confDetail.selectedConfDetail;
   var listItem ;
   var paperlist = "";
 
   if ('selectedLabDetail' in props.labDetail) {
-    listItem = labInformation.paper.map((obj) =>
-      <li>
+    listItem = labInformation.paper.map((obj, i) =>
+      <li key={i}>
         <b>{obj.title}</b> <br />
         <i>{obj.apa}</i>
         <a href={obj.href}>[link]</a>
@@ -41,6 +35,7 @@ const DetailSideBar = (props) => {
   }
 
   // nothing selected
+  // TODO: more general condition to show nothing
   if (!('selectedLabDetail' in props.labDetail)) {
     return (
       <div
@@ -56,37 +51,7 @@ const DetailSideBar = (props) => {
     );
   }
 
-  if (flag == 0) {
-    return (
-      <div
-        style={{
-          width: "400px",
-          height: "710px",
-          marginLeft: 20,
-          padding: 20,
-          outline: "thin dashed black",
-          overflow: "scroll",
-        }}
-      >
-        <h1>
-          {labInformation.name}
-        </h1>
-        <h2>
-          Information
-        </h2>
-        <text>
-          {labInformation.prof_name}, {schoolNameList[labInformation.school]} <br />
-          <b>E - mail</b>: {labInformation.email} <br />
-          <b>Interest</b>: {labInformation.description} <br />
-          <b>Lab link</b>: <a href={labInformation.href}>{labInformation.href}</a>
-        </text>
-        <h2>
-          {paperlist}
-        </h2>
-        <ul>{listItem}</ul>
-      </div>
-    );
-  } else if (flag == 1) {
+  if (props.shouldVisualizeConf) {
     return (
       <div
         style={{
@@ -104,9 +69,35 @@ const DetailSideBar = (props) => {
         <h2>
           Information
         </h2>
-        <text>
-          <b>Impact Score</b>: {confInformation.impactScore} <br />
-        </text>
+        <b>Impact Score</b>: {confInformation.impactScore} <br />
+      </div>
+    );
+  } else {
+    return (
+      <div
+        style={{
+          width: "400px",
+          height: "710px",
+          marginLeft: 20,
+          padding: 20,
+          outline: "thin dashed black",
+          overflow: "scroll",
+        }}
+      >
+        <h1>
+          {labInformation.name}
+        </h1>
+        <h2>
+          Information
+        </h2>
+        {labInformation.prof_name}, {schoolNameList[labInformation.school]} <br />
+        <b>E - mail</b>: {labInformation.email} <br />
+        <b>Interest</b>: {labInformation.description} <br />
+        <b>Lab link</b>: <a href={labInformation.href}>{labInformation.href}</a>
+        <h2>
+          {paperlist}
+        </h2>
+        <ul>{listItem}</ul>
       </div>
     );
   }

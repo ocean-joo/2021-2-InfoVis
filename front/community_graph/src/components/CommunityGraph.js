@@ -405,10 +405,12 @@ const CommunityGraph = (props) => {
           paper: d.paper,
         };
         setLabDetail({ selectedLabDetail });
+        setConfFlag(false);
       } else {
         // if clicked again, restore
         setLabView(false);
         setLabDetail({});
+        setConfFlag(false);
 
         x = comGraphWidth / 2 - x_offset;
         y = comGraphHeight / 2 - y_offset;
