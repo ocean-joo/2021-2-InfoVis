@@ -28,10 +28,3 @@ button {
   border: 0.1px dashed #ccc;
   cursor: pointer;
 }
-
-.transparent {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}

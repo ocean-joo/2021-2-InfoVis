@@ -73,9 +73,6 @@ const CommunityGraph = (props) => {
 
     const schoolScale = d3.scaleOrdinal(d3.schemeCategory10);
 
-    // total number of nodes
-    const nodeNum = nodes.length;
-
     nodes.forEach(function (node) {
       node.r = defaultRadius;
 
@@ -85,7 +82,6 @@ const CommunityGraph = (props) => {
       // }
       // node.r = node.scale / 2;
     });
-    // console.log('maxRadius', maxRadius);
 
     // collect clusters from nodes
     const clusters = {};
@@ -231,9 +227,7 @@ const CommunityGraph = (props) => {
       .attr("class", "lab_link")
       .style("stroke", "darkgray")
       .style("stroke-width", "1.3px")
-      .attr("opacity", 0)
-      .on("click", link_clicked);
-    // .on('click', node_clicked);
+      .attr("opacity", 0);
 
     // node for lab
     const labNode = comGraphSVG
@@ -266,7 +260,7 @@ const CommunityGraph = (props) => {
             d.fy = null;
           })
       )
-      .on("click", node_clicked);
+      .on("click", onClickNode);
 
     var labText = comGraphSVG
       .append("g")
@@ -281,7 +275,7 @@ const CommunityGraph = (props) => {
       .attr("text-anchor", "middle")
       .attr("opacity", 0)
       .text((d) => {
-        if (d.name == "_") return "";
+        if (d.name === "_") return "";
         else return d.name;
       });
 
@@ -312,88 +306,10 @@ const CommunityGraph = (props) => {
           node = n;
         }
       });
-      node_clicked(event, node);
+      onClickNode(event, node);
     }
 
-    function split_to_lines(long_line, limit) {
-      var lines = [""];
-      var line_num = 0;
-      var chunks = long_line.split(" ");
-      for (var i = 0; i < chunks.length; i++) {
-        if (lines[line_num].length + chunks[i].length <= limit) {
-          lines[line_num] += chunks[i] + " ";
-        } else {
-          lines[line_num] += make_space((limit - lines[line_num].length) * 2);
-          line_num++;
-          lines.push(chunks[i] + " ");
-        }
-      }
-      return lines;
-    }
-
-    function make_space(_len) {
-      var pad = "";
-      for (var i = 0; i < _len; i++) pad += "&nbsp;";
-      return pad;
-    }
-
-    function link_clicked(event, d) {
-      if (d && link_clicked !== d) {
-        linkPopup.transition().duration(200).style("opacity", 0.9);
-
-        var offset = 20;
-        var conf_text = "";
-        d.common_conf.forEach(function (c) {
-          var conf_name = conf_json[c.conf_id]["name"];
-          conf_text += "<button>" + conf_name + "</button> ";
-          conf_text +=
-            make_space(3) +
-            c.source_num +
-            make_space(4) +
-            c.target_num +
-            "</br>";
-        });
-
-        linkPopup
-          .html(
-            "<b>Conference List    (Lab1)  (Lab2)</b></br>" +
-              "Lab 1:  " +
-              d.source.name +
-              "</br>Lab 2:  " +
-              d.target.name +
-              "</br>" +
-              conf_text
-          )
-          .style("left", event.pageX + "px")
-          .style("top", event.pageY - 28 + "px");
-
-        linkPopup.selectAll("button").on("click", function (b, i) {
-          var _impact_score = 0;
-          var _title = b.path[0].innerText;
-          for (var c = 0; c < conf_json.length; c++) {
-            if (conf_json[c]["name"] == _title) {
-              _impact_score = conf_json[c]["impact_score"];
-              break;
-            }
-          }
-          var selectedConfDetail = {
-            title: _title,
-            impactScore: _impact_score,
-          };
-          setConfDetail({ selectedConfDetail });
-          console.log("community graph", selectedConfDetail);
-        });
-
-        link_clicked = d;
-      } else {
-        setConfDetail({});
-        linkPopup.transition().duration(500).style("opacity", 0);
-
-        link_clicked = null;
-      }
-    }
-
-    function node_clicked(event, d) {
+    function onClickNode(event, d) {
       var x, y, k;
 
       // they are magic numbers...
@@ -704,8 +620,90 @@ const CommunityGraph = (props) => {
       .selectAll(".lab_link")
       .filter((d) => d.weight < weightRange.min || d.weight > weightRange.max);
 
-    filteredLabLink.attr("opacity", 1);
-    TransparentLabLink.attr("opacity", 0);
+    filteredLabLink.attr("opacity", 1).on("click", onClickLink);
+    TransparentLabLink.attr("opacity", 0).on("click", null);
+
+    var linkPopup = d3.selectAll(".tooltip");
+    var clickedLink;
+
+    function onClickLink(event, d) {
+      console.log(event, d);
+      if (d && clickedLink !== d) {
+        linkPopup.transition().duration(200).style("opacity", 0.9);
+
+        var offset = 20;
+        var conf_text = "";
+        d.common_conf.forEach(function (c) {
+          var conf_name = conf_json[c.conf_id]["name"];
+          conf_text += "<button>" + conf_name + "</button> ";
+          conf_text +=
+            make_space(3) +
+            c.source_num +
+            make_space(4) +
+            c.target_num +
+            "</br>";
+        });
+
+        linkPopup
+          .html(
+            "<b>Conference List    (Lab1)  (Lab2)</b></br>" +
+              "Lab 1:  " +
+              d.source.name +
+              "</br>Lab 2:  " +
+              d.target.name +
+              "</br>" +
+              conf_text
+          )
+          .style("left", event.pageX + "px")
+          .style("top", event.pageY - 28 + "px");
+
+        linkPopup.selectAll("button").on("click", function (b, i) {
+          var _impact_score = 0;
+          var _title = b.path[0].innerText;
+          for (var c = 0; c < conf_json.length; c++) {
+            if (conf_json[c]["name"] === _title) {
+              _impact_score = conf_json[c]["impact_score"];
+              break;
+            }
+          }
+          var selectedConfDetail = {
+            title: _title,
+            impactScore: _impact_score,
+          };
+          setConfDetail({ selectedConfDetail });
+          console.log("community graph", selectedConfDetail);
+        });
+
+        clickedLink = d;
+      } else {
+        setConfDetail({});
+        linkPopup.transition().duration(500).style("opacity", 0);
+
+        clickedLink = null;
+      }
+    }
+
+    function split_to_lines(long_line, limit) {
+      var lines = [""];
+      var line_num = 0;
+      var chunks = long_line.split(" ");
+      for (var i = 0; i < chunks.length; i++) {
+        if (lines[line_num].length + chunks[i].length <= limit) {
+          lines[line_num] += chunks[i] + " ";
+        } else {
+          lines[line_num] += make_space((limit - lines[line_num].length) * 2);
+          line_num++;
+          lines.push(chunks[i] + " ");
+        }
+      }
+      return lines;
+    }
+
+    function make_space(_len) {
+      var pad = "";
+      for (var i = 0; i < _len; i++) pad += "&nbsp;";
+      return pad;
+    }
   }, [weightRange, isLabView]);
 
   return (
