@@ -108,7 +108,7 @@ const CommunityGraph = (props) => {
     // .attr("style", "outline: thin solid black;");
 
     // to draw schoolLink before than schoolNodaEdge
-    comGraphSVG.append("g").attr("id", "schoolLink");
+    comGraphSVG.append("g").attr("class", "schoolLink");
 
     // link popup
     var linkPopup = d3
@@ -168,14 +168,13 @@ const CommunityGraph = (props) => {
 
     // link for school
     let schoolLink = comGraphSVG
-      .select("#schoolLink")
+      .select(".schoolLink")
       .selectAll("school_line")
       .data(school_link)
       .enter()
       .append("line");
 
     schoolLink
-      .attr("class", "school_link")
       .style("stroke", "lightgray")
       .style("stroke-width", (d) => d.weight / 10)
       .style("fill", "none")
@@ -208,6 +207,7 @@ const CommunityGraph = (props) => {
       .attr("font-size", "13px")
       .attr("fill", "black")
       .attr("text-anchor", "middle")
+      .attr("class", "schoolText")
       .attr("opacity", 1)
       .text((d, i) => {
         return schoolNameArray[i];
@@ -215,13 +215,13 @@ const CommunityGraph = (props) => {
 
     // link for lab
     let labLink = comGraphSVG
-      .selectAll("lab_line")
+      .selectAll("lab_link")
       .data(links)
       .enter()
       .append("line");
 
     labLink
-      .attr("class", "lab_link")
+      .attr("class", "labLink")
       .style("stroke", "darkgray")
       .style("stroke-width", "1.3px")
       .attr("opacity", 0);
@@ -234,6 +234,7 @@ const CommunityGraph = (props) => {
       .data((d) => d)
       .enter()
       .append("circle")
+      .attr("class", "labNode")
       .attr("r", (d) => d.r)
       .attr("fill", (d) => schoolScale(schoolList[d.school]["id"]))
       .attr("stroke", "black")
@@ -266,6 +267,7 @@ const CommunityGraph = (props) => {
       .data((d) => d)
       .enter()
       .append("text")
+      .attr("class", "labText")
       .attr("font-family", "sans-serif")
       .attr("font-size", "4px")
       .attr("fill", "black")
@@ -609,15 +611,15 @@ const CommunityGraph = (props) => {
 
   // useEffect for link weight change
   useEffect(() => {
-    d3.selectAll(".lab_link").attr("opacity", 0).on("click", null);
+    d3.selectAll(".labLink").attr("opacity", 0).on("click", null);
 
     if (!isLabView) return;
 
     const filteredLabLink = d3
-      .selectAll(".lab_link")
+      .selectAll(".labLink")
       .filter((d) => d.weight > weightRange.min && d.weight < weightRange.max);
     const TransparentLabLink = d3
-      .selectAll(".lab_link")
+      .selectAll(".labLink")
       .filter((d) => d.weight < weightRange.min || d.weight > weightRange.max);
 
     filteredLabLink.attr("opacity", 1).on("click", onClickLink);
@@ -705,6 +707,10 @@ const CommunityGraph = (props) => {
       return pad;
     }
   }, [weightRange, isLabView]);
+
+  useEffect(() => {
+    console.log(scaleFactor);
+  }, [scaleFactor]);
 
   return (
     <div style={{ display: "flex" }}>
