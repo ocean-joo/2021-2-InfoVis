@@ -17,19 +17,6 @@ const CommunityGraph = (props) => {
 
   const onChangeWeightRange = (e) => {
     setWeightRange(e);
-
-    if (!isLabView) return;
-    const filteredLabLink = d3
-      .selectAll("line")
-      .filter((d) => d.weight > weightRange.min && d.weight < weightRange.max);
-    const TransparentLabLink = d3
-      .selectAll("line")
-      .filter((d) => d.weight < weightRange.min || d.weight > weightRange.max);
-
-    console.log(weightRange, filteredLabLink.size(), TransparentLabLink.size());
-
-    filteredLabLink.attr("opacity", 1);
-    TransparentLabLink.attr("opacity", 0);
   };
 
   const schoolNameArray = [
@@ -58,6 +45,7 @@ const CommunityGraph = (props) => {
   var dur = 600;
   const link_popup_width = 100;
 
+  // useEffect for initialize, node click event
   useEffect(() => {
     const nodes = lab_json;
     const links = link_json;
@@ -240,7 +228,7 @@ const CommunityGraph = (props) => {
       .append("line");
 
     labLink
-      .attr("class", "link")
+      .attr("class", "lab_link")
       .style("stroke", "darkgray")
       .style("stroke-width", "1.3px")
       .attr("opacity", 0)
@@ -473,7 +461,6 @@ const CommunityGraph = (props) => {
         labLink
           .transition()
           .duration(dur)
-          .attr("opacity", 1)
           .attr(
             "transform",
             "translate(" +
@@ -705,6 +692,21 @@ const CommunityGraph = (props) => {
       });
     }
   }, []);
+
+  // useEffect for link weight change
+  useEffect(() => {
+    if (!isLabView) return;
+
+    const filteredLabLink = d3
+      .selectAll(".lab_link")
+      .filter((d) => d.weight > weightRange.min && d.weight < weightRange.max);
+    const TransparentLabLink = d3
+      .selectAll(".lab_link")
+      .filter((d) => d.weight < weightRange.min || d.weight > weightRange.max);
+
+    filteredLabLink.attr("opacity", 1);
+    TransparentLabLink.attr("opacity", 0);
+  }, [weightRange, isLabView]);
 
   return (
     <div style={{ display: "flex" }}>
