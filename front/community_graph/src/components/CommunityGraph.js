@@ -15,6 +15,8 @@ const CommunityGraph = (props) => {
   // it's percentage. should divide by 100 in below code
   const [weightRange, setWeightRange] = useState({ min: 0, max: 100 });
 
+  const [scaleFactor, setScaleFactor] = useState(1.2);
+
   const onChangeWeightRange = (e) => {
     setWeightRange(e);
   };
@@ -59,7 +61,6 @@ const CommunityGraph = (props) => {
     const defaultRadius = 4;
 
     var centered;
-    const scaleFactor = 1.2;
     var polygon, centroid;
     var valueline = d3
       .line()
@@ -316,6 +317,8 @@ const CommunityGraph = (props) => {
       const x_offset = 120;
       const y_offset = 100;
 
+      linkPopup.transition().duration(dur).style("opacity", 0);
+
       if (d && centered !== d) {
         setLabView(true);
 
@@ -481,7 +484,6 @@ const CommunityGraph = (props) => {
               ")"
           );
       }
-      linkPopup.transition().duration(dur).style("opacity", 0);
     }
 
     function ticked() {
@@ -611,6 +613,8 @@ const CommunityGraph = (props) => {
 
   // useEffect for link weight change
   useEffect(() => {
+    d3.selectAll(".lab_link").attr("opacity", 0).on("click", null);
+
     if (!isLabView) return;
 
     const filteredLabLink = d3
