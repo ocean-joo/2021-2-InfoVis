@@ -40,12 +40,23 @@ const ControlPanel = (props) => {
       }}
     >
       <div className="Range">
-        <label>Zoom: </label>
-        <input
-          type="number"
-          value={props.scaleFactor}
-          onChange={onScaleInputChange}
-        />
+        <h4>Scale ( 5 - 300 % )</h4>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "flex-end",
+          }}
+        >
+          <input
+            style={{ width: 100 }}
+            type="number"
+            value={props.scaleFactor}
+            onChange={onScaleInputChange}
+          />
+          <p />
+          <label>&nbsp;&nbsp;%</label>
+        </div>
+        <br />
         <div className="Slider">
           <Slider
             min={5}
@@ -54,11 +65,12 @@ const ControlPanel = (props) => {
             onChange={onScaleChange}
           />
         </div>
-        <label> %</label>
         <br />
+        <h4>Visualized Similarity ( 0 - 100 % )</h4>
         <br />
         <label>LowerBound: </label>
         <input
+          style={{ width: 100 }}
           type="number"
           value={props.weightRange.min}
           onChange={onLowerBoundChange}
@@ -67,6 +79,7 @@ const ControlPanel = (props) => {
         <br />
         <label>UpperBound: </label>
         <input
+          style={{ width: 100 }}
           type="number"
           value={props.weightRange.max}
           onChange={onUpperBoundChange}
