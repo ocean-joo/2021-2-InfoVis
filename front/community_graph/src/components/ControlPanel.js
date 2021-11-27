@@ -1,5 +1,5 @@
 import React from "react";
-import { Range } from "rc-slider";
+import Slider, { Range } from "rc-slider";
 import "rc-slider/assets/index.css";
 
 const ControlPanel = (props) => {
@@ -20,6 +20,16 @@ const ControlPanel = (props) => {
     props.setWeightRange({ min: value[0], max: value[1] });
   };
 
+  const onScaleChange = (value) => {
+    props.setScaleFactor(value);
+  };
+
+  const onScaleInputChange = (e) => {
+    if (+e.target.value > 300 || +e.target.value < 5) return;
+
+    props.setScaleFactor(+e.target.value);
+  };
+
   return (
     <div
       style={{
@@ -29,7 +39,24 @@ const ControlPanel = (props) => {
         alignItems: "flex-end",
       }}
     >
-      <div className="Slider">
+      <div className="Range">
+        <label>Zoom: </label>
+        <input
+          type="number"
+          value={props.scaleFactor}
+          onChange={onScaleInputChange}
+        />
+        <div className="Slider">
+          <Slider
+            min={5}
+            max={300}
+            value={props.scaleFactor}
+            onChange={onScaleChange}
+          />
+        </div>
+        <label> %</label>
+        <br />
+        <br />
         <label>LowerBound: </label>
         <input
           type="number"

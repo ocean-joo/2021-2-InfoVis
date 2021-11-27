@@ -15,11 +15,7 @@ const CommunityGraph = (props) => {
   // it's percentage. should divide by 100 in below code
   const [weightRange, setWeightRange] = useState({ min: 0, max: 100 });
 
-  const [scaleFactor, setScaleFactor] = useState(1.2);
-
-  const onChangeWeightRange = (e) => {
-    setWeightRange(e);
-  };
+  const [scaleFactor, setScaleFactor] = useState(100);
 
   const schoolNameArray = [
     "Seoul National University",
@@ -601,7 +597,7 @@ const CommunityGraph = (props) => {
             "," +
             centroid[1] +
             `) scale(` +
-            scaleFactor +
+            scaleFactor / 100 +
             ")"
         );
 
@@ -714,7 +710,9 @@ const CommunityGraph = (props) => {
     <div style={{ display: "flex" }}>
       <ControlPanel
         weightRange={weightRange}
-        setWeightRange={onChangeWeightRange}
+        setWeightRange={setWeightRange}
+        scaleFactor={scaleFactor}
+        setScaleFactor={setScaleFactor}
       />
       <svg ref={comGraph} width={comGraphWidth} height={comGraphHeight} />
       <DetailSideBar
