@@ -11,6 +11,7 @@ import lab_json from "../data/lab.json";
 const CommunityGraph = (props) => {
   const [labDetail, setLabDetail] = useState({});
   const [confDetail, setConfDetail] = useState({});
+  const [confFlag, setConfFlag] = useState(false);
   const [isLabView, setLabView] = useState(false);
   // it's percentage. should divide by 100 in below code
   const [weightRange, setWeightRange] = useState({ min: 0, max: 100 });
@@ -673,12 +674,14 @@ const CommunityGraph = (props) => {
             impactScore: _impact_score,
           };
           setConfDetail({ selectedConfDetail });
+          setConfFlag(true);
           console.log("community graph", selectedConfDetail);
         });
 
         clickedLink = d;
       } else {
         setConfDetail({});
+        setConfFlag(false);
         linkPopup.transition().duration(500).style("opacity", 0);
 
         clickedLink = null;
@@ -724,7 +727,7 @@ const CommunityGraph = (props) => {
       <DetailSideBar
         labDetail={labDetail}
         confDetail={confDetail}
-        shouldVisualizeConf={false}
+        shouldVisualizeConf={confFlag}
       />
     </div>
   );
