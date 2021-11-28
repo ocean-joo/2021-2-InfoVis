@@ -555,8 +555,8 @@ const CommunityGraph = (props) => {
       var x, y, k;
 
       // they are magic numbers...
-      const x_offset = scaleFactor;
-      const y_offset = scaleFactor;
+      const x_offset = 14000 / scaleFactor;
+      const y_offset = 10000 / scaleFactor;
 
       linkPopup.transition().duration(dur).style("opacity", 0);
 
