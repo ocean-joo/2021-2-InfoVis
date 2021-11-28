@@ -44,11 +44,11 @@ const CommunityGraph = (props) => {
   var dur = 600;
   const link_popup_width = 100;
 
+  const nodes = lab_json;
+  const links = link_json;
+
   // useEffect for initialize, node click event
   useEffect(() => {
-    const nodes = lab_json;
-    const links = link_json;
-
     // separation between same-color circles
     const nodePadding = 73;
     // separation between different-color circles
@@ -57,7 +57,6 @@ const CommunityGraph = (props) => {
     var maxRadius = 30;
     const defaultRadius = 4;
 
-    var centered;
     var polygon, centroid;
     var valueline = d3
       .line()
@@ -191,8 +190,8 @@ const CommunityGraph = (props) => {
       .append("path")
       .attr("stroke", (d) => schoolScale(d))
       .attr("fill", (d) => schoolScale(d))
-      .attr("opacity", 0)
-      .on("click", cluster_clicked);
+      .attr("class", "schoolNodeEdge")
+      .attr("opacity", 0);
 
     schoolNodeEdge.transition().duration(200).attr("opacity", 1);
 
@@ -258,8 +257,7 @@ const CommunityGraph = (props) => {
             d.fx = null;
             d.fy = null;
           })
-      )
-      .on("click", onClickNode);
+      );
 
     var labText = comGraphSVG
       .append("g")
@@ -296,196 +294,6 @@ const CommunityGraph = (props) => {
       })
       .strength(0.1);
     // .distance([85]);
-
-    // helper functions
-    function cluster_clicked(event, d) {
-      var node;
-      nodes.forEach(function (n) {
-        // TODO : lighter?
-        if (schoolList[n.school]["id"] === d.groupId) {
-          node = n;
-        }
-      });
-      onClickNode(event, node);
-    }
-
-    function onClickNode(event, d) {
-      var x, y, k;
-
-      // they are magic numbers...
-      const x_offset = 120;
-      const y_offset = 100;
-
-      linkPopup.transition().duration(dur).style("opacity", 0);
-
-      if (d && centered !== d) {
-        setLabView(true);
-
-        // TODO : thicker stroke for the links in d's cluster
-        x = d.x;
-        y = d.y;
-        k = 4;
-        centered = d;
-
-        schoolNode.transition().attr("opacity", 0);
-        schoolLink.transition().attr("opacity", 0);
-
-        labText
-          .transition()
-          .duration(dur)
-          .attr("opacity", 1)
-          .attr(
-            "transform",
-            "translate(" +
-              comGraphWidth / 2 +
-              "," +
-              comGraphHeight / 2 +
-              ")scale(" +
-              k +
-              ")translate(" +
-              (-x - x_offset) +
-              "," +
-              (-y - y_offset) +
-              ")"
-          );
-
-        labNode
-          .transition()
-          .duration(dur)
-          .attr("opacity", 1)
-          .attr(
-            "transform",
-            "translate(" +
-              comGraphWidth / 2 +
-              "," +
-              comGraphHeight / 2 +
-              ")scale(" +
-              k +
-              ")translate(" +
-              (-x - x_offset) +
-              "," +
-              (-y - y_offset) +
-              ")"
-          );
-
-        labNode.classed(
-          "active",
-          centered &&
-            function (d) {
-              return d === centered;
-            }
-        );
-
-        labLink
-          .transition()
-          .duration(dur)
-          .attr(
-            "transform",
-            "translate(" +
-              comGraphWidth / 2 +
-              "," +
-              comGraphHeight / 2 +
-              ")scale(" +
-              k +
-              ")translate(" +
-              (-x - x_offset) +
-              "," +
-              (-y - y_offset) +
-              ")"
-          );
-        // set lab detail info
-        // TODO : Add paper Info
-        var selectedLabDetail = {
-          name: d.name,
-          school: d.school,
-          prof_name: d.prof_name,
-          email: d.email,
-          description: d.description,
-          href: d.href,
-          paper: d.paper,
-        };
-        setLabDetail({ selectedLabDetail });
-        setConfFlag(false);
-      } else {
-        // if clicked again, restore
-        setLabView(false);
-        setLabDetail({});
-        setConfFlag(false);
-
-        x = comGraphWidth / 2 - x_offset;
-        y = comGraphHeight / 2 - y_offset;
-        k = 1;
-        centered = null;
-
-        schoolNode.transition().duration(dur).attr("opacity", 1);
-        schoolLink.transition().duration(dur).attr("opacity", 1);
-
-        labText
-          .transition()
-          .duration(dur)
-          .attr("opacity", 0)
-          .attr(
-            "transform",
-            "translate(" +
-              comGraphWidth / 2 +
-              "," +
-              comGraphHeight / 2 +
-              ")scale(" +
-              k +
-              ")translate(" +
-              (-x - x_offset) +
-              "," +
-              (-y - y_offset) +
-              ")"
-          );
-
-        labNode
-          .transition()
-          .duration(dur)
-          .attr("opacity", 0)
-          .attr(
-            "transform",
-            "translate(" +
-              comGraphWidth / 2 +
-              "," +
-              comGraphHeight / 2 +
-              ")scale(" +
-              k +
-              ")translate(" +
-              (-x - x_offset) +
-              "," +
-              (-y - y_offset) +
-              ")"
-          );
-
-        labNode.classed(
-          "active",
-          centered &&
-            function (d) {
-              return d === centered;
-            }
-        );
-
-        labLink
-          .transition()
-          .duration(dur)
-          .attr("opacity", 0)
-          .attr(
-            "transform",
-            "translate(" +
-              comGraphWidth / 2 +
-              "," +
-              comGraphHeight / 2 +
-              ")scale(" +
-              k +
-              ")translate(" +
-              (-x - x_offset) +
-              "," +
-              (-y - y_offset) +
-              ")"
-          );
-      }
-    }
 
     function ticked() {
       labLink
@@ -714,7 +522,210 @@ const CommunityGraph = (props) => {
   }, [weightRange, isLabView]);
 
   useEffect(() => {
-    console.log(scaleFactor);
+    var centered;
+    const schoolNode = d3.selectAll(".schoolNode");
+    const schoolLink = d3.selectAll(".schoolLink");
+    const schoolNodeEdge = d3.selectAll(".schoolNodeEdge");
+    const labLink = d3.selectAll(".labLink");
+    const labNode = d3.selectAll(".labNode");
+    const schoolText = d3.selectAll(".schoolText");
+    const labText = d3.selectAll(".labText");
+    const linkPopup = d3.selectAll(".tooltip");
+
+    onClickNode(null, centered);
+
+    schoolNodeEdge.on("click", cluster_clicked);
+    labNode.on("click", onClickNode);
+
+    // helper functions
+    function cluster_clicked(event, d) {
+      var node;
+      nodes.forEach(function (n) {
+        // TODO : lighter?
+        if (schoolList[n.school]["id"] === d.groupId) {
+          node = n;
+        }
+      });
+      onClickNode(event, node);
+    }
+
+    function onClickNode(event, d) {
+      var x, y, k;
+
+      // they are magic numbers...
+      const x_offset = 120;
+      const y_offset = 100;
+
+      linkPopup.transition().duration(dur).style("opacity", 0);
+
+      if (d && centered !== d) {
+        setLabView(true);
+
+        // TODO : thicker stroke for the links in d's cluster
+        x = d.x;
+        y = d.y;
+        k = (scaleFactor * 4) / 100;
+        centered = d;
+
+        schoolNode.transition().attr("opacity", 0);
+        schoolLink.transition().attr("opacity", 0);
+
+        labText
+          .transition()
+          .duration(dur)
+          .attr("opacity", 1)
+          .attr(
+            "transform",
+            "translate(" +
+              comGraphWidth / 2 +
+              "," +
+              comGraphHeight / 2 +
+              ")scale(" +
+              k +
+              ")translate(" +
+              (-x - x_offset) +
+              "," +
+              (-y - y_offset) +
+              ")"
+          );
+
+        labNode
+          .transition()
+          .duration(dur)
+          .attr("opacity", 1)
+          .attr(
+            "transform",
+            "translate(" +
+              comGraphWidth / 2 +
+              "," +
+              comGraphHeight / 2 +
+              ")scale(" +
+              k +
+              ")translate(" +
+              (-x - x_offset) +
+              "," +
+              (-y - y_offset) +
+              ")"
+          );
+
+        labNode.classed(
+          "active",
+          centered &&
+            function (d) {
+              return d === centered;
+            }
+        );
+
+        labLink
+          .transition()
+          .duration(dur)
+          .attr(
+            "transform",
+            "translate(" +
+              comGraphWidth / 2 +
+              "," +
+              comGraphHeight / 2 +
+              ")scale(" +
+              k +
+              ")translate(" +
+              (-x - x_offset) +
+              "," +
+              (-y - y_offset) +
+              ")"
+          );
+        // set lab detail info
+        // TODO : Add paper Info
+        var selectedLabDetail = {
+          name: d.name,
+          school: d.school,
+          prof_name: d.prof_name,
+          email: d.email,
+          description: d.description,
+          href: d.href,
+          paper: d.paper,
+        };
+        setLabDetail({ selectedLabDetail });
+        setConfFlag(false);
+      } else {
+        // if clicked again, restore
+        setLabView(false);
+        setLabDetail({});
+        setConfFlag(false);
+
+        x = comGraphWidth / 2 - x_offset;
+        y = comGraphHeight / 2 - y_offset;
+        k = 1;
+        centered = null;
+
+        schoolNode.transition().duration(dur).attr("opacity", 1);
+        schoolLink.transition().duration(dur).attr("opacity", 1);
+
+        labText
+          .transition()
+          .duration(dur)
+          .attr("opacity", 0)
+          .attr(
+            "transform",
+            "translate(" +
+              comGraphWidth / 2 +
+              "," +
+              comGraphHeight / 2 +
+              ")scale(" +
+              k +
+              ")translate(" +
+              (-x - x_offset) +
+              "," +
+              (-y - y_offset) +
+              ")"
+          );
+
+        labNode
+          .transition()
+          .duration(dur)
+          .attr("opacity", 0)
+          .attr(
+            "transform",
+            "translate(" +
+              comGraphWidth / 2 +
+              "," +
+              comGraphHeight / 2 +
+              ")scale(" +
+              k +
+              ")translate(" +
+              (-x - x_offset) +
+              "," +
+              (-y - y_offset) +
+              ")"
+          );
+
+        labNode.classed(
+          "active",
+          centered &&
+            function (d) {
+              return d === centered;
+            }
+        );
+
+        labLink
+          .transition()
+          .duration(dur)
+          .attr("opacity", 0)
+          .attr(
+            "transform",
+            "translate(" +
+              comGraphWidth / 2 +
+              "," +
+              comGraphHeight / 2 +
+              ")scale(" +
+              k +
+              ")translate(" +
+              (-x - x_offset) +
+              "," +
+              (-y - y_offset) +
+              ")"
+          );
+      }
+    }
   }, [scaleFactor]);
 
   return (
