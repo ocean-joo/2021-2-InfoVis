@@ -41,7 +41,7 @@ const CommunityGraph = (props) => {
   const comGraphHeightOffset = 0;
 
   const comGraphWidthPadding = 0;
-  var dur = 600;
+  var dur = 100;
   const link_popup_width = 100;
 
   const nodes = lab_json;
@@ -521,8 +521,8 @@ const CommunityGraph = (props) => {
     }
   }, [weightRange, isLabView]);
 
+  // useEffect for Scale change
   useEffect(() => {
-    var centered;
     const schoolNode = d3.selectAll(".schoolNode");
     const schoolLink = d3.selectAll(".schoolLink");
     const schoolNodeEdge = d3.selectAll(".schoolNodeEdge");
@@ -532,13 +532,14 @@ const CommunityGraph = (props) => {
     const labText = d3.selectAll(".labText");
     const linkPopup = d3.selectAll(".tooltip");
 
-    onClickNode(null, centered);
-
-    schoolNodeEdge.on("click", cluster_clicked);
+    schoolNodeEdge.on("click", onClickCluster);
     labNode.on("click", onClickNode);
 
+    const selectedNode = d3.select(".active").data()[0];
+    onClickNode(null, selectedNode);
+
     // helper functions
-    function cluster_clicked(event, d) {
+    function onClickCluster(event, d) {
       var node;
       nodes.forEach(function (n) {
         // TODO : lighter?
@@ -550,15 +551,17 @@ const CommunityGraph = (props) => {
     }
 
     function onClickNode(event, d) {
+      var centered;
       var x, y, k;
 
       // they are magic numbers...
-      const x_offset = 120;
-      const y_offset = 100;
+      const x_offset = scaleFactor;
+      const y_offset = scaleFactor;
 
       linkPopup.transition().duration(dur).style("opacity", 0);
 
       if (d && centered !== d) {
+        d.selected = true;
         setLabView(true);
 
         // TODO : thicker stroke for the links in d's cluster
