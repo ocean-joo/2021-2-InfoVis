@@ -88,7 +88,6 @@ const CommunityGraph = (props) => {
         clusters[clusterID] = node;
       }
     });
-    // console.log('clusters', clusters);
 
     // community graph
     var comGraphSVG = d3
@@ -440,7 +439,6 @@ const CommunityGraph = (props) => {
     var clickedLink;
 
     function onClickLink(event, d) {
-      console.log(event, d);
       if (d && clickedLink !== d) {
         linkPopup.transition().duration(200).style("opacity", 0.9);
 
@@ -497,7 +495,6 @@ const CommunityGraph = (props) => {
           };
           setConfDetail({ selectedConfDetail });
           setConfFlag(true);
-          console.log("community graph", selectedConfDetail);
         });
 
         clickedLink = d;
@@ -544,11 +541,10 @@ const CommunityGraph = (props) => {
     const labText = d3.selectAll(".labText");
     const linkPopup = d3.selectAll(".tooltip");
 
-    const selectedNode = d3.select(".active").data()[0];
-
     if (!isLabView) {
       schoolNodeEdge.on("click", onClickCluster);
     } else {
+      const selectedNode = d3.select(".active").data()[0];
       schoolNodeEdge.on("click", null);
       transitionToLabView(null, selectedNode);
     }
@@ -566,40 +562,25 @@ const CommunityGraph = (props) => {
     }
 
     function onClickNode(event, d) {
-      console.log("selectedNode : ", selectedNode);
-      console.log("d : ", d);
+      const selectedNode = d3.select(".active").data()[0];
+      // TODO : should disable popup click event
+      linkPopup.transition().duration(200).style("opacity", 0);
       if (selectedNode !== d) {
         transitionToLabView(event, d);
-        // set lab detail info
-        var selectedLabDetail = {
-          name: d.name,
-          school: d.school,
-          prof_name: d.prof_name,
-          email: d.email,
-          description: d.description,
-          href: d.href,
-          paper: d.paper,
-        };
-        setLabDetail({ selectedLabDetail });
-        setConfFlag(false);
       } else {
         transitionToSchoolView(event, d);
       }
     }
 
     function transitionToLabView(event, d) {
-      var centered;
       var x, y, k;
       const x_offset = 14000 / scaleFactor;
       const y_offset = 10000 / scaleFactor;
-      d.selected = true;
       setLabView(true);
 
-      // TODO : thicker stroke for the links in d's cluster
       x = d.x;
       y = d.y;
       k = (scaleFactor * 4) / 100;
-      centered = d;
 
       schoolNode.transition().attr("opacity", 0);
       schoolLink.transition().attr("opacity", 0);
@@ -642,14 +623,6 @@ const CommunityGraph = (props) => {
             ")"
         );
 
-      labNode.classed(
-        "active",
-        centered &&
-          function (d) {
-            return d === centered;
-          }
-      );
-
       labLink
         .transition()
         .duration(dur)
@@ -667,8 +640,8 @@ const CommunityGraph = (props) => {
             (-y - y_offset) +
             ")"
         );
+
       // set lab detail info
-      // TODO : Add paper Info
       var selectedLabDetail = {
         name: d.name,
         school: d.school,
@@ -678,12 +651,16 @@ const CommunityGraph = (props) => {
         href: d.href,
         paper: d.paper,
       };
+
+      labNode.classed("active", function (node) {
+        return node === d;
+      });
+
       setLabDetail({ selectedLabDetail });
       setConfFlag(false);
     }
 
     function transitionToSchoolView(event, d) {
-      var centered;
       var x, y, k;
       const x_offset = 14000 / scaleFactor;
       const y_offset = 10000 / scaleFactor;
@@ -696,7 +673,6 @@ const CommunityGraph = (props) => {
       x = comGraphWidth / 2 - x_offset;
       y = comGraphHeight / 2 - y_offset;
       k = 1;
-      centered = null;
 
       schoolNode.transition().duration(dur).attr("opacity", 1);
       schoolLink.transition().duration(dur).attr("opacity", 1);
@@ -739,13 +715,7 @@ const CommunityGraph = (props) => {
             ")"
         );
 
-      labNode.classed(
-        "active",
-        centered &&
-          function (d) {
-            return d === centered;
-          }
-      );
+      labNode.classed("active", false);
 
       labLink
         .transition()
