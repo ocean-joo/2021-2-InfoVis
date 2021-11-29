@@ -448,25 +448,37 @@ const CommunityGraph = (props) => {
         var conf_text = "";
         d.common_conf.forEach(function (c) {
           var conf_name = conf_json[c.conf_id]["name"];
+
           conf_text += "<button>" + conf_name + "</button> ";
           conf_text +=
-            make_space(3) +
+            make_space(5) +
             c.source_num +
-            make_space(4) +
-            c.target_num +
+            make_space(11) +
+            c.target_num + 
+            make_space(11) +
             "</br>";
         });
 
         linkPopup
           .html(
-            "<b>Conference List    (Lab1)  (Lab2)</b></br>" +
-              "Lab 1:  " +
-              d.source.name +
-              "</br>Lab 2:  " +
-              d.target.name +
+              make_space(10) +
+              "<b>Conference List" +
+              make_space(17) +
+              "Lab1"+
+              make_space(6) +
+              "Lab2" +
+              "</b></br>" + 
+              conf_text + 
               "</br>" +
-              conf_text
-          )
+              "Weight: "+
+              d.weight+
+              "</br>" +
+              "Lab 1 :  " +
+              d.source.name +
+              "</br>Lab 2 :  " +
+              d.target.name + 
+              "</br>"
+            )
           .style("left", event.pageX + "px")
           .style("top", event.pageY - 28 + "px");
 

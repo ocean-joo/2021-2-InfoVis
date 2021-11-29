@@ -4,7 +4,7 @@ div.tooltip {
   padding: 2px;
   font: 15px sans-serif;
   background: lightsteelblue;
-  border: 0px;
+  border: 0px solid;
   border-radius: 8px;
 }
 
@@ -25,6 +25,8 @@ svg text {
 }
 
 button {
-  border: 0.1px dashed #ccc;
+  border: 0.0px dashed #ccc;
+  width: 200px;
+  background: transparent;
   cursor: pointer;
 }
