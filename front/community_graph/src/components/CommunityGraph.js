@@ -565,7 +565,6 @@ const CommunityGraph = (props) => {
 
     function onClickNode(event, d) {
       const selectedNode = d3.select(".active").data()[0];
-      // TODO : should disable popup click event
       linkPopup.transition().duration(200).style("opacity", 0);
       linkPopup.html("");
       if (selectedNode !== d) {
@@ -655,8 +654,38 @@ const CommunityGraph = (props) => {
         paper: d.paper,
       };
 
-      labNode.classed("active", function (node) {
+      labNode.classed("active", (node) => {
         return node === d;
+      });
+
+      var related_lab = [];
+
+      labLink.data().forEach((link) => {
+        if (link.source.id === d.id) {
+          related_lab.push(link.target.id);
+        } else if (link.target.id === d.id) {
+          related_lab.push(link.source.id);
+        }
+      });
+
+      console.log(related_lab);
+
+      labLink
+        .filter((link) => {
+          return link.source.id === d.id || link.target.id === d.id;
+        })
+        .style("stroke", "red")
+        .style("stroke-width", "2px");
+
+      labLink
+        .filter((link) => {
+          return link.source.id !== d.id && link.target.id !== d.id;
+        })
+        .style("stroke", "darkgray")
+        .style("stroke-width", "1.3px");
+
+      labNode.classed("related_node", (node) => {
+        return related_lab.includes(node.id);
       });
 
       setLabDetail({ selectedLabDetail });

@@ -10,6 +10,12 @@ div.tooltip {
 
 .active {
   stroke-width: 0.7;
+  stroke: blue;
+}
+
+.related_node {
+  stroke-width: 0.7;
+  stroke: red;
 }
 
 .background {
@@ -25,7 +31,7 @@ svg text {
 }
 
 button {
-  border: 0.0px dashed #ccc;
+  border: 0px dashed #ccc;
   width: 200px;
   background: transparent;
   cursor: pointer;
