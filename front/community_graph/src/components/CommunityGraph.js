@@ -449,7 +449,7 @@ const CommunityGraph = (props) => {
 
           conf_text += "<button>" + conf_name + "</button> ";
           conf_text +=
-            make_space(5) +
+            make_space(11) +
             c.source_num +
             make_space(11) +
             c.target_num +
@@ -468,12 +468,12 @@ const CommunityGraph = (props) => {
               "</b></br>" +
               conf_text +
               "</br>" +
-              "Weight: " +
+              "Similarity : " +
               d.weight +
-              "</br>" +
-              "Lab 1 :  " +
+              " %</br>" +
+              "Lab 1 : " +
               d.source.name +
-              "</br>Lab 2 :  " +
+              "</br>Lab 2 : " +
               d.target.name +
               "</br>"
           )
