@@ -565,6 +565,7 @@ const CommunityGraph = (props) => {
       const selectedNode = d3.select(".active").data()[0];
       // TODO : should disable popup click event
       linkPopup.transition().duration(200).style("opacity", 0);
+      linkPopup.html("");
       if (selectedNode !== d) {
         transitionToLabView(event, d);
       } else {
