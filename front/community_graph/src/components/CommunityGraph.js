@@ -454,31 +454,31 @@ const CommunityGraph = (props) => {
             make_space(5) +
             c.source_num +
             make_space(11) +
-            c.target_num + 
+            c.target_num +
             make_space(11) +
             "</br>";
         });
 
         linkPopup
           .html(
-              make_space(10) +
+            make_space(10) +
               "<b>Conference List" +
               make_space(17) +
-              "Lab1"+
+              "Lab1" +
               make_space(6) +
               "Lab2" +
-              "</b></br>" + 
-              conf_text + 
+              "</b></br>" +
+              conf_text +
               "</br>" +
-              "Weight: "+
-              d.weight+
+              "Weight: " +
+              d.weight +
               "</br>" +
               "Lab 1 :  " +
               d.source.name +
               "</br>Lab 2 :  " +
-              d.target.name + 
+              d.target.name +
               "</br>"
-            )
+          )
           .style("left", event.pageX + "px")
           .style("top", event.pageY - 28 + "px");
 
@@ -544,112 +544,33 @@ const CommunityGraph = (props) => {
     const labText = d3.selectAll(".labText");
     const linkPopup = d3.selectAll(".tooltip");
 
-    schoolNodeEdge.on("click", onClickCluster);
-    labNode.on("click", onClickNode);
-
     const selectedNode = d3.select(".active").data()[0];
-    onClickNode(null, selectedNode);
+
+    if (!isLabView) {
+      schoolNodeEdge.on("click", onClickCluster);
+    } else {
+      schoolNodeEdge.on("click", null);
+      transitionToLabView(null, selectedNode);
+    }
+    labNode.on("click", onClickNode);
 
     // helper functions
     function onClickCluster(event, d) {
       var node;
       nodes.forEach(function (n) {
-        // TODO : lighter?
         if (schoolList[n.school]["id"] === d.groupId) {
           node = n;
         }
       });
-      onClickNode(event, node);
+      transitionToLabView(event, node);
     }
 
     function onClickNode(event, d) {
-      var centered;
-      var x, y, k;
-
-      // they are magic numbers...
-      const x_offset = 14000 / scaleFactor;
-      const y_offset = 10000 / scaleFactor;
-
-      linkPopup.transition().duration(dur).style("opacity", 0);
-
-      if (d && centered !== d) {
-        d.selected = true;
-        setLabView(true);
-
-        // TODO : thicker stroke for the links in d's cluster
-        x = d.x;
-        y = d.y;
-        k = (scaleFactor * 4) / 100;
-        centered = d;
-
-        schoolNode.transition().attr("opacity", 0);
-        schoolLink.transition().attr("opacity", 0);
-
-        labText
-          .transition()
-          .duration(dur)
-          .attr("opacity", 1)
-          .attr(
-            "transform",
-            "translate(" +
-              comGraphWidth / 2 +
-              "," +
-              comGraphHeight / 2 +
-              ")scale(" +
-              k +
-              ")translate(" +
-              (-x - x_offset) +
-              "," +
-              (-y - y_offset) +
-              ")"
-          );
-
-        labNode
-          .transition()
-          .duration(dur)
-          .attr("opacity", 1)
-          .attr(
-            "transform",
-            "translate(" +
-              comGraphWidth / 2 +
-              "," +
-              comGraphHeight / 2 +
-              ")scale(" +
-              k +
-              ")translate(" +
-              (-x - x_offset) +
-              "," +
-              (-y - y_offset) +
-              ")"
-          );
-
-        labNode.classed(
-          "active",
-          centered &&
-            function (d) {
-              return d === centered;
-            }
-        );
-
-        labLink
-          .transition()
-          .duration(dur)
-          .attr(
-            "transform",
-            "translate(" +
-              comGraphWidth / 2 +
-              "," +
-              comGraphHeight / 2 +
-              ")scale(" +
-              k +
-              ")translate(" +
-              (-x - x_offset) +
-              "," +
-              (-y - y_offset) +
-              ")"
-          );
+      console.log("selectedNode : ", selectedNode);
+      console.log("d : ", d);
+      if (selectedNode !== d) {
+        transitionToLabView(event, d);
         // set lab detail info
-        // TODO : Add paper Info
         var selectedLabDetail = {
           name: d.name,
           school: d.school,
@@ -662,86 +583,190 @@ const CommunityGraph = (props) => {
         setLabDetail({ selectedLabDetail });
         setConfFlag(false);
       } else {
-        // if clicked again, restore
-        setLabView(false);
-        setLabDetail({});
-        setConfFlag(false);
-
-        x = comGraphWidth / 2 - x_offset;
-        y = comGraphHeight / 2 - y_offset;
-        k = 1;
-        centered = null;
-
-        schoolNode.transition().duration(dur).attr("opacity", 1);
-        schoolLink.transition().duration(dur).attr("opacity", 1);
-
-        labText
-          .transition()
-          .duration(dur)
-          .attr("opacity", 0)
-          .attr(
-            "transform",
-            "translate(" +
-              comGraphWidth / 2 +
-              "," +
-              comGraphHeight / 2 +
-              ")scale(" +
-              k +
-              ")translate(" +
-              (-x - x_offset) +
-              "," +
-              (-y - y_offset) +
-              ")"
-          );
-
-        labNode
-          .transition()
-          .duration(dur)
-          .attr("opacity", 0)
-          .attr(
-            "transform",
-            "translate(" +
-              comGraphWidth / 2 +
-              "," +
-              comGraphHeight / 2 +
-              ")scale(" +
-              k +
-              ")translate(" +
-              (-x - x_offset) +
-              "," +
-              (-y - y_offset) +
-              ")"
-          );
-
-        labNode.classed(
-          "active",
-          centered &&
-            function (d) {
-              return d === centered;
-            }
-        );
-
-        labLink
-          .transition()
-          .duration(dur)
-          .attr("opacity", 0)
-          .attr(
-            "transform",
-            "translate(" +
-              comGraphWidth / 2 +
-              "," +
-              comGraphHeight / 2 +
-              ")scale(" +
-              k +
-              ")translate(" +
-              (-x - x_offset) +
-              "," +
-              (-y - y_offset) +
-              ")"
-          );
+        transitionToSchoolView(event, d);
       }
     }
-  }, [scaleFactor]);
+
+    function transitionToLabView(event, d) {
+      var centered;
+      var x, y, k;
+      const x_offset = 14000 / scaleFactor;
+      const y_offset = 10000 / scaleFactor;
+      d.selected = true;
+      setLabView(true);
+
+      // TODO : thicker stroke for the links in d's cluster
+      x = d.x;
+      y = d.y;
+      k = (scaleFactor * 4) / 100;
+      centered = d;
+
+      schoolNode.transition().attr("opacity", 0);
+      schoolLink.transition().attr("opacity", 0);
+
+      labText
+        .transition()
+        .duration(dur)
+        .attr("opacity", 1)
+        .attr(
+          "transform",
+          "translate(" +
+            comGraphWidth / 2 +
+            "," +
+            comGraphHeight / 2 +
+            ")scale(" +
+            k +
+            ")translate(" +
+            (-x - x_offset) +
+            "," +
+            (-y - y_offset) +
+            ")"
+        );
+
+      labNode
+        .transition()
+        .duration(dur)
+        .attr("opacity", 1)
+        .attr(
+          "transform",
+          "translate(" +
+            comGraphWidth / 2 +
+            "," +
+            comGraphHeight / 2 +
+            ")scale(" +
+            k +
+            ")translate(" +
+            (-x - x_offset) +
+            "," +
+            (-y - y_offset) +
+            ")"
+        );
+
+      labNode.classed(
+        "active",
+        centered &&
+          function (d) {
+            return d === centered;
+          }
+      );
+
+      labLink
+        .transition()
+        .duration(dur)
+        .attr(
+          "transform",
+          "translate(" +
+            comGraphWidth / 2 +
+            "," +
+            comGraphHeight / 2 +
+            ")scale(" +
+            k +
+            ")translate(" +
+            (-x - x_offset) +
+            "," +
+            (-y - y_offset) +
+            ")"
+        );
+      // set lab detail info
+      // TODO : Add paper Info
+      var selectedLabDetail = {
+        name: d.name,
+        school: d.school,
+        prof_name: d.prof_name,
+        email: d.email,
+        description: d.description,
+        href: d.href,
+        paper: d.paper,
+      };
+      setLabDetail({ selectedLabDetail });
+      setConfFlag(false);
+    }
+
+    function transitionToSchoolView(event, d) {
+      var centered;
+      var x, y, k;
+      const x_offset = 14000 / scaleFactor;
+      const y_offset = 10000 / scaleFactor;
+
+      // if clicked again, restore
+      setLabView(false);
+      setLabDetail({});
+      setConfFlag(false);
+
+      x = comGraphWidth / 2 - x_offset;
+      y = comGraphHeight / 2 - y_offset;
+      k = 1;
+      centered = null;
+
+      schoolNode.transition().duration(dur).attr("opacity", 1);
+      schoolLink.transition().duration(dur).attr("opacity", 1);
+
+      labText
+        .transition()
+        .duration(dur)
+        .attr("opacity", 0)
+        .attr(
+          "transform",
+          "translate(" +
+            comGraphWidth / 2 +
+            "," +
+            comGraphHeight / 2 +
+            ")scale(" +
+            k +
+            ")translate(" +
+            (-x - x_offset) +
+            "," +
+            (-y - y_offset) +
+            ")"
+        );
+
+      labNode
+        .transition()
+        .duration(dur)
+        .attr("opacity", 0)
+        .attr(
+          "transform",
+          "translate(" +
+            comGraphWidth / 2 +
+            "," +
+            comGraphHeight / 2 +
+            ")scale(" +
+            k +
+            ")translate(" +
+            (-x - x_offset) +
+            "," +
+            (-y - y_offset) +
+            ")"
+        );
+
+      labNode.classed(
+        "active",
+        centered &&
+          function (d) {
+            return d === centered;
+          }
+      );
+
+      labLink
+        .transition()
+        .duration(dur)
+        .attr("opacity", 0)
+        .attr(
+          "transform",
+          "translate(" +
+            comGraphWidth / 2 +
+            "," +
+            comGraphHeight / 2 +
+            ")scale(" +
+            k +
+            ")translate(" +
+            (-x - x_offset) +
+            "," +
+            (-y - y_offset) +
+            ")"
+        );
+    }
+  }, [scaleFactor, isLabView]);
 
   return (
     <div style={{ display: "flex" }}>
