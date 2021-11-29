@@ -54,8 +54,8 @@ const CommunityGraph = (props) => {
     // separation between different-color circles
     const clusterPadding = nodePadding * 2;
 
-    var maxRadius = 30;
-    const defaultRadius = 4;
+    const minRadius = 2;
+    const maxRadius = 30;
 
     var polygon, centroid;
     var valueline = d3
@@ -70,14 +70,16 @@ const CommunityGraph = (props) => {
 
     const schoolScale = d3.scaleOrdinal(d3.schemeCategory10);
 
-    nodes.forEach(function (node) {
-      node.r = defaultRadius;
+    const nodeScale = d3
+      .scaleLinear()
+      .domain([
+        d3.min(nodes, (d) => d.total_paper_num),
+        d3.max(nodes, (d) => d.total_paper_num),
+      ])
+      .range([3, 5]);
 
-      // node size is mapped to "scale" property
-      // if (maxRadius < node.scale / 2) {
-      // maxRadius = node.scale / 2;
-      // }
-      // node.r = node.scale / 2;
+    nodes.forEach(function (node) {
+      node.r = nodeScale(node.total_paper_num);
     });
 
     // collect clusters from nodes
