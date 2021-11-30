@@ -13,6 +13,7 @@ const CommunityGraph = (props) => {
   const [confDetail, setConfDetail] = useState({});
   const [confFlag, setConfFlag] = useState(false);
   const [isLabView, setLabView] = useState(false);
+  const [confClicked, setConfClicked] = useState(false);
   // it's percentage. should divide by 100 in below code
   const [weightRange, setWeightRange] = useState({ min: 0, max: 100 });
 
@@ -46,6 +47,7 @@ const CommunityGraph = (props) => {
 
   const nodes = lab_json;
   const links = link_json;
+  const confs = conf_json;
 
   // useEffect for initialize, node click event
   useEffect(() => {
@@ -482,22 +484,7 @@ const CommunityGraph = (props) => {
           .style("left", event.pageX + "px")
           .style("top", event.pageY - 28 + "px");
 
-        linkPopup.selectAll("button").on("click", function (b, i) {
-          var _impact_score = 0;
-          var _title = b.path[0].innerText;
-          for (var c = 0; c < conf_json.length; c++) {
-            if (conf_json[c]["name"] === _title) {
-              _impact_score = conf_json[c]["impact_score"];
-              break;
-            }
-          }
-          var selectedConfDetail = {
-            title: _title,
-            impactScore: _impact_score,
-          };
-          setConfDetail({ selectedConfDetail });
-          setConfFlag(true);
-        });
+        linkPopup.selectAll("button").on("click", onClickConf);
 
         clickedLink = d;
       } else {
@@ -507,6 +494,43 @@ const CommunityGraph = (props) => {
 
         clickedLink = null;
       }
+    }
+
+    function onClickConf(b, i) {
+      setConfClicked(true);
+      const _title = b.path[0].innerText;
+      const selectedConf = confs.find((conf) => conf.name === _title);
+
+      const selectedConfDetail = {
+        title: _title,
+        impactScore: selectedConf.impact_score,
+      };
+
+      // Highlight related labs
+
+      var related_lab = [];
+
+      const labNode = d3.selectAll(".labNode");
+      const labLink = d3.selectAll(".labLink");
+
+      nodes.forEach((lab) => {
+        const publishedPaper = lab.paper.filter(
+          (paper) => paper.conf_id == selectedConf.id
+        );
+
+        if (publishedPaper.length > 0) related_lab.push(lab.id);
+      });
+
+      labNode.classed("related_node", false);
+
+      labNode.classed("conf_related_node", (node) => {
+        return related_lab.includes(node.id);
+      });
+
+      labLink.style("stroke", "darkgray").style("stroke-width", "1.3px");
+
+      setConfDetail({ selectedConfDetail });
+      setConfFlag(true);
     }
 
     function split_to_lines(long_line, limit) {
@@ -564,6 +588,7 @@ const CommunityGraph = (props) => {
     }
 
     function onClickNode(event, d) {
+      setConfClicked(false);
       const selectedNode = d3.select(".active").data()[0];
       linkPopup.transition().duration(200).style("opacity", 0);
       linkPopup.html("");
@@ -658,35 +683,37 @@ const CommunityGraph = (props) => {
         return node === d;
       });
 
-      var related_lab = [];
+      if (!confClicked) {
+        var related_lab = [];
 
-      labLink.data().forEach((link) => {
-        if (link.source.id === d.id) {
-          related_lab.push(link.target.id);
-        } else if (link.target.id === d.id) {
-          related_lab.push(link.source.id);
-        }
-      });
+        labLink.data().forEach((link) => {
+          if (link.source.id === d.id) {
+            related_lab.push(link.target.id);
+          } else if (link.target.id === d.id) {
+            related_lab.push(link.source.id);
+          }
+        });
 
-      console.log(related_lab);
+        labLink
+          .filter((link) => {
+            return link.source.id === d.id || link.target.id === d.id;
+          })
+          .style("stroke", "red")
+          .style("stroke-width", "2px");
 
-      labLink
-        .filter((link) => {
-          return link.source.id === d.id || link.target.id === d.id;
-        })
-        .style("stroke", "red")
-        .style("stroke-width", "2px");
+        labLink
+          .filter((link) => {
+            return link.source.id !== d.id && link.target.id !== d.id;
+          })
+          .style("stroke", "darkgray")
+          .style("stroke-width", "1.3px");
 
-      labLink
-        .filter((link) => {
-          return link.source.id !== d.id && link.target.id !== d.id;
-        })
-        .style("stroke", "darkgray")
-        .style("stroke-width", "1.3px");
+        labNode.classed("conf_related_node", false);
 
-      labNode.classed("related_node", (node) => {
-        return related_lab.includes(node.id);
-      });
+        labNode.classed("related_node", (node) => {
+          return related_lab.includes(node.id);
+        });
+      }
 
       setLabDetail({ selectedLabDetail });
       setConfFlag(false);
@@ -768,7 +795,7 @@ const CommunityGraph = (props) => {
             ")"
         );
     }
-  }, [scaleFactor, isLabView]);
+  }, [scaleFactor, isLabView, confClicked]);
 
   return (
     <div style={{ display: "flex" }}>

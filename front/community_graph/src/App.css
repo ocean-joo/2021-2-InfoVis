@@ -9,13 +9,18 @@ div.tooltip {
 }
 
 .active {
-  stroke-width: 0.7;
+  stroke-width: 1;
   stroke: blue;
 }
 
 .related_node {
-  stroke-width: 0.7;
+  stroke-width: 1;
   stroke: red;
+}
+
+.conf_related_node {
+  stroke-width: 1;
+  stroke: pink;
 }
 
 .background {
