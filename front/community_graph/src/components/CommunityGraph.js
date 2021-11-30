@@ -492,8 +492,8 @@ const CommunityGraph = (props) => {
 
         clickedLink = d;
       } else {
-        setConfDetail({});
         setConfFlag(false);
+        setConfDetail({});
         linkPopup.transition().duration(500).style("opacity", 0);
 
         clickedLink = null;
@@ -752,8 +752,8 @@ const CommunityGraph = (props) => {
 
       // if clicked again, restore
       setLabView(false);
-      setLabDetail({});
       setConfFlag(false);
+      setLabDetail({});
 
       x = comGraphWidth / 2 - x_offset;
       y = comGraphHeight / 2 - y_offset;
