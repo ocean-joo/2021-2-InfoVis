@@ -576,8 +576,6 @@ const CommunityGraph = (props) => {
       .on("start", dragstarted)
       .on("drag", dragged);
 
-    d3.select(comGraph.current).call(dragBackground);
-
     var drag_start_x, drag_start_y;
 
     function dragstarted(event, d) {
@@ -594,12 +592,13 @@ const CommunityGraph = (props) => {
 
     if (!isLabView) {
       schoolNodeEdge.on("click", onClickCluster);
+      labNode.on("click", null);
     } else {
       const selectedNode = d3.select(".active").data()[0];
       schoolNodeEdge.on("click", null);
       transitionToLabView(null, selectedNode);
+      labNode.on("click", onClickNode);
     }
-    labNode.on("click", onClickNode);
 
     // helper functions
     function onClickCluster(event, d) {
@@ -763,64 +762,11 @@ const CommunityGraph = (props) => {
       schoolNode.transition().duration(dur).attr("opacity", 1);
       schoolLink.transition().duration(dur).attr("opacity", 1);
 
-      labText
-        .transition()
-        .duration(dur)
-        .attr("opacity", 0)
-        .attr(
-          "transform",
-          "translate(" +
-            comGraphWidth / 2 +
-            "," +
-            comGraphHeight / 2 +
-            ")scale(" +
-            k +
-            ")translate(" +
-            (-x - x_offset - xOffset) +
-            "," +
-            (-y - y_offset - yOffset) +
-            ")"
-        );
-
-      labNode
-        .transition()
-        .duration(dur)
-        .attr("opacity", 0)
-        .attr(
-          "transform",
-          "translate(" +
-            comGraphWidth / 2 +
-            "," +
-            comGraphHeight / 2 +
-            ")scale(" +
-            k +
-            ")translate(" +
-            (-x - x_offset - xOffset) +
-            "," +
-            (-y - y_offset - yOffset) +
-            ")"
-        );
+      labText.transition().duration(dur).attr("opacity", 0);
+      labLink.transition().duration(dur).attr("opacity", 0);
+      labNode.transition().duration(dur).attr("opacity", 0);
 
       labNode.classed("active", false);
-
-      labLink
-        .transition()
-        .duration(dur)
-        .attr("opacity", 0)
-        .attr(
-          "transform",
-          "translate(" +
-            comGraphWidth / 2 +
-            "," +
-            comGraphHeight / 2 +
-            ")scale(" +
-            k +
-            ")translate(" +
-            (-x - x_offset - xOffset) +
-            "," +
-            (-y - y_offset - yOffset) +
-            ")"
-        );
     }
   }, [scaleFactor, isLabView, confClicked, xOffset, yOffset]);
 
