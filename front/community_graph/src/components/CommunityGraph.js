@@ -14,6 +14,10 @@ const CommunityGraph = (props) => {
   const [confFlag, setConfFlag] = useState(false);
   const [isLabView, setLabView] = useState(false);
   const [confClicked, setConfClicked] = useState(false);
+
+  const [xOffset, setXOffset] = useState(0);
+  const [yOffset, setYOffset] = useState(0);
+
   // it's percentage. should divide by 100 in below code
   const [weightRange, setWeightRange] = useState({ min: 0, max: 100 });
 
@@ -567,6 +571,27 @@ const CommunityGraph = (props) => {
     const labText = d3.selectAll(".labText");
     const linkPopup = d3.selectAll(".tooltip");
 
+    const dragBackground = d3
+      .drag()
+      .on("start", dragstarted)
+      .on("drag", dragged);
+
+    d3.select(comGraph.current).call(dragBackground);
+
+    var drag_start_x, drag_start_y;
+
+    function dragstarted(event, d) {
+      drag_start_x = event.x;
+      drag_start_y = event.y;
+    }
+
+    function dragged(event, d) {
+      const x_offset = event.x - drag_start_x;
+      const y_offset = event.y - drag_start_y;
+      setXOffset(xOffset + x_offset);
+      setYOffset(yOffset + y_offset);
+    }
+
     if (!isLabView) {
       schoolNodeEdge.on("click", onClickCluster);
     } else {
@@ -589,6 +614,8 @@ const CommunityGraph = (props) => {
 
     function onClickNode(event, d) {
       setConfClicked(false);
+      setXOffset(0);
+      setYOffset(0);
       const selectedNode = d3.select(".active").data()[0];
       linkPopup.transition().duration(200).style("opacity", 0);
       linkPopup.html("");
@@ -625,9 +652,9 @@ const CommunityGraph = (props) => {
             ")scale(" +
             k +
             ")translate(" +
-            (-x - x_offset) +
+            (-x - x_offset - xOffset) +
             "," +
-            (-y - y_offset) +
+            (-y - y_offset - yOffset) +
             ")"
         );
 
@@ -644,9 +671,9 @@ const CommunityGraph = (props) => {
             ")scale(" +
             k +
             ")translate(" +
-            (-x - x_offset) +
+            (-x - x_offset - xOffset) +
             "," +
-            (-y - y_offset) +
+            (-y - y_offset - yOffset) +
             ")"
         );
 
@@ -662,9 +689,9 @@ const CommunityGraph = (props) => {
             ")scale(" +
             k +
             ")translate(" +
-            (-x - x_offset) +
+            (-x - x_offset - xOffset) +
             "," +
-            (-y - y_offset) +
+            (-y - y_offset - yOffset) +
             ")"
         );
 
@@ -749,9 +776,9 @@ const CommunityGraph = (props) => {
             ")scale(" +
             k +
             ")translate(" +
-            (-x - x_offset) +
+            (-x - x_offset - xOffset) +
             "," +
-            (-y - y_offset) +
+            (-y - y_offset - yOffset) +
             ")"
         );
 
@@ -768,9 +795,9 @@ const CommunityGraph = (props) => {
             ")scale(" +
             k +
             ")translate(" +
-            (-x - x_offset) +
+            (-x - x_offset - xOffset) +
             "," +
-            (-y - y_offset) +
+            (-y - y_offset - yOffset) +
             ")"
         );
 
@@ -789,13 +816,13 @@ const CommunityGraph = (props) => {
             ")scale(" +
             k +
             ")translate(" +
-            (-x - x_offset) +
+            (-x - x_offset - xOffset) +
             "," +
-            (-y - y_offset) +
+            (-y - y_offset - yOffset) +
             ")"
         );
     }
-  }, [scaleFactor, isLabView, confClicked]);
+  }, [scaleFactor, isLabView, confClicked, xOffset, yOffset]);
 
   return (
     <div style={{ display: "flex" }}>
