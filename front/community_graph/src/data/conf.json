@@ -3,3390 +3,3955 @@
         "id": "0",
         "name": "AAAI Conference on Artificial Intelligence",
         "impact_score": 25.57,
+        "website": "https://aaai.org/Conferences/AAAI-22/",
         "isConf": true
     },
     {
         "id": "1",
         "name": "AAAI/ACM Conference on AI, Ethics, and Society",
         "impact_score": 4.29,
+        "website": "https://www.aies-conference.com/2021/",
         "isConf": true
     },
     {
         "id": "2",
         "name": "ACM Conference on Learning @ Scale",
         "impact_score": 3.3,
+        "website": "https://emoocs2021.eu/",
         "isConf": true
     },
     {
         "id": "3",
         "name": "ACM Conference on Recommender Systems",
         "impact_score": 5.12,
+        "website": "https://recsys.acm.org/recsys21/",
         "isConf": true
     },
     {
         "id": "4",
         "name": "ACM International Conference on Information and Knowledge Management",
         "impact_score": 9.4,
+        "website": "https://www.cikm2021.org/",
         "isConf": true
     },
     {
         "id": "5",
         "name": "ACM International Conference on Multimedia",
         "impact_score": 11.05,
+        "website": "https://2021.acmmm.org/",
         "isConf": true
     },
     {
         "id": "6",
         "name": "ACM International Conference on Multimedia Retrieval",
         "impact_score": 4.46,
+        "website": "http://icmr2021.org/",
         "isConf": true
     },
     {
         "id": "7",
         "name": "ACM International Conference on Web Search and Data Mining",
         "impact_score": 10.56,
+        "website": "http://www.wsdm-conference.org/2022/",
         "isConf": true
     },
     {
         "id": "8",
         "name": "ACM Multimedia Systems Conference",
         "impact_score": 4.62,
+        "website": "https://2021.acmmmsys.org/",
         "isConf": true
     },
     {
         "id": "9",
         "name": "ACM SIGIR Conference on Research and development in information retrieval",
         "impact_score": 8.74,
+        "website": "https://sigir.org/sigir2021/",
         "isConf": true
     },
     {
         "id": "10",
         "name": "ACM SIGKDD International Conference on Knowledge discovery and data mining",
         "impact_score": 13.53,
+        "website": "https://www.kdd.org/kdd2021/",
         "isConf": true
     },
     {
         "id": "11",
         "name": "ACM SIGMOD International Conference on Management of Data",
         "impact_score": 10.06,
+        "website": "https://2022.sigmod.org/",
         "isConf": true
     },
     {
         "id": "12",
         "name": "ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems",
         "impact_score": 4.62,
+        "website": "https://sigspatial2021.sigspatial.org/",
         "isConf": true
     },
     {
         "id": "13",
         "name": "ACM Symposium on Document Engineering",
         "impact_score": 1.32,
+        "website": "https://doceng.org/doceng2021",
         "isConf": true
     },
     {
         "id": "14",
         "name": "ACM Symposium on Virtual Reality Software and Technology",
         "impact_score": 2.97,
+        "website": "http://vrst.acm.org/vrst2021/",
         "isConf": true
     },
     {
         "id": "15",
         "name": "ACM/IEEE International Conference on Distributed Smart Cameras",
         "impact_score": 1.65,
+        "website": "https://event.unitn.it/icdsc2019/",
         "isConf": true
     },
     {
         "id": "16",
         "name": "Allerton Conference on Communication, Control, and Computing",
         "impact_score": 4.12,
+        "website": "https://allerton.csl.illinois.edu/",
         "isConf": true
     },
     {
         "id": "17",
         "name": "Annual Conference Towards Autonomous Robotic Systems",
         "impact_score": 1.81,
+        "website": "https://lcas.lincoln.ac.uk/wp/taros-2021/",
         "isConf": true
     },
     {
         "id": "18",
         "name": "Annual Conference on Medical Image Understanding and Analysis",
         "impact_score": 1.65,
+        "website": "https://miua2021.com/",
         "isConf": true
     },
     {
         "id": "19",
         "name": "Annual Meeting of the Cognitive Science Society",
         "impact_score": 2.64,
+        "website": "https://cognitivesciencesociety.org/cogsci-2021/",
         "isConf": true
     },
     {
         "id": "20",
         "name": "Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)",
         "impact_score": 2.15,
+        "website": "https://www.sigdial.org/files/workshops/conference22/",
         "isConf": true
     },
     {
         "id": "21",
         "name": "Applications of Digital Image Processing",
         "impact_score": 1.98,
+        "website": "http://www.adip.org/",
         "isConf": true
     },
     {
         "id": "22",
         "name": "Artificial Intelligence in Education",
         "impact_score": 2.81,
+        "website": "https://aied2021.science.uu.nl/",
         "isConf": true
     },
     {
         "id": "23",
         "name": "Artificial Intelligence in Medicine",
         "impact_score": 1.49,
+        "website": "http://aime21.aimedicine.info/",
         "isConf": true
     },
     {
         "id": "24",
         "name": "Asian Conference on Computer Aided Surgery",
         "impact_score": 0.33,
+        "website": "https://accas2020.org/",
         "isConf": true
     },
     {
         "id": "25",
         "name": "Asian Conference on Computer Vision (ACCV)",
         "impact_score": 5.61,
+        "website": "http://accv2020.kyoto/",
         "isConf": true
     },
     {
         "id": "26",
         "name": "Asian Conference on Machine Learning",
         "impact_score": 1.98,
+        "website": "http://www.acml-conf.org/2021/",
         "isConf": true
     },
     {
         "id": "27",
         "name": "Australasian Joint Conference on Artificial Intelligence",
         "impact_score": 0.99,
+        "website": "https://ai21.webflow.io/",
         "isConf": true
     },
     {
         "id": "28",
         "name": "Brazilian Conference on Intelligent Systems",
         "impact_score": 0.66,
+        "website": "http://c4ai.inova.usp.br/bracis/",
         "isConf": true
     },
     {
         "id": "29",
         "name": "British Machine Vision Conference",
         "impact_score": 5.94,
+        "website": "https://britishmachinevisionassociation.github.io/bmvc",
         "isConf": true
     },
     {
         "id": "30",
         "name": "Canadian Conference on Artificial Intelligence",
         "impact_score": 1.16,
+        "website": "https://www.caiac.ca/en/conferences/canadianai-2021/home",
         "isConf": true
     },
     {
         "id": "31",
         "name": "Chinese Conference on Pattern Recognition and Computer Vision",
         "impact_score": 0.82,
+        "website": "http://www.prcv.cn/2021/index_en.html",
         "isConf": true
     },
     {
         "id": "32",
         "name": "Color and Imaging Conference",
         "impact_score": 1.16,
+        "website": "https://www.imaging.org/site/IST/Conferences/Color_and_Imaging/CIC2020/IST/Conferences/CIC/CIC_Home.aspx?hkey=ff455d92-345d-4ba1-8843-c4bedd9dcead",
         "isConf": true
     },
     {
         "id": "33",
         "name": "Computational Optical Sensing and Imaging",
         "impact_score": 0.99,
+        "website": "https://www.osa.org/en-us/meetings/osa_meetings/osa_imaging_and_applied_optics_congress/program/computational_optical_sensing_and_imaging_(1)/",
         "isConf": true
     },
     {
         "id": "34",
         "name": "Conference of the European Chapter of the Association for Computational Linguistics",
         "impact_score": 5.61,
+        "website": "https://2021.eacl.org/",
         "isConf": true
     },
     {
         "id": "35",
         "name": "Conference of the International Fuzzy Systems Association and the European Society for Fuzzy Logic and Technology",
         "impact_score": 0.66,
+        "website": "http://www.ifsa-eusflat2021.eu/index.html",
         "isConf": true
     },
     {
         "id": "36",
         "name": "Conference of the International Speech Communication Association (INTERSPEECH)",
         "impact_score": 6.6,
+        "website": "https://www.interspeech2021.org/",
         "isConf": true
     },
     {
         "id": "37",
         "name": "Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (HLT-NAACL)",
         "impact_score": 7.26,
+        "website": "https://www.aclweb.org/portal/content/naacl-hlt-2021-first-call-papers",
         "isConf": true
     },
     {
         "id": "38",
         "name": "Conference of the Spanish Association for Artificial Intelligence",
         "impact_score": 0.99,
+        "website": "https://caepia20-21.uma.es/?lang=en",
         "isConf": true
     },
     {
         "id": "39",
         "name": "Conference on Biomimetic and Biohybrid Systems",
         "impact_score": 2.15,
+        "website": "https://livingmachinesconference.eu/2021/",
         "isConf": true
     },
     {
         "id": "40",
         "name": "Conference on Computational Natural Language Learning (CoNLL)",
         "impact_score": 3.46,
+        "website": "https://conll.org/",
         "isConf": true
     },
     {
         "id": "41",
         "name": "Conference on Computer and Robot Vision",
         "impact_score": 1.49,
+        "website": "https://www.computerrobotvision.org/",
         "isConf": true
     },
     {
         "id": "42",
         "name": "Conference on Empirical Methods in Natural Language Processing (EMNLP)",
         "impact_score": 9.24,
+        "website": "https://2021.emnlp.org/",
         "isConf": true
     },
     {
         "id": "43",
         "name": "Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing",
         "impact_score": 2.64,
+        "website": "https://www.emnlp-ijcnlp2019.org/",
         "isConf": true
     },
     {
         "id": "44",
         "name": "Conference on Human Information Interaction and Retrieval",
         "impact_score": 3.13,
+        "website": "https://ai.ur.de/chiir2022/",
         "isConf": true
     },
     {
         "id": "45",
         "name": "Conference on Innovative Data Systems Research",
         "impact_score": 3.3,
+        "website": "http://cidrdb.org/cidr2022/index.html",
         "isConf": true
     },
     {
         "id": "46",
         "name": "Conference on Learning Theory (COLT)",
         "impact_score": 4.79,
+        "website": "http://learningtheory.org/colt2021/",
         "isConf": true
     },
     {
         "id": "47",
         "name": "Conference on Robot Learning",
         "impact_score": 4.79,
+        "website": "https://www.robot-learning.org/",
         "isConf": true
     },
     {
         "id": "48",
         "name": "Conference on Uncertainty in Artificial Intelligence (UAI)",
         "impact_score": 3.63,
+        "website": "https://auai.org/uai2021/",
         "isConf": true
     },
     {
         "id": "49",
         "name": "Data Compression Conference",
         "impact_score": 2.48,
+        "website": "https://www.cs.brandeis.edu/~dcc/Call.html",
         "isConf": true
     },
     {
         "id": "50",
         "name": "Detection and Classification of Acoustic Scenes and Events",
         "impact_score": 2.31,
+        "website": "http://dcase.community/workshop2021/index",
         "isConf": true
     },
     {
         "id": "51",
         "name": "EPIA Conference on Artificial Intelligence",
         "impact_score": 1.32,
+        "website": "http://www.appia.pt/epia2021/",
         "isConf": true
     },
     {
         "id": "52",
         "name": "Eurographics Workshop on Visual Computing for Biology and Medicine",
         "impact_score": 0.99,
+        "website": "https://conferences.eg.org/vcbm2021/",
         "isConf": true
     },
     {
         "id": "53",
         "name": "European Conference on Computer Vision",
         "impact_score": 25.91,
+        "website": "http://iccv2021.thecvf.com/",
         "isConf": true
     },
     {
         "id": "54",
         "name": "European Conference on Information Retrieval",
         "impact_score": 3.3,
+        "website": "https://ecir2022.org/",
         "isConf": true
     },
     {
         "id": "55",
         "name": "European Conference on Machine learning and knowledge discovery in databases",
         "impact_score": 4.95,
+        "website": "https://ecmlpkdd2020.net/",
         "isConf": true
     },
     {
         "id": "56",
         "name": "European Conference on Technology Enhanced Learning",
         "impact_score": 2.48,
+        "website": "https://ea-tel.eu/ectel2021",
         "isConf": true
     },
     {
         "id": "57",
         "name": "European Signal Processing Conference",
         "impact_score": 4.79,
+        "website": "https://eusipco2021.org/",
         "isConf": true
     },
     {
         "id": "58",
         "name": "European Symposium on Artificial Neural Networks",
         "impact_score": 2.15,
+        "website": "https://www.esann.org/",
         "isConf": true
     },
     {
         "id": "59",
         "name": "European Workshop on Visual Information Processing",
         "impact_score": 1.16,
+        "website": "https://euvip2022.org/",
         "isConf": true
     },
     {
         "id": "60",
         "name": "Eye Tracking Research & Application",
         "impact_score": 2.48,
+        "website": "https://etra.acm.org/2022/",
         "isConf": true
     },
     {
         "id": "61",
         "name": "Field and Service Robotics",
         "impact_score": 1.81,
+        "website": "http://www.srg.mech.keio.ac.jp/fsr2019/",
         "isConf": true
     },
     {
         "id": "62",
         "name": "Florida Artificial Intelligence Research Society Conference",
         "impact_score": 1.98,
+        "website": "https://www.flairs-35.info/",
         "isConf": true
     },
     {
         "id": "63",
         "name": "German Conference on Pattern Recognition",
         "impact_score": 2.97,
+        "website": "https://dagm-gcpr.de/",
         "isConf": true
     },
     {
         "id": "64",
         "name": "Global Conference on Artificial Intelligence",
         "impact_score": 0.99,
+        "website": "http://gcai-2020.info/",
         "isConf": true
     },
     {
         "id": "65",
         "name": "IAPR Asian Conference on Pattern Recognition",
         "impact_score": 1.32,
+        "website": "https://www.acpr2019.org/",
         "isConf": true
     },
     {
         "id": "66",
         "name": "IAPR International Workshop on Document Analysis Systems",
         "impact_score": 1.65,
+        "website": "http://www.vlrlab.net/das2020/",
         "isConf": true
     },
     {
         "id": "67",
         "name": "IEEE Annual International Conference on CYBER Technology in Automation, Control, and Intelligent Systems",
         "impact_score": 1.16,
+        "website": "https://ieee-cyber.org/2021/",
         "isConf": true
     },
     {
         "id": "68",
         "name": "IEEE Applied Imagery Pattern Recognition Workshop",
         "impact_score": 0.49,
+        "website": "https://www.aipr-workshop.org/",
         "isConf": true
     },
     {
         "id": "69",
         "name": "IEEE Automatic Speech Recognition and Understanding Workshop",
         "impact_score": 4.79,
+        "website": "https://asru2021.org/",
         "isConf": true
     },
     {
         "id": "70",
         "name": "IEEE Conference on Computational Intelligence and Games",
         "impact_score": 2.31,
+        "website": "http://www.maastrichtuniversity.nl/cig2018",
         "isConf": true
     },
     {
         "id": "71",
         "name": "IEEE Conference on Games",
         "impact_score": 1.81,
+        "website": "https://ieee-cog.org/2021/",
         "isConf": true
     },
     {
         "id": "72",
         "name": "IEEE Conference on Multimedia Information Processing and Retrieval",
         "impact_score": 2.15,
+        "website": "https://mipr2021.org/",
         "isConf": true
     },
     {
         "id": "73",
         "name": "IEEE Conference on Virtual Reality and 3D User Interfaces",
         "impact_score": 3.3,
+        "website": "https://ieeevr.org/2022/",
         "isConf": true
     },
     {
         "id": "74",
         "name": "IEEE Data Driven Control and Learning Systems Conference",
         "impact_score": 1.16,
+        "website": "http://eie.usts.edu.cn/ddcls2021/index.html",
         "isConf": true
     },
     {
         "id": "75",
         "name": "IEEE Intelligent Transportation Systems Conference",
         "impact_score": 5.45,
+        "website": "http://2021.ieee-itsc.org/",
         "isConf": true
     },
     {
         "id": "76",
         "name": "IEEE Intelligent Vehicles Symposium",
         "impact_score": 5.45,
+        "website": "https://2021.ieee-iv.org/",
         "isConf": true
     },
     {
         "id": "77",
         "name": "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
         "impact_score": 12.04,
+        "website": "https://2022.ieeeicassp.org/",
         "isConf": true
     },
     {
         "id": "78",
         "name": "IEEE International Conference on Advanced Video and Signal-Based Surveillance",
         "impact_score": 4.12,
+        "website": "http://www.avss2021.org/",
         "isConf": true
     },
     {
         "id": "79",
         "name": "IEEE International Conference on Artificial Intelligence Circuits and Systems",
         "impact_score": 1.65,
+        "website": "http://aicas2021.org/index",
         "isConf": true
     },
     {
         "id": "80",
         "name": "IEEE International Conference on Artificial Intelligence and Virtual Reality",
         "impact_score": 0.82,
+        "website": "http://www.ieee-aivr.org/",
         "isConf": true
     },
     {
         "id": "81",
         "name": "IEEE International Conference on Automatic Face & Gesture Recognition",
         "impact_score": 7.59,
+        "website": "http://iab-rubric.org/fg2021/",
         "isConf": true
     },
     {
         "id": "82",
         "name": "IEEE International Conference on Autonomic Computing",
         "impact_score": 2.64,
+        "website": "http://www.cacsuk.co.uk/index.php/conferences/icac2021",
         "isConf": true
     },
     {
         "id": "83",
         "name": "IEEE International Conference on Autonomous Robot Systems and Competitions",
         "impact_score": 1.98,
+        "website": "http://icarsc2020.uac.pt/",
         "isConf": true
     },
     {
         "id": "84",
         "name": "IEEE International Conference on Big Data",
         "impact_score": 3.79,
+        "website": "http://bigdataieee.org/BigData2021/",
         "isConf": true
     },
     {
         "id": "85",
         "name": "IEEE International Conference on Big Data and Smart Computing",
         "impact_score": 1.65,
+        "website": "http://www.icbdsc.org/",
         "isConf": true
     },
     {
         "id": "86",
         "name": "IEEE International Conference on Big Knowledge",
         "impact_score": 1.81,
+        "website": "http://icbk2019.bigke.org/",
         "isConf": true
     },
     {
         "id": "87",
         "name": "IEEE International Conference on Bioinformatics and Biomedicine",
         "impact_score": 3.13,
+        "website": "https://ieeebibm.org/BIBM2021/",
         "isConf": true
     },
     {
         "id": "88",
         "name": "IEEE International Conference on Biometrics: Theory Applications and Systems (BTAS)",
         "impact_score": 3.3,
+        "website": "https://ieee-biometrics.org/ijcb2020/",
         "isConf": true
     },
     {
         "id": "89",
         "name": "IEEE International Conference on Computational Photography",
         "impact_score": 3.46,
+        "website": "https://iccp-conference.org/",
         "isConf": true
     },
     {
         "id": "90",
         "name": "IEEE International Conference on Data Mining",
         "impact_score": 7.59,
+        "website": "https://icdm2021.auckland.ac.nz/",
         "isConf": true
     },
     {
         "id": "91",
         "name": "IEEE International Conference on Data Science in Cyberspace",
         "impact_score": 1.49,
+        "website": "http://www.ieeedsc.org/2021/",
         "isConf": true
     },
     {
         "id": "92",
         "name": "IEEE International Conference on Fuzzy Systems",
         "impact_score": 3.79,
+        "website": "https://attend.ieee.org/fuzzieee-2021/",
         "isConf": true
     },
     {
         "id": "93",
         "name": "IEEE International Conference on Identity, Security, and Behavior Analysis",
         "impact_score": 2.97,
+        "website": "https://www.idrbt.ac.in//ISBA/index.html",
         "isConf": true
     },
     {
         "id": "94",
         "name": "IEEE International Conference on Image Processing",
         "impact_score": 7.59,
+        "website": "https://2021.ieeeicip.org/Default.asp",
         "isConf": true
     },
     {
         "id": "95",
         "name": "IEEE International Conference on Imaging Systems and Techniques",
         "impact_score": 0.99,
+        "website": "https://ist2021.ieee-ims.org/",
         "isConf": true
     },
     {
         "id": "96",
         "name": "IEEE International Conference on Intelligence and Security Informatics",
         "impact_score": 1.49,
+        "website": "http://www.isi-conf.org/",
         "isConf": true
     },
     {
         "id": "97",
         "name": "IEEE International Conference on Multimedia and Expo",
         "impact_score": 6.43,
+        "website": "https://2021.ieeeicme.org/",
         "isConf": true
     },
     {
         "id": "98",
         "name": "IEEE International Conference on Robotics and Biomimetics",
         "impact_score": 1.81,
+        "website": "http://www.robio2018.org/",
         "isConf": true
     },
     {
         "id": "99",
         "name": "IEEE International Conference on Smart Computing",
         "impact_score": 3.3,
+        "website": "https://www.smart-comp.info/",
         "isConf": true
     },
     {
         "id": "100",
         "name": "IEEE International Conference on Systems, Man and Cybernetics",
         "impact_score": 3.3,
+        "website": "http://ieeesmc2021.org/",
         "isConf": true
     },
     {
         "id": "101",
         "name": "IEEE International Geoscience and Remote Sensing Symposium",
         "impact_score": 3.46,
+        "website": "https://www.igarss2021.com/",
         "isConf": true
     },
     {
         "id": "102",
         "name": "IEEE International Smart Cities Conference",
         "impact_score": 1.81,
+        "website": "https://attend.ieee.org/isc2-2021/",
         "isConf": true
     },
     {
         "id": "103",
         "name": "IEEE International Symposium on Applied Computational Intelligence and Informatics",
         "impact_score": 0.49,
+        "website": "http://conf.uni-obuda.hu/saci2021/",
         "isConf": true
     },
     {
         "id": "104",
         "name": "IEEE International Symposium on Biomedical Imaging",
         "impact_score": 6.6,
+        "website": "https://biomedicalimaging.org/2022/",
         "isConf": true
     },
     {
         "id": "105",
         "name": "IEEE International Symposium on Information Theory",
         "impact_score": 7.26,
+        "website": "https://2021.ieee-isit.org/",
         "isConf": true
     },
     {
         "id": "106",
         "name": "IEEE International Symposium on Workload Characterization",
         "impact_score": 2.97,
+        "website": "http://www.iiswc.org/iiswc2021/index.html",
         "isConf": true
     },
     {
         "id": "107",
         "name": "IEEE International Ultrasonics Symposium",
         "impact_score": 1.81,
+        "website": "https://2021.ieee-ius.org/",
         "isConf": true
     },
     {
         "id": "108",
         "name": "IEEE International Workshop on Information Forensics and Security",
         "impact_score": 2.48,
+        "website": "https://wifs2021.lirmm.fr/",
         "isConf": true
     },
     {
         "id": "109",
         "name": "IEEE Pacific Visualization Symposium",
         "impact_score": 2.31,
+        "website": "http://vis.tju.edu.cn/pvis2021",
         "isConf": true
     },
     {
         "id": "110",
         "name": "IEEE Power & Energy Society Innovative Smart Grid Technologies Conference",
         "impact_score": 1.81,
+        "website": "https://ieee-isgt.org/",
         "isConf": true
     },
     {
         "id": "111",
         "name": "IEEE Southwest Symposium on Image Analysis and Interpretation",
         "impact_score": 1.49,
+        "website": "http://ivpcl.unm.edu/SSIAI2020/index.html",
         "isConf": true
     },
     {
         "id": "112",
         "name": "IEEE Spoken Language Technology Workshop",
         "impact_score": 3.13,
+        "website": "http://2021.ieeeslt.org/",
         "isConf": true
     },
     {
         "id": "113",
         "name": "IEEE Symposium Series on Computational Intelligence",
         "impact_score": 3.3,
+        "website": "https://attend.ieee.org/ssci-2021/",
         "isConf": true
     },
     {
         "id": "114",
         "name": "IEEE Symposium on Privacy-Aware Computing",
         "impact_score": 1.16,
+        "website": "http://sopac-conference.info/",
         "isConf": true
     },
     {
         "id": "115",
         "name": "IEEE Symposium on Visual Analytics Science and Technology",
         "impact_score": 2.15,
+        "website": "http://ieeevis.org/year/2020/info/call-participation/vast-paper-types",
         "isConf": true
     },
     {
         "id": "116",
         "name": "IEEE Symposium on Visual Languages and Human-Centric Computing",
         "impact_score": 2.15,
+        "website": "https://conf.researchr.org/home/vlhcc-2021",
         "isConf": true
     },
     {
         "id": "117",
         "name": "IEEE Visual Communications and Image Processing",
         "impact_score": 1.98,
+        "website": "http://www.vcip2021.org/",
         "isConf": true
     },
     {
         "id": "118",
         "name": "IEEE Working Conference on Software Visualization",
         "impact_score": 1.98,
+        "website": "https://vissoft.info/2021/",
         "isConf": true
     },
     {
         "id": "119",
         "name": "IEEE Workshop on Applications of Signal Processing to Audio and Acoustics",
         "impact_score": 2.48,
+        "website": "https://www.waspaa.com/",
         "isConf": true
     },
     {
         "id": "120",
         "name": "IEEE Workshop on Multimedia Signal Processing",
         "impact_score": 2.81,
+        "website": "https://attend.ieee.org/mmsp-2020/mmsp-2021/",
         "isConf": true
     },
     {
         "id": "121",
         "name": "IEEE/ASME International Conference on Advanced Intelligent Mechatronics",
         "impact_score": 2.15,
+        "website": "https://www.aim2022.org/",
         "isConf": true
     },
     {
         "id": "122",
         "name": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
         "impact_score": 51.98,
+        "website": "http://cvpr2022.thecvf.com/",
         "isConf": true
     },
     {
         "id": "123",
         "name": "IEEE/CVF International Conference on Computer Vision",
         "impact_score": 32.51,
+        "website": "http://iccv2021.thecvf.com/home",
         "isConf": true
     },
     {
         "id": "124",
         "name": "IEEE/OES Autonomous Underwater Vehicle Workshop",
         "impact_score": 0.99,
+        "website": "https://auv2018.lsts.pt/",
         "isConf": true
     },
     {
         "id": "125",
         "name": "IEEE/RSJ International Conference on Intelligent Robots and Systems",
         "impact_score": 10.06,
+        "website": "https://www.iros2021.org/",
         "isConf": true
     },
     {
         "id": "126",
         "name": "IEEE/WIC/ACM International Conference on Web Intelligence",
         "impact_score": 2.97,
+        "website": "https://www.wi-iat.com/wi-iat2021/index.html",
         "isConf": true
     },
     {
         "id": "127",
         "name": "Iberian Conference on Pattern Recognition and Image Analysis",
         "impact_score": 0.99,
+        "website": "http://www.ibpria.org/2022/",
         "isConf": true
     },
     {
         "id": "128",
         "name": "Iberoamerican Congress on Pattern Recognition (CIARP)",
         "impact_score": 1.32,
+        "website": "https://ciarp25.org/",
         "isConf": true
     },
     {
         "id": "129",
         "name": "Intelligent Data Analysis",
         "impact_score": 1.49,
+        "website": "https://ida2021.org/",
         "isConf": true
     },
     {
         "id": "130",
         "name": "Intelligent Virtual Agents",
         "impact_score": 2.64,
+        "website": "https://sites.google.com/view/iva2021/",
         "isConf": true
     },
     {
         "id": "131",
         "name": "International Conference Image Analysis and Recognition",
         "impact_score": 1.81,
+        "website": "https://www.aimiconf.org/iciar20",
         "isConf": true
     },
     {
         "id": "132",
         "name": "International Conference Information Visualisation",
         "impact_score": 1.16,
+        "website": "https://iv.csites.fct.unl.pt/au/",
         "isConf": true
     },
     {
         "id": "133",
         "name": "International Conference of the Biometrics Special Interest Group",
         "impact_score": 2.48,
+        "website": "https://biosig.de/",
         "isConf": true
     },
     {
         "id": "134",
         "name": "International Conference of the Cross-Language Evaluation Forum for European Languages",
         "impact_score": 2.97,
+        "website": "http://clef2021.clef-initiative.eu/",
         "isConf": true
     },
     {
         "id": "135",
         "name": "International Conference of the Italian Association for Artificial Intelligence",
         "impact_score": 1.65,
+        "website": "https://aixia2021.disco.unimib.it/",
         "isConf": true
     },
     {
         "id": "136",
         "name": "International Conference on 3D Vision",
         "impact_score": 5.94,
+        "website": "https://3dv2021.surrey.ac.uk/",
         "isConf": true
     },
     {
         "id": "137",
         "name": "International Conference on Advanced Computational Intelligence",
         "impact_score": 0.82,
+        "website": "https://conference.cs.cityu.edu.hk/icaci/",
         "isConf": true
     },
     {
         "id": "138",
         "name": "International Conference on Advanced Concepts for Intelligent Vision Systems",
         "impact_score": 1.98,
+        "website": "http://acivs.org/acivs2020/",
         "isConf": true
     },
     {
         "id": "139",
         "name": "International Conference on Advanced Data Mining and Applications",
         "impact_score": 2.15,
+        "website": "https://adma2021.net/",
         "isConf": true
     },
     {
         "id": "140",
         "name": "International Conference on Advanced Intelligent Systems and Informatics",
         "impact_score": 1.32,
+        "website": "http://egyptscience.net/AISI2021/home.html",
         "isConf": true
     },
     {
         "id": "141",
         "name": "International Conference on Advanced Machine Learning Technologies and Applications",
         "impact_score": 1.16,
+        "website": "http://egyptscience.net/AMLTA2021/home.html",
         "isConf": true
     },
     {
         "id": "142",
         "name": "International Conference on Advanced Visual Interfaces",
         "impact_score": 1.98,
+        "website": "https://sites.google.com/unisa.it/avi2020/",
         "isConf": true
     },
     {
         "id": "143",
         "name": "International Conference on Advances in Social Network Analysis and Mining",
         "impact_score": 4.46,
+        "website": "http://asonam.cpsc.ucalgary.ca/2021/",
         "isConf": true
     },
     {
         "id": "144",
         "name": "International Conference on Affective Computing and Intelligent Interaction",
         "impact_score": 3.13,
+        "website": "https://www.acii-conf.net/2021/",
         "isConf": true
     },
     {
         "id": "145",
         "name": "International Conference on Applications of Natural Language to Information Systems",
         "impact_score": 1.16,
+        "website": "http://nldb2021.sb.dfki.de/",
         "isConf": true
     },
     {
         "id": "146",
         "name": "International Conference on Artificial Intelligence and Soft Computing",
         "impact_score": 1.65,
+        "website": "http://icaisc2021.icaisc.eu/",
         "isConf": true
     },
     {
         "id": "147",
         "name": "International Conference on Artificial Intelligence and Statistics",
         "impact_score": 9.9,
+        "website": "https://aistats.org/aistats2021/",
         "isConf": true
     },
     {
         "id": "148",
         "name": "International Conference on Artificial Neural Networks",
         "impact_score": 3.46,
+        "website": "https://e-nns.org/icann2021/",
         "isConf": true
     },
     {
         "id": "149",
         "name": "International Conference on Artificial Reality and Telexistence / Eurographics Symposium on Virtual Environments",
         "impact_score": 0.99,
+        "website": "https://icat-egve-2021.org/",
         "isConf": true
     },
     {
         "id": "150",
         "name": "International Conference on Automated Planning and Scheduling",
         "impact_score": 3.96,
+        "website": "https://icaps21.icaps-conference.org/",
         "isConf": true
     },
     {
         "id": "151",
         "name": "International Conference on Biometrics",
         "impact_score": 3.3,
+        "website": "http://ijcb2021.iapr-tc4.org/",
         "isConf": true
     },
     {
         "id": "152",
         "name": "International Conference on Case-Based Reasoning",
         "impact_score": 1.32,
+        "website": "https://iccbr21.org/",
         "isConf": true
     },
     {
         "id": "153",
         "name": "International Conference on Complex, Intelligent and Software Intensive Systems",
         "impact_score": 1.16,
+        "website": "http://voyager.ce.fit.ac.jp/conf/cisis/2021/",
         "isConf": true
     },
     {
         "id": "154",
         "name": "International Conference on Computational Linguistics",
         "impact_score": 4.62,
+        "website": "http://coling2020.org/",
         "isConf": true
     },
     {
         "id": "155",
         "name": "International Conference on Computational Linguistics and Intelligent Text Processing",
         "impact_score": 1.98,
+        "website": "https://www.cicling.org/2018/",
         "isConf": true
     },
     {
         "id": "156",
         "name": "International Conference on Computational Science and Computational Intelligence",
         "impact_score": 0.99,
+        "website": "https://www.american-cse.org/csci2020/",
         "isConf": true
     },
     {
         "id": "157",
         "name": "International Conference on Computer Analysis of Images and Patterns",
         "impact_score": 1.49,
+        "website": "http://cyprusconferences.org/caip2021/",
         "isConf": true
     },
     {
         "id": "158",
         "name": "International Conference on Content-Based Multimedia Indexing",
         "impact_score": 0.66,
+        "website": "http://cbmi2020.univ-lille.fr/",
         "isConf": true
     },
     {
         "id": "159",
         "name": "International Conference on Control, Automation, Robotics and Vision",
         "impact_score": 2.15,
+        "website": "https://www.icarcv.sg/2020/",
         "isConf": true
     },
     {
         "id": "160",
         "name": "International Conference on Data Engineering Workshops",
         "impact_score": 8.25,
+        "website": "https://icde2022.ieeecomputer.my/",
         "isConf": true
     },
     {
         "id": "161",
         "name": "International Conference on Database and Expert Systems Applications",
         "impact_score": 1.49,
+        "website": "http://www.dexa.org/dexa2021",
         "isConf": true
     },
     {
         "id": "162",
         "name": "International Conference on Digital Audio Effects",
         "impact_score": 1.16,
+        "website": "https://dafx2020.mdw.ac.at/",
         "isConf": true
     },
     {
         "id": "163",
         "name": "International Conference on Digital Image Computing Techniques and Applications",
         "impact_score": 1.32,
+        "website": "http://dicta2021.dictaconference.org/index.html",
         "isConf": true
     },
     {
         "id": "164",
         "name": "International Conference on Discovery Science",
         "impact_score": 1.32,
+        "website": "https://ds2021.cs.dal.ca/",
         "isConf": true
     },
     {
         "id": "165",
         "name": "International Conference on Document Analysis and Recognition",
         "impact_score": 4.46,
+        "website": "https://icdar2021.org/",
         "isConf": true
     },
     {
         "id": "166",
         "name": "International Conference on Hybrid Artificial Intelligent Systems",
         "impact_score": 1.65,
+        "website": "http://2021.haisconference.eu/",
         "isConf": true
     },
     {
         "id": "167",
         "name": "International Conference on Image Analysis and Processing",
         "impact_score": 2.15,
+        "website": "https://event.unitn.it/iciap2019/",
         "isConf": true
     },
     {
         "id": "168",
         "name": "International Conference on Image Analysis and Recognition",
         "impact_score": 0.99,
+        "website": "https://www.aimiconf.org/iciar20/",
         "isConf": true
     },
     {
         "id": "169",
         "name": "International Conference on Image Processing Theory, Tools and Applications",
         "impact_score": 1.98,
+        "website": "http://www.ipta-conference.com/ipta20/",
         "isConf": true
     },
     {
         "id": "170",
         "name": "International Conference on Image and Graphics",
         "impact_score": 1.16,
+        "website": "http://icig2021.csig.org.cn/",
         "isConf": true
     },
     {
         "id": "171",
         "name": "International Conference on Information Fusion",
         "impact_score": 3.63,
+        "website": "https://www.fusion2021.co.za/",
         "isConf": true
     },
     {
         "id": "172",
         "name": "International Conference on Information Processing and Management of Uncertainty in Knowledge-Based Systems",
         "impact_score": 2.15,
+        "website": "https://ipmu2022.disco.unimib.it/",
         "isConf": true
     },
     {
         "id": "173",
         "name": "International Conference on Information Processing in Medical Imaging",
         "impact_score": 3.13,
+        "website": "https://ipmi2021.org/",
         "isConf": true
     },
     {
         "id": "174",
         "name": "International Conference on Information, Intelligence, Systems and Applications",
         "impact_score": 0.66,
+        "website": "https://www.iisaconference.com/2021/menu/home",
         "isConf": true
     },
     {
         "id": "175",
         "name": "International Conference on Integration of Constraint Programming, Artificial Intelligence, and Operations Research",
         "impact_score": 2.48,
+        "website": "https://cpaior.org/",
         "isConf": true
     },
     {
         "id": "176",
         "name": "International Conference on Intelligent Computer Mathematics",
         "impact_score": 0.99,
+        "website": "https://cicm-conference.org/cicm.php",
         "isConf": true
     },
     {
         "id": "177",
         "name": "International Conference on Intelligent Data Engineering and Automated Learning",
         "impact_score": 1.49,
+        "website": "https://ideal-conf.com/",
         "isConf": true
     },
     {
         "id": "178",
         "name": "International Conference on Intelligent Science and Big Data Engineering",
         "impact_score": 0.99,
+        "website": "http://iscide.njust.edu.cn/",
         "isConf": true
     },
     {
         "id": "179",
         "name": "International Conference on Intelligent System Application to Power Systems",
         "impact_score": 1.16,
+        "website": "http://isap-power.org/2019",
         "isConf": true
     },
     {
         "id": "180",
         "name": "International Conference on Intelligent User Interfaces",
         "impact_score": 4.95,
+        "website": "https://iui.acm.org/2022/",
         "isConf": true
     },
     {
         "id": "181",
         "name": "International Conference on Intelligent and Fuzzy Systems",
         "impact_score": 0.49,
+        "website": "http://infus.itu.edu.tr/",
         "isConf": true
     },
     {
         "id": "182",
         "name": "International Conference on Interactive Collaborative Learning",
         "impact_score": 0.99,
+        "website": "http://www.icl-conference.org/current/",
         "isConf": true
     },
     {
         "id": "183",
         "name": "International Conference on Language Resources and Evaluation (LREC)",
         "impact_score": 3.13,
+        "website": "https://lrec2020.lrec-conf.org/",
         "isConf": true
     },
     {
         "id": "184",
         "name": "International Conference on Learning Analytics And Knowledge",
         "impact_score": 5.28,
+        "website": "https://www.solaresearch.org/events/lak/lak22/",
         "isConf": true
     },
     {
         "id": "185",
         "name": "International Conference on Learning Representations",
         "impact_score": 11.38,
+        "website": "https://iclr.cc/",
         "isConf": true
     },
     {
         "id": "186",
         "name": "International Conference on Learning and Intelligent Optimization",
         "impact_score": 1.98,
+        "website": "https://lion15.sba-research.org/",
         "isConf": true
     },
     {
         "id": "187",
         "name": "International Conference on Machine Learning (ICML)",
         "impact_score": 18.48,
+        "website": "https://icml.cc/Conferences/2021",
         "isConf": true
     },
     {
         "id": "188",
         "name": "International Conference on Machine Learning and Applications",
         "impact_score": 2.97,
+        "website": "https://www.icmla-conference.org/icmla21/",
         "isConf": true
     },
     {
         "id": "189",
         "name": "International Conference on Machine Vision",
         "impact_score": 1.16,
+        "website": "http://icmv.org/",
         "isConf": true
     },
     {
         "id": "190",
         "name": "International Conference on Machine Vision Applications",
         "impact_score": 1.49,
+        "website": "http://www.mva-org.jp/mva2021/",
         "isConf": true
     },
     {
         "id": "191",
         "name": "International Conference on Medical Imaging with Deep Learning",
         "impact_score": 1.32,
+        "website": "https://2021.midl.io/",
         "isConf": true
     },
     {
         "id": "192",
         "name": "International Conference on Modeling Decisions for Artificial Intelligence",
         "impact_score": 0.66,
+        "website": "http://www.mdai.cat/mdai2021/",
         "isConf": true
     },
     {
         "id": "193",
         "name": "International Conference on Multimedia Modeling",
         "impact_score": 3.13,
+        "website": "http://mmm2022.org/",
         "isConf": true
     },
     {
         "id": "194",
         "name": "International Conference on Natural Computation, Fuzzy Systems and Knowledge Discovery",
         "impact_score": 1.16,
+        "website": "http://icnc-fskd.gzu.edu.cn/",
         "isConf": true
     },
     {
         "id": "195",
         "name": "International Conference on Natural Language Generation",
         "impact_score": 0.99,
+        "website": "https://inlg2021.github.io/pages/calls.html",
         "isConf": true
     },
     {
         "id": "196",
         "name": "International Conference on Neural Information Processing",
         "impact_score": 3.13,
+        "website": "https://iconip2021.apnns.org/",
         "isConf": true
     },
     {
         "id": "197",
         "name": "International Conference on Pattern Recognition",
         "impact_score": 4.29,
+        "website": "https://www.icpr2020.it/",
         "isConf": true
     },
     {
         "id": "198",
         "name": "International Conference on Principles and Practice of Multi-Agent Systems",
         "impact_score": 1.65,
+        "website": "http://uchiya.web.nitech.ac.jp/prima2020/",
         "isConf": true
     },
     {
         "id": "199",
         "name": "International Conference on Scalable Uncertainty Management",
         "impact_score": 1.32,
+        "website": "https://sum2020.inf.unibz.it/",
         "isConf": true
     },
     {
         "id": "200",
         "name": "International Conference on Scale Space and Variational Methods in Computer Vision",
         "impact_score": 1.65,
+        "website": "https://ssvm2021.sciencesconf.org/",
         "isConf": true
     },
     {
         "id": "201",
         "name": "International Conference on Security, Pattern Analysis, and Cybernetics",
         "impact_score": 1.16,
+        "website": "http://www.ieee-spac.org/",
         "isConf": true
     },
     {
         "id": "202",
         "name": "International Conference on Semantic Systems",
         "impact_score": 1.32,
+        "website": "https://2019.semantics.cc/",
         "isConf": true
     },
     {
         "id": "203",
         "name": "International Conference on Signal-Image Technology and Internet-Based Systems",
         "impact_score": 0.66,
+        "website": "http://www.sitis-conf.org/",
         "isConf": true
     },
     {
         "id": "204",
         "name": "International Conference on Similarity Search and Applications",
         "impact_score": 0.82,
+        "website": "http://www.sisap.org/2021/",
         "isConf": true
     },
     {
         "id": "205",
         "name": "International Conference on Smart Energy Systems and Technologies",
         "impact_score": 0.66,
+        "website": "https://sites.univaasa.fi/sest2021/",
         "isConf": true
     },
     {
         "id": "206",
         "name": "International Conference on Smart Multimedia",
         "impact_score": 0.66,
+        "website": "http://smartmultimedia.org/2021/",
         "isConf": true
     },
     {
         "id": "207",
         "name": "International Conference on Smart and Sustainable Technologies",
         "impact_score": 0.99,
+        "website": "https://2021.splitech.org/",
         "isConf": true
     },
     {
         "id": "208",
         "name": "International Conference on Social Computing, Behavioral-Cultural Modeling and Prediction and Behavior Representation in Modeling and Simulation",
         "impact_score": 2.31,
+        "website": "http://sbp-brims.org/2021/",
         "isConf": true
     },
     {
         "id": "209",
         "name": "International Conference on Software Engineering and Knowledge Engineering",
         "impact_score": 0.82,
+        "website": "http://ksiresearch.org/seke/seke21.html",
         "isConf": true
     },
     {
         "id": "210",
         "name": "International Conference on Speech and Computer",
         "impact_score": 1.49,
+        "website": "http://www.specom.nw.ru/2021",
         "isConf": true
     },
     {
         "id": "211",
         "name": "International Conference on Swarm Intelligence",
         "impact_score": 1.98,
+        "website": "http://www.iasei.org/icsi2021/",
         "isConf": true
     },
     {
         "id": "212",
         "name": "International Conference on Text, Speech, and Dialogue",
         "impact_score": 0.99,
+        "website": "https://www.kiv.zcu.cz/tsd2021/",
         "isConf": true
     },
     {
         "id": "213",
         "name": "International Conference on Tools with Artificial Intelligence",
         "impact_score": 2.31,
+        "website": "https://ictai.computer.org/",
         "isConf": true
     },
     {
         "id": "214",
         "name": "International Conference on Ubiquitous Computing and Ambient Intelligence",
         "impact_score": 1.81,
+        "website": "http://mamilab.esi.uclm.es/ucami2017/",
         "isConf": true
     },
     {
         "id": "215",
         "name": "International Conference on Ubiquitous Robots and Ambient Intelligence",
         "impact_score": 1.16,
+        "website": "http://www.ubiquitousrobots.org/2021/",
         "isConf": true
     },
     {
         "id": "216",
         "name": "International Conference on Universal Village",
         "impact_score": 0.82,
+        "website": "https://universalvillage.org/",
         "isConf": true
     },
     {
         "id": "217",
         "name": "International Conference on Unmanned Aircraft Systems",
         "impact_score": 2.97,
+        "website": "http://www.icuasa.org/",
         "isConf": true
     },
     {
         "id": "218",
         "name": "International Conference on Wavelet Analysis and Pattern Recognition",
         "impact_score": 0.33,
+        "website": "https://www.icmlc.com/ICWAPR/welcome.html",
         "isConf": true
     },
     {
         "id": "219",
         "name": "International Conference on Web Intelligence, Mining and Semantics",
         "impact_score": 1.98,
+        "website": "https://wims2020.sigappfr.org/",
         "isConf": true
     },
     {
         "id": "220",
         "name": "International Congress on Image and Signal Processing, BioMedical Engineering and Informatics",
         "impact_score": 0.66,
+        "website": "http://www.cisp-bmei.cn/",
         "isConf": true
     },
     {
         "id": "221",
         "name": "International Cross-Domain Conference for Machine Learning and Knowledge Extraction",
         "impact_score": 1.65,
+        "website": "https://cd-make.net/",
         "isConf": true
     },
     {
         "id": "222",
         "name": "International Fuzzy Systems Association World Congress",
         "impact_score": 0.66,
+        "website": "https://interval.louisiana.edu/IFSA-NAFIPS/",
         "isConf": true
     },
     {
         "id": "223",
         "name": "International IEEE/EMBS Conference on Neural Engineering",
         "impact_score": 2.31,
+        "website": "https://neuro.embs.org/2021/",
         "isConf": true
     },
     {
         "id": "224",
         "name": "International Joint Conference on Artificial Intelligence (IJCAI)",
         "impact_score": 11.71,
+        "website": "https://ijcai-21.org/",
         "isConf": true
     },
     {
         "id": "225",
         "name": "International Joint Conference on Biometrics",
         "impact_score": 4.95,
+        "website": "http://ijcb2021.iapr-tc4.org/",
         "isConf": true
     },
     {
         "id": "226",
         "name": "International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications",
         "impact_score": 2.15,
+        "website": "http://www.visigrapp.org/",
         "isConf": true
     },
     {
         "id": "227",
         "name": "International Joint Conference on Natural Language Processing (IJCNLP)",
         "impact_score": 4.12,
+        "website": "https://2021.aclweb.org/",
         "isConf": true
     },
     {
         "id": "228",
         "name": "International Joint Conference on Neural Networks",
         "impact_score": 7.09,
+        "website": "https://wcci2022.org/call-for-papers/",
         "isConf": true
     },
     {
         "id": "229",
         "name": "International Multimedia Conference",
         "impact_score": 2.97,
+        "website": "https://www.acmmm.org/2020/",
         "isConf": true
     },
     {
         "id": "230",
         "name": "International Static Analysis Symposium",
         "impact_score": 1.49,
+        "website": "https://conf.researchr.org/home/sas-2021?",
         "isConf": true
     },
     {
         "id": "231",
         "name": "International Symposium on Cyber Security Cryptography and Machine Learning",
         "impact_score": 1.49,
+        "website": "http://cscml.org/",
         "isConf": true
     },
     {
         "id": "232",
         "name": "International Symposium on Information Processing in Sensor Networks",
         "impact_score": 4.12,
+        "website": "https://ipsn.acm.org/2021/",
         "isConf": true
     },
     {
         "id": "233",
         "name": "International Symposium on Intelligent Signal Processing and Communication Systems",
         "impact_score": 0.49,
+        "website": "http://www.ieee-ispacs2021.org/",
         "isConf": true
     },
     {
         "id": "234",
         "name": "International Symposium on Mathematical Morphology and Its Applications to Signal and Image Processing",
         "impact_score": 1.16,
+        "website": "http://ismm.uni-saarland.de/",
         "isConf": true
     },
     {
         "id": "235",
         "name": "International Symposium on Medical Robotics",
         "impact_score": 1.49,
+        "website": "http://www.ismr.gatech.edu/",
         "isConf": true
     },
     {
         "id": "236",
         "name": "International Symposium on Neural Networks",
         "impact_score": 1.16,
+        "website": "https://conference.cs.cityu.edu.hk/isnn/",
         "isConf": true
     },
     {
         "id": "237",
         "name": "International Symposium on Power and Timing Modeling, Optimization and Simulation",
         "impact_score": 1.49,
+        "website": "http://www.patmos2019.upatras.gr/",
         "isConf": true
     },
     {
         "id": "238",
         "name": "International Symposium on String Processing and Information Retrieval",
         "impact_score": 0.99,
+        "website": "https://www.cristal.univ-lille.fr/spire2021/",
         "isConf": true
     },
     {
         "id": "239",
         "name": "International Symposium on Visual Computing",
         "impact_score": 0.66,
+        "website": "https://www.isvc.net/",
         "isConf": true
     },
     {
         "id": "240",
         "name": "International Symposium on Visual Information Communication and Interaction",
         "impact_score": 0.99,
+        "website": "https://vinci-conf.org/",
         "isConf": true
     },
     {
         "id": "241",
         "name": "International Teletraffic Congress",
         "impact_score": 2.64,
+        "website": "https://itc33.org/",
         "isConf": true
     },
     {
         "id": "242",
         "name": "International Work-Conference on the Interplay Between Natural and Artificial Computation",
         "impact_score": 1.32,
+        "website": "http://www.iwinac.org/iwinac2022/",
         "isConf": true
     },
     {
         "id": "243",
         "name": "International Workshop on Acoustic Signal Enhancement",
         "impact_score": 1.32,
+        "website": "https://iwaenc2022.org/",
         "isConf": true
     },
     {
         "id": "244",
         "name": "International Workshop on Algorithms in Bioinformatics",
         "impact_score": 0.99,
+        "website": "https://acm-bcb.org/WABI/2021/",
         "isConf": true
     },
     {
         "id": "245",
         "name": "International Workshop on Arabic and Derived Script Analysis and Recognition",
         "impact_score": 1.32,
+        "website": "https://asar2021.wixsite.com/home",
         "isConf": true
     },
     {
         "id": "246",
         "name": "International Workshop on Biometrics and Forensics",
         "impact_score": 1.98,
+        "website": "https://www.iwbf2021.com/",
         "isConf": true
     },
     {
         "id": "247",
         "name": "International Workshop on Digital Watermarking",
         "impact_score": 0.66,
+        "website": "http://iwdw.site/",
         "isConf": true
     },
     {
         "id": "248",
         "name": "International Workshop on Energy Minimization Methods in Computer Vision and Pattern Recognitio",
         "impact_score": 1.32,
+        "website": "https://www.dsi.unive.it/emmcvpr17/",
         "isConf": true
     },
     {
         "id": "249",
         "name": "International Workshop on Graph-Based Representations in Pattern Recognition",
         "impact_score": 1.49,
+        "website": "https://gbr2019.sciencesconf.org/",
         "isConf": true
     },
     {
         "id": "250",
         "name": "International Workshop on Machine Learning for Medical Image Reconstruction",
         "impact_score": 1.32,
+        "website": "https://sites.google.com/view/mlmir2020/home",
         "isConf": true
     },
     {
         "id": "251",
         "name": "International Workshop on Machine Learning for Signal Processing",
         "impact_score": 2.81,
+        "website": "https://attend.ieee.org/mlsp-2021/",
         "isConf": true
     },
     {
         "id": "252",
         "name": "International Workshop on Machine Learning in Medical Imaging",
         "impact_score": 3.46,
+        "website": "https://sites.google.com/view/mlmi2021/",
         "isConf": true
     },
     {
         "id": "253",
         "name": "International Workshop on Quality of Multimedia Experience",
         "impact_score": 3.46,
+        "website": "https://qomex2021.itec.aau.at/",
         "isConf": true
     },
     {
         "id": "254",
         "name": "International Workshop on Shape in Medical Imaging",
         "impact_score": 1.32,
+        "website": "https://shapemi.github.io/",
         "isConf": true
     },
     {
         "id": "255",
         "name": "International Workshop on the Analysis of Multitemporal Remote Sensing Images",
         "impact_score": 0.66,
+        "website": "https://multitemp2019.tongji.edu.cn/",
         "isConf": true
     },
     {
         "id": "256",
         "name": "Joint Conference on Lexical and Computational Semantics",
         "impact_score": 1.81,
+        "website": "https://sites.google.com/view/starsem2021/home",
         "isConf": true
     },
     {
         "id": "257",
         "name": "Joint German/Austrian Conference on Artificial Intelligence",
         "impact_score": 1.49,
+        "website": "https://ki2021.uni-luebeck.de/",
         "isConf": true
     },
     {
         "id": "258",
         "name": "Joint IAPR International Workshops on Statistical Techniques in Pattern Recognition (SPR) and Structural and Syntactic Pattern Recognition (SSPR)",
         "impact_score": 0.49,
+        "website": "https://www.dais.unive.it/sspr2020/",
         "isConf": true
     },
     {
         "id": "259",
         "name": "Joint IEEE International Conference on Development and Learning and Epigenetic Robotics",
         "impact_score": 1.49,
+        "website": "https://icdl-2021.org/",
         "isConf": true
     },
     {
         "id": "260",
         "name": "Joint International Semantic Technology Conference",
         "impact_score": 0.99,
+        "website": "http://jist2018.knowledge-graph.jp/",
         "isConf": true
     },
     {
         "id": "261",
         "name": "Knowledge Capture Conference",
         "impact_score": 2.48,
+        "website": "https://www.k-cap.org/2021/index.html",
         "isConf": true
     },
     {
         "id": "262",
         "name": "Knowledge Engineering and Knowledge Management",
         "impact_score": 1.65,
+        "website": "https://ekaw2020.inf.unibz.it/",
         "isConf": true
     },
     {
         "id": "263",
         "name": "Machine Learning for Healthcare Conference",
         "impact_score": 2.31,
+        "website": "https://www.mlforhc.org/",
         "isConf": true
     },
     {
         "id": "264",
         "name": "Medical Image Computing and Computer Assisted Intervention",
         "impact_score": 9.73,
+        "website": "https://miccai2021.org/en/",
         "isConf": true
     },
     {
         "id": "265",
         "name": "Medical Imaging : Computer-Aided Diagnosis",
         "impact_score": 3.13,
+        "website": "https://spie.org/mi/conferencedetails/computer-aided-diagnosis?SSO=1",
         "isConf": true
     },
     {
         "id": "266",
         "name": "Medical Imaging : Digital Pathology",
         "impact_score": 1.65,
+        "website": "https://spie.org/MI22/conferencedetails/digital-pathology?enableBackToBrowse=true",
         "isConf": true
     },
     {
         "id": "267",
         "name": "Medical Imaging : Image Processing",
         "impact_score": 3.3,
+        "website": "https://spie.org/conferences-and-exhibitions/medical-imaging?SSO=1",
         "isConf": true
     },
     {
         "id": "268",
         "name": "Medical Imaging : Image-Guided Procedures, Robotic Interventions, and Modeling",
         "impact_score": 1.81,
+        "website": "https://spie.org/MI22/conferencedetails/image-guided-procedures",
         "isConf": true
     },
     {
         "id": "269",
         "name": "Medical Imaging : Imaging Informatics for Healthcare, Research, and Applications",
         "impact_score": 1.49,
+        "website": "https://spie.org/MI/conferencedetails/imaging-informatics",
         "isConf": true
     },
     {
         "id": "270",
         "name": "Meeting of the Association for Computational Linguistics (ACL)",
         "impact_score": 10.56,
+        "website": "https://2021.aclweb.org/",
         "isConf": true
     },
     {
         "id": "271",
         "name": "Mining Software Repositories",
         "impact_score": 4.62,
+        "website": "https://2021.msrconf.org/",
         "isConf": true
     },
     {
         "id": "272",
         "name": "Mobile Multimedia/Image Processing, Security, and Applications",
         "impact_score": 0.82,
+        "website": "https://spie.org/SIC/conferencedetails/mobile-multimedia?SSO=1",
         "isConf": true
     },
     {
         "id": "273",
         "name": "Neural Information Processing Systems (NIPS)",
         "impact_score": 33.49,
+        "website": "https://nips.cc/",
         "isConf": true
     },
     {
         "id": "274",
         "name": "North American Fuzzy Information Processing Society Annual Conference",
         "impact_score": 1.49,
+        "website": "https://nafips2022.cs.smu.ca/",
         "isConf": true
     },
     {
         "id": "275",
         "name": "Pacific Rim International Conference on Artificial Intelligence",
         "impact_score": 1.32,
+        "website": "https://ijcai20.org/",
         "isConf": true
     },
     {
         "id": "276",
         "name": "Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD)",
         "impact_score": 3.96,
+        "website": "https://pakdd2021.org/",
         "isConf": true
     },
     {
         "id": "277",
         "name": "Photons Plus Ultrasound: Imaging and Sensing",
         "impact_score": 1.32,
+        "website": "https://spie.org/pwb/conferencedetails/photons-plus-ultrasound?SSO=1",
         "isConf": true
     },
     {
         "id": "278",
         "name": "Picture Coding Symposium",
         "impact_score": 1.65,
+        "website": "https://pcs2021.org/",
         "isConf": true
     },
     {
         "id": "279",
         "name": "Principles of Knowledge Representation and Reasoning",
         "impact_score": 2.81,
+        "website": "https://kr2021.kbsg.rwth-aachen.de/",
         "isConf": true
     },
     {
         "id": "280",
         "name": "Recent Advances in Natural Language Processing",
         "impact_score": 0.99,
+        "website": "http://ranlp.org/ranlp2021/history.php",
         "isConf": true
     },
     {
         "id": "281",
         "name": "SAI Intelligent Systems Conference",
         "impact_score": 1.32,
+        "website": "https://saiconference.com/IntelliSys",
         "isConf": true
     },
     {
         "id": "282",
         "name": "SIAM International Conference on Data Mining (SDM)",
         "impact_score": 5.45,
+        "website": "https://www.siam.org/conferences/cm/conference/sdm21",
         "isConf": true
     },
     {
         "id": "283",
         "name": "SIBGRAPI Conference on Graphics, Patterns and Images",
         "impact_score": 1.65,
+        "website": "https://www.inf.ufrgs.br/sibgrapi2021/",
         "isConf": true
     },
     {
         "id": "284",
         "name": "Scandinavian Conference on Image Analysis",
         "impact_score": 2.48,
+        "website": "https://ssba.org.se/scia2019/",
         "isConf": true
     },
     {
         "id": "285",
         "name": "Smart Grid Conference",
         "impact_score": 0.82,
+        "website": "https://sgc2021.tabrizu.ac.ir/en",
         "isConf": true
     },
     {
         "id": "286",
         "name": "TREC Video Retrieval Evaluation: TRECVID",
         "impact_score": 1.16,
+        "website": "http://trecvid.nist.gov/",
         "isConf": true
     },
     {
         "id": "287",
         "name": "The Euro-China Conference on Intelligent Data Analysis and Applications",
         "impact_score": 0.66,
+        "website": "https://www.ecc2019.ro/",
         "isConf": true
     },
     {
         "id": "288",
         "name": "Winter Conference on Applications of Computer Vision",
         "impact_score": 8.74,
+        "website": "http://wacv2022.thecvf.com/home",
         "isConf": true
     },
     {
         "id": "289",
         "name": "Workshop on Argument Mining",
         "impact_score": 1.32,
+        "website": "https://2021.argmining.org/",
         "isConf": true
     },
     {
         "id": "290",
         "name": "Workshop on Biomedical Natural Language Processing",
         "impact_score": 2.81,
+        "website": "https://aclweb.org/aclwiki/BioNLP_Workshop",
         "isConf": true
     },
     {
         "id": "291",
         "name": "Workshop on Hyperspectral Imaging and Signal Processing: Evolution in Remote Sensing",
         "impact_score": 0.99,
+        "website": "https://www.ieee-whispers.com/",
         "isConf": true
     },
     {
         "id": "292",
         "name": "ACM SIGMOD Record",
         "impact_score": 3.13,
+        "website": "https://sigmodrecord.org/",
         "isConf": false
     },
     {
         "id": "293",
         "name": "ACM Transactions on Applied Perception",
         "impact_score": 1.49,
+        "website": "https://dl.acm.org/journal/tap",
         "isConf": false
     },
     {
         "id": "294",
         "name": "ACM Transactions on Asian and Low-Resource Language Information Processing",
         "impact_score": 1.65,
+        "website": "https://dl.acm.org/journal/tallip",
         "isConf": false
     },
     {
         "id": "295",
         "name": "ACM Transactions on Autonomous and Adaptive Systems",
         "impact_score": 3.13,
+        "website": "https://dl.acm.org/journal/taas",
         "isConf": false
     },
     {
         "id": "296",
         "name": "ACM Transactions on Intelligent Systems and Technology",
         "impact_score": 6.76,
+        "website": "https://dl.acm.org/journal/tist",
         "isConf": false
     },
     {
         "id": "297",
         "name": "ACM Transactions on Knowledge Discovery from Data",
         "impact_score": 5.78,
+        "website": "https://dl.acm.org/journal/tkdd",
         "isConf": false
     },
     {
         "id": "298",
         "name": "ACM Transactions on Spatial Algorithms and Systems",
         "impact_score": 1.81,
+        "website": "https://dl.acm.org/journal/tsas",
         "isConf": false
     },
     {
         "id": "299",
         "name": "AI Communications",
         "impact_score": 1.49,
+        "website": "http://www.iospress.nl/journal/ai-communications/",
         "isConf": false
     },
     {
         "id": "300",
         "name": "AI Magazine",
         "impact_score": 4.29,
+        "website": "http://www.aaai.org/Magazine/magazine.php",
         "isConf": false
     },
     {
         "id": "301",
         "name": "AI and Society",
         "impact_score": 2.15,
+        "website": "https://www.springer.com/journal/146",
         "isConf": false
     },
     {
         "id": "302",
         "name": "Advances in Data Analysis and Classification",
         "impact_score": 1.98,
+        "website": "https://www.springer.com/journal/11634",
         "isConf": false
     },
     {
         "id": "303",
         "name": "Annals of Mathematics and Artificial Intelligence",
         "impact_score": 0.99,
+        "website": "https://www.springer.com/journal/10472",
         "isConf": false
     },
     {
         "id": "304",
         "name": "Applied Artificial Intelligence",
         "impact_score": 0.66,
+        "website": "https://www.tandfonline.com/toc/uaai20/current",
         "isConf": false
     },
     {
         "id": "305",
         "name": "Applied Intelligence",
         "impact_score": 3.96,
+        "website": "https://www.springer.com/journal/10489",
         "isConf": false
     },
     {
         "id": "306",
         "name": "Applied Optics",
         "impact_score": 2.64,
+        "website": "https://www.osapublishing.org/ao/home.cfm",
         "isConf": false
     },
     {
         "id": "307",
         "name": "Artificial Intelligence",
         "impact_score": 6.93,
+        "website": "https://www.journals.elsevier.com/artificial-intelligence",
         "isConf": false
     },
     {
         "id": "308",
         "name": "Artificial Intelligence Review",
         "impact_score": 4.12,
+        "website": "https://www.springer.com/journal/10462",
         "isConf": false
     },
     {
         "id": "309",
         "name": "Artificial Intelligence and Law",
         "impact_score": 1.49,
+        "website": "https://www.springer.com/journal/10506",
         "isConf": false
     },
     {
         "id": "310",
         "name": "Artificial Intelligence in Medicine",
         "impact_score": 3.79,
+        "website": "https://www.sciencedirect.com/journal/artificial-intelligence-in-medicine",
         "isConf": false
     },
     {
         "id": "311",
         "name": "Artificial Life",
         "impact_score": 1.32,
+        "website": "http://www.mitpressjournals.org/loi/artl",
         "isConf": false
     },
     {
         "id": "312",
         "name": "Autonomous Agents and Multi-Agent Systems",
         "impact_score": 3.46,
+        "website": "https://www.springer.com/journal/10458",
         "isConf": false
     },
     {
         "id": "313",
         "name": "Autonomous Robots",
         "impact_score": 8.91,
+        "website": "https://www.springer.com/journal/10514",
         "isConf": false
     },
     {
         "id": "314",
         "name": "BMC Medical Imaging",
         "impact_score": 0.99,
+        "website": "https://bmcmedimaging.biomedcentral.com/",
         "isConf": false
     },
     {
         "id": "315",
         "name": "BMC Medical Informatics and Decision Making",
         "impact_score": 3.46,
+        "website": "https://bmcmedinformdecismak.biomedcentral.com/",
         "isConf": false
     },
     {
         "id": "316",
         "name": "Bayesian Analysis",
         "impact_score": 1.98,
+        "website": "https://projecteuclid.org/euclid.ba",
         "isConf": false
     },
     {
         "id": "317",
         "name": "Behaviour and Information Technology",
         "impact_score": 2.31,
+        "website": "https://www.tandfonline.com/toc/tbit20/current",
         "isConf": false
     },
     {
         "id": "318",
         "name": "Big Data",
         "impact_score": 2.48,
+        "website": "http://www.liebertpub.com/overview/big-data/611/",
         "isConf": false
     },
     {
         "id": "319",
         "name": "Big Data Mining and Analytics",
         "impact_score": 1.49,
+        "website": "https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=8254253",
         "isConf": false
     },
     {
         "id": "320",
         "name": "Big Data Research",
         "impact_score": 0.99,
+        "website": "https://www.journals.elsevier.com/big-data-research",
         "isConf": false
     },
     {
         "id": "321",
         "name": "BioData Mining",
         "impact_score": 1.65,
+        "website": "https://biodatamining.biomedcentral.com/",
         "isConf": false
     },
     {
         "id": "322",
         "name": "Biomedical Optics Express",
         "impact_score": 3.96,
+        "website": "https://www.osapublishing.org/boe/home.cfm",
         "isConf": false
     },
     {
         "id": "323",
         "name": "CAAI Transactions on Intelligence Technology",
         "impact_score": 2.15,
+        "website": "https://digital-library.theiet.org/content/journals/trit",
         "isConf": false
     },
     {
         "id": "324",
         "name": "Canadian Journal of Remote Sensing",
         "impact_score": 0.33,
+        "website": "https://www.tandfonline.com/toc/ujrs20/current",
         "isConf": false
     },
     {
         "id": "325",
         "name": "Chemometrics and Intelligent Laboratory Systems",
         "impact_score": 1.32,
+        "website": "https://www.journals.elsevier.com/chemometrics-and-intelligent-laboratory-systems",
         "isConf": false
     },
     {
         "id": "326",
         "name": "Cognitive Computation",
         "impact_score": 2.81,
+        "website": "https://www.springer.com/journal/12559",
         "isConf": false
     },
     {
         "id": "327",
         "name": "Cognitive Systems Research",
         "impact_score": 3.13,
+        "website": "https://www.journals.elsevier.com/cognitive-systems-research",
         "isConf": false
     },
     {
         "id": "328",
         "name": "Communications in Information and Systems",
         "impact_score": 0.49,
+        "website": "https://www.intlpress.com/site/pub/pages/journals/items/cis/_home/_main/index.php",
         "isConf": false
     },
     {
         "id": "329",
         "name": "Communications in Nonlinear Science and Numerical Simulation",
         "impact_score": 2.48,
+        "website": "https://www.sciencedirect.com/journal/communications-in-nonlinear-science-and-numerical-simulation",
         "isConf": false
     },
     {
         "id": "330",
         "name": "Computational Intelligence",
         "impact_score": 1.32,
+        "website": "http://onlinelibrary.wiley.com/journal/10.1111/(ISSN)1467-8640",
         "isConf": false
     },
     {
         "id": "331",
         "name": "Computational Intelligence and Neuroscience",
         "impact_score": 2.15,
+        "website": "https://www.hindawi.com/journals/cin/",
         "isConf": false
     },
     {
         "id": "332",
         "name": "Computational Linguistics",
         "impact_score": 3.13,
+        "website": "http://www.mitpressjournals.org/loi/coli",
         "isConf": false
     },
     {
         "id": "333",
         "name": "Computational Optimization and Applications",
         "impact_score": 3.63,
+        "website": "https://www.springer.com/journal/10589",
         "isConf": false
     },
     {
         "id": "334",
         "name": "Computational Statistics and Data Analysis",
         "impact_score": 1.16,
+        "website": "https://www.journals.elsevier.com/computational-statistics-and-data-analysis",
         "isConf": false
     },
     {
         "id": "335",
         "name": "Computational Visual Media",
         "impact_score": 2.15,
+        "website": "http://cvm.tsinghuajournals.com/EN/2096-0433/home.shtml",
         "isConf": false
     },
     {
         "id": "336",
         "name": "Computer Methods in Biomechanics and Biomedical Engineering: Imaging and Visualization",
         "impact_score": 3.3,
+        "website": "https://www.tandfonline.com/toc/tciv20/current",
         "isConf": false
     },
     {
         "id": "337",
         "name": "Computer Speech and Language",
         "impact_score": 5.12,
+        "website": "https://www.journals.elsevier.com/computer-speech-and-language",
         "isConf": false
     },
     {
         "id": "338",
         "name": "Computer Vision and Image Understanding",
         "impact_score": 8.91,
+        "website": "https://www.journals.elsevier.com/computer-vision-and-image-understanding",
         "isConf": false
     },
     {
         "id": "339",
         "name": "Computerized Medical Imaging and Graphics",
         "impact_score": 4.46,
+        "website": "https://www.journals.elsevier.com/computerized-medical-imaging-and-graphics",
         "isConf": false
     },
     {
         "id": "340",
         "name": "Connection Science",
         "impact_score": 1.32,
+        "website": "https://www.tandfonline.com/toc/ccos20/current",
         "isConf": false
     },
     {
         "id": "341",
         "name": "Data Intelligence",
         "impact_score": 1.32,
+        "website": "https://www.mitpressjournals.org/loi/dint",
         "isConf": false
     },
     {
         "id": "342",
         "name": "Data Mining and Knowledge Discovery",
         "impact_score": 4.12,
+        "website": "https://www.springer.com/journal/10618",
         "isConf": false
     },
     {
         "id": "343",
         "name": "Data Science and Engineering",
         "impact_score": 2.15,
+        "website": "https://www.springer.com/journal/41019",
         "isConf": false
     },
     {
         "id": "344",
         "name": "Data and Knowledge Engineering",
         "impact_score": 4.12,
+        "website": "https://www.journals.elsevier.com/data-and-knowledge-engineering",
         "isConf": false
     },
     {
         "id": "345",
         "name": "Data in Brief",
         "impact_score": 1.32,
+        "website": "https://www.journals.elsevier.com/data-in-brief",
         "isConf": false
     },
     {
         "id": "346",
         "name": "Digital Investigation",
         "impact_score": 2.31,
+        "website": "https://www.journals.elsevier.com/digital-investigation",
         "isConf": false
     },
     {
         "id": "347",
         "name": "EPJ Data Science",
         "impact_score": 3.63,
+        "website": "https://epjdatascience.springeropen.com/",
         "isConf": false
     },
     {
         "id": "348",
         "name": "ETRI Journal",
         "impact_score": 1.32,
+        "website": "http://etrij.etri.re.kr/",
         "isConf": false
     },
     {
         "id": "349",
         "name": "Electronic Journal of Statistics",
         "impact_score": 3.96,
+        "website": "https://imstat.org/journals-and-publications/electronic-journal-of-statistics/",
         "isConf": false
     },
     {
         "id": "350",
         "name": "Engineering Applications of Artificial Intelligence",
         "impact_score": 6.11,
+        "website": "https://www.journals.elsevier.com/engineering-applications-of-artificial-intelligence",
         "isConf": false
     },
     {
         "id": "351",
         "name": "Entropy",
         "impact_score": 4.46,
+        "website": "https://www.mdpi.com/journal/entropy",
         "isConf": false
     },
     {
         "id": "352",
         "name": "Eurasip Journal on Advances in Signal Processing",
         "impact_score": 1.98,
+        "website": "https://asp-eurasipjournals.springeropen.com/",
         "isConf": false
     },
     {
         "id": "353",
         "name": "Eurasip Journal on Image and Video Processing",
         "impact_score": 1.49,
+        "website": "https://jivp-eurasipjournals.springeropen.com/",
         "isConf": false
     },
     {
         "id": "354",
         "name": "European Journal of Combinatorics",
         "impact_score": 2.81,
+        "website": "https://www.journals.elsevier.com/european-journal-of-combinatorics",
         "isConf": false
     },
     {
         "id": "355",
         "name": "Evolutionary Computation",
         "impact_score": 3.3,
+        "website": "http://www.mitpressjournals.org/loi/evco",
         "isConf": false
     },
     {
         "id": "356",
         "name": "Evolutionary Intelligence",
         "impact_score": 0.49,
+        "website": "https://www.springer.com/journal/12065",
         "isConf": false
     },
     {
         "id": "357",
         "name": "Expert Systems",
         "impact_score": 1.65,
+        "website": "http://onlinelibrary.wiley.com/journal/10.1111/(ISSN)1468-0394",
         "isConf": false
     },
     {
         "id": "358",
         "name": "Expert Systems with Applications",
         "impact_score": 10.39,
+        "website": "https://www.journals.elsevier.com/expert-systems-with-applications",
         "isConf": false
     },
     {
         "id": "359",
         "name": "Forensic Science International",
         "impact_score": 1.16,
+        "website": "https://www.journals.elsevier.com/forensic-science-international",
         "isConf": false
     },
     {
         "id": "360",
         "name": "Foundations and Trends in Information Retrieval",
         "impact_score": 0.66,
+        "website": "http://www.nowpublishers.com/INR",
         "isConf": false
     },
     {
         "id": "361",
         "name": "Frontiers in Computational Neuroscience",
         "impact_score": 1.65,
+        "website": "https://www.frontiersin.org/journals/computational-neuroscience",
         "isConf": false
     },
     {
         "id": "362",
         "name": "Frontiers in Robotics and AI",
         "impact_score": 4.62,
+        "website": "https://www.frontiersin.org/journals/robotics-and-ai",
         "isConf": false
     },
     {
         "id": "363",
         "name": "Fuzzy Information and Engineering",
         "impact_score": 1.49,
+        "website": "https://www.tandfonline.com/toc/tfie/current",
         "isConf": false
     },
     {
         "id": "364",
         "name": "Fuzzy Optimization and Decision Making",
         "impact_score": 2.31,
+        "website": "https://www.springer.com/journal/10700",
         "isConf": false
     },
     {
         "id": "365",
         "name": "Fuzzy Sets and Systems",
         "impact_score": 5.61,
+        "website": "https://www.journals.elsevier.com/fuzzy-sets-and-systems",
         "isConf": false
     },
     {
         "id": "366",
         "name": "Genetic Programming and Evolvable Machines",
         "impact_score": 2.81,
+        "website": "https://www.springer.com/journal/10710",
         "isConf": false
     },
     {
         "id": "367",
         "name": "Granular Computing",
         "impact_score": 2.64,
+        "website": "https://www.springer.com/journal/41066",
         "isConf": false
     },
     {
         "id": "368",
         "name": "Group Decision and Negotiation",
         "impact_score": 1.16,
+        "website": "https://www.springer.com/journal/10726",
         "isConf": false
     },
     {
         "id": "369",
         "name": "Human Brain Mapping",
         "impact_score": 5.78,
+        "website": "https://onlinelibrary.wiley.com/journal/10970193",
         "isConf": false
     },
     {
         "id": "370",
         "name": "IEEE Computational Intelligence Magazine",
         "impact_score": 5.12,
+        "website": "http://cis.ieee.org/ieee-computational-intelligence-magazine.html",
         "isConf": false
     },
     {
         "id": "371",
         "name": "IEEE Geoscience and Remote Sensing Letters",
         "impact_score": 6.11,
+        "website": "https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=8859",
         "isConf": false
     },
     {
         "id": "372",
         "name": "IEEE Geoscience and Remote Sensing Magazine",
         "impact_score": 2.48,
+        "website": "https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=6245518",
         "isConf": false
     },
     {
         "id": "373",
         "name": "IEEE Intelligent Systems",
         "impact_score": 4.12,
+        "website": "https://www.computer.org/csdl/magazine/ex",
         "isConf": false
     },
     {
         "id": "374",
         "name": "IEEE Intelligent Transportation Systems Magazine",
         "impact_score": 3.13,
+        "website": "https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=5117645",
         "isConf": false
     },
     {
         "id": "375",
         "name": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
         "impact_score": 5.78,
+        "website": "https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=4609443",
         "isConf": false
     },
     {
         "id": "376",
         "name": "IEEE Latin America Transactions",
         "impact_score": 0.99,
+        "website": "http://www.ewh.ieee.org/reg/9/etrans/eng/index.html",
         "isConf": false
     },
     {
         "id": "377",
         "name": "IEEE Multimedia",
         "impact_score": 4.95,
+        "website": "https://www.computer.org/csdl/magazines/mu",
         "isConf": false
     },
     {
         "id": "378",
         "name": "IEEE Open Journal of Vehicular Technology",
         "impact_score": 0.49,
+        "website": "https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=8782711",
         "isConf": false
     },
     {
         "id": "379",
         "name": "IEEE Robotics and Automation Letters",
         "impact_score": 10.72,
+        "website": "https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=7083369",
         "isConf": false
     },
     {
         "id": "380",
         "name": "IEEE Robotics and Automation Magazine",
         "impact_score": 2.97,
+        "website": "http://www.ieee-ras.org/publications/ram",
         "isConf": false
     },
     {
         "id": "381",
         "name": "IEEE Systems, Man, and Cybernetics Magazine",
         "impact_score": 2.81,
+        "website": "https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=6745853",
         "isConf": false
     },
     {
         "id": "382",
         "name": "IEEE Transactions on Affective Computing",
         "impact_score": 5.45,
+        "website": "https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=5165369",
         "isConf": false
     },
     {
         "id": "383",
         "name": "IEEE Transactions on Biometrics, Behavior, and Identity Science",
         "impact_score": 2.15,
+        "website": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8423754",
         "isConf": false
     },
     {
         "id": "384",
         "name": "IEEE Transactions on Circuits and Systems for Video Technology",
         "impact_score": 9.9,
+        "website": "http://tcsvt.polito.it/",
         "isConf": false
     },
     {
         "id": "385",
         "name": "IEEE Transactions on Cognitive Communications and Networking",
         "impact_score": 4.46,
+        "website": "https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=6687307",
         "isConf": false
     },
     {
         "id": "386",
         "name": "IEEE Transactions on Cognitive and Developmental Systems",
         "impact_score": 3.3,
+        "website": "https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=7274989",
         "isConf": false
     },
     {
         "id": "387",
         "name": "IEEE Transactions on Computational Imaging",
         "impact_score": 5.28,
+        "website": "https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=6745852",
         "isConf": false
     },
     {
         "id": "388",
         "name": "IEEE Transactions on Computational Intelligence and AI in Games",
         "impact_score": 0.17,
+        "website": "https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=4804728",
         "isConf": false
     },
     {
         "id": "389",
         "name": "IEEE Transactions on Control Systems Technology",
         "impact_score": 8.74,
+        "website": "http://www.ieeecss.org/publications/tcst",
         "isConf": false
     },
     {
         "id": "390",
         "name": "IEEE Transactions on Emerging Topics in Computational Intelligence",
         "impact_score": 4.62,
+        "website": "https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=7433297",
         "isConf": false
     },
     {
         "id": "391",
         "name": "IEEE Transactions on Evolutionary Computation",
         "impact_score": 8.09,
+        "website": "http://cis.ieee.org/ieee-transactions-on-evolutionary-computation.html",
         "isConf": false
     },
     {
         "id": "392",
         "name": "IEEE Transactions on Fuzzy Systems",
         "impact_score": 10.39,
+        "website": "http://cis.ieee.org/ieee-transactions-on-fuzzy-systems.html",
         "isConf": false
     },
     {
         "id": "393",
         "name": "IEEE Transactions on Geoscience and Remote Sensing",
         "impact_score": 10.39,
+        "website": "https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=36",
         "isConf": false
     },
     {
         "id": "394",
         "name": "IEEE Transactions on Image Processing",
         "impact_score": 20.13,
+        "website": "http://signalprocessingsociety.org/publications-resources/ieee-transactions-image-processing",
         "isConf": false
     },
     {
         "id": "395",
         "name": "IEEE Transactions on Information Theory",
         "impact_score": 12.21,
+        "website": "http://www.comm.utoronto.ca/trans-it/",
         "isConf": false
     },
     {
         "id": "396",
         "name": "IEEE Transactions on Intelligent Transportation Systems",
         "impact_score": 12.21,
+        "website": "http://sites.ieee.org/itss/publications/transactions/",
         "isConf": false
     },
     {
         "id": "397",
         "name": "IEEE Transactions on Intelligent Vehicles",
         "impact_score": 4.12,
+        "website": "https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=7274857",
         "isConf": false
     },
     {
         "id": "398",
         "name": "IEEE Transactions on Knowledge and Data Engineering",
         "impact_score": 14.36,
+        "website": "https://www.computer.org/web/tkde",
         "isConf": false
     },
     {
         "id": "399",
         "name": "IEEE Transactions on Learning Technologies",
         "impact_score": 3.3,
+        "website": "https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=4620076",
         "isConf": false
     },
     {
         "id": "400",
         "name": "IEEE Transactions on Medical Imaging",
         "impact_score": 10.72,
+        "website": "https://ieee-tmi.org/",
         "isConf": false
     },
     {
         "id": "401",
         "name": "IEEE Transactions on Neural Networks and Learning Systems",
         "impact_score": 16.17,
+        "website": "https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=5962385",
         "isConf": false
     },
     {
         "id": "402",
         "name": "IEEE Transactions on Neural Systems and Rehabilitation Engineering",
         "impact_score": 4.79,
+        "website": "https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=7333",
         "isConf": false
     },
     {
         "id": "403",
         "name": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
         "impact_score": 25.25,
+        "website": "https://www.computer.org/web/tpami",
         "isConf": false
     },
     {
         "id": "404",
         "name": "IEEE Transactions on Robotics",
         "impact_score": 9.07,
+        "website": "http://www.ieee-ras.org/publications/t-ro",
         "isConf": false
     },
     {
         "id": "405",
         "name": "IEEE Transactions on Visualization and Computer Graphics",
         "impact_score": 10.89,
+        "website": "https://www.computer.org/web/tvcg",
         "isConf": false
     },
     {
         "id": "406",
         "name": "IEEE Vehicular Technology Magazine",
         "impact_score": 7.26,
+        "website": "http://www.ieeevtc.org/vtmagazine/",
         "isConf": false
     },
     {
         "id": "407",
         "name": "IEEE/ACM Transactions on Audio Speech and Language Processing",
         "impact_score": 7.75,
+        "website": "https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=6570655",
         "isConf": false
     },
     {
         "id": "408",
         "name": "IET Biometrics",
         "impact_score": 2.97,
+        "website": "http://digital-library.theiet.org/content/journals/iet-bmt",
         "isConf": false
     },
     {
         "id": "409",
         "name": "IET Computer Vision",
         "impact_score": 2.15,
+        "website": "http://digital-library.theiet.org/content/journals/iet-cvi",
         "isConf": false
     },
     {
         "id": "410",
         "name": "IET Image Processing",
         "impact_score": 1.98,
+        "website": "http://digital-library.theiet.org/content/journals/iet-ipr",
         "isConf": false
     },
     {
         "id": "411",
         "name": "IET Intelligent Transport Systems",
         "impact_score": 1.32,
+        "website": "https://digital-library.theiet.org/content/journals/iet-its",
         "isConf": false
     },
     {
         "id": "412",
         "name": "IET Signal Processing",
         "impact_score": 1.81,
+        "website": "http://digital-library.theiet.org/content/journals/iet-spr",
         "isConf": false
     },
     {
         "id": "413",
         "name": "IET Smart Cities",
         "impact_score": 0.33,
+        "website": "https://digital-library.theiet.org/content/journals/iet-smc",
         "isConf": false
     },
     {
         "id": "414",
         "name": "IETE Technical Review",
         "impact_score": 0.66,
+        "website": "https://www.tandfonline.com/loi/titr20",
         "isConf": false
     },
     {
         "id": "415",
         "name": "IPSJ Transactions on Computer Vision and Applications",
         "impact_score": 1.81,
+        "website": "https://ipsjcva.springeropen.com/",
         "isConf": false
     },
     {
         "id": "416",
         "name": "ISPRS International Journal of Geo-Information",
         "impact_score": 3.79,
+        "website": "https://www.mdpi.com/journal/ijgi",
         "isConf": false
     },
     {
         "id": "417",
         "name": "ISPRS Journal of Photogrammetry and Remote Sensing",
         "impact_score": 4.95,
+        "website": "https://www.journals.elsevier.com/isprs-journal-of-photogrammetry-and-remote-sensing",
         "isConf": false
     },
     {
         "id": "418",
         "name": "Image Processing On Line",
         "impact_score": 0.66,
+        "website": "https://www.ipol.im/",
         "isConf": false
     },
     {
         "id": "419",
         "name": "Image and Vision Computing",
         "impact_score": 7.42,
+        "website": "https://www.journals.elsevier.com/image-and-vision-computing",
         "isConf": false
     },
     {
         "id": "420",
         "name": "Information",
         "impact_score": 2.97,
+        "website": "https://www.mdpi.com/journal/information",
         "isConf": false
     },
     {
         "id": "421",
         "name": "Information Discovery and Delivery",
         "impact_score": 0.49,
+        "website": "https://www.emeraldgrouppublishing.com/journal/idd",
         "isConf": false
     },
     {
         "id": "422",
         "name": "Information Fusion",
         "impact_score": 10.89,
+        "website": "https://www.sciencedirect.com/journal/information-fusion",
         "isConf": false
     },
     {
         "id": "423",
         "name": "Information Processing Letters",
         "impact_score": 2.97,
+        "website": "https://www.journals.elsevier.com/information-processing-letters",
         "isConf": false
     },
     {
         "id": "424",
         "name": "Information Processing and Management",
         "impact_score": 4.79,
+        "website": "https://www.journals.elsevier.com/information-processing-and-management",
         "isConf": false
     },
     {
         "id": "425",
         "name": "Information Sciences",
         "impact_score": 14.36,
+        "website": "https://www.journals.elsevier.com/information-sciences",
         "isConf": false
     },
     {
         "id": "426",
         "name": "Information and Inference",
         "impact_score": 0.33,
+        "website": "https://academic.oup.com/imaiai",
         "isConf": false
     },
     {
         "id": "427",
         "name": "Intelligent Automation and Soft Computing",
         "impact_score": 0.99,
+        "website": "http://www.tandfonline.com/toc/tasj20/current#",
         "isConf": false
     },
     {
         "id": "428",
         "name": "Intelligent Data Analysis",
         "impact_score": 1.32,
+        "website": "http://www.iospress.nl/journal/intelligent-data-analysis/",
         "isConf": false
     },
     {
         "id": "429",
         "name": "Intelligent Decision Technologies",
         "impact_score": 0.33,
+        "website": "https://www.iospress.nl/journal/intelligent-decision-technologies/",
         "isConf": false
     },
     {
         "id": "430",
         "name": "International Journal of Advanced Intelligence Paradigms",
         "impact_score": 0.82,
+        "website": "https://www.inderscience.com/jhome.php?jcode=ijaip",
         "isConf": false
     },
     {
         "id": "431",
         "name": "International Journal of Approximate Reasoning",
         "impact_score": 4.29,
+        "website": "https://www.journals.elsevier.com/international-journal-of-approximate-reasoning",
         "isConf": false
     },
     {
         "id": "432",
         "name": "International Journal of Artificial Intelligence in Education",
         "impact_score": 2.31,
+        "website": "https://www.springer.com/journal/40593",
         "isConf": false
     },
     {
         "id": "433",
         "name": "International Journal of Biometrics",
         "impact_score": 0.33,
+        "website": "https://www.inderscience.com/jhome.php?jcode=ijbm",
         "isConf": false
     },
     {
         "id": "434",
         "name": "International Journal of Cognitive Informatics and Natural Intelligence",
         "impact_score": 0.99,
+        "website": "https://www.igi-global.com/journal/international-journal-cognitive-informatics-natural/1095",
         "isConf": false
     },
     {
         "id": "435",
         "name": "International Journal of Computational Intelligence Systems",
         "impact_score": 2.48,
+        "website": "https://www.atlantis-press.com/journals/ijcis",
         "isConf": false
     },
     {
         "id": "436",
         "name": "International Journal of Computer Assisted Radiology and Surgery",
         "impact_score": 4.12,
+        "website": "https://www.springer.com/journal/11548",
         "isConf": false
     },
     {
         "id": "437",
         "name": "International Journal of Computer Vision",
         "impact_score": 12.71,
+        "website": "https://www.springer.com/journal/11263",
         "isConf": false
     },
     {
         "id": "438",
         "name": "International Journal of Data Mining and Bioinformatics",
         "impact_score": 0.82,
+        "website": "http://www.inderscience.com/browse/index.php?journalID=189",
         "isConf": false
     },
     {
         "id": "439",
         "name": "International Journal of Data Science and Analytics",
         "impact_score": 3.63,
+        "website": "https://www.springer.com/journal/41060",
         "isConf": false
     },
     {
         "id": "440",
         "name": "International Journal of Data Warehousing and Mining",
         "impact_score": 0.49,
+        "website": "https://www.igi-global.com/journal/international-journal-data-warehousing-mining/1085",
         "isConf": false
     },
     {
         "id": "441",
         "name": "International Journal of Fuzzy Systems",
         "impact_score": 4.12,
+        "website": "https://www.springer.com/journal/40815",
         "isConf": false
     },
     {
         "id": "442",
         "name": "International Journal of Image and Data Fusion",
         "impact_score": 0.33,
+        "website": "https://www.tandfonline.com/toc/tidf20/current",
         "isConf": false
     },
     {
         "id": "443",
         "name": "International Journal of Image and Graphics",
         "impact_score": 0.66,
+        "website": "https://www.worldscientific.com/worldscinet/ijig",
         "isConf": false
     },
     {
         "id": "444",
         "name": "International Journal of Imaging Systems and Technology",
         "impact_score": 0.66,
+        "website": "http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)1098-1098",
         "isConf": false
     },
     {
         "id": "445",
         "name": "International Journal of Information Technology and Decision Making",
         "impact_score": 1.65,
+        "website": "http://www.worldscinet.com/ijitdm/ijitdm.shtml",
         "isConf": false
     },
     {
         "id": "446",
         "name": "International Journal of Intelligent Computing and Cybernetics",
         "impact_score": 0.17,
+        "website": "https://www.emeraldgrouppublishing.com/journal/ijicc",
         "isConf": false
     },
     {
         "id": "447",
         "name": "International Journal of Intelligent Information and Database Systems",
         "impact_score": 0.66,
+        "website": "https://www.inderscience.com/jhome.php?jcode=ijiids",
         "isConf": false
     },
     {
         "id": "448",
         "name": "International Journal of Intelligent Robotics and Applications",
         "impact_score": 1.49,
+        "website": "https://www.springer.com/journal/41315",
         "isConf": false
     },
     {
         "id": "449",
         "name": "International Journal of Intelligent Systems",
         "impact_score": 4.12,
+        "website": "http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)1098-111X",
         "isConf": false
     },
     {
         "id": "450",
         "name": "International Journal of Intelligent Systems Technologies and Applications",
         "impact_score": 0.33,
+        "website": "https://www.inderscience.com/jhome.php?jcode=ijista",
         "isConf": false
     },
     {
         "id": "451",
         "name": "International Journal of Knowledge-Based and Intelligent Engineering Systems",
         "impact_score": 0.33,
+        "website": "https://www.iospress.nl/journal/international-journal-of-knowledge-based-and-intelligent-engineering-systems/",
         "isConf": false
     },
     {
         "id": "452",
         "name": "International Journal of Machine Learning and Cybernetics",
         "impact_score": 3.13,
+        "website": "https://www.springer.com/journal/13042",
         "isConf": false
     },
     {
         "id": "453",
         "name": "International Journal of Medical Robotics and Computer Assisted Surgery",
         "impact_score": 2.81,
+        "website": "https://onlinelibrary.wiley.com/journal/1478596x",
         "isConf": false
     },
     {
         "id": "454",
         "name": "International Journal of Multimedia Information Retrieval",
         "impact_score": 0.99,
+        "website": "https://www.springer.com/journal/13735",
         "isConf": false
     },
     {
         "id": "455",
         "name": "International Journal of Neural Systems",
         "impact_score": 2.97,
+        "website": "http://www.worldscinet.com/ijns/ijns.shtml",
         "isConf": false
     },
     {
         "id": "456",
         "name": "International Journal of Pattern Recognition and Artificial Intelligence",
         "impact_score": 1.16,
+        "website": "http://www.worldscinet.com/ijprai/ijprai.shtml",
         "isConf": false
     },
     {
         "id": "457",
         "name": "International Journal of Remote Sensing",
         "impact_score": 1.65,
+        "website": "https://www.tandfonline.com/toc/tres20/current",
         "isConf": false
     },
     {
         "id": "458",
         "name": "International Journal of Robotics Research",
         "impact_score": 11.38,
+        "website": "http://ijr.sagepub.com/",
         "isConf": false
     },
     {
         "id": "459",
         "name": "International Journal of Software Engineering and Knowledge Engineering",
         "impact_score": 1.65,
+        "website": "https://www.worldscientific.com/worldscinet/ijseke",
         "isConf": false
     },
     {
         "id": "460",
         "name": "International Journal of Speech Technology",
         "impact_score": 0.99,
+        "website": "https://www.springer.com/journal/10772",
         "isConf": false
     },
     {
         "id": "461",
         "name": "International Journal of Wavelets, Multiresolution and Information Processing",
         "impact_score": 0.82,
+        "website": "http://www.worldscinet.com/ijwmip/ijwmip.shtml",
         "isConf": false
     },
     {
         "id": "462",
         "name": "International Journal on Artificial Intelligence Tools",
         "impact_score": 1.98,
+        "website": "http://www.worldscinet.com/ijait/ijait.shtml",
         "isConf": false
     },
     {
         "id": "463",
         "name": "International Journal on Document Analysis and Recognition",
         "impact_score": 1.65,
+        "website": "https://www.springer.com/journal/10032",
         "isConf": false
     },
     {
         "id": "464",
         "name": "Inverse Problems and Imaging",
         "impact_score": 1.16,
+        "website": "https://www.aimsciences.org/journal/1930-8337",
         "isConf": false
     },
     {
         "id": "465",
         "name": "Iranian Journal of Fuzzy Systems",
         "impact_score": 0.99,
+        "website": "https://ijfs.usb.ac.ir/",
         "isConf": false
     },
     {
         "id": "466",
         "name": "Journal of Advances in Information Fusion",
         "impact_score": 0.66,
+        "website": "http://isif.org/journals/all",
         "isConf": false
     },
     {
         "id": "467",
         "name": "Journal of Ambient Intelligence and Humanized Computing",
         "impact_score": 3.96,
+        "website": "https://www.springer.com/journal/12652",
         "isConf": false
     },
     {
         "id": "468",
         "name": "Journal of Ambient Intelligence and Smart Environments",
         "impact_score": 1.49,
+        "website": "http://www.iospress.nl/journal/journal-of-ambient-intelligence-and-smart-environments/",
         "isConf": false
     },
     {
         "id": "469",
         "name": "Journal of Applied Remote Sensing",
         "impact_score": 0.99,
+        "website": "https://www.spiedigitallibrary.org/journals/journal-of-applied-remote-sensing?SSO=1",
         "isConf": false
     },
     {
         "id": "470",
         "name": "Journal of Artificial Intelligence Research (JAIR)",
         "impact_score": 6.6,
+        "website": "http://www.jair.org/",
         "isConf": false
     },
     {
         "id": "471",
         "name": "Journal of Artificial Intelligence and Soft Computing Research",
         "impact_score": 1.16,
+        "website": "https://content.sciendo.com/configurable/contentpage/journals$002fjaiscr$002fjaiscr-overview.xml",
         "isConf": false
     },
     {
         "id": "472",
         "name": "Journal of Automated Reasoning",
         "impact_score": 3.3,
+        "website": "https://www.springer.com/journal/10817",
         "isConf": false
     },
     {
         "id": "473",
         "name": "Journal of Automation, Mobile Robotics and Intelligent Systems",
         "impact_score": 0.49,
+        "website": "http://www.jamris.org/",
         "isConf": false
     },
     {
         "id": "474",
         "name": "Journal of Biomedical Optics",
         "impact_score": 2.81,
+        "website": "https://www.spiedigitallibrary.org/journals/journal-of-biomedical-optics?SSO=1",
         "isConf": false
     },
     {
         "id": "475",
         "name": "Journal of Combinatorial Optimization",
         "impact_score": 2.15,
+        "website": "https://www.springer.com/journal/10878",
         "isConf": false
     },
     {
         "id": "476",
         "name": "Journal of Complex Networks",
         "impact_score": 2.31,
+        "website": "https://academic.oup.com/comnet",
         "isConf": false
     },
     {
         "id": "477",
         "name": "Journal of Digital Imaging",
         "impact_score": 1.65,
+        "website": "https://www.springer.com/journal/10278",
         "isConf": false
     },
     {
         "id": "478",
         "name": "Journal of Electronic Imaging",
         "impact_score": 3.3,
+        "website": "http://spie.org/x868.xml",
         "isConf": false
     },
     {
         "id": "479",
         "name": "Journal of Experimental and Theoretical Artificial Intelligence",
         "impact_score": 1.65,
+        "website": "https://www.tandfonline.com/toc/teta20/current",
         "isConf": false
     },
     {
         "id": "480",
         "name": "Journal of Global Optimization",
         "impact_score": 2.64,
+        "website": "https://www.springer.com/journal/10898",
         "isConf": false
     },
     {
         "id": "481",
         "name": "Journal of Heuristics",
         "impact_score": 2.15,
+        "website": "https://www.springer.com/journal/10732",
         "isConf": false
     },
     {
         "id": "482",
         "name": "Journal of Imaging",
         "impact_score": 1.98,
+        "website": "https://www.mdpi.com/journal/jimaging",
         "isConf": false
     },
     {
         "id": "483",
         "name": "Journal of Intelligent Information Systems",
         "impact_score": 1.65,
+        "website": "https://www.springer.com/journal/10844",
         "isConf": false
     },
     {
         "id": "484",
         "name": "Journal of Intelligent Manufacturing",
         "impact_score": 3.13,
+        "website": "https://www.springer.com/journal/10845",
         "isConf": false
     },
     {
         "id": "485",
         "name": "Journal of Intelligent Transportation Systems",
         "impact_score": 0.99,
+        "website": "https://www.tandfonline.com/toc/gits20/current",
         "isConf": false
     },
     {
         "id": "486",
         "name": "Journal of Intelligent and Fuzzy Systems",
         "impact_score": 3.96,
+        "website": "http://www.iospress.nl/journal/journal-of-intelligent-fuzzy-systems/",
         "isConf": false
     },
     {
         "id": "487",
         "name": "Journal of Machine Learning Research",
         "impact_score": 13.37,
+        "website": "http://jmlr.csail.mit.edu/",
         "isConf": false
     },
     {
         "id": "488",
         "name": "Journal of Magnetic Resonance Imaging",
         "impact_score": 3.3,
+        "website": "https://onlinelibrary.wiley.com/journal/15222586",
         "isConf": false
     },
     {
         "id": "489",
         "name": "Journal of Mathematical Imaging and Vision",
         "impact_score": 2.97,
+        "website": "https://www.springer.com/journal/10851",
         "isConf": false
     },
     {
         "id": "490",
         "name": "Journal of Medical Imaging",
         "impact_score": 3.79,
+        "website": "https://www.spiedigitallibrary.org/journals/journal-of-medical-imaging",
         "isConf": false
     },
     {
         "id": "491",
         "name": "Journal of New Music Research",
         "impact_score": 1.32,
+        "website": "https://www.tandfonline.com/toc/nnmr20/current",
         "isConf": false
     },
     {
         "id": "492",
         "name": "Journal of Optimization Theory and Applications",
         "impact_score": 2.81,
+        "website": "https://www.springer.com/journal/10957",
         "isConf": false
     },
     {
         "id": "493",
         "name": "Journal of Real-Time Image Processing",
         "impact_score": 2.97,
+        "website": "https://www.springer.com/journal/11554",
         "isConf": false
     },
     {
         "id": "494",
         "name": "Journal of Reliable Intelligent Environments",
         "impact_score": 1.16,
+        "website": "https://www.springer.com/journal/40860",
         "isConf": false
     },
     {
         "id": "495",
         "name": "Journal of Signal Processing Systems",
         "impact_score": 3.46,
+        "website": "https://www.springer.com/journal/11265",
         "isConf": false
     },
     {
         "id": "496",
         "name": "Journal of Spatial Information Science",
         "impact_score": 0.33,
+        "website": "https://www.josis.org/index.php/josis",
         "isConf": false
     },
     {
         "id": "497",
         "name": "Journal of Uncertain Systems",
         "impact_score": 0.33,
+        "website": "http://www.jus.org.uk/",
         "isConf": false
     },
     {
         "id": "498",
         "name": "Journal of Vision",
         "impact_score": 1.98,
+        "website": "https://jov.arvojournals.org/",
         "isConf": false
     },
     {
         "id": "499",
         "name": "Journal of Visual Communication and Image Representation",
         "impact_score": 4.62,
+        "website": "https://www.journals.elsevier.com/journal-of-visual-communication-and-image-representation",
         "isConf": false
     },
     {
         "id": "500",
         "name": "Journal of the ACM",
         "impact_score": 6.43,
+        "website": "https://dl.acm.org/journal/jacm",
         "isConf": false
     },
     {
         "id": "501",
         "name": "Journal of the Acoustical Society of America",
         "impact_score": 3.63,
+        "website": "https://asa.scitation.org/journal/jas",
         "isConf": false
     },
     {
         "id": "502",
         "name": "Journal of the Institute of Image Electronics Engineers of Japan",
         "impact_score": 0.17,
+        "website": "https://www.jstage.jst.go.jp/browse/iieej/_pubinfo/-char/en",
         "isConf": false
     },
     {
         "id": "503",
         "name": "Journal on Data Semantics",
         "impact_score": 0.99,
+        "website": "https://www.springer.com/journal/13740",
         "isConf": false
     },
     {
         "id": "504",
         "name": "Knowledge Engineering Review",
         "impact_score": 2.15,
+        "website": "http://journals.cambridge.org/action/displayJournal?jid=KER",
         "isConf": false
     },
     {
         "id": "505",
         "name": "Knowledge and Information Systems",
         "impact_score": 6.93,
+        "website": "https://www.springer.com/journal/10115",
         "isConf": false
     },
     {
         "id": "506",
         "name": "Knowledge-Based Systems",
         "impact_score": 11.71,
+        "website": "https://www.journals.elsevier.com/knowledge-based-systems",
         "isConf": false
     },
     {
         "id": "507",
         "name": "Language Resources and Evaluation",
         "impact_score": 1.98,
+        "website": "https://www.springer.com/journal/10579",
         "isConf": false
     },
     {
         "id": "508",
         "name": "Machine Learning",
         "impact_score": 5.78,
+        "website": "https://www.springer.com/journal/10994",
         "isConf": false
     },
     {
         "id": "509",
         "name": "Machine Translation",
         "impact_score": 1.65,
+        "website": "https://www.springer.com/journal/10590",
         "isConf": false
     },
     {
         "id": "510",
         "name": "Machine Vision and Applications",
         "impact_score": 3.3,
+        "website": "https://www.springer.com/journal/138",
         "isConf": false
     },
     {
         "id": "511",
         "name": "Magnetic Resonance Imaging",
         "impact_score": 1.32,
+        "website": "https://www.journals.elsevier.com/magnetic-resonance-imaging",
         "isConf": false
     },
     {
         "id": "512",
         "name": "Medical Image Analysis",
         "impact_score": 9.07,
+        "website": "https://www.journals.elsevier.com/medical-image-analysis",
         "isConf": false
     },
     {
         "id": "513",
         "name": "Memetic Computing",
         "impact_score": 2.15,
+        "website": "https://www.springer.com/journal/12293",
         "isConf": false
     },
     {
         "id": "514",
         "name": "Minds and Machines",
         "impact_score": 1.49,
+        "website": "https://www.springer.com/journal/11023",
         "isConf": false
     },
     {
         "id": "515",
         "name": "Multidimensional Systems and Signal Processing",
         "impact_score": 1.81,
+        "website": "https://www.springer.com/journal/11045",
         "isConf": false
     },
     {
         "id": "516",
         "name": "Multimedia Systems",
         "impact_score": 1.81,
+        "website": "https://www.springer.com/journal/530",
         "isConf": false
     },
     {
         "id": "517",
         "name": "Multimedia Tools and Applications",
         "impact_score": 7.42,
+        "website": "https://www.springer.com/journal/11042",
         "isConf": false
     },
     {
         "id": "518",
         "name": "Natural Language Engineering",
         "impact_score": 2.15,
+        "website": "http://journals.cambridge.org/action/displayJournal?jid=NLE",
         "isConf": false
     },
     {
         "id": "519",
         "name": "Neural Computation",
         "impact_score": 4.62,
+        "website": "http://www.mitpressjournals.org/loi/neco",
         "isConf": false
     },
     {
         "id": "520",
         "name": "Neural Computing and Applications",
         "impact_score": 5.45,
+        "website": "https://www.springer.com/journal/521",
         "isConf": false
     },
     {
         "id": "521",
         "name": "Neural Networks",
         "impact_score": 6.6,
+        "website": "https://www.journals.elsevier.com/neural-networks",
         "isConf": false
     },
     {
         "id": "522",
         "name": "Neural Processing Letters",
         "impact_score": 2.97,
+        "website": "https://www.springer.com/journal/11063",
         "isConf": false
     },
     {
         "id": "523",
         "name": "NeuroImage",
         "impact_score": 8.09,
+        "website": "https://www.journals.elsevier.com/neuroimage",
         "isConf": false
     },
     {
         "id": "524",
         "name": "Neurocomputing",
         "impact_score": 15.18,
+        "website": "https://www.journals.elsevier.com/neurocomputing",
         "isConf": false
     },
     {
         "id": "525",
         "name": "Neuroinformatics",
         "impact_score": 2.64,
+        "website": "https://www.springer.com/journal/12021",
         "isConf": false
     },
     {
         "id": "526",
         "name": "New Review of Hypermedia and Multimedia",
         "impact_score": 0.99,
+        "website": "https://www.tandfonline.com/toc/tham20/current",
         "isConf": false
     },
     {
         "id": "527",
         "name": "Optical Engineering",
         "impact_score": 1.65,
+        "website": "https://www.spiedigitallibrary.org/journals/optical-engineering?SSO=1",
         "isConf": false
     },
     {
         "id": "528",
         "name": "Optics Express",
         "impact_score": 5.78,
+        "website": "https://www.osapublishing.org/oe/home.cfm",
         "isConf": false
     },
     {
         "id": "529",
         "name": "Optics Letters",
         "impact_score": 1.98,
+        "website": "https://www.osapublishing.org/ol/home.cfm",
         "isConf": false
     },
     {
         "id": "530",
         "name": "Optik",
         "impact_score": 1.81,
+        "website": "https://www.journals.elsevier.com/optik",
         "isConf": false
     },
     {
         "id": "531",
         "name": "Optimization Letters",
         "impact_score": 3.13,
+        "website": "https://www.springer.com/journal/11590",
         "isConf": false
     },
     {
         "id": "532",
         "name": "Optimization Methods and Software",
         "impact_score": 2.31,
+        "website": "https://www.tandfonline.com/toc/goms20/current",
         "isConf": false
     },
     {
         "id": "533",
         "name": "Pattern Analysis and Applications",
         "impact_score": 2.15,
+        "website": "https://www.springer.com/journal/10044",
         "isConf": false
     },
     {
         "id": "534",
         "name": "Pattern Recognition",
         "impact_score": 17.32,
+        "website": "https://www.journals.elsevier.com/pattern-recognition",
         "isConf": false
     },
     {
         "id": "535",
         "name": "Pattern Recognition Letters",
         "impact_score": 6.76,
+        "website": "https://www.journals.elsevier.com/pattern-recognition-letters",
         "isConf": false
     },
     {
         "id": "536",
         "name": "Progress in Artificial Intelligence",
         "impact_score": 2.15,
+        "website": "https://www.springer.com/journal/13748",
         "isConf": false
     },
     {
         "id": "537",
         "name": "Remote Sensing",
         "impact_score": 6.76,
+        "website": "https://www.mdpi.com/journal/remotesensing",
         "isConf": false
     },
     {
         "id": "538",
         "name": "Remote Sensing Letters",
         "impact_score": 1.49,
+        "website": "https://www.tandfonline.com/toc/trsl20/current",
         "isConf": false
     },
     {
         "id": "539",
         "name": "Robotica",
         "impact_score": 2.31,
+        "website": "http://journals.cambridge.org/action/displayJournal?jid=ROB",
         "isConf": false
     },
     {
         "id": "540",
         "name": "SIAM Journal on Imaging Sciences",
         "impact_score": 4.79,
+        "website": "https://www.siam.org/publications/journals/siam-journal-on-imaging-sciences-siims",
         "isConf": false
     },
     {
         "id": "541",
         "name": "SIAM Journal on Matrix Analysis and Applications",
         "impact_score": 3.46,
+        "website": "https://www.siam.org/publications/journals/siam-journal-on-matrix-analysis-and-applications-simax",
         "isConf": false
     },
     {
         "id": "542",
         "name": "SMPTE Motion Imaging Journal",
         "impact_score": 0.49,
+        "website": "https://ieeexplore.ieee.org/xpl/aboutJournal.jsp?punumber=7261654",
         "isConf": false
     },
     {
         "id": "543",
         "name": "Scientific data",
         "impact_score": 3.79,
+        "website": "https://epjdatascience.springeropen.com/",
         "isConf": false
     },
     {
         "id": "544",
         "name": "Signal Processing: Image Communication",
         "impact_score": 4.62,
+        "website": "https://www.sciencedirect.com/journal/signal-processing-image-communication",
         "isConf": false
     },
     {
         "id": "545",
         "name": "Signal, Image and Video Processing",
         "impact_score": 2.48,
+        "website": "https://www.springer.com/journal/11760",
         "isConf": false
     },
     {
         "id": "546",
         "name": "Smart Science",
         "impact_score": 0.33,
+        "website": "https://www.tandfonline.com/toc/tsma20/current",
         "isConf": false
     },
     {
         "id": "547",
         "name": "Social Network Analysis and Mining",
         "impact_score": 2.97,
+        "website": "https://www.springer.com/journal/13278",
         "isConf": false
     },
     {
         "id": "548",
         "name": "Speech Communication",
         "impact_score": 3.46,
+        "website": "https://www.journals.elsevier.com/speech-communication",
         "isConf": false
     },
     {
         "id": "549",
         "name": "Statistical Methods in Medical Research",
         "impact_score": 2.31,
+        "website": "http://smm.sagepub.com/",
         "isConf": false
     },
     {
         "id": "550",
         "name": "Statistics and Computing",
         "impact_score": 2.15,
+        "website": "https://www.springer.com/journal/11222",
         "isConf": false
     },
     {
         "id": "551",
         "name": "Swarm Intelligence",
         "impact_score": 1.81,
+        "website": "https://www.springer.com/journal/11721",
         "isConf": false
     },
     {
         "id": "552",
         "name": "Swarm and Evolutionary Computation",
         "impact_score": 6.11,
+        "website": "https://www.journals.elsevier.com/swarm-and-evolutionary-computation/",
         "isConf": false
     },
     {
         "id": "553",
         "name": "Transactions in GIS",
         "impact_score": 1.65,
+        "website": "https://onlinelibrary.wiley.com/journal/14679671",
         "isConf": false
     },
     {
         "id": "554",
         "name": "Transactions of the Association for Computational Linguistics",
         "impact_score": 6.43,
+        "website": "https://transacl.org/index.php/tacl",
         "isConf": false
     },
     {
         "id": "555",
         "name": "Transactions of the Japanese Society for Artificial Intelligence",
         "impact_score": 0.33,
+        "website": "https://www.jstage.jst.go.jp/browse/tjsai",
         "isConf": false
     },
     {
         "id": "556",
         "name": "Transactions on Interactive Intelligent Systems",
         "impact_score": 3.13,
+        "website": "https://dl.acm.org/journal/tiis",
         "isConf": false
     },
     {
         "id": "557",
         "name": "Unmanned Systems",
         "impact_score": 1.16,
+        "website": "https://www.worldscientific.com/worldscinet/us",
         "isConf": false
     },
     {
         "id": "558",
         "name": "VLDB Journal",
         "impact_score": 6.11,
+        "website": "https://www.springer.com/journal/778",
         "isConf": false
     },
     {
         "id": "559",
         "name": "Vehicular Communications",
         "impact_score": 2.97,
+        "website": "https://www.journals.elsevier.com/vehicular-communications",
         "isConf": false
     },
     {
         "id": "560",
         "name": "Virtual Reality",
         "impact_score": 1.16,
+        "website": "https://www.springer.com/journal/10055",
         "isConf": false
     },
     {
         "id": "561",
         "name": "Visual Computer",
         "impact_score": 3.79,
+        "website": "https://www.springer.com/journal/371",
         "isConf": false
     },
     {
         "id": "562",
         "name": "Visual Informatics",
         "impact_score": 1.81,
+        "website": "https://www.journals.elsevier.com/visual-informatics/",
         "isConf": false
     },
     {
         "id": "563",
         "name": "Web Intelligence",
         "impact_score": 0.66,
+        "website": "https://www.iospress.nl/journal/web-intelligence-and-agent-systems/",
         "isConf": false
     },
     {
         "id": "564",
         "name": "Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery",
         "impact_score": 3.3,
+        "website": "https://onlinelibrary.wiley.com/journal/19424795",
         "isConf": false
     }
 ]

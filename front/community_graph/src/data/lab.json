@@ -130,7 +130,7 @@
         "prof_name": "강현구",
         "email": "tkang@snu.ac.kr",
         "href": "http://hpse.snu.ac.kr",
-        "name": "_",
+        "name": "강현구교수님 연구실",
         "school": "snu",
         "description": "스마트 공법 및 구조",
         "total_paper_num": 0,
@@ -138,6 +138,460 @@
     },
     {
         "id": 4,
+        "prof_name": "고학수",
+        "email": "hsk@snu.ac.kr",
+        "href": "",
+        "name": "고학수교수님 연구실",
+        "school": "snu",
+        "description": "인공지능 법제도, 개인정보 법제도",
+        "total_paper_num": 0,
+        "paper": []
+    },
+    {
+        "id": 5,
+        "prof_name": "곽노준",
+        "email": "nojunk@snu.ac.kr",
+        "href": "http://mipal.snu.ac.kr",
+        "name": "패턴인식 및 컴퓨터비전 연구실",
+        "school": "snu",
+        "description": "딥러닝/기계학습 알고리즘 및 응용",
+        "total_paper_num": 12,
+        "paper": [
+            {
+                "title": "Pose estimator and tracker using temporal flow maps for limbs",
+                "conf_id": 228,
+                "href": "https://ieeexplore.ieee.org/abstract/document/8851734/",
+                "year": "2019",
+                "apa": "Hwang, J., Lee, J., Park, S., & Kwak, N. (2019). Pose estimator and tracker using temporal flow maps for limbs. 2019 International Joint Conference on Neural Networks (IJCNN), 1-8."
+            },
+            {
+                "title": "StackNet: Stacking feature maps for Continual learning",
+                "conf_id": 122,
+                "href": "http://openaccess.thecvf.com/content_CVPRW_2020/html/w15/Kim_StackNet_Stacking_Feature_Maps_for_Continual_Learning_CVPRW_2020_paper.html",
+                "year": "2020",
+                "apa": "Kim, J., Kim, J., & Kwak, N.J. (2020). StackNet: Stacking feature maps for Continual learning. 2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW), 975-982."
+            },
+            {
+                "title": "Matching video net: Memory-based embedding for video action recognition",
+                "conf_id": 228,
+                "href": "https://ieeexplore.ieee.org/abstract/document/7965886/",
+                "year": "2017",
+                "apa": "Kim, D., Lee, M., & Kwak, N. (2017). Matching video net: Memory-based embedding for video action recognition. 2017 International Joint Conference on Neural Networks (IJCNN), 432-438."
+            },
+            {
+                "title": "Prototype-Based Personalized Pruning",
+                "conf_id": 77,
+                "href": "https://ieeexplore.ieee.org/abstract/document/9414526/",
+                "year": "2021",
+                "apa": "Kim, J., Chang, S., Yun, S., & Kwak, N. (2021). Prototype-Based Personalized Pruning. ICASSP 2021 - 2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 3925-3929."
+            },
+            {
+                "title": "Sym-parameterized dynamic inference for mixed-domain image translation",
+                "conf_id": 123,
+                "href": "http://openaccess.thecvf.com/content_ICCV_2019/html/Chang_Sym-Parameterized_Dynamic_Inference_for_Mixed-Domain_Image_Translation_ICCV_2019_paper.html",
+                "year": "2019",
+                "apa": "Chang, S., Park, S., Yang, J., & Kwak, N. (2019). Sym-Parameterized Dynamic Inference for Mixed-Domain Image Translation. 2019 IEEE/CVF International Conference on Computer Vision (ICCV), 4802-4810."
+            },
+            {
+                "title": "Unpriortized Autoencoder For Image Generation",
+                "conf_id": 94,
+                "href": "https://ieeexplore.ieee.org/abstract/document/9191173/",
+                "year": "2020",
+                "apa": "Yoo, J., Lee, H., & Kwak, N. (2020). Unpriortized Autoencoder For Image Generation. 2020 IEEE International Conference on Image Processing (ICIP), 763-767."
+            },
+            {
+                "title": "Illumination robust optical flow estimation by illumination-chromaticity decoupling",
+                "conf_id": 94,
+                "href": "https://ieeexplore.ieee.org/abstract/document/7351133/",
+                "year": "2015",
+                "apa": "Park, S., & Kwak, N. (2015). Illumination robust optical flow estimation by illumination-chromaticity decoupling. 2015 IEEE International Conference on Image Processing (ICIP), 1910-1914."
+            },
+            {
+                "title": "Feature fusion for online mutual knowledge distillation",
+                "conf_id": 197,
+                "href": "https://ieeexplore.ieee.org/abstract/document/9412615/",
+                "year": "2021",
+                "apa": "Kim, J., Hyun, M., Chung, I., & Kwak, N. (2021). Feature Fusion for Online Mutual Knowledge Distillation. 2020 25th International Conference on Pattern Recognition (ICPR), 4619-4625."
+            },
+            {
+                "title": "Image restoration by estimating frequency distribution of local patches",
+                "conf_id": 122,
+                "href": "http://openaccess.thecvf.com/content_cvpr_2018/html/Yoo_Image_Restoration_by_CVPR_2018_paper.html",
+                "year": "2018",
+                "apa": "Yoo, J., Lee, S., & Kwak, N. (2018). Image Restoration by Estimating Frequency Distribution of Local Patches. 2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition, 6684-6692."
+            },
+            {
+                "title": "Phase Selective Convolution",
+                "conf_id": 122,
+                "href": "https://openaccess.thecvf.com/content/CVPR2021W/EVW/html/Lin_Phase_Selective_Convolution_CVPRW_2021_paper.html",
+                "year": "2021",
+                "apa": "Lin, J.M., Noorzad, P., Yang, Y., Kwak, N., & Porikli, F.M. (2021). Phase Selective Convolution. 2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW), 3193-3202."
+            },
+            {
+                "title": "Dynamic graph generation network: Generating relational knowledge from diagrams",
+                "conf_id": 122,
+                "href": "http://openaccess.thecvf.com/content_cvpr_2018/html/Kim_Dynamic_Graph_Generation_CVPR_2018_paper.html",
+                "year": "2018",
+                "apa": "Kim, D., Yoo, Y.J., Kim, J., Lee, S., & Kwak, N. (2018). Dynamic Graph Generation Network: Generating Relational Knowledge from Diagrams. 2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition, 4167-4175."
+            },
+            {
+                "title": "Feature Fusion for Online Mutual Knowledge Distillation",
+                "conf_id": 197,
+                "href": "https://www.researchgate.net/profile/Jangho-Kim-3/publication/332553857_Feature_Fusion_for_Online_Mutual_Knowledge_Distillation/links/5ee7e3b0a6fdcc73be7c7ca8/Feature-Fusion-for-Online-Mutual-Knowledge-Distillation.pdf",
+                "year": "2021",
+                "apa": "Kim, J., Hyun, M., Chung, I., & Kwak, N. (2021). Feature Fusion for Online Mutual Knowledge Distillation. 2020 25th International Conference on Pattern Recognition (ICPR), 4619-4625."
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "prof_name": "국웅",
+        "email": "woongkook@snu.ac.kr",
+        "href": "http://www.math.snu.ac.kr/~woongkook/",
+        "name": "국웅교수님 연구실",
+        "school": "snu",
+        "description": "조합론(대수적위상수학)",
+        "total_paper_num": 1,
+        "paper": [
+            {
+                "title": "Topological data analysis can extract sub-groups with high incidence rates of Type 2 diabetes",
+                "conf_id": 438,
+                "href": "https://www.inderscienceonline.com/doi/abs/10.1504/IJDMB.2019.099287",
+                "year": "2019",
+                "apa": "Park, T., Kim, H., Oh, B., Kook, W., Kim, H.S., Park, U., Kim, Y., & Yi, C. (2019). Topological data analysis can extract sub-groups with high incidence rates of Type 2 diabetes. International Journal of Data Mining and Bioinformatics."
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "prof_name": "김건희",
+        "email": "gunhee@snu.ac.kr",
+        "href": "http://vision.snu.ac.kr",
+        "name": "시각 및 학습 연구실",
+        "school": "snu",
+        "description": "컴퓨터비전, 자연어처리",
+        "total_paper_num": 8,
+        "paper": [
+            {
+                "title": "Multi-task self-supervised object detection via recycling of bounding box annotations",
+                "conf_id": 122,
+                "href": "http://openaccess.thecvf.com/content_CVPR_2019/html/Lee_Multi-Task_Self-Supervised_Object_Detection_via_Recycling_of_Bounding_Box_Annotations_CVPR_2019_paper.html",
+                "year": "2019",
+                "apa": "Lee, W., Na, J., & Kim, G. (2019). Multi-Task Self-Supervised Object Detection via Recycling of Bounding Box Annotations. 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 4979-4988."
+            },
+            {
+                "title": "Better to follow, follow to be better: Towards precise supervision of feature super-resolution for small object detection",
+                "conf_id": 123,
+                "href": "http://openaccess.thecvf.com/content_ICCV_2019/html/Noh_Better_to_Follow_Follow_to_Be_Better_Towards_Precise_Supervision_ICCV_2019_paper.html",
+                "year": "2019",
+                "apa": "Noh, J., Bae, W., Lee, W., Seo, J., & Kim, G. (2019). Better to Follow, Follow to Be Better: Towards Precise Supervision of Feature Super-Resolution for Small Object Detection. 2019 IEEE/CVF International Conference on Computer Vision (ICCV), 9724-9733."
+            },
+            {
+                "title": "Improving occlusion and hard negative handling for single-stage pedestrian detectors",
+                "conf_id": 122,
+                "href": "http://openaccess.thecvf.com/content_cvpr_2018/html/Noh_Improving_Occlusion_and_CVPR_2018_paper.html",
+                "year": "2018",
+                "apa": "Noh, J., Lee, S., Kim, B., & Kim, G. (2018). Improving Occlusion and Hard Negative Handling for Single-Stage Pedestrian Detectors. 2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition, 966-974."
+            },
+            {
+                "title": "Transitional Adaptation of Pretrained Models for Visual Storytelling",
+                "conf_id": 122,
+                "href": "https://openaccess.thecvf.com/content/CVPR2021/html/Yu_Transitional_Adaptation_of_Pretrained_Models_for_Visual_Storytelling_CVPR_2021_paper.html",
+                "year": "2021",
+                "apa": "Yu, Y., Chung, J., Yun, H., Kim, J., & Kim, G. (2021). Transitional Adaptation of Pretrained Models for Visual Storytelling. 2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 12653-12663."
+            },
+            {
+                "title": "StyleMix: Separating Content and Style for Enhanced Data Augmentation",
+                "conf_id": 122,
+                "href": "https://openaccess.thecvf.com/content/CVPR2021/html/Hong_StyleMix_Separating_Content_and_Style_for_Enhanced_Data_Augmentation_CVPR_2021_paper.html",
+                "year": "2021",
+                "apa": "Hong, M., Choi, J., & Kim, G. (2021). StyleMix: Separating Content and Style for Enhanced Data Augmentation. 2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 14857-14865."
+            },
+            {
+                "title": "POL360: A Universal Mobile VR Motion Controller using Polarized Light",
+                "conf_id": 14,
+                "href": "https://dl.acm.org/doi/abs/10.1145/3359996.3364262",
+                "year": "2019",
+                "apa": "Jang, H., Choi, J., & Kim, G. (2019). POL360: A Universal Mobile VR Motion Controller using Polarized Light. 25th ACM Symposium on Virtual Reality Software and Technology."
+            },
+            {
+                "title": "Towards personalized image captioning via multimodal memory networks",
+                "conf_id": 403,
+                "href": "https://ieeexplore.ieee.org/abstract/document/8334621/",
+                "year": "2019",
+                "apa": "Park, C.C., Kim, B., & Kim, G. (2019). Towards Personalized Image Captioning via Multimodal Memory Networks. IEEE Transactions on Pattern Analysis and Machine Intelligence, 41, 999-1012."
+            },
+            {
+                "title": "Retrieval of sentence sequences for an image stream via coherence recurrent convolutional networks",
+                "conf_id": 403,
+                "href": "https://ieeexplore.ieee.org/abstract/document/7917283/",
+                "year": "2018",
+                "apa": "Park, C.C., Kim, Y., & Kim, G. (2018). Retrieval of Sentence Sequences for an Image Stream via Coherence Recurrent Convolutional Networks. IEEE Transactions on Pattern Analysis and Machine Intelligence, 40, 945-957."
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "prof_name": "김덕진",
+        "email": "djkim@snu.ac.kr",
+        "href": "http://satgeo.snu.ac.kr",
+        "name": "SATELLITE GEOPHYSICS LABORATORY",
+        "school": "snu",
+        "description": "인공위성정보, 기계학습, AWS",
+        "total_paper_num": 15,
+        "paper": [
+            {
+                "title": "Surface observation of thwaites ice tongue in west antarctica using dual-polarized TerraSAR-X data",
+                "conf_id": 101,
+                "href": "https://ieeexplore.ieee.org/abstract/document/6350485/",
+                "year": "2012",
+                "apa": "Kim, S.H., & Kim, D. (2012). Surface observation of thwaites ice tongue in west antarctica using dual-polarized TerraSAR-X data. 2012 IEEE International Geoscience and Remote Sensing Symposium, 4446-4448."
+            },
+            {
+                "title": "Mitigation of atmospheric phase delay effects in SAR interferometry for volcanic activity monotoring using MODIS data and WRF model",
+                "conf_id": 101,
+                "href": "https://ieeexplore.ieee.org/abstract/document/6350632/",
+                "year": "2012",
+                "apa": "Jung, J., & Kim, D. (2012). Mitigation of atmospheric phase delay effects in SAR interferometry for volcanic activity monotoring using MODIS data and WRF model. 2012 IEEE International Geoscience and Remote Sensing Symposium, 3623-3626."
+            },
+            {
+                "title": "Correction of tropospheric phase delay in time series InSAR using WRF model for monitoring Shinmoedake volcano",
+                "conf_id": 101,
+                "href": "https://ieeexplore.ieee.org/abstract/document/6721111/",
+                "year": "2013",
+                "apa": "Jung, J., & Kim, D. (2013). Correction of tropospheric phase delay in time series InSAR using WRF model for monitoring Shinmoedake volcano. 2013 IEEE International Geoscience and Remote Sensing Symposium - IGARSS, 137-140."
+            },
+            {
+                "title": "Water Body Detection using Deep Learning with Sentinel-1 SAR satellite data and Land Cover Maps",
+                "conf_id": 101,
+                "href": "https://ieeexplore.ieee.org/abstract/document/9553555/",
+                "year": "2021",
+                "apa": "Jeon, H., Kim, D., & Kim, J. (2021). Water Body Detection using Deep Learning with Sentinel-1 SAR satellite data and Land Cover Maps. 2021 IEEE International Geoscience and Remote Sensing Symposium IGARSS, 8495-8498."
+            },
+            {
+                "title": "Evaluation of long-baseline TanDEM-X DEM in tidal flat",
+                "conf_id": 101,
+                "href": "https://ieeexplore.ieee.org/abstract/document/7729080/",
+                "year": "2016",
+                "apa": "Choi, C., & Kim, D. (2016). Evaluation of long-baseline TanDEM-X DEM in tidal flat. 2016 IEEE International Geoscience and Remote Sensing Symposium (IGARSS), 336-339."
+            },
+            {
+                "title": "Coherent change detection using InSAR temporal decorrelation model: A case study for volcanic ash detection",
+                "conf_id": 393,
+                "href": "https://ieeexplore.ieee.org/abstract/document/7505618/",
+                "year": "2016",
+                "apa": "Jung, J., Kim, D., Lavalle, M., & Yun, S. (2016). Coherent Change Detection Using InSAR Temporal Decorrelation Model: A Case Study for Volcanic Ash Detection. IEEE Transactions on Geoscience and Remote Sensing, 54, 5765-5775."
+            },
+            {
+                "title": "Ship velocity estimation from ship wakes detected using convolutional neural networks",
+                "conf_id": 375,
+                "href": "https://ieeexplore.ieee.org/abstract/document/8896951/",
+                "year": "2019",
+                "apa": "Kang, K., & Kim, D. (2019). Ship Velocity Estimation From Ship Wakes Detected Using Convolutional Neural Networks. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 12, 4379-4388."
+            },
+            {
+                "title": "Characterization of Arctic sea ice thickness using high-resolution spaceborne polarimetric SAR data",
+                "conf_id": 393,
+                "href": "https://ieeexplore.ieee.org/abstract/document/5966332/",
+                "year": "2012",
+                "apa": "Kim, J., Kim, D., & Hwang, B. (2012). Characterization of Arctic Sea Ice Thickness Using High-Resolution Spaceborne Polarimetric SAR Data. IEEE Transactions on Geoscience and Remote Sensing, 50, 13-22."
+            },
+            {
+                "title": "Optimum baseline of a single-pass In-SAR system to generate the best DEM in tidal flats",
+                "conf_id": 375,
+                "href": "https://ieeexplore.ieee.org/abstract/document/8291526/",
+                "year": "2018",
+                "apa": "Choi, C., & Kim, D. (2018). Optimum Baseline of a Single-Pass In-SAR System to Generate the Best DEM in Tidal Flats. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 11, 919-929."
+            },
+            {
+                "title": "Detection of durable and permanent changes in urban areas using multitemporal polarimetric UAVSAR data",
+                "conf_id": 371,
+                "href": "https://ieeexplore.ieee.org/abstract/document/7373590/",
+                "year": "2016",
+                "apa": "Kim, D., Hensley, S., Yun, S., & Neumann, M. (2016). Detection of Durable and Permanent Changes in Urban Areas Using Multitemporal Polarimetric UAVSAR Data. IEEE Geoscience and Remote Sensing Letters, 13, 267-271."
+            },
+            {
+                "title": "Damage-mapping algorithm based on coherence model using multitemporal polarimetric–interferometric SAR data",
+                "conf_id": 393,
+                "href": "https://ieeexplore.ieee.org/abstract/document/8124198/",
+                "year": "2018",
+                "apa": "Jung, J., Yun, S., Kim, D., & Lavalle, M. (2018). Damage-Mapping Algorithm Based on Coherence Model Using Multitemporal Polarimetric–Interferometric SAR Data. IEEE Transactions on Geoscience and Remote Sensing, 56, 1520-1532."
+            },
+            {
+                "title": "Doppler velocity characteristics during tropical cyclones observed using ScanSAR raw data",
+                "conf_id": 393,
+                "href": "https://ieeexplore.ieee.org/abstract/document/7373595/",
+                "year": "2016",
+                "apa": "Kang, K., Kim, D., Kim, S.H., & Moon, W.M. (2016). Doppler Velocity Characteristics During Tropical Cyclones Observed Using ScanSAR Raw Data. IEEE Transactions on Geoscience and Remote Sensing, 54, 2343-2355."
+            },
+            {
+                "title": "Paddy field mapping using topographic and scattering features of PolSAR data",
+                "conf_id": 371,
+                "href": "https://ieeexplore.ieee.org/abstract/document/7842574/",
+                "year": "2017",
+                "apa": "Kim, Y., Oh, J., Kim, D., & Kim, Y. (2017). Paddy Field Mapping Using Topographic and Scattering Features of PolSAR Data. IEEE Geoscience and Remote Sensing Letters, 14, 484-488."
+            },
+            {
+                "title": "Estimation of surface roughness parameter in intertidal mudflat using airborne polarimetric SAR data",
+                "conf_id": 393,
+                "href": "https://ieeexplore.ieee.org/abstract/document/4804116/",
+                "year": "2009",
+                "apa": "Park, S., Moon, W.M., & Kim, D. (2009). Estimation of Surface Roughness Parameter in Intertidal Mudflat Using Airborne Polarimetric SAR Data. IEEE Transactions on Geoscience and Remote Sensing, 47, 1022-1031."
+            },
+            {
+                "title": "Application of TerraSAR-X data for emergent oil-spill monitoring",
+                "conf_id": 393,
+                "href": "https://ieeexplore.ieee.org/abstract/document/5357426/",
+                "year": "2010",
+                "apa": "Kim, D., Moon, W.M., & Kim, Y. (2010). Application of TerraSAR-X Data for Emergent Oil-Spill Monitoring. IEEE Transactions on Geoscience and Remote Sensing, 48, 852-863."
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "prof_name": "김선",
+        "email": "sunkim.bioinfo@snu.ac.kr",
+        "href": "http://biohealth.snu.ac.kr",
+        "name": "생물정보 및 생명정보 연구실",
+        "school": "snu",
+        "description": "생명정보, 기계학습",
+        "total_paper_num": 10,
+        "paper": [
+            {
+                "title": "Identifying stress-related genes and predicting stress types in Arabidopsis using logical correlation layer and CMCL loss through time-series data",
+                "conf_id": 87,
+                "href": "https://ieeexplore.ieee.org/abstract/document/8621581/",
+                "year": "2018",
+                "apa": "Kang, D., Ahn, H., Lee, S., Lee, C., Hur, J., Jung, W., & Kim, S. (2018). Identifying stress-related genes and predicting stress types in Arabidopsis using logical correlation layer and CMCL loss through time-series data. 2018 IEEE International Conference on Bioinformatics and Biomedicine (BIBM), 399-404."
+            },
+            {
+                "title": "HTRgene: integrating multiple heterogeneous time-series data to investigate cold and heat stress response signaling genes in Arabidopsis",
+                "conf_id": 87,
+                "href": "https://ieeexplore.ieee.org/abstract/document/8621290/",
+                "year": "2018",
+                "apa": "Ahn, H., Jung, I., Chae, H., Kang, D., Jung, W., & Kim, S. (2018). HTRgene: Integrating Multiple Heterogeneous Time-series Data to Investigate Cold and Heat Stress Response Signaling Genes in Arabidopsis. 2018 IEEE International Conference on Bioinformatics and Biomedicine (BIBM), 393-398."
+            },
+            {
+                "title": "Flow maximization analysis of cell cycle pathway activation status in breast cancer subtypes",
+                "conf_id": 84,
+                "href": "https://ieeexplore.ieee.org/abstract/document/7881721/",
+                "year": "2017",
+                "apa": "Lee, S., Moon, J.H., Park, Y., & Kim, S. (2017). Flow maximization analysis of cell cycle pathway activation status in breast cancer subtypes. 2017 IEEE International Conference on Big Data and Smart Computing (BigComp), 91-95."
+            },
+            {
+                "title": "Flow maximization analysis of cell cycle pathway activation status in breast cancer subtypes",
+                "conf_id": 85,
+                "href": "https://ieeexplore.ieee.org/abstract/document/7881721/",
+                "year": "2017",
+                "apa": "Lee, S., Moon, J.H., Park, Y., & Kim, S. (2017). Flow maximization analysis of cell cycle pathway activation status in breast cancer subtypes. 2017 IEEE International Conference on Big Data and Smart Computing (BigComp), 91-95."
+            },
+            {
+                "title": "Deepfunnet: deep learning for gene functional similarity network construction",
+                "conf_id": 84,
+                "href": "https://ieeexplore.ieee.org/abstract/document/8679374/",
+                "year": "2019",
+                "apa": "Ahn, H., Son, S., & Kim, S. (2019). DeepFunNet: Deep Learning for Gene Functional Similarity Network Construction. 2019 IEEE International Conference on Big Data and Smart Computing (BigComp), 1-8."
+            },
+            {
+                "title": "Deepfunnet: deep learning for gene functional similarity network construction",
+                "conf_id": 85,
+                "href": "https://ieeexplore.ieee.org/abstract/document/8679374/",
+                "year": "2019",
+                "apa": "Ahn, H., Son, S., & Kim, S. (2019). DeepFunNet: Deep Learning for Gene Functional Similarity Network Construction. 2019 IEEE International Conference on Big Data and Smart Computing (BigComp), 1-8."
+            },
+            {
+                "title": "Integration of heterogeneous time series gene expression data by clustering on time dimension",
+                "conf_id": 84,
+                "href": "https://ieeexplore.ieee.org/abstract/document/7881688/",
+                "year": "2017",
+                "apa": "Ahn, H., Chae, H., Jung, W., & Kim, S. (2017). Integration of heterogeneous time series gene expression data by clustering on time dimension. 2017 IEEE International Conference on Big Data and Smart Computing (BigComp), 332-335."
+            },
+            {
+                "title": "Integration of heterogeneous time series gene expression data by clustering on time dimension",
+                "conf_id": 85,
+                "href": "https://ieeexplore.ieee.org/abstract/document/7881688/",
+                "year": "2017",
+                "apa": "Ahn, H., Chae, H., Jung, W., & Kim, S. (2017). Integration of heterogeneous time series gene expression data by clustering on time dimension. 2017 IEEE International Conference on Big Data and Smart Computing (BigComp), 332-335."
+            },
+            {
+                "title": "Homomorphic Computation of Local Alignment",
+                "conf_id": 87,
+                "href": "https://ieeexplore.ieee.org/abstract/document/9313199/",
+                "year": "2020",
+                "apa": "Bataa, M., Song, S., Park, K., Kim, M., Cheon, J.H., & Kim, S. (2020). Homomorphic Computation of Local Alignment. 2020 IEEE International Conference on Bioinformatics and Biomedicine (BIBM), 2167-2174."
+            },
+            {
+                "title": "Biovlab-mmia: a reconfigurable cloud computing environment for microrna and mrna integrated analysis",
+                "conf_id": 87,
+                "href": "https://ieeexplore.ieee.org/abstract/document/6120491/",
+                "year": "2011",
+                "apa": "Lee, H., Yang, Y., Chae, H., Nam, S., Choi, D., Tangchaisin, P., Herath, C., Marru, S., Nephew, K.P., & Kim, S. (2011). BioVLAB-MMIA: A Reconfigurable Cloud Computing Environment for microRNA and mRNA Integrated Analysis. 2011 IEEE International Conference on Bioinformatics and Biomedicine, 494-499."
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "prof_name": "김영민",
+        "email": "youngmin.kim@snu.ac.kr",
+        "href": "https://3d.snu.ac.kr/",
+        "name": "3차원 비쥬얼 컴퓨팅 및 기하학적 처리 연구실",
+        "school": "snu",
+        "description": "3D 비전",
+        "total_paper_num": 7,
+        "paper": [
+            {
+                "title": "PotSAC: A Robust Axis Estimator for Axially Symmetric Pot Fragments",
+                "conf_id": 123,
+                "href": "https://openaccess.thecvf.com/content_ICCVW_2019/papers/EH/Hong_PotSAC_A_Robust_Axis_Estimator_for_Axially_Symmetric_Pot_Fragments_ICCVW_2019_paper.pdf",
+                "year": "2019",
+                "apa": "Hong, J.H., Kim, Y., Wi, K., & Kim, J. (2019). PotSAC: A Robust Axis Estimator for Axially Symmetric Pot Fragments. 2019 IEEE/CVF International Conference on Computer Vision Workshop (ICCVW), 1421-1428."
+            },
+            {
+                "title": "PotSAC: A Robust Axis Estimator for Axially Symmetric Pot Fragments",
+                "conf_id": 123,
+                "href": "http://openaccess.thecvf.com/content_ICCVW_2019/html/EH/Hong_PotSAC_A_Robust_Axis_Estimator_for_Axially_Symmetric_Pot_Fragments_ICCVW_2019_paper.html",
+                "year": "2019",
+                "apa": "Hong, J.H., Kim, Y., Wi, K., & Kim, J. (2019). PotSAC: A Robust Axis Estimator for Axially Symmetric Pot Fragments. 2019 IEEE/CVF International Conference on Computer Vision Workshop (ICCVW), 1421-1428."
+            },
+            {
+                "title": "RL-GAN-Net: A Reinforcement Learning Agent Controlled GAN Network for Real-Time Point Cloud Shape Completion",
+                "conf_id": 122,
+                "href": "http://openaccess.thecvf.com/content_CVPR_2019/supplemental/Sarmad_RL-GAN-Net_A_Reinforcement_CVPR_2019_supplemental.pdf",
+                "year": "2019",
+                "apa": "Sarmad, M., Lee, H.J., & Kim, Y. (2019). RL-GAN-Net: A Reinforcement Learning Agent Controlled GAN Network for Real-Time Point Cloud Shape Completion. 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 5891-5900."
+            },
+            {
+                "title": "Rl-gan-net: A reinforcement learning agent controlled gan network for real-time point cloud shape completion",
+                "conf_id": 122,
+                "href": "http://openaccess.thecvf.com/content_CVPR_2019/html/Sarmad_RL-GAN-Net_A_Reinforcement_Learning_Agent_Controlled_GAN_Network_for_Real-Time_CVPR_2019_paper.html",
+                "year": "2019",
+                "apa": "Sarmad, M., Lee, H.J., & Kim, Y. (2019). RL-GAN-Net: A Reinforcement Learning Agent Controlled GAN Network for Real-Time Point Cloud Shape Completion. 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 5891-5900."
+            },
+            {
+                "title": "Automatic Pose Generation for Robotic 3-D Scanning of Mechanical Parts",
+                "conf_id": 404,
+                "href": "https://ieeexplore.ieee.org/abstract/document/9089042/",
+                "year": "2020",
+                "apa": "Lee, I.D., Seo, J.H., Kim, Y., Choi, J., Han, S., & Yoo, B. (2020). Automatic Pose Generation for Robotic 3-D Scanning of Mechanical Parts. IEEE Transactions on Robotics, 36, 1219-1238."
+            },
+            {
+                "title": "GATSBI: Generative Agent-centric Spatio-temporal Object Interaction",
+                "conf_id": 122,
+                "href": "http://openaccess.thecvf.com/content/CVPR2021/html/Min_GATSBI_Generative_Agent-Centric_Spatio-Temporal_Object_Interaction_CVPR_2021_paper.html",
+                "year": "2021",
+                "apa": "Min, C., Bae, J., Lee, J., & Kim, Y. (2021). GATSBI: Generative Agent-centric Spatio-temporal Object Interaction. 2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 3073-3082."
+            },
+            {
+                "title": "3D Pots Configuration System by Optimizing over Geometric Constraints",
+                "conf_id": 197,
+                "href": "https://ieeexplore.ieee.org/abstract/document/9412372/",
+                "year": "2021",
+                "apa": "Kim, J.E., Arshad, M.Z., Jong, Y.S., Hong, J., Kim, J., & Kim, Y. (2021). 3D Pots Configuration System by Optimizing over Geometric Constraints. 2020 25th International Conference on Pattern Recognition (ICPR), 2398-2405."
+            }
+        ]
+    },
+    {
+        "id": 11,
         "prof_name": "김장우",
         "email": "jangwoo@snu.ac.kr",
         "href": "https://hpcs.snu.ac.kr/~jangwoo",
@@ -148,7 +602,7 @@
         "paper": []
     },
     {
-        "id": 5,
+        "id": 12,
         "prof_name": "김현진",
         "email": "hjinkim@snu.ac.kr",
         "href": "larr.snu.ac.kr",
@@ -393,7 +847,7 @@
                 "conf_id": 125,
                 "href": "https://ieeexplore.ieee.org/abstract/document/9341486/",
                 "year": "2020",
-                "apa": "Kim, C., Kim, J., & Kim, H. (2020). Edge-based Visual Odometry with Stereo Cameras using Multiple Oriented Quadtrees. 2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 5917-5924."
+                "apa": "Kim, C., Kim, J., & Kim, H.J. (2020). Edge-based Visual Odometry with Stereo Cameras using Multiple Oriented Quadtrees. 2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 5917-5924."
             },
             {
                 "title": "Stable flight of a flapping-wing micro air vehicle under wind disturbance",
@@ -405,18 +859,18 @@
         ]
     },
     {
-        "id": 6,
+        "id": 13,
         "prof_name": "류경석",
         "email": "ernestryu@snu.ac.kr",
         "href": "http://www.math.snu.ac.kr/~ernestryu/",
-        "name": "_",
+        "name": "류경석교수님 연구실",
         "school": "snu",
         "description": "최적화, 머신러닝 이론",
         "total_paper_num": 0,
         "paper": []
     },
     {
-        "id": 7,
+        "id": 14,
         "prof_name": "문태섭",
         "email": "tsmoon@snu.ac.kr",
         "href": "https://mindlab-snu.github.io",
@@ -442,7 +896,7 @@
         ]
     },
     {
-        "id": 8,
+        "id": 15,
         "prof_name": "박재흥",
         "email": "park73@snu.ac.kr",
         "href": "http://dyros.snu.ac.kr/",
@@ -573,7 +1027,7 @@
         ]
     },
     {
-        "id": 9,
+        "id": 16,
         "prof_name": "박종우",
         "email": "fcp@snu.ac.kr",
         "href": "http://robotics.snu.ac.kr",
@@ -760,7 +1214,7 @@
         ]
     },
     {
-        "id": 10,
+        "id": 17,
         "prof_name": "백대현",
         "email": "baek@snu.ac.kr",
         "href": "http://biosci.snu.ac.kr/baeklab",
@@ -771,18 +1225,18 @@
         "paper": []
     },
     {
-        "id": 11,
+        "id": 18,
         "prof_name": "백용주",
         "email": "y.baek@snu.ac.kr",
         "href": "https://yongjoobaek.wordpress.com",
-        "name": "_",
+        "name": "백용주교수님 연구실",
         "school": "snu",
         "description": "통계물리",
         "total_paper_num": 0,
         "paper": []
     },
     {
-        "id": 12,
+        "id": 19,
         "prof_name": "서봉원",
         "email": "bongwon@snu.ac.kr",
         "href": "http://hcc.snu.ac.kr",
@@ -801,7 +1255,7 @@
         ]
     },
     {
-        "id": 13,
+        "id": 20,
         "prof_name": "석차옥",
         "email": "chaok@snu.ac.kr",
         "href": "http://compbio.snu.ac.kr",
@@ -812,7 +1266,7 @@
         "paper": []
     },
     {
-        "id": 14,
+        "id": 21,
         "prof_name": "손석우",
         "email": "seokwooson@snu.ac.kr",
         "href": "http://wcd.snu.ac.kr",
@@ -823,7 +1277,7 @@
         "paper": []
     },
     {
-        "id": 15,
+        "id": 22,
         "prof_name": "송현오",
         "email": "hyunoh@snu.ac.kr",
         "href": "http://mllab.snu.ac.kr/hyunoh",
@@ -834,7 +1288,7 @@
         "paper": []
     },
     {
-        "id": 16,
+        "id": 23,
         "prof_name": "안우영",
         "email": "wahn55@snu.ac.kr",
         "href": "https://ccs-lab.github.io/",
@@ -845,7 +1299,7 @@
         "paper": []
     },
     {
-        "id": 17,
+        "id": 24,
         "prof_name": "안정호",
         "email": "gajh@snu.ac.kr",
         "href": "http://scale.snu.ac.kr",
@@ -864,7 +1318,7 @@
         ]
     },
     {
-        "id": 18,
+        "id": 25,
         "prof_name": "양인순",
         "email": "insoonyang@snu.ac.kr",
         "href": "http://coregroup.snu.ac.kr/~yang/",
@@ -897,7 +1351,7 @@
         ]
     },
     {
-        "id": 19,
+        "id": 26,
         "prof_name": "오성회",
         "email": "songhwai@snu.ac.kr",
         "href": "http://rllab.snu.ac.kr",
@@ -1056,18 +1510,18 @@
         ]
     },
     {
-        "id": 20,
+        "id": 27,
         "prof_name": "원중호",
         "email": "wonj@stats.snu.ac.kr",
         "href": "https://won-j.github.io",
-        "name": "_",
+        "name": "원중호교수님 연구실",
         "school": "snu",
         "description": "통계계산",
         "total_paper_num": 0,
         "paper": []
     },
     {
-        "id": 21,
+        "id": 28,
         "prof_name": "유승주",
         "email": "sungjoo.yoo@gmail.com",
         "href": "http://cmalab.snu.ac.kr",
@@ -1100,7 +1554,7 @@
         ]
     },
     {
-        "id": 22,
+        "id": 29,
         "prof_name": "윤성로",
         "email": "sryoon@snu.ac.kr",
         "href": "http://ailab.snu.ac.kr/",
@@ -1126,7 +1580,7 @@
         ]
     },
     {
-        "id": 23,
+        "id": 30,
         "prof_name": "이경무",
         "email": "kyoungmu@snu.ac.kr",
         "href": "http://cv.snu.ac.kr",
@@ -1292,7 +1746,7 @@
         ]
     },
     {
-        "id": 24,
+        "id": 31,
         "prof_name": "이경수",
         "email": "kyi@snu.ac.kr",
         "href": "http://vdcl.snu.ac.kr",
@@ -1416,7 +1870,101 @@
         ]
     },
     {
-        "id": 25,
+        "id": 32,
+        "prof_name": "이교구",
+        "email": "kglee@snu.ac.kr",
+        "href": "http://marg.snu.ac.kr",
+        "name": "음악 오디오 연구실",
+        "school": "snu",
+        "description": "컴퓨터청각, 기계학습",
+        "total_paper_num": 7,
+        "paper": [
+            {
+                "title": "Do Channels Matter? Illuminating Interpersonal Influence on Music Recommendations",
+                "conf_id": 3,
+                "href": "https://dl.acm.org/doi/abs/10.1145/3383313.3418489",
+                "year": "2020",
+                "apa": "Kim, H.J., Park, S.Y., Park, M., & Lee, K. (2020). Do Channels Matter? Illuminating Interpersonal Influence on Music Recommendations. Fourteenth ACM Conference on Recommender Systems."
+            },
+            {
+                "title": "Disentangling timbre and singing style with multi-singer singing synthesis system",
+                "conf_id": 77,
+                "href": "https://ieeexplore.ieee.org/abstract/document/9054636/",
+                "year": "2020",
+                "apa": "Lee, J., Choi, H., Koo, J., & Lee, K. (2020). Disentangling Timbre and Singing Style with Multi-Singer Singing Synthesis System. ICASSP 2020 - 2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 7224-7228."
+            },
+            {
+                "title": "Note onset detection based on harmonic cepstrum regularity",
+                "conf_id": 97,
+                "href": "https://ieeexplore.ieee.org/abstract/document/6607461/",
+                "year": "2013",
+                "apa": "Heo, H., Sung, D., & Lee, K. (2013). Note onset detection based on harmonic cepstrum regularity. 2013 IEEE International Conference on Multimedia and Expo (ICME), 1-6."
+            },
+            {
+                "title": "A pairwise approach to simultaneous onset/offset detection for singing voice using correntropy",
+                "conf_id": 77,
+                "href": "https://ieeexplore.ieee.org/abstract/document/6853672/",
+                "year": "2014",
+                "apa": "Chang, S., & Lee, K. (2014). A pairwise approach to simultaneous onset/offset detection for singing voice using correntropy. 2014 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 629-633."
+            },
+            {
+                "title": "Vocal separation using extended robust principal component analysis with Schatten p/lp-norm and scale compression",
+                "conf_id": 251,
+                "href": "https://ieeexplore.ieee.org/abstract/document/6958909/",
+                "year": "2014",
+                "apa": "Jeong, I., & Lee, K. (2014). Vocal separation using extended robust principal component analysis with Schatten p/lp-norm and scale compression. 2014 IEEE International Workshop on Machine Learning for Signal Processing (MLSP), 1-6."
+            },
+            {
+                "title": "Mood classfication from musical audio using user group-dependent models",
+                "conf_id": 188,
+                "href": "https://ieeexplore.ieee.org/abstract/document/6147661/",
+                "year": "2011",
+                "apa": "Lee, K., & Cho, M. (2011). Mood Classfication from Musical Audio Using User Group-Dependent Models. 2011 10th International Conference on Machine Learning and Applications and Workshops, 2, 130-135."
+            },
+            {
+                "title": "Towards a class-based representation of perceptual tempo for music retrieval",
+                "conf_id": 188,
+                "href": "https://ieeexplore.ieee.org/abstract/document/5381398/",
+                "year": "2009",
+                "apa": "Chen, C., Lee, K., & Wu, H. (2009). Towards a Class-Based Representation of Perceptual Tempo for Music Retrieval. 2009 International Conference on Machine Learning and Applications, 602-607."
+            }
+        ]
+    },
+    {
+        "id": 33,
+        "prof_name": "이상구",
+        "email": "sglee@snu.ac.kr",
+        "href": "http://ids.snu.ac.kr/wiki/Sang-goo_Lee",
+        "name": "지능형 데이터 시스템 연구실",
+        "school": "snu",
+        "description": "데이터베이스, 자연어처리, 패션 AI",
+        "total_paper_num": 0,
+        "paper": []
+    },
+    {
+        "id": 34,
+        "prof_name": "이영기",
+        "email": "youngkilee@snu.ac.kr",
+        "href": "https://hcs.snu.ac.kr",
+        "name": "인간 중심 컴퓨터 시스템 연구실",
+        "school": "snu",
+        "description": "모바일 유비쿼터스 컴퓨팅",
+        "total_paper_num": 0,
+        "paper": []
+    },
+    {
+        "id": 35,
+        "prof_name": "이원종",
+        "email": "wrhee@snu.ac.kr",
+        "href": "http://adsl.snu.ac.kr",
+        "name": "응용데이터과학 연구실",
+        "school": "snu",
+        "description": "Deep Learning Theory, Representation Learning",
+        "total_paper_num": 0,
+        "paper": []
+    },
+    {
+        "id": 36,
         "prof_name": "이재성",
         "email": "jaes@snu.ac.kr",
         "href": "http://fmisl.snu.ac.kr/",
@@ -1442,7 +1990,7 @@
         ]
     },
     {
-        "id": 26,
+        "id": 37,
         "prof_name": "이재욱",
         "email": "jaewook@snu.ac.kr",
         "href": "http://slcf.snu.ac.kr",
@@ -1475,7 +2023,7 @@
         ]
     },
     {
-        "id": 27,
+        "id": 38,
         "prof_name": "이준환",
         "email": "joonhwan@snu.ac.kr",
         "href": "http://hcid.snu.ac.kr",
@@ -1494,7 +2042,7 @@
         ]
     },
     {
-        "id": 28,
+        "id": 39,
         "prof_name": "이혁재",
         "email": "hyukjae@snu.ac.kr",
         "href": "http://capp.snu.ac.kr",
@@ -1505,7 +2053,7 @@
         "paper": []
     },
     {
-        "id": 29,
+        "id": 40,
         "prof_name": "장병탁",
         "email": "btzhang@bi.snu.ac.kr",
         "href": "http://bi.snu.ac.kr/~btzhang/",
@@ -1566,7 +2114,7 @@
         ]
     },
     {
-        "id": 30,
+        "id": 41,
         "prof_name": "전동석",
         "email": "djeon1@snu.ac.kr",
         "href": "http://mms.snu.ac.kr",
@@ -1577,7 +2125,7 @@
         "paper": []
     },
     {
-        "id": 31,
+        "id": 42,
         "prof_name": "전병곤",
         "email": "bgchun@snu.ac.kr",
         "href": "https://spl.snu.ac.kr",
@@ -1588,7 +2136,7 @@
         "paper": []
     },
     {
-        "id": 32,
+        "id": 43,
         "prof_name": "전세영",
         "email": "sychun@snu.ac.kr",
         "href": "icl.snu.ac.kr",
@@ -1614,7 +2162,7 @@
         ]
     },
     {
-        "id": 33,
+        "id": 44,
         "prof_name": "정교민",
         "email": "kjung@snu.ac.kr",
         "href": "http://milab.snu.ac.kr",
@@ -1682,7 +2230,7 @@
         ]
     },
     {
-        "id": 34,
+        "id": 45,
         "prof_name": "정민화",
         "email": "mchung@snu.ac.kr",
         "href": "http://slp.snu.ac.kr",
@@ -1693,7 +2241,7 @@
         "paper": []
     },
     {
-        "id": 35,
+        "id": 46,
         "prof_name": "조남익",
         "email": "nicho@snu.ac.kr",
         "href": "http://ispl.snu.ac.kr",
@@ -1964,7 +2512,7 @@
         ]
     },
     {
-        "id": 36,
+        "id": 47,
         "prof_name": "조성준",
         "email": "zoon@snu.ac.kr",
         "href": "http://dm.snu.ac.kr/ko/people/professor",
@@ -2018,7 +2566,7 @@
         ]
     },
     {
-        "id": 37,
+        "id": 48,
         "prof_name": "차지욱",
         "email": "connectome@snu.ac.kr",
         "href": "http://sites.google.com/connectomelab.net/snu",
@@ -2037,7 +2585,7 @@
         ]
     },
     {
-        "id": 38,
+        "id": 49,
         "prof_name": "최진영",
         "email": "jychoi@snu.ac.kr",
         "href": "http://pil.snu.ac.kr",
@@ -2273,7 +2821,7 @@
         ]
     },
     {
-        "id": 39,
+        "id": 50,
         "prof_name": "하순회",
         "email": "sha@snu.ac.kr",
         "href": "http://peace.snu.ac.kr/sha/",
@@ -2292,7 +2840,7 @@
         ]
     },
     {
-        "id": 40,
+        "id": 51,
         "prof_name": "한보형",
         "email": "bhhan@snu.ac.kr",
         "href": "http://cvlab.snu.ac.kr/~bhhan",
@@ -2353,7 +2901,7 @@
         ]
     },
     {
-        "id": 41,
+        "id": 52,
         "prof_name": "황승원",
         "email": "seungwonh@snu.ac.kr",
         "href": "https://seungwonh.github.io",
@@ -2364,7 +2912,7 @@
         "paper": []
     },
     {
-        "id": 42,
+        "id": 53,
         "prof_name": "정송",
         "email": "songchong@kaist.ac.kr",
         "href": "http://sites.google.com/a/kaist.edu/song-chong",
@@ -2375,7 +2923,7 @@
         "paper": []
     },
     {
-        "id": 43,
+        "id": 54,
         "prof_name": "김기응",
         "email": "kekim@kaist.ac.kr",
         "href": "http://ailab.kaist.ac.kr/users/kekim",
@@ -2386,7 +2934,7 @@
         "paper": []
     },
     {
-        "id": 44,
+        "id": 55,
         "prof_name": "서민준",
         "email": "minjoon@kaist.ac.kr",
         "href": "https://seominjoon.github.io/",
@@ -2397,7 +2945,7 @@
         "paper": []
     },
     {
-        "id": 45,
+        "id": 56,
         "prof_name": "신진우",
         "email": "jinwoos@kaist.ac.kr",
         "href": "http://alinlab.kaist.ac.kr/shin.html",
@@ -2458,7 +3006,7 @@
         ]
     },
     {
-        "id": 46,
+        "id": 57,
         "prof_name": "양은호",
         "email": "eunhoy@kaist.ac.kr",
         "href": "http://sites.google.com/site/yangeh",
@@ -2477,7 +3025,7 @@
         ]
     },
     {
-        "id": 47,
+        "id": 58,
         "prof_name": "윤세영",
         "email": "yunseyoung@kaist.ac.kr",
         "href": "http://fbsqkd.github.io/",
@@ -2517,18 +3065,18 @@
         ]
     },
     {
-        "id": 48,
+        "id": 59,
         "prof_name": "윤철희",
         "email": "chulheey@mit.edu",
         "href": "https://chulheey.mit.edu/",
-        "name": "_",
+        "name": "윤철희교수님 연구실",
         "school": "kaist",
         "description": "최적화, 기계학습 및 심층학습 이론",
         "total_paper_num": 0,
         "paper": []
     },
     {
-        "id": 49,
+        "id": 60,
         "prof_name": "이주호",
         "email": "juholee@kaist.ac.kr",
         "href": "https://juho-lee.github.io/",
@@ -2539,7 +3087,7 @@
         "paper": []
     },
     {
-        "id": 50,
+        "id": 61,
         "prof_name": "주재걸",
         "email": "jchoo@kaist.ac.kr",
         "href": "https://sites.google.com/site/jaegulchoo/",
@@ -2586,18 +3134,18 @@
         ]
     },
     {
-        "id": 51,
+        "id": 62,
         "prof_name": "최윤재",
         "email": "edwardchoi@kaist.ac.kr",
         "href": "http://mp2893.com/",
-        "name": "_",
+        "name": "최윤재교수님 연구실",
         "school": "kaist",
         "description": "기계학습, 헬스케어, 자연어 처리",
         "total_paper_num": 0,
         "paper": []
     },
     {
-        "id": 52,
+        "id": 63,
         "prof_name": "최재식",
         "email": "jaesik.choi@kaist.ac.kr",
         "href": "http://sailab.kaist.ac.kr/",
@@ -2616,7 +3164,7 @@
         ]
     },
     {
-        "id": 53,
+        "id": 64,
         "prof_name": "황성주",
         "email": "sjhwang82@kaist.ac.kr",
         "href": "http://www.sungjuhwang.com/",
@@ -2627,7 +3175,7 @@
         "paper": []
     },
     {
-        "id": 54,
+        "id": 65,
         "prof_name": "곽수하",
         "email": "mercury3@postech.ac.kr",
         "href": "http://cvlab.postech.ac.kr/~suhakwak/",
@@ -2638,7 +3186,7 @@
         "paper": []
     },
     {
-        "id": 55,
+        "id": 66,
         "prof_name": "김원화",
         "email": "wonhwa@postech.ac.kr",
         "href": "http://aimi.postech.ac.kr/",
@@ -2649,7 +3197,7 @@
         "paper": []
     },
     {
-        "id": 56,
+        "id": 67,
         "prof_name": "이근배",
         "email": "gblee@postech.ac.kr",
         "href": "ttp://nlp.postech.ac.kr/~gblee/",
@@ -2724,7 +3272,7 @@
         ]
     },
     {
-        "id": 57,
+        "id": 68,
         "prof_name": "이승용",
         "email": "leesy@postech.ac.kr",
         "href": "http://phome.postech.ac.kr/~leesy/",
@@ -2806,7 +3354,7 @@
         ]
     },
     {
-        "id": 58,
+        "id": 69,
         "prof_name": "이종혁",
         "email": "jhlee@postech.ac.kr",
         "href": "http://kle.postech.ac.kr/~jhlee/",
@@ -2832,7 +3380,7 @@
         ]
     },
     {
-        "id": 59,
+        "id": 70,
         "prof_name": "조민수",
         "email": "mscho@postech.ac.kr",
         "href": "http://cvlab.postech.ac.kr/~mcho/",
@@ -2886,7 +3434,7 @@
         ]
     },
     {
-        "id": 60,
+        "id": 71,
         "prof_name": "조성현",
         "email": "sodomau@postech.ac.kr",
         "href": "https://www.scho.pe.kr/",
@@ -2905,7 +3453,7 @@
         ]
     },
     {
-        "id": 61,
+        "id": 72,
         "prof_name": "박은혁",
         "email": "eh.park@postech.ac.kr",
         "href": "",
@@ -2916,7 +3464,7 @@
         "paper": []
     },
     {
-        "id": 62,
+        "id": 73,
         "prof_name": "서영주",
         "email": "yjsuh@postech.ac.kr",
         "href": "http://monet.postech.ac.kr/yjsuh/",
@@ -2927,7 +3475,7 @@
         "paper": []
     },
     {
-        "id": 63,
+        "id": 74,
         "prof_name": "성효진",
         "email": "hsung@postech.ac.kr",
         "href": "http://hsung.postech.ac.kr/",
@@ -2938,7 +3486,7 @@
         "paper": []
     },
     {
-        "id": 64,
+        "id": 75,
         "prof_name": "유환조",
         "email": "hwanjoyu@postech.ac.kr",
         "href": "https://sites.google.com/site/postechdm/people/faculty",
@@ -3034,18 +3582,18 @@
         ]
     },
     {
-        "id": 65,
+        "id": 76,
         "prof_name": "정재훈",
         "email": "jung153@postech.ac.kr",
         "href": "https://sites.google.com/view/jaehunjung",
-        "name": "_",
+        "name": "정재훈교수님 연구실",
         "school": "postech",
         "description": "위상수학적 데이터분석, 수치해석과 과학계산",
         "total_paper_num": 0,
         "paper": []
     },
     {
-        "id": 66,
+        "id": 77,
         "prof_name": "한욱신",
         "email": "wshan@postech.ac.kr",
         "href": "http://dblab.postech.ac.kr/",
@@ -3056,7 +3604,7 @@
         "paper": []
     },
     {
-        "id": 67,
+        "id": 78,
         "prof_name": "김동우",
         "email": "dongwookim@postech.ac.kr",
         "href": "http://ml.postech.ac.kr/",
@@ -3067,7 +3615,7 @@
         "paper": []
     },
     {
-        "id": 68,
+        "id": 79,
         "prof_name": "안희갑",
         "email": "heekap@postech.ac.kr",
         "href": "http://algo.postech.ac.kr/~heekap/",
@@ -3078,7 +3626,7 @@
         "paper": []
     },
     {
-        "id": 69,
+        "id": 80,
         "prof_name": "옥정슬",
         "email": "jungseul@postech.ac.kr",
         "href": "https://sites.google.com/view/jungseulok",
@@ -3097,7 +3645,7 @@
         ]
     },
     {
-        "id": 70,
+        "id": 81,
         "prof_name": "황형주",
         "email": "hjhwang@postech.ac.kr",
         "href": "http://am2.postech.ac.kr/",
@@ -3108,7 +3656,7 @@
         "paper": []
     },
     {
-        "id": 71,
+        "id": 82,
         "prof_name": "김영석",
         "email": "youngsok@yonsei.ac.kr",
         "href": "https://hpcp.yonsei.ac.kr/",
@@ -3119,7 +3667,7 @@
         "paper": []
     },
     {
-        "id": 72,
+        "id": 83,
         "prof_name": "박노성",
         "email": "noseong@yonsei.ac.kr",
         "href": "https://sites.google.com/view/npark",
@@ -3130,7 +3678,7 @@
         "paper": []
     },
     {
-        "id": 73,
+        "id": 84,
         "prof_name": "여진영",
         "email": "jinyeo@yonsei.ac.kr",
         "href": "http://convei.weebly.com/",
@@ -3141,7 +3689,7 @@
         "paper": []
     },
     {
-        "id": 74,
+        "id": 85,
         "prof_name": "이진호",
         "email": "leejinho@yonsei.ac.kr",
         "href": "https://acsys.yonsei.ac.kr/",
@@ -3167,7 +3715,7 @@
         ]
     },
     {
-        "id": 75,
+        "id": 86,
         "prof_name": "Christian Wallraven",
         "email": "wallraven@korea.ac.kr",
         "href": "https://cogsyslab.notion.site/",
@@ -3249,7 +3797,7 @@
         ]
     },
     {
-        "id": 76,
+        "id": 87,
         "prof_name": "감태의",
         "email": "kamte@korea.ac.kr",
         "href": "http://mailab.korea.ac.kr/",
@@ -3260,7 +3808,7 @@
         "paper": []
     },
     {
-        "id": 77,
+        "id": 88,
         "prof_name": "석흥일",
         "email": "hisuk@korea.ac.kr",
         "href": "https://milab.korea.ac.kr/",
@@ -3300,7 +3848,7 @@
         ]
     },
     {
-        "id": 78,
+        "id": 89,
         "prof_name": "성준경",
         "email": "jkseong@korea.ac.kr",
         "href": "http://brein.korea.ac.kr/lab/",
@@ -3319,7 +3867,7 @@
         ]
     },
     {
-        "id": 79,
+        "id": 90,
         "prof_name": "이상근",
         "email": "yalphy@korea.ac.kr",
         "href": "http://dilab.korea.ac.kr/",
@@ -3366,7 +3914,7 @@
         ]
     },
     {
-        "id": 80,
+        "id": 91,
         "prof_name": "이성환",
         "email": "sw.lee@korea.ac.kr",
         "href": "http://pr.korea.ac.kr/",
@@ -3637,7 +4185,7 @@
         ]
     },
     {
-        "id": 81,
+        "id": 92,
         "prof_name": "정원주",
         "email": "wchung@korea.ac.kr",
         "href": "http://spl.korea.ac.kr/",
@@ -3656,7 +4204,7 @@
         ]
     },
     {
-        "id": 82,
+        "id": 93,
         "prof_name": "최성준",
         "email": "sungjoon-choi@korea.ac.kr",
         "href": "https://sites.google.com/view/sungjoon-choi/home",
