@@ -18,25 +18,8 @@ const DetailSideBar = (props) => {
   var listItem ;
   var paperlist = "";
 
-  if ('selectedLabDetail' in props.labDetail) {
-    listItem = labInformation.paper.map((obj, i) =>
-      <li key={i}>
-        <b>{obj.title}</b> <br />
-        <i>{obj.apa}</i>
-        <a href={obj.href}>[link]</a>
-      </li>
-    );
-    if (labInformation.paper.length !== 0) {
-      paperlist = "Paper List";
-    }
-  } else {
-    listItem = "";
-    labInformation = {};
-  }
-
   // nothing selected
-  // TODO: more general condition to show nothing
-  if (!('selectedLabDetail' in props.labDetail)) {
+  if (!('selectedLabDetail' in props.labDetail) && !props.shouldVisualizeConf) {
     return (
       <div
       style={{
@@ -50,6 +33,40 @@ const DetailSideBar = (props) => {
       ></div>
     );
   }
+
+  if (props.shouldVisualizeConf) {
+    labInformation = {};
+    listItem = confInformation.papers.map((labObj, i) => {
+      const labPaperList = labObj.paper.map((paperObj, j) => {
+        return <li key={1000*i+j}>
+          <b>{paperObj.title}</b> <br />
+          <i>{paperObj.apa}</i>
+          <a href={paperObj.href}>[link]</a>
+        </li>
+      });
+      return <div>
+        <h3>{labObj.name}</h3>
+        {labPaperList}
+        <br />
+      </div>
+    });
+
+    if (confInformation.papers.length !== 0) {
+      paperlist = "Paper List";
+    }
+  } else {
+    listItem = labInformation.paper.map((obj, i) =>
+      <li key={i}>
+        <b>{obj.title}</b> <br />
+        <i>{obj.apa}</i>
+        <a href={obj.href}>[link]</a>
+      </li>
+    );
+    if (labInformation.paper.length !== 0) {
+      paperlist = "Paper List";
+    }
+  }
+
 
   if (props.shouldVisualizeConf) {
     return (
@@ -71,6 +88,10 @@ const DetailSideBar = (props) => {
         </h2>
         <b>Impact Score</b>: {confInformation.impactScore} <br />
         <b>Website     </b>: <a href={confInformation.website}>[link]</a><br />
+        <h2>
+          {paperlist}
+        </h2>
+        {listItem}
       </div>
     );
   } else {
@@ -100,7 +121,7 @@ const DetailSideBar = (props) => {
         </h2>
         <ul>{listItem}</ul>
       </div>
-    );
+    ); 
   }
   
 };

@@ -502,15 +502,9 @@ const CommunityGraph = (props) => {
       setConfClicked(true);
       const _title = b.path[0].innerText;
       const selectedConf = confs.find((conf) => conf.name === _title);
-
-      const selectedConfDetail = {
-        title: _title,
-        impactScore: selectedConf.impact_score,
-        website: selectedConf.website,
-      };
+      var papers = [];
 
       // Highlight related labs
-
       var related_lab = [];
 
       const labNode = d3.selectAll(".labNode");
@@ -521,7 +515,13 @@ const CommunityGraph = (props) => {
           (paper) => paper.conf_id == selectedConf.id
         );
 
-        if (publishedPaper.length > 0) related_lab.push(lab.id);
+        if (publishedPaper.length > 0)  {
+          related_lab.push(lab.id);
+          papers.push({
+            'name': lab.name,
+            'paper': publishedPaper,
+          });
+        }
       });
 
       labNode.classed("related_node", false);
@@ -531,6 +531,14 @@ const CommunityGraph = (props) => {
       });
 
       labLink.style("stroke", "darkgray").style("stroke-width", "1.3px");
+
+      console.log(papers);
+      const selectedConfDetail = {
+        title: _title,
+        impactScore: selectedConf.impact_score,
+        website: selectedConf.website,
+        papers: papers,
+      };
 
       setConfDetail({ selectedConfDetail });
       setConfFlag(true);
