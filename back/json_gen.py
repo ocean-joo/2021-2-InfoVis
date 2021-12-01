@@ -11,6 +11,7 @@ raw_lab_list = []
 lab_list = []
 link_list = []
 
+#  conference 봐보기
 school_list = ["snu", "kaist", "postech", "yonsei", "korea"]
 lab_in_conf_cnt = [] # lab_in_conf_cnt[A][B] : how many paper lab A published on conference B.
 adj_matrix = [] # adj_matrix[A][B] : weight, common conference for lab A and lab B
@@ -25,7 +26,7 @@ if __name__ == '__main__' :
         # Remove first line
         next(rdr)
         for row in rdr:
-            new_conf = {"id" : str(conf_id_idx), "name" : row[0], "impact_score" : float(row[2]), "isConf" : True}
+            new_conf = {"id" : str(conf_id_idx), "name" : row[0], "impact_score" : float(row[2]), "website" : row[6], "isConf" : True}
             conf_list.append(new_conf)
             conf_id_idx += 1
 
@@ -35,7 +36,7 @@ if __name__ == '__main__' :
         # Remove first line
         next(rdr)
         for row in rdr:
-            conf_list.append({"id" : str(conf_id_idx), "name" : row[0], "impact_score" : float(row[1]), "isConf" : False})
+            conf_list.append({"id" : str(conf_id_idx), "name" : row[0], "impact_score" : float(row[1]), "website" : row[13], "isConf" : False})
             conf_id_idx += 1
 
     for school in school_list:
@@ -70,7 +71,7 @@ if __name__ == '__main__' :
         lab_el["prof_name"] = lab["prof_name"]
         lab_el["email"] = lab["email"]
         lab_el["href"] = lab["href"]
-        lab_el["name"] = lab["name"]
+        lab_el["name"] = lab["name"] if lab["name"] != "_" else lab["prof_name"]+"교수님 연구실"
         lab_el["school"] = lab["school"]
         lab_el["description"] = lab["description"]
 
