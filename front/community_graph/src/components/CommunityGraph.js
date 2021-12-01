@@ -46,7 +46,6 @@ const CommunityGraph = (props) => {
   const comGraphHeightOffset = 0;
 
   const comGraphWidthPadding = 0;
-  var dur = 100;
   const link_popup_width = 100;
 
   const nodes = lab_json;
@@ -108,8 +107,7 @@ const CommunityGraph = (props) => {
       .append("g")
       .attr(
         "transform",
-        `translate(${comGraphWidth / 2 + comGraphWidthOffset} , ${
-          comGraphHeight / 2 + comGraphHeightOffset
+        `translate(${comGraphWidth / 2 + comGraphWidthOffset} , ${comGraphHeight / 2 + comGraphHeightOffset
         })`
       );
     // .attr("style", "outline: thin solid black;");
@@ -413,12 +411,12 @@ const CommunityGraph = (props) => {
         d3.select(path.node().parentNode).attr(
           "transform",
           "translate(" +
-            centroid[0] +
-            "," +
-            centroid[1] +
-            `) scale(` +
-            scaleFactor / 100 +
-            ")"
+          centroid[0] +
+          "," +
+          centroid[1] +
+          `) scale(` +
+          scaleFactor / 100 +
+          ")"
         );
 
         groupId.x = centroid[0];
@@ -468,22 +466,22 @@ const CommunityGraph = (props) => {
         linkPopup
           .html(
             make_space(10) +
-              "<b>Conference List" +
-              make_space(17) +
-              "Lab1" +
-              make_space(6) +
-              "Lab2" +
-              "</b></br>" +
-              conf_text +
-              "</br>" +
-              "Similarity : " +
-              d.weight +
-              " %</br>" +
-              "Lab 1 : " +
-              d.source.name +
-              "</br>Lab 2 : " +
-              d.target.name +
-              "</br>"
+            "<b>Conference List" +
+            make_space(17) +
+            "Lab1" +
+            make_space(6) +
+            "Lab2" +
+            "</b></br>" +
+            conf_text +
+            "</br>" +
+            "Similarity : " +
+            d.weight +
+            " %</br>" +
+            "Lab 1 : " +
+            d.source.name +
+            "</br>Lab 2 : " +
+            d.target.name +
+            "</br>"
           )
           .style("left", event.pageX + "px")
           .style("top", event.pageY - 28 + "px");
@@ -581,6 +579,8 @@ const CommunityGraph = (props) => {
     function dragstarted(event, d) {
       drag_start_x = event.x;
       drag_start_y = event.y;
+      linkPopup.transition().duration(200).style("opacity", 0);
+      linkPopup.html("");
     }
 
     function dragged(event, d) {
@@ -593,11 +593,13 @@ const CommunityGraph = (props) => {
     if (!isLabView) {
       schoolNodeEdge.on("click", onClickCluster);
       labNode.on("click", null);
+      d3.select(comGraph.current).on(".dragBackground", null);
     } else {
       const selectedNode = d3.select(".active").data()[0];
       schoolNodeEdge.on("click", null);
-      transitionToLabView(null, selectedNode);
+      transitionToLabView(null, selectedNode, 0);
       labNode.on("click", onClickNode);
+      d3.select(comGraph.current).call(dragBackground);
     }
 
     // helper functions
@@ -608,24 +610,24 @@ const CommunityGraph = (props) => {
           node = n;
         }
       });
-      transitionToLabView(event, node);
+      transitionToLabView(event, node, 600);
     }
 
     function onClickNode(event, d) {
       setConfClicked(false);
-      setXOffset(0);
-      setYOffset(0);
       const selectedNode = d3.select(".active").data()[0];
       linkPopup.transition().duration(200).style("opacity", 0);
       linkPopup.html("");
       if (selectedNode !== d) {
-        transitionToLabView(event, d);
+        transitionToLabView(event, d, 600);
       } else {
-        transitionToSchoolView(event, d);
+        transitionToSchoolView(event, d, 600);
       }
+      setXOffset(0);
+      setYOffset(0);
     }
 
-    function transitionToLabView(event, d) {
+    function transitionToLabView(event, d, dur) {
       var x, y, k;
       const x_offset = 14000 / scaleFactor;
       const y_offset = 10000 / scaleFactor;
@@ -645,16 +647,16 @@ const CommunityGraph = (props) => {
         .attr(
           "transform",
           "translate(" +
-            comGraphWidth / 2 +
-            "," +
-            comGraphHeight / 2 +
-            ")scale(" +
-            k +
-            ")translate(" +
-            (-x - x_offset - xOffset) +
-            "," +
-            (-y - y_offset - yOffset) +
-            ")"
+          comGraphWidth / 2 +
+          "," +
+          comGraphHeight / 2 +
+          ")scale(" +
+          k +
+          ")translate(" +
+          (-x - x_offset + xOffset) +
+          "," +
+          (-y - y_offset + yOffset) +
+          ")"
         );
 
       labNode
@@ -664,16 +666,16 @@ const CommunityGraph = (props) => {
         .attr(
           "transform",
           "translate(" +
-            comGraphWidth / 2 +
-            "," +
-            comGraphHeight / 2 +
-            ")scale(" +
-            k +
-            ")translate(" +
-            (-x - x_offset - xOffset) +
-            "," +
-            (-y - y_offset - yOffset) +
-            ")"
+          comGraphWidth / 2 +
+          "," +
+          comGraphHeight / 2 +
+          ")scale(" +
+          k +
+          ")translate(" +
+          (-x - x_offset + xOffset) +
+          "," +
+          (-y - y_offset + yOffset) +
+          ")"
         );
 
       labLink
@@ -682,16 +684,16 @@ const CommunityGraph = (props) => {
         .attr(
           "transform",
           "translate(" +
-            comGraphWidth / 2 +
-            "," +
-            comGraphHeight / 2 +
-            ")scale(" +
-            k +
-            ")translate(" +
-            (-x - x_offset - xOffset) +
-            "," +
-            (-y - y_offset - yOffset) +
-            ")"
+          comGraphWidth / 2 +
+          "," +
+          comGraphHeight / 2 +
+          ")scale(" +
+          k +
+          ")translate(" +
+          (-x - x_offset + xOffset) +
+          "," +
+          (-y - y_offset + yOffset) +
+          ")"
         );
 
       // set lab detail info
@@ -745,7 +747,7 @@ const CommunityGraph = (props) => {
       setConfFlag(false);
     }
 
-    function transitionToSchoolView(event, d) {
+    function transitionToSchoolView(event, d, dur) {
       var x, y, k;
       const x_offset = 14000 / scaleFactor;
       const y_offset = 10000 / scaleFactor;
