@@ -506,6 +506,7 @@ const CommunityGraph = (props) => {
       const selectedConfDetail = {
         title: _title,
         impactScore: selectedConf.impact_score,
+        website: selectedConf.website,
       };
 
       // Highlight related labs

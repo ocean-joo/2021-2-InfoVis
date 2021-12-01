@@ -70,6 +70,7 @@ const DetailSideBar = (props) => {
           Information
         </h2>
         <b>Impact Score</b>: {confInformation.impactScore} <br />
+        <b>Website     </b>: <a href={confInformation.website}>[link]</a><br />
       </div>
     );
   } else {
