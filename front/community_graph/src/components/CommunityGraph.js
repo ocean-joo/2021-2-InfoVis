@@ -73,7 +73,8 @@ const CommunityGraph = (props) => {
       })
       .curve(d3.curveCatmullRomClosed);
 
-    const schoolScale = d3.scaleOrdinal(d3.schemeCategory10);
+    const SchoolColorScale = d3.scaleOrdinal(["#264653", "#2A9D8F", "#E9C46A", "#F4A261", "#E76F51"]);
+    const labColorScale = d3.scaleOrdinal(["#287271", "#8AB17D", "#EFB366", "#EE8959", "#E4572E"]);
 
     const nodeScale = d3
       .scaleLinear()
@@ -193,8 +194,8 @@ const CommunityGraph = (props) => {
       .enter()
       .append("g")
       .append("path")
-      .attr("stroke", (d) => schoolScale(d))
-      .attr("fill", (d) => schoolScale(d))
+      .attr("stroke", (d) => SchoolColorScale(d))
+      .attr("fill", (d) => SchoolColorScale(d))
       .attr("class", "schoolNodeEdge")
       .attr("opacity", 0);
 
@@ -241,7 +242,7 @@ const CommunityGraph = (props) => {
       .append("circle")
       .attr("class", "labNode")
       .attr("r", (d) => d.r)
-      .attr("fill", (d) => schoolScale(schoolList[d.school]["id"]))
+      .attr("fill", (d) => labColorScale(schoolList[d.school]["id"]))
       .attr("stroke", "black")
       .attr("stroke-width", 0.3)
       .attr("opacity", 0) // initially invisible
@@ -515,7 +516,7 @@ const CommunityGraph = (props) => {
           (paper) => paper.conf_id == selectedConf.id
         );
 
-        if (publishedPaper.length > 0)  {
+        if (publishedPaper.length > 0) {
           related_lab.push(lab.id);
           papers.push({
             'name': lab.name,
