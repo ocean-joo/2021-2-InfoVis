@@ -158,6 +158,7 @@ const CommunityGraph = (props) => {
         dic[k] = 0;
       }
     }
+    
     link_json.forEach(function (l) {
       var src_school_id = schoolList[lab_json[l.source]["school"]]["id"];
       var tar_school_id = schoolList[lab_json[l.target]["school"]]["id"];
@@ -232,6 +233,8 @@ const CommunityGraph = (props) => {
       .style("stroke-width", "1.3px")
       .attr("opacity", 0);
 
+
+    var prevX, prevY;
     // node for lab
     const labNode = comGraphSVG
       .append("g")
@@ -253,10 +256,17 @@ const CommunityGraph = (props) => {
             if (!event.active) simulation.alphaTarget(0.005).restart();
             d.fx = d.x;
             d.fy = d.y;
+            prevX = d.x;
+            prevY = d.y;
           })
           .on("drag", function (event, d) {
-            d.fx = event.x;
-            d.fy = event.y;
+            // todo : adaptively change according to moving scaleFactor
+            var deltaX = event.x - prevX;
+            var deltaY = event.y - prevY;
+            d.fx += deltaX / (scaleFactor / 20) ;
+            d.fy += deltaY / (scaleFactor / 20) ;
+            prevX = event.x;
+            prevY = event.y;
           })
           .on("end", function (event, d) {
             if (!event.active) simulation.alphaTarget(0);
@@ -264,6 +274,7 @@ const CommunityGraph = (props) => {
             d.fy = null;
           })
       );
+      
 
     var labText = comGraphSVG
       .append("g")
@@ -545,22 +556,6 @@ const CommunityGraph = (props) => {
       setConfFlag(true);
     }
 
-    function split_to_lines(long_line, limit) {
-      var lines = [""];
-      var line_num = 0;
-      var chunks = long_line.split(" ");
-      for (var i = 0; i < chunks.length; i++) {
-        if (lines[line_num].length + chunks[i].length <= limit) {
-          lines[line_num] += chunks[i] + " ";
-        } else {
-          lines[line_num] += make_space((limit - lines[line_num].length) * 2);
-          line_num++;
-          lines.push(chunks[i] + " ");
-        }
-      }
-      return lines;
-    }
-
     function make_space(_len) {
       var pad = "";
       for (var i = 0; i < _len; i++) pad += "&nbsp;";
@@ -642,7 +637,6 @@ const CommunityGraph = (props) => {
       const x_offset = 14000 / scaleFactor;
       const y_offset = 10000 / scaleFactor;
       setLabView(true);
-
       x = d.x;
       y = d.y;
       k = (scaleFactor * 4) / 100;
@@ -780,6 +774,8 @@ const CommunityGraph = (props) => {
 
       labNode.classed("active", false);
     }
+
+    
   }, [scaleFactor, isLabView, confClicked, xOffset, yOffset]);
 
   return (
