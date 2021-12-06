@@ -42,8 +42,8 @@ const CommunityGraph = (props) => {
   // parameters for community graph location
   const comGraphWidth = 960;
   const comGraphHeight = 750;
-  const comGraphWidthOffset = 80;
-  const comGraphHeightOffset = 0;
+  const comGraphWidthOffset = -50;
+  const comGraphHeightOffset = -40;
 
   const comGraphWidthPadding = 0;
   const link_popup_width = 100;
