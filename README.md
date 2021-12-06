@@ -11,6 +11,6 @@
 - Community graph implementation using nodes and links information
 ~~~
 $ cd front/community_graph
-$ yarn add rc-slider
+$ yarn add react-scripts rc-slider
 $ yarn start
 ~~~
