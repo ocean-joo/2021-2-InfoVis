@@ -11,7 +11,6 @@ raw_lab_list = []
 lab_list = []
 link_list = []
 
-#  conference 봐보기
 school_list = ["snu", "kaist", "postech", "yonsei", "korea"]
 lab_in_conf_cnt = [] # lab_in_conf_cnt[A][B] : how many paper lab A published on conference B.
 adj_matrix = [] # adj_matrix[A][B] : weight, common conference for lab A and lab B
